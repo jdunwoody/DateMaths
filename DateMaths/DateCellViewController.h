@@ -18,6 +18,8 @@
 @property (nonatomic, strong) id<DateMathsViewDelegate> delegate;
 @property (nonatomic, strong) Digit *digit;
 
+@property (nonatomic) BOOL used;
 - (IBAction)tappedView:(id)sender;
 
+- (void)markAsUsed;
 @end

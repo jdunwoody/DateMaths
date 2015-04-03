@@ -82,18 +82,36 @@
 
 - (void)didTapCellView:(DateCellViewController *)dateCellViewController
 {
+    if (dateCellViewController.used) {
+        return;
+    }
+
+    dateCellViewController.used = YES;
+
     ResultsCellViewController *resultsCellViewController = [[ResultsCellViewController alloc] initWithNibName:@"ResultsCellViewController" bundle:[NSBundle mainBundle]];
     resultsCellViewController.digit = dateCellViewController.digit;
 
     [self.resultsScrollView addSubview:resultsCellViewController.view];
     [self addChildViewController:resultsCellViewController];
     [resultsCellViewController didMoveToParentViewController:self];
+
+    CGFloat width = resultsCellViewController.view.bounds.size.width;
+    CGFloat height = resultsCellViewController.view.bounds.size.height;
+
+    resultsCellViewController.view.frame = CGRectMake(self.resultsScrollView.contentSize.width, 0, width, height);
+    self.resultsScrollView.contentSize = CGSizeMake(self.resultsScrollView.contentSize.width + width, height);
 }
 
 - (void)didTapResultsCellView:(ResultsCellViewController *)resultsCellViewController
 {
     [resultsCellViewController removeFromParentViewController];
     [resultsCellViewController.view removeFromSuperview];
+
+//    CGFloat width = resultsCellViewController.view.bounds.size.width;
+//    CGFloat height = resultsCellViewController.view.bounds.size.height;
+//
+//    resultsCellViewController.view.frame = CGRectMake(self.resultsScrollView.contentSize.width, 0, width, height);
+//    self.resultsScrollView.contentSize = CGSizeMake(self.resultsScrollView.contentSize.width + width, height);
 }
 
 @end

@@ -27,4 +27,10 @@
     [self.delegate didTapCellView:self];
 }
 
+- (void)setUsed:(BOOL)used
+{
+    _used = used;
+    self.view.backgroundColor = [UIColor lightGrayColor];
+}
+
 @end

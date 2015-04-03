@@ -7,14 +7,15 @@
 //
 
 #import "DateMathsViewController.h"
-#import "DateMathsViewModel.h"
 #import "Digit.h"
 #import "DateCellViewController.h"
+#import "ResultsCellViewController.h"
+#import "DigitCollection.h"
+#import "CALayer+NewCategory.h"
 
 @interface DateMathsViewController ()
-@property (strong, nonatomic) DateMathsViewModel *dateMathsViewModel;
 @property (nonatomic, readonly) NSString *formattedDate;
-@property (nonatomic, readonly) NSMutableArray *dateCells;
+@property (nonatomic, strong) DigitCollection *digitCollection;
 @end
 
 @implementation DateMathsViewController
@@ -23,30 +24,24 @@
 {
     [super viewDidLoad];
 
-    self.dateDigitsScrollView.layer.borderWidth = 1.0f;
-    self.dateDigitsScrollView.layer.borderColor = [UIColor blackColor].CGColor;
+    self.digitCollection = [[DigitCollection alloc] initWithDate:[NSDate date]];
 
-    self.operatorScrollView.layer.borderWidth = 1.0f;
-    self.operatorScrollView.layer.borderColor = [UIColor blackColor].CGColor;
+    [self createDigitViews];
 
-    self.dateMathsViewModel = [[DateMathsViewModel alloc] initWithDate:[NSDate date]];
-
-    NSString *formattedDate = self.dateMathsViewModel.formattedDate;
-    self.formattedDateLabel.text = formattedDate;
-
-    NSMutableArray *digits = [self extractDigitsFromString:formattedDate];
-
-    [self createDigitViewsWithDigits:digits];
-
-    //    self.dateDigitsScrollView.contentSize
-    //    self.resultsScrollView;
-    //    self.operatorScrollView;
+    [self.dateDigitsScrollView.layer addBlackBorder];
+    [self.operatorScrollView.layer addBlackBorder];
+    [self.resultsScrollView.layer addBlackBorder];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
 
+    [self layoutCells];
+}
+
+- (void)layoutCells
+{
     CGFloat cellWidth = self.dateDigitsScrollView.frame.size.width / [self.dateDigitsScrollView.subviews count];
     CGFloat cellHeight = self.dateDigitsScrollView.frame.size.height;
 
@@ -60,15 +55,14 @@
     self.dateDigitsScrollView.contentSize = CGSizeMake(currentContentWidth, cellHeight);
 }
 
-- (void)createDigitViewsWithDigits:(NSMutableArray *)digits
+- (void)createDigitViews
 {
     __block CGFloat width = 0;
     __block CGFloat height = 0;
 
-    [digits enumerateObjectsUsingBlock:^(Digit *digit, NSUInteger idx, BOOL *stop) {
+    for (Digit *digit in self.digitCollection) {
         DateCellViewController *dateCellViewController = [[DateCellViewController alloc] initWithNibName:@"DateCellViewController" bundle:[NSBundle mainBundle]];
         dateCellViewController.delegate = self;
-        [self.dateCells addObject:dateCellViewController];
 
         CGFloat edgeLength = self.dateDigitsScrollView.bounds.size.height;
         UILabel *digitLabel = [[UILabel alloc] initWithFrame:CGRectMake(width, 0, edgeLength, edgeLength)];
@@ -79,29 +73,27 @@
         [self.dateDigitsScrollView addSubview:dateCellViewController.view];
         [self addChildViewController:dateCellViewController];
         [dateCellViewController didMoveToParentViewController:self];
-    }];
+    };
 
     self.dateDigitsScrollView.contentSize = CGSizeMake(width, height);
-}
-
-- (NSMutableArray *)extractDigitsFromString:(NSString *)formattedDate
-{
-    NSString *digitString = [[formattedDate componentsSeparatedByCharactersInSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]] componentsJoinedByString:@""];
-    NSUInteger numberOfDigits = [digitString length];
-    NSMutableArray *digits = [[NSMutableArray alloc] init];
-    for (int i = 0; i < numberOfDigits; i++) {
-        NSString *character = [NSString stringWithFormat:@"%c", [digitString characterAtIndex:(NSUInteger)i]];
-        [digits addObject:[[Digit alloc] initWithDigit:character.doubleValue]];
-    }
-    return digits;
 }
 
 #pragma mark - DateMathsViewDelegate
 
 - (void)didTapCellView:(DateCellViewController *)dateCellViewController
 {
-    [dateCellViewController.view removeFromSuperview];
-    [self.resultsScrollView addSubview:dateCellViewController.view];
+    ResultsCellViewController *resultsCellViewController = [[ResultsCellViewController alloc] initWithNibName:@"ResultsCellViewController" bundle:[NSBundle mainBundle]];
+    resultsCellViewController.digit = dateCellViewController.digit;
+
+    [self.resultsScrollView addSubview:resultsCellViewController.view];
+    [self addChildViewController:resultsCellViewController];
+    [resultsCellViewController didMoveToParentViewController:self];
+}
+
+- (void)didTapResultsCellView:(ResultsCellViewController *)resultsCellViewController
+{
+    [resultsCellViewController removeFromParentViewController];
+    [resultsCellViewController.view removeFromSuperview];
 }
 
 @end

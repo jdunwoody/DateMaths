@@ -8,14 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		914CB12CD7B79FA6332C1BFB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 914CB5E39B366B313E1A520F /* LaunchScreen.xib */; };
-		914CB1E930A15A4CA5483C04 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB69176FBFD7951CDD47F /* ViewController.m */; };
 		914CB4412521AEF574DEF2F2 /* Digit.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB86A2BA424D049C9CD24 /* Digit.m */; };
+		914CB488D21B5E76926DA3BD /* DigitCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB002441A5C2F3C11FBF7 /* DigitCollection.m */; };
 		914CB6631C2F1FAD9401E283 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 914CBB52F83F3C1DAC8B6625 /* Main.storyboard */; };
+		914CBA5C037D61EFAE1DB001 /* CALayer+NewCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CBF0DCA8CC6E6EDFE659A /* CALayer+NewCategory.m */; };
 		914CBB2005A6995428799172 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB479BAD5699ED9B7C2FA /* AppDelegate.m */; };
 		914CBCC3B96D5CA79BEE8C77 /* DateMathsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CBA329EF88E051638C3E2 /* DateMathsViewModel.m */; };
 		914CBD7FCD50F049842EDC89 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 914CB9D3C69619BA9B98BB48 /* Images.xcassets */; };
 		914CBF176BC1052841FFB9D1 /* DateMathsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB50977B4279E38952DA1 /* DateMathsTests.m */; };
 		914CBF27319C07554EC7C084 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB04F81F03B4475E8AAE0 /* main.m */; };
+		9E7650EC1ACEA0D20072D761 /* ResultsCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E7650EA1ACEA0D20072D761 /* ResultsCellViewController.m */; };
+		9E7650ED1ACEA0D20072D761 /* ResultsCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E7650EB1ACEA0D20072D761 /* ResultsCellViewController.xib */; };
 		9E89CC121AC7F58B0086C816 /* DateMathsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E89CC111AC7F58B0086C816 /* DateMathsViewController.m */; };
 		9E9924D01AC9667400D6057D /* DateCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9924CE1AC9667400D6057D /* DateCellViewController.m */; };
 		9E9924D11AC9667400D6057D /* DateCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E9924CF1AC9667400D6057D /* DateCellViewController.xib */; };
@@ -32,24 +35,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		914CB002441A5C2F3C11FBF7 /* DigitCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DigitCollection.m; sourceTree = "<group>"; };
 		914CB04F81F03B4475E8AAE0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		914CB0A91F98BAB9285CBFFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		914CB1120D5FDF945F364A6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		914CB1BC285DED776267516E /* DateMathsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DateMathsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		914CB22439F18B629F99FD63 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		914CB3493BC48A27BB2A09CC /* ResultsCellViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsCellViewDelegate.h; sourceTree = "<group>"; };
 		914CB3D91A7F0934FAF71BC5 /* Digit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Digit.h; sourceTree = "<group>"; };
 		914CB479BAD5699ED9B7C2FA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		914CB50977B4279E38952DA1 /* DateMathsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateMathsTests.m; sourceTree = "<group>"; };
 		914CB54EA3F6E6AABF8ED12E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		914CB617A680D7BFA7DA0596 /* DigitCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DigitCollection.h; sourceTree = "<group>"; };
 		914CB6375BE3E96890A1CF32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
-		914CB69176FBFD7951CDD47F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		914CB86A2BA424D049C9CD24 /* Digit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Digit.m; sourceTree = "<group>"; };
 		914CB8A696E0C0265376F126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		914CB9D3C69619BA9B98BB48 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		914CBA329EF88E051638C3E2 /* DateMathsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateMathsViewModel.m; sourceTree = "<group>"; };
+		914CBAA50A5591BB3AD060B6 /* CALayer+NewCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+NewCategory.h"; sourceTree = "<group>"; };
 		914CBABF8458B64D6C56CCB5 /* DateMathsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateMathsViewModel.h; sourceTree = "<group>"; };
 		914CBB4C2E4EB5A7D5A0DA15 /* DateMathsViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateMathsViewDelegate.h; sourceTree = "<group>"; };
 		914CBD7B0D8FA667D1F3DFD3 /* DateMaths.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DateMaths.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		914CBF0DCA8CC6E6EDFE659A /* CALayer+NewCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+NewCategory.m"; sourceTree = "<group>"; };
+		9E7650E91ACEA0D20072D761 /* ResultsCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsCellViewController.h; sourceTree = "<group>"; };
+		9E7650EA1ACEA0D20072D761 /* ResultsCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsCellViewController.m; sourceTree = "<group>"; };
+		9E7650EB1ACEA0D20072D761 /* ResultsCellViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultsCellViewController.xib; sourceTree = "<group>"; };
 		9E89CC101AC7F58B0086C816 /* DateMathsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateMathsViewController.h; sourceTree = "<group>"; };
 		9E89CC111AC7F58B0086C816 /* DateMathsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateMathsViewController.m; sourceTree = "<group>"; };
 		9E9924CD1AC9667400D6057D /* DateCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateCellViewController.h; sourceTree = "<group>"; };
@@ -122,22 +131,28 @@
 		914CBC5C97790867B37B96F4 /* DateMaths */ = {
 			isa = PBXGroup;
 			children = (
-				914CB8ECE2DC34F51FC0FB4F /* Supporting Files */,
-				914CB9D3C69619BA9B98BB48 /* Images.xcassets */,
-				914CB5E39B366B313E1A520F /* LaunchScreen.xib */,
 				914CB54EA3F6E6AABF8ED12E /* AppDelegate.h */,
 				914CB479BAD5699ED9B7C2FA /* AppDelegate.m */,
-				914CBB52F83F3C1DAC8B6625 /* Main.storyboard */,
-				914CB22439F18B629F99FD63 /* ViewController.h */,
-				914CB69176FBFD7951CDD47F /* ViewController.m */,
+				914CBAA50A5591BB3AD060B6 /* CALayer+NewCategory.h */,
+				914CBF0DCA8CC6E6EDFE659A /* CALayer+NewCategory.m */,
+				9E9924D21AC9667900D6057D /* DateCell */,
 				9E89CC101AC7F58B0086C816 /* DateMathsViewController.h */,
 				9E89CC111AC7F58B0086C816 /* DateMathsViewController.m */,
-				914CBA329EF88E051638C3E2 /* DateMathsViewModel.m */,
-				914CBABF8458B64D6C56CCB5 /* DateMathsViewModel.h */,
-				914CB86A2BA424D049C9CD24 /* Digit.m */,
-				914CB3D91A7F0934FAF71BC5 /* Digit.h */,
-				9E9924D21AC9667900D6057D /* DateCell */,
 				914CBB4C2E4EB5A7D5A0DA15 /* DateMathsViewDelegate.h */,
+				914CBABF8458B64D6C56CCB5 /* DateMathsViewModel.h */,
+				914CBA329EF88E051638C3E2 /* DateMathsViewModel.m */,
+				914CB3D91A7F0934FAF71BC5 /* Digit.h */,
+				914CB86A2BA424D049C9CD24 /* Digit.m */,
+				914CB617A680D7BFA7DA0596 /* DigitCollection.h */,
+				914CB002441A5C2F3C11FBF7 /* DigitCollection.m */,
+				914CB9D3C69619BA9B98BB48 /* Images.xcassets */,
+				914CB5E39B366B313E1A520F /* LaunchScreen.xib */,
+				914CBB52F83F3C1DAC8B6625 /* Main.storyboard */,
+				9E7650E91ACEA0D20072D761 /* ResultsCellViewController.h */,
+				9E7650EA1ACEA0D20072D761 /* ResultsCellViewController.m */,
+				9E7650EB1ACEA0D20072D761 /* ResultsCellViewController.xib */,
+				914CB3493BC48A27BB2A09CC /* ResultsCellViewDelegate.h */,
+				914CB8ECE2DC34F51FC0FB4F /* Supporting Files */,
 			);
 			path = DateMaths;
 			sourceTree = "<group>";
@@ -228,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E7650ED1ACEA0D20072D761 /* ResultsCellViewController.xib in Resources */,
 				9E9924D11AC9667400D6057D /* DateCellViewController.xib in Resources */,
 				914CBD7FCD50F049842EDC89 /* Images.xcassets in Resources */,
 				914CB12CD7B79FA6332C1BFB /* LaunchScreen.xib in Resources */,
@@ -246,9 +262,11 @@
 				914CBB2005A6995428799172 /* AppDelegate.m in Sources */,
 				9E89CC121AC7F58B0086C816 /* DateMathsViewController.m in Sources */,
 				9E9924D01AC9667400D6057D /* DateCellViewController.m in Sources */,
-				914CB1E930A15A4CA5483C04 /* ViewController.m in Sources */,
 				914CBCC3B96D5CA79BEE8C77 /* DateMathsViewModel.m in Sources */,
+				9E7650EC1ACEA0D20072D761 /* ResultsCellViewController.m in Sources */,
 				914CB4412521AEF574DEF2F2 /* Digit.m in Sources */,
+				914CB488D21B5E76926DA3BD /* DigitCollection.m in Sources */,
+				914CBA5C037D61EFAE1DB001 /* CALayer+NewCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

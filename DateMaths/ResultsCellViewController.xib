@@ -4,40 +4,40 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DateCellViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResultsCellViewController">
             <connections>
-                <outlet property="tapGestureRecogniser" destination="Rrx-6d-qBt" id="gbh-xz-rCN"/>
+                <outlet property="digitLabel" destination="0r1-RR-fGP" id="QsE-qf-CYv"/>
+                <outlet property="tapGesture" destination="gMU-c8-UBV" id="SPd-zK-3iC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="111" height="107"/>
+            <rect key="frame" x="0.0" y="0.0" width="59" height="53"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k2E-mm-YZJ" userLabel="Digit">
-                    <rect key="frame" x="50.5" y="43.5" width="10" height="20.5"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="l" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0r1-RR-fGP">
+                    <rect key="frame" x="27" y="16" width="4" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="1" green="0.96920045015319856" blue="0.84989709194702734" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <gestureRecognizers/>
             <constraints>
-                <constraint firstAttribute="centerY" secondItem="k2E-mm-YZJ" secondAttribute="centerY" id="Kmg-X1-3ri"/>
-                <constraint firstAttribute="centerX" secondItem="k2E-mm-YZJ" secondAttribute="centerX" id="Ouw-Vl-w9a"/>
+                <constraint firstAttribute="centerX" secondItem="0r1-RR-fGP" secondAttribute="centerX" id="AZ9-Yf-G0z"/>
+                <constraint firstAttribute="centerY" secondItem="0r1-RR-fGP" secondAttribute="centerY" id="qvm-Ok-LJe"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outletCollection property="gestureRecognizers" destination="Rrx-6d-qBt" appends="YES" id="pDh-Wc-OdR"/>
+                <outletCollection property="gestureRecognizers" destination="gMU-c8-UBV" appends="YES" id="0ua-Ml-HeG"/>
             </connections>
-            <point key="canvasLocation" x="78.5" y="160.5"/>
+            <point key="canvasLocation" x="52.5" y="133.5"/>
         </view>
-        <tapGestureRecognizer id="Rrx-6d-qBt">
+        <tapGestureRecognizer id="gMU-c8-UBV">
             <connections>
-                <action selector="tappedView:" destination="-1" id="6xg-cl-Dff"/>
-                <outlet property="delegate" destination="-1" id="tFf-AP-gdA"/>
+                <action selector="tapped:" destination="-1" id="8tk-Ob-vxn"/>
             </connections>
         </tapGestureRecognizer>
     </objects>

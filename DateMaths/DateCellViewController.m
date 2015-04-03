@@ -8,6 +8,7 @@
 
 #import "DateCellViewController.h"
 #import "DateMathsViewDelegate.h"
+#import "CALayer+NewCategory.h"
 
 @interface DateCellViewController ()
 @end
@@ -18,8 +19,7 @@
 {
     [super viewDidLoad];
 
-    self.view.layer.borderColor = [UIColor blackColor].CGColor;
-    self.view.layer.borderWidth = 1.0f;
+    [self.view.layer addBlackBorder];
 }
 
 - (IBAction)tappedView:(id)sender

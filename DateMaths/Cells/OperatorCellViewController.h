@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class DateMathsViewController;
+@protocol OperatorCellDelegate;
+
 @interface OperatorCellViewController : UIViewController
+
+@property (nonatomic, strong) id<OperatorCellDelegate> delegate;
+@property (weak, nonatomic) IBOutlet UILabel *label;
 
 @end

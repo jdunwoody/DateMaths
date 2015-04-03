@@ -7,6 +7,7 @@
 //
 
 #import "OperatorCellViewController.h"
+#import "CALayer+NewCategory.h"
 
 @interface OperatorCellViewController ()
 
@@ -17,6 +18,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    [self.view.layer addBlackBorder];
 }
 
 @end

@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "DateMathsViewDelegate.h"
 #import "ResultsCellViewDelegate.h"
+#import "OperatorCellDelegate.h"
 
-@interface DateMathsViewController : UIViewController<DateMathsViewDelegate, ResultsCellViewDelegate>
+@interface DateMathsViewController : UIViewController<DateMathsViewDelegate, ResultsCellViewDelegate, OperatorCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *formattedDateLabel;
 @property (weak, nonatomic) IBOutlet UIScrollView *dateDigitsScrollView;

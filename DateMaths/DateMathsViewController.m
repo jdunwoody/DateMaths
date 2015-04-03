@@ -27,6 +27,7 @@
     self.digitCollection = [[DigitCollection alloc] initWithDate:[NSDate date]];
 
     [self createDigitViews];
+    [self createOperatorViews];
 
     [self.dateDigitsScrollView.layer addBlackBorder];
     [self.operatorScrollView.layer addBlackBorder];
@@ -53,6 +54,11 @@
     }
 
     self.dateDigitsScrollView.contentSize = CGSizeMake(currentContentWidth, cellHeight);
+}
+
+- (void)createOperatorViews
+{
+
 }
 
 - (void)createDigitViews

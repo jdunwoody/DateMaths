@@ -7,21 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		914CB02290A447C07B0FDA22 /* DateCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB6917CE6CDF2D2E0729A /* DateCellViewController.m */; };
 		914CB12CD7B79FA6332C1BFB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 914CB5E39B366B313E1A520F /* LaunchScreen.xib */; };
+		914CB2FC1B9C25D96C93924C /* DateCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 914CB8E6CB4760626CD042A3 /* DateCellViewController.xib */; };
 		914CB4412521AEF574DEF2F2 /* Digit.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB86A2BA424D049C9CD24 /* Digit.m */; };
 		914CB488D21B5E76926DA3BD /* DigitCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB002441A5C2F3C11FBF7 /* DigitCollection.m */; };
 		914CB6631C2F1FAD9401E283 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 914CBB52F83F3C1DAC8B6625 /* Main.storyboard */; };
+		914CB6706E95C82362120C2B /* ResultsCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB741034861F215D8DC52 /* ResultsCellViewController.m */; };
 		914CBA5C037D61EFAE1DB001 /* CALayer+NewCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CBF0DCA8CC6E6EDFE659A /* CALayer+NewCategory.m */; };
 		914CBB2005A6995428799172 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB479BAD5699ED9B7C2FA /* AppDelegate.m */; };
 		914CBCC3B96D5CA79BEE8C77 /* DateMathsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CBA329EF88E051638C3E2 /* DateMathsViewModel.m */; };
+		914CBD6F108A6673A44485CF /* ResultsCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 914CB93A7189A46385CDB471 /* ResultsCellViewController.xib */; };
 		914CBD7FCD50F049842EDC89 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 914CB9D3C69619BA9B98BB48 /* Images.xcassets */; };
 		914CBF176BC1052841FFB9D1 /* DateMathsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB50977B4279E38952DA1 /* DateMathsTests.m */; };
 		914CBF27319C07554EC7C084 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB04F81F03B4475E8AAE0 /* main.m */; };
-		9E7650EC1ACEA0D20072D761 /* ResultsCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E7650EA1ACEA0D20072D761 /* ResultsCellViewController.m */; };
-		9E7650ED1ACEA0D20072D761 /* ResultsCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E7650EB1ACEA0D20072D761 /* ResultsCellViewController.xib */; };
+		9E7651021ACEB5400072D761 /* DateCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E7650F81ACEB5400072D761 /* DateCellViewController.m */; };
+		9E7651031ACEB5400072D761 /* DateCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E7650F91ACEB5400072D761 /* DateCellViewController.xib */; };
+		9E7651041ACEB5400072D761 /* OperatorCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E7650FC1ACEB5400072D761 /* OperatorCellViewController.m */; };
+		9E7651051ACEB5400072D761 /* OperatorCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E7650FD1ACEB5400072D761 /* OperatorCellViewController.xib */; };
+		9E7651061ACEB5400072D761 /* ResultsCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E7650FF1ACEB5400072D761 /* ResultsCellViewController.m */; };
+		9E7651071ACEB5400072D761 /* ResultsCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E7651001ACEB5400072D761 /* ResultsCellViewController.xib */; };
 		9E89CC121AC7F58B0086C816 /* DateMathsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E89CC111AC7F58B0086C816 /* DateMathsViewController.m */; };
-		9E9924D01AC9667400D6057D /* DateCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E9924CE1AC9667400D6057D /* DateCellViewController.m */; };
-		9E9924D11AC9667400D6057D /* DateCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E9924CF1AC9667400D6057D /* DateCellViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,30 +46,40 @@
 		914CB0A91F98BAB9285CBFFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		914CB1120D5FDF945F364A6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		914CB1BC285DED776267516E /* DateMathsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DateMathsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		914CB3493BC48A27BB2A09CC /* ResultsCellViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsCellViewDelegate.h; sourceTree = "<group>"; };
 		914CB3D91A7F0934FAF71BC5 /* Digit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Digit.h; sourceTree = "<group>"; };
 		914CB479BAD5699ED9B7C2FA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		914CB50977B4279E38952DA1 /* DateMathsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateMathsTests.m; sourceTree = "<group>"; };
 		914CB54EA3F6E6AABF8ED12E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		914CB617A680D7BFA7DA0596 /* DigitCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DigitCollection.h; sourceTree = "<group>"; };
 		914CB6375BE3E96890A1CF32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		914CB66CEFF172DE2E1DDE52 /* ResultsCellViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsCellViewDelegate.h; sourceTree = "<group>"; };
+		914CB6917CE6CDF2D2E0729A /* DateCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateCellViewController.m; sourceTree = "<group>"; };
+		914CB741034861F215D8DC52 /* ResultsCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsCellViewController.m; sourceTree = "<group>"; };
 		914CB86A2BA424D049C9CD24 /* Digit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Digit.m; sourceTree = "<group>"; };
 		914CB8A696E0C0265376F126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		914CB8E6CB4760626CD042A3 /* DateCellViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateCellViewController.xib; sourceTree = "<group>"; };
+		914CB93A7189A46385CDB471 /* ResultsCellViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultsCellViewController.xib; sourceTree = "<group>"; };
 		914CB9D3C69619BA9B98BB48 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		914CBA329EF88E051638C3E2 /* DateMathsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateMathsViewModel.m; sourceTree = "<group>"; };
 		914CBAA50A5591BB3AD060B6 /* CALayer+NewCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+NewCategory.h"; sourceTree = "<group>"; };
 		914CBABF8458B64D6C56CCB5 /* DateMathsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateMathsViewModel.h; sourceTree = "<group>"; };
-		914CBB4C2E4EB5A7D5A0DA15 /* DateMathsViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateMathsViewDelegate.h; sourceTree = "<group>"; };
+		914CBCB7C36171CC85317DF9 /* DateCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateCellViewController.h; sourceTree = "<group>"; };
 		914CBD7B0D8FA667D1F3DFD3 /* DateMaths.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DateMaths.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		914CBE39AB940C8A559256B7 /* ResultsCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsCellViewController.h; sourceTree = "<group>"; };
 		914CBF0DCA8CC6E6EDFE659A /* CALayer+NewCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+NewCategory.m"; sourceTree = "<group>"; };
-		9E7650E91ACEA0D20072D761 /* ResultsCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsCellViewController.h; sourceTree = "<group>"; };
-		9E7650EA1ACEA0D20072D761 /* ResultsCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsCellViewController.m; sourceTree = "<group>"; };
-		9E7650EB1ACEA0D20072D761 /* ResultsCellViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultsCellViewController.xib; sourceTree = "<group>"; };
+		9E7650F71ACEB5400072D761 /* DateCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateCellViewController.h; sourceTree = "<group>"; };
+		9E7650F81ACEB5400072D761 /* DateCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateCellViewController.m; sourceTree = "<group>"; };
+		9E7650F91ACEB5400072D761 /* DateCellViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateCellViewController.xib; sourceTree = "<group>"; };
+		9E7650FA1ACEB5400072D761 /* DateMathsViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateMathsViewDelegate.h; sourceTree = "<group>"; };
+		9E7650FB1ACEB5400072D761 /* OperatorCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperatorCellViewController.h; sourceTree = "<group>"; };
+		9E7650FC1ACEB5400072D761 /* OperatorCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperatorCellViewController.m; sourceTree = "<group>"; };
+		9E7650FD1ACEB5400072D761 /* OperatorCellViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OperatorCellViewController.xib; sourceTree = "<group>"; };
+		9E7650FE1ACEB5400072D761 /* ResultsCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsCellViewController.h; sourceTree = "<group>"; };
+		9E7650FF1ACEB5400072D761 /* ResultsCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsCellViewController.m; sourceTree = "<group>"; };
+		9E7651001ACEB5400072D761 /* ResultsCellViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultsCellViewController.xib; sourceTree = "<group>"; };
+		9E7651011ACEB5400072D761 /* ResultsCellViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsCellViewDelegate.h; sourceTree = "<group>"; };
 		9E89CC101AC7F58B0086C816 /* DateMathsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateMathsViewController.h; sourceTree = "<group>"; };
 		9E89CC111AC7F58B0086C816 /* DateMathsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateMathsViewController.m; sourceTree = "<group>"; };
-		9E9924CD1AC9667400D6057D /* DateCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateCellViewController.h; sourceTree = "<group>"; };
-		9E9924CE1AC9667400D6057D /* DateCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateCellViewController.m; sourceTree = "<group>"; };
-		9E9924CF1AC9667400D6057D /* DateCellViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateCellViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +140,13 @@
 			children = (
 				914CB6375BE3E96890A1CF32 /* Info.plist */,
 				914CB04F81F03B4475E8AAE0 /* main.m */,
+				914CB93A7189A46385CDB471 /* ResultsCellViewController.xib */,
+				914CBE39AB940C8A559256B7 /* ResultsCellViewController.h */,
+				914CB6917CE6CDF2D2E0729A /* DateCellViewController.m */,
+				914CBCB7C36171CC85317DF9 /* DateCellViewController.h */,
+				914CB66CEFF172DE2E1DDE52 /* ResultsCellViewDelegate.h */,
+				914CB741034861F215D8DC52 /* ResultsCellViewController.m */,
+				914CB8E6CB4760626CD042A3 /* DateCellViewController.xib */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -135,10 +158,9 @@
 				914CB479BAD5699ED9B7C2FA /* AppDelegate.m */,
 				914CBAA50A5591BB3AD060B6 /* CALayer+NewCategory.h */,
 				914CBF0DCA8CC6E6EDFE659A /* CALayer+NewCategory.m */,
-				9E9924D21AC9667900D6057D /* DateCell */,
+				9E7650F61ACEB5400072D761 /* Cells */,
 				9E89CC101AC7F58B0086C816 /* DateMathsViewController.h */,
 				9E89CC111AC7F58B0086C816 /* DateMathsViewController.m */,
-				914CBB4C2E4EB5A7D5A0DA15 /* DateMathsViewDelegate.h */,
 				914CBABF8458B64D6C56CCB5 /* DateMathsViewModel.h */,
 				914CBA329EF88E051638C3E2 /* DateMathsViewModel.m */,
 				914CB3D91A7F0934FAF71BC5 /* Digit.h */,
@@ -148,23 +170,27 @@
 				914CB9D3C69619BA9B98BB48 /* Images.xcassets */,
 				914CB5E39B366B313E1A520F /* LaunchScreen.xib */,
 				914CBB52F83F3C1DAC8B6625 /* Main.storyboard */,
-				9E7650E91ACEA0D20072D761 /* ResultsCellViewController.h */,
-				9E7650EA1ACEA0D20072D761 /* ResultsCellViewController.m */,
-				9E7650EB1ACEA0D20072D761 /* ResultsCellViewController.xib */,
-				914CB3493BC48A27BB2A09CC /* ResultsCellViewDelegate.h */,
 				914CB8ECE2DC34F51FC0FB4F /* Supporting Files */,
 			);
 			path = DateMaths;
 			sourceTree = "<group>";
 		};
-		9E9924D21AC9667900D6057D /* DateCell */ = {
+		9E7650F61ACEB5400072D761 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				9E9924CD1AC9667400D6057D /* DateCellViewController.h */,
-				9E9924CE1AC9667400D6057D /* DateCellViewController.m */,
-				9E9924CF1AC9667400D6057D /* DateCellViewController.xib */,
+				9E7650F71ACEB5400072D761 /* DateCellViewController.h */,
+				9E7650F81ACEB5400072D761 /* DateCellViewController.m */,
+				9E7650F91ACEB5400072D761 /* DateCellViewController.xib */,
+				9E7650FA1ACEB5400072D761 /* DateMathsViewDelegate.h */,
+				9E7650FB1ACEB5400072D761 /* OperatorCellViewController.h */,
+				9E7650FC1ACEB5400072D761 /* OperatorCellViewController.m */,
+				9E7650FD1ACEB5400072D761 /* OperatorCellViewController.xib */,
+				9E7650FE1ACEB5400072D761 /* ResultsCellViewController.h */,
+				9E7650FF1ACEB5400072D761 /* ResultsCellViewController.m */,
+				9E7651001ACEB5400072D761 /* ResultsCellViewController.xib */,
+				9E7651011ACEB5400072D761 /* ResultsCellViewDelegate.h */,
 			);
-			name = DateCell;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,11 +269,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E7650ED1ACEA0D20072D761 /* ResultsCellViewController.xib in Resources */,
-				9E9924D11AC9667400D6057D /* DateCellViewController.xib in Resources */,
 				914CBD7FCD50F049842EDC89 /* Images.xcassets in Resources */,
+				9E7651051ACEB5400072D761 /* OperatorCellViewController.xib in Resources */,
 				914CB12CD7B79FA6332C1BFB /* LaunchScreen.xib in Resources */,
 				914CB6631C2F1FAD9401E283 /* Main.storyboard in Resources */,
+				914CBD6F108A6673A44485CF /* ResultsCellViewController.xib in Resources */,
+				9E7651031ACEB5400072D761 /* DateCellViewController.xib in Resources */,
+				914CB2FC1B9C25D96C93924C /* DateCellViewController.xib in Resources */,
+				9E7651071ACEB5400072D761 /* ResultsCellViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,12 +290,15 @@
 				914CBF27319C07554EC7C084 /* main.m in Sources */,
 				914CBB2005A6995428799172 /* AppDelegate.m in Sources */,
 				9E89CC121AC7F58B0086C816 /* DateMathsViewController.m in Sources */,
-				9E9924D01AC9667400D6057D /* DateCellViewController.m in Sources */,
+				9E7651061ACEB5400072D761 /* ResultsCellViewController.m in Sources */,
 				914CBCC3B96D5CA79BEE8C77 /* DateMathsViewModel.m in Sources */,
-				9E7650EC1ACEA0D20072D761 /* ResultsCellViewController.m in Sources */,
 				914CB4412521AEF574DEF2F2 /* Digit.m in Sources */,
+				9E7651041ACEB5400072D761 /* OperatorCellViewController.m in Sources */,
 				914CB488D21B5E76926DA3BD /* DigitCollection.m in Sources */,
 				914CBA5C037D61EFAE1DB001 /* CALayer+NewCategory.m in Sources */,
+				914CB02290A447C07B0FDA22 /* DateCellViewController.m in Sources */,
+				9E7651021ACEB5400072D761 /* DateCellViewController.m in Sources */,
+				914CB6706E95C82362120C2B /* ResultsCellViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

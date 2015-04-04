@@ -17,7 +17,11 @@
 #import "OperatorCellViewController.h"
 
 @interface DateMathsViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *digitLabel;
+@property (weak, nonatomic) IBOutlet UILabel *formattedDateLabel;
+
 @property (nonatomic, readonly) NSString *formattedDate;
+
 @property (nonatomic, strong) DigitCollection *digitCollection;
 @property (nonatomic, strong) OperatorCollection *operatorCollection;
 @end
@@ -96,18 +100,19 @@
 
     for (Digit *digit in self.digitCollection) {
         DateCellViewController *dateCellViewController = [[DateCellViewController alloc] initWithNibName:@"DateCellViewController" bundle:[NSBundle mainBundle]];
-        dateCellViewController.delegate = self;
-        dateCellViewController.digit = digit;
 
         [self.dateDigitsScrollView addSubview:dateCellViewController.view];
         [self addChildViewController:dateCellViewController];
         [dateCellViewController didMoveToParentViewController:self];
 
+        dateCellViewController.delegate = self;
+        dateCellViewController.digit = digit;
+
 //        CGFloat edgeLength = self.dateDigitsScrollView.bounds.size.height;
-        UILabel *digitLabel = dateCellViewController.digitLabel;//[[UILabel alloc] initWithFrame:CGRectMake(width, 0, edgeLength, edgeLength)];
-        digitLabel.text = [NSString stringWithFormat:@"%li", (long)digit.digit];
-        width += digitLabel.bounds.size.width;
-        height = digitLabel.bounds.size.height;
+//        UILabel *digitLabel = dateCellViewController.digitLabel;//[[UILabel alloc] initWithFrame:CGRectMake(width, 0, edgeLength, edgeLength)];
+//        digitLabel.text = [NSString stringWithFormat:@"%li", (long)digit.digit];
+        width += dateCellViewController.view.bounds.size.width;
+        height = dateCellViewController.view.bounds.size.height;
     };
 
     self.dateDigitsScrollView.contentSize = CGSizeMake(width, height);
@@ -124,11 +129,12 @@
     dateCellViewController.used = YES;
 
     ResultsCellViewController *resultsCellViewController = [[ResultsCellViewController alloc] initWithNibName:@"ResultsCellViewController" bundle:[NSBundle mainBundle]];
-    resultsCellViewController.digit = dateCellViewController.digit;
 
     [self.resultsScrollView addSubview:resultsCellViewController.view];
     [self addChildViewController:resultsCellViewController];
     [resultsCellViewController didMoveToParentViewController:self];
+
+    resultsCellViewController.digit = dateCellViewController.digit;
 
     CGFloat width = resultsCellViewController.view.bounds.size.width;
     CGFloat height = resultsCellViewController.view.bounds.size.height;

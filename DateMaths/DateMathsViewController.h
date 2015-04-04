@@ -13,7 +13,6 @@
 
 @interface DateMathsViewController : UIViewController<DateMathsViewDelegate, ResultsCellViewDelegate, OperatorCellDelegate>
 
-@property (weak, nonatomic) IBOutlet UILabel *formattedDateLabel;
 @property (weak, nonatomic) IBOutlet UIScrollView *dateDigitsScrollView;
 @property (weak, nonatomic) IBOutlet UIScrollView *operatorScrollView;
 @property (weak, nonatomic) IBOutlet UIScrollView *resultsScrollView;

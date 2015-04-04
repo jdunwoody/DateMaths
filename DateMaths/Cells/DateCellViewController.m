@@ -9,8 +9,11 @@
 #import "DateCellViewController.h"
 #import "DateMathsViewDelegate.h"
 #import "CALayer+NewCategory.h"
+#import "Digit.h"
 
 @interface DateCellViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *digitLabel;
+
 @end
 
 @implementation DateCellViewController
@@ -31,6 +34,13 @@
 {
     _used = used;
     self.view.backgroundColor = [UIColor lightGrayColor];
+}
+
+- (void)setDigit:(Digit *)digit
+{
+    _digit = digit;
+
+    self.digitLabel.text = [NSString stringWithFormat:@"%li", (long)self.digit.digit];
 }
 
 @end

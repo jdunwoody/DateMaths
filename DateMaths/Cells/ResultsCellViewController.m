@@ -9,6 +9,7 @@
 #import "ResultsCellViewController.h"
 #import "ResultsCellViewDelegate.h"
 #import "CALayer+NewCategory.h"
+#import "Digit.h"
 
 @interface ResultsCellViewController ()
 
@@ -26,6 +27,13 @@
 - (IBAction)tapped:(id)sender
 {
     [self.delegate didTapResultsCellView:self];
+}
+
+- (void)setDigit:(Digit *)digit
+{
+    _digit = digit;
+
+    self.digitLabel.text = [NSString stringWithFormat:@"%li", (long)digit.digit];
 }
 
 @end

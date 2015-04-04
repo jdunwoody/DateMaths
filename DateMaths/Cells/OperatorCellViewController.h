@@ -10,10 +10,14 @@
 
 @class DateMathsViewController;
 @protocol OperatorCellDelegate;
+@class Operator;
 
 @interface OperatorCellViewController : UIViewController
 
 @property (nonatomic, strong) id<OperatorCellDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UILabel *label;
+@property (strong, nonatomic) Operator *operator;
+
+- (IBAction)tappedView:(id)sender;
 
 @end

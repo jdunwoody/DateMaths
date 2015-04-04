@@ -23,12 +23,21 @@
                 </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
             <constraints>
                 <constraint firstAttribute="centerX" secondItem="2AG-zl-F1v" secondAttribute="centerX" id="1Y1-4R-1es"/>
                 <constraint firstAttribute="centerY" secondItem="2AG-zl-F1v" secondAttribute="centerY" id="4cQ-gn-dCG"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="2v5-ns-If7" appends="YES" id="3Fe-Sy-vjC"/>
+            </connections>
             <point key="canvasLocation" x="51.5" y="129"/>
         </view>
+        <tapGestureRecognizer id="2v5-ns-If7">
+            <connections>
+                <action selector="tappedView:" destination="-1" id="xpO-Ag-hsO"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
 </document>

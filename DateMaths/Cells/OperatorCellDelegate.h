@@ -5,6 +5,10 @@
 
 #import <Foundation/Foundation.h>
 
+@class OperatorCellViewController;
+
 @protocol OperatorCellDelegate<NSObject>
+
+- (void)didTapOperatorCellView:(OperatorCellViewController *)controller;
 
 @end

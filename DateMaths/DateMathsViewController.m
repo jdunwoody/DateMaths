@@ -35,7 +35,6 @@
     self.digitCollection = [[DigitCollection alloc] initWithDate:[NSDate date]];
     self.operatorCollection = [[OperatorCollection alloc] init];
 
-
     [self.dateDigitsScrollView.layer addBlackBorder];
     [self.operatorScrollView.layer addBlackBorder];
     [self.resultsScrollView.layer addBlackBorder];
@@ -78,16 +77,13 @@
         [self addChildViewController:operatorCellViewController];
         [operatorCellViewController didMoveToParentViewController:self];
 
-//        CGFloat edgeLength = self.operatorScrollView.bounds.size.height;
-        UILabel *label = operatorCellViewController.label;
-        label.text = operator.symbol;
+        operatorCellViewController.operator = operator;
         CGFloat width = operatorCellViewController.view.bounds.size.width;
         CGFloat height = operatorCellViewController.view.bounds.size.height;
 
         operatorCellViewController.view.frame = CGRectMake(currentContentWidth, 0.0f, width, height);
 
         currentContentWidth += width;
-
     };
 
     self.operatorScrollView.contentSize = CGSizeMake(currentContentWidth, self.operatorScrollView.frame.size.height);
@@ -108,9 +104,6 @@
         dateCellViewController.delegate = self;
         dateCellViewController.digit = digit;
 
-//        CGFloat edgeLength = self.dateDigitsScrollView.bounds.size.height;
-//        UILabel *digitLabel = dateCellViewController.digitLabel;//[[UILabel alloc] initWithFrame:CGRectMake(width, 0, edgeLength, edgeLength)];
-//        digitLabel.text = [NSString stringWithFormat:@"%li", (long)digit.digit];
         width += dateCellViewController.view.bounds.size.width;
         height = dateCellViewController.view.bounds.size.height;
     };
@@ -147,12 +140,25 @@
 {
     [resultsCellViewController removeFromParentViewController];
     [resultsCellViewController.view removeFromSuperview];
+}
 
-//    CGFloat width = resultsCellViewController.view.bounds.size.width;
-//    CGFloat height = resultsCellViewController.view.bounds.size.height;
-//
-//    resultsCellViewController.view.frame = CGRectMake(self.resultsScrollView.contentSize.width, 0, width, height);
-//    self.resultsScrollView.contentSize = CGSizeMake(self.resultsScrollView.contentSize.width + width, height);
+- (void)didTapOperatorCellView:(OperatorCellViewController *)controller
+{
+    OperatorCellViewController *operatorCellViewController = [[OperatorCellViewController alloc] initWithNibName:@"OperatorCellViewController" bundle:[NSBundle mainBundle]];
+
+    [self.resultsScrollView addSubview:operatorCellViewController.view];
+    [self addChildViewController:operatorCellViewController];
+    [operatorCellViewController didMoveToParentViewController:self];
+
+    operatorCellViewController.operator = controller.operator;
+    CGFloat width = operatorCellViewController.view.bounds.size.width;
+    CGFloat height = operatorCellViewController.view.bounds.size.height;
+
+    CGFloat currentContentWidth = self.resultsScrollView.contentSize.width;
+
+    operatorCellViewController.view.frame = CGRectMake(currentContentWidth, 0.0f, width, height);
+
+    self.resultsScrollView.contentSize = CGSizeMake(currentContentWidth + width, height);
 }
 
 @end

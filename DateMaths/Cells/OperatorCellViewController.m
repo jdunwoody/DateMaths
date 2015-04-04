@@ -8,6 +8,8 @@
 
 #import "OperatorCellViewController.h"
 #import "CALayer+NewCategory.h"
+#import "Operator.h"
+#import "OperatorCellDelegate.h"
 
 @interface OperatorCellViewController ()
 
@@ -20,6 +22,18 @@
     [super viewDidLoad];
 
     [self.view.layer addBlackBorder];
+}
+
+- (void)setOperator:(Operator *)operator
+{
+    _operator = operator;
+
+    self.label.text = [NSString stringWithFormat:@"%@", operator.symbol];
+}
+
+- (IBAction)tappedView:(id)sender
+{
+    [self.delegate didTapOperatorCellView:self];
 }
 
 @end

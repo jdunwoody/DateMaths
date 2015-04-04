@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d949dfb-cef2-42cc-8df7-cd7c40355e52" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DateMaths/Cell.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DateMaths/ResultsCollectionViewCell.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DateMaths/ResultsCollectionViewCell.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DateMaths/ResultsCollectionViewDataSource.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DateMaths/ResultsCollectionViewDataSource.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DateMaths/DateMathsViewController.h" afterPath="$PROJECT_DIR$/DateMaths/DateMathsViewController.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DateMaths/DateMathsViewController.m" afterPath="$PROJECT_DIR$/DateMaths/DateMathsViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DateMaths/Cells/OperatorCellDelegate.h" afterPath="$PROJECT_DIR$/DateMaths/Cells/OperatorCellDelegate.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DateMaths/Cells/OperatorCellViewController.h" afterPath="$PROJECT_DIR$/DateMaths/Cells/OperatorCellViewController.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DateMaths/Cells/OperatorCellViewController.m" afterPath="$PROJECT_DIR$/DateMaths/Cells/OperatorCellViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DateMaths/Cells/OperatorCellViewController.xib" afterPath="$PROJECT_DIR$/DateMaths/Cells/OperatorCellViewController.xib" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DateMaths/Digit.h" afterPath="$PROJECT_DIR$/DateMaths/Digit.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DateMaths/Base.lproj/Main.storyboard" afterPath="$PROJECT_DIR$/DateMaths/Base.lproj/Main.storyboard" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DateMaths.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/DateMaths.xcodeproj/project.pbxproj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DateMaths.iws" />
@@ -38,8 +43,8 @@
       <file leaf-file-name="DateMathsViewController.m" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DateMaths/DateMathsViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24042273" vertical-offset="871" max-vertical-offset="2210">
-              <caret line="81" column="22" selection-start-line="81" selection-start-column="16" selection-end-line="81" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.19418758" vertical-offset="360" max-vertical-offset="2379">
+              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding>
                 <element signature="e#0#2#0" expanded="true" />
                 <element signature="e#159#194#0" expanded="true" />
@@ -48,11 +53,31 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="ResultsCollectionViewDataSource.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DateMaths/ResultsCollectionViewDataSource.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="611">
+              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DateMaths/main.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="247">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="DateCellViewController.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DateMaths/Cells/DateCellViewController.h">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="377">
-              <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+              <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
               <folding>
                 <element signature="e#0#2#0" expanded="true" />
               </folding>
@@ -60,54 +85,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OperatorCellViewController.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DateMaths/Cells/OperatorCellViewController.h">
+      <file leaf-file-name="Digit.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DateMaths/Digit.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="299">
-              <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OperatorCellDelegate.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DateMaths/Cells/OperatorCellDelegate.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
-              <caret line="11" column="58" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OperatorCellViewController.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DateMaths/Cells/OperatorCellViewController.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="546">
-              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding>
-                <element signature="e#0#2#0" expanded="true" />
+                <element signature="e#112#145#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DateMathsViewModel.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DateMaths/DateMathsViewModel.m">
+      <file leaf-file-name="OperatorCollection.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DateMaths/OperatorCollection.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="481">
-              <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DateMathsViewModel.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DateMaths/DateMathsViewModel.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="234">
-              <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="559">
+              <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+              <folding>
+                <element signature="e#111#141#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -115,29 +112,43 @@
       <file leaf-file-name="DateMathsViewController.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DateMaths/DateMathsViewController.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
-              <caret line="17" column="68" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="68" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="260">
+              <caret line="20" column="68" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="68" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Operator.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DateMaths/Operator.h">
+      <file leaf-file-name="ResultsCollectionViewCell.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DateMaths/ResultsCollectionViewCell.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="247">
-              <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="169">
+              <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ResultsCellViewDelegate.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DateMaths/Cells/ResultsCellViewDelegate.h">
+      <file leaf-file-name="ResultsCollectionViewCell.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DateMaths/ResultsCollectionViewCell.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="208">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding>
+                <element signature="e#111#144#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResultsCollectionViewDataSource.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DateMaths/ResultsCollectionViewDataSource.h">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
-              <caret line="12" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#33#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -155,7 +166,6 @@
         <option value="$PROJECT_DIR$/DateMaths/DateMathsViewModel.m" />
         <option value="$PROJECT_DIR$/DateMaths/DigitView.h" />
         <option value="$PROJECT_DIR$/DateMaths/DigitView.m" />
-        <option value="$PROJECT_DIR$/DateMaths/Digit.h" />
         <option value="$PROJECT_DIR$/DateMaths/Digit.m" />
         <option value="$PROJECT_DIR$/DateMaths/DateCellViewController.h" />
         <option value="$PROJECT_DIR$/DateMaths/DigitCollection.h" />
@@ -179,7 +189,14 @@
         <option value="$PROJECT_DIR$/DateMaths/Cells/OperatorCellViewController.h" />
         <option value="$PROJECT_DIR$/DateMaths/Cells/OperatorCellDelegate.h" />
         <option value="$PROJECT_DIR$/DateMaths/Cells/OperatorCellViewController.m" />
+        <option value="$PROJECT_DIR$/DateMaths/ResultsCollectionViewCell.h" />
+        <option value="$PROJECT_DIR$/DateMaths/ResulsCollectionViewDataSource.m" />
+        <option value="$PROJECT_DIR$/DateMaths/Cell.h" />
+        <option value="$PROJECT_DIR$/DateMaths/Digit.h" />
+        <option value="$PROJECT_DIR$/DateMaths/ResulsCollectionViewDataSource.h" />
+        <option value="$PROJECT_DIR$/DateMaths/ResultsCollectionViewDataSource.h" />
         <option value="$PROJECT_DIR$/DateMaths/DateMathsViewController.m" />
+        <option value="$PROJECT_DIR$/DateMaths/ResultsCollectionViewDataSource.m" />
       </list>
     </option>
   </component>
@@ -364,7 +381,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32866243" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24946997" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2204947" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2204947" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299363" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -392,62 +409,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/DateMaths/Cells/OperatorCellViewController.m</url>
-          <line>28</line>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="23" />
+      <option name="time" value="29" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DateMaths/OperatorCollection.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="299" max-vertical-offset="598">
-          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
-          <folding>
-            <element signature="e#111#141#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DateMaths/Cells/OperatorCellViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="286" max-vertical-offset="403">
-          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#2#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DateMaths/Cells/OperatorCellViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="325">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DateMaths/Operator.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="143" max-vertical-offset="377">
-          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DateMaths/Operator.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="156" max-vertical-offset="286">
-          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DateMaths/DateMathsViewController.m">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
@@ -601,25 +567,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DateMaths/main.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSString.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5135">
           <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DateMaths/Digit.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -694,16 +645,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DateMaths/OperatorCollection.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="26" max-vertical-offset="559">
-          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
-          <folding>
-            <element signature="e#111#141#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DateMaths/Operator.m">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="338">
@@ -733,17 +674,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="546">
           <caret line="36" column="1" selection-start-line="28" selection-start-column="2" selection-end-line="36" selection-end-column="1" />
           <folding>
-            <element signature="e#0#2#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DateMaths/Cells/DateCellViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="377">
-          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#2#0" expanded="true" />
+            <element signature="e#0#2#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -788,14 +719,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DateMaths/DateMathsViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
-          <caret line="17" column="68" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DateMaths/Operator.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="247">
@@ -806,18 +729,108 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DateMaths/Cells/OperatorCellViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="103" max-vertical-offset="546">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="546">
+          <caret line="34" column="1" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
           <folding>
             <element signature="e#0#2#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/DateMaths/Cell.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="757">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DateMaths/Digit.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="e#112#145#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DateMaths/Cells/DateCellViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="377">
+          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#2#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DateMaths/ResultsCollectionViewCell.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="208">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="e#111#144#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DateMaths/ResultsCollectionViewCell.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="169">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DateMaths/ResultsCollectionViewDataSource.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DateMaths/OperatorCollection.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="26" max-vertical-offset="559">
+          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+          <folding>
+            <element signature="e#111#141#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DateMaths/DateMathsViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="39" max-vertical-offset="260">
+          <caret line="20" column="68" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DateMaths/main.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="247">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DateMaths/ResultsCollectionViewDataSource.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="611">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DateMaths/DateMathsViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24042273" vertical-offset="871" max-vertical-offset="2210">
-          <caret line="81" column="22" selection-start-line="81" selection-start-column="16" selection-end-line="81" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.19418758" vertical-offset="360" max-vertical-offset="2379">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding>
             <element signature="e#0#2#0" expanded="true" />
             <element signature="e#159#194#0" expanded="true" />

@@ -11,10 +11,13 @@
 #import "ResultsCellViewDelegate.h"
 #import "OperatorCellDelegate.h"
 
-@interface DateMathsViewController : UIViewController<DateMathsViewDelegate, ResultsCellViewDelegate, OperatorCellDelegate>
+@class ResultsCollectionViewDataSource;
+
+@interface DateMathsViewController : UIViewController<DateMathsViewDelegate, ResultsCellViewDelegate, OperatorCellDelegate, UICollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *dateDigitsScrollView;
 @property (weak, nonatomic) IBOutlet UIScrollView *operatorScrollView;
 @property (weak, nonatomic) IBOutlet UIScrollView *resultsScrollView;
+@property (weak, nonatomic) IBOutlet UICollectionView *resultsCollectionView;
 
 @end

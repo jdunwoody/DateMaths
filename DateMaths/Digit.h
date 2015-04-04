@@ -4,9 +4,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Cell.h"
 
-
-@interface Digit : NSObject
+@interface Digit : NSObject<Cell>
 @property (nonatomic, readonly) double digit;
 - (instancetype)initWithDigit:(double)digit;
 @end

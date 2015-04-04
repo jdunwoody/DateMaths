@@ -15,6 +15,7 @@
 #import "Operator.h"
 #import "OperatorCollection.h"
 #import "OperatorCellViewController.h"
+#import "ResultsCollectionViewDataSource.h"
 
 @interface DateMathsViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *digitLabel;
@@ -24,6 +25,7 @@
 
 @property (nonatomic, strong) DigitCollection *digitCollection;
 @property (nonatomic, strong) OperatorCollection *operatorCollection;
+@property (nonatomic, strong) ResultsCollectionViewDataSource *resultsCollectionViewDataSource;
 @end
 
 @implementation DateMathsViewController
@@ -34,6 +36,10 @@
 
     self.digitCollection = [[DigitCollection alloc] initWithDate:[NSDate date]];
     self.operatorCollection = [[OperatorCollection alloc] init];
+
+    self.resultsCollectionViewDataSource = [[ResultsCollectionViewDataSource alloc] init];
+    self.resultsCollectionView.dataSource = self.resultsCollectionViewDataSource;
+    self.resultsCollectionView.delegate = self;
 
     [self.dateDigitsScrollView.layer addBlackBorder];
     [self.operatorScrollView.layer addBlackBorder];
@@ -84,7 +90,7 @@
         operatorCellViewController.view.frame = CGRectMake(currentContentWidth, 0.0f, width, height);
 
         currentContentWidth += width;
-    };
+    }
 
     self.operatorScrollView.contentSize = CGSizeMake(currentContentWidth, self.operatorScrollView.frame.size.height);
 }
@@ -106,7 +112,7 @@
 
         width += dateCellViewController.view.bounds.size.width;
         height = dateCellViewController.view.bounds.size.height;
-    };
+    }
 
     self.dateDigitsScrollView.contentSize = CGSizeMake(width, height);
 }
@@ -121,6 +127,13 @@
 
     dateCellViewController.used = YES;
 
+    [self addToResultsScrollView:dateCellViewController];
+    [self.resultsCollectionViewDataSource addDigit:dateCellViewController.digit];
+    [self.resultsCollectionView reloadData];
+}
+
+- (void)addToResultsScrollView:(DateCellViewController *)dateCellViewController
+{
     ResultsCellViewController *resultsCellViewController = [[ResultsCellViewController alloc] initWithNibName:@"ResultsCellViewController" bundle:[NSBundle mainBundle]];
 
     [self.resultsScrollView addSubview:resultsCellViewController.view];

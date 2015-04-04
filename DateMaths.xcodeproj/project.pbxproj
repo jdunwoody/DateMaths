@@ -14,7 +14,9 @@
 		914CB6631C2F1FAD9401E283 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 914CBB52F83F3C1DAC8B6625 /* Main.storyboard */; };
 		914CB829FA4F1B405DBAC68F /* Operator.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CBB4FC5CC8AF490F8C7D7 /* Operator.m */; };
 		914CBA5C037D61EFAE1DB001 /* CALayer+NewCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CBF0DCA8CC6E6EDFE659A /* CALayer+NewCategory.m */; };
+		914CBB15F093CCA67FEB163D /* ResultsCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB825CD98CCA1B4807C80 /* ResultsCollectionViewDataSource.m */; };
 		914CBB2005A6995428799172 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB479BAD5699ED9B7C2FA /* AppDelegate.m */; };
+		914CBC8DD36BB2BB4C9925D5 /* ResultsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB00225B86F58B8E9DDD2 /* ResultsCollectionViewCell.m */; };
 		914CBCC3B96D5CA79BEE8C77 /* DateMathsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CBA329EF88E051638C3E2 /* DateMathsViewModel.m */; };
 		914CBD7FCD50F049842EDC89 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 914CB9D3C69619BA9B98BB48 /* Images.xcassets */; };
 		914CBF176BC1052841FFB9D1 /* DateMathsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB50977B4279E38952DA1 /* DateMathsTests.m */; };
@@ -39,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		914CB00225B86F58B8E9DDD2 /* ResultsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsCollectionViewCell.m; sourceTree = "<group>"; };
 		914CB002441A5C2F3C11FBF7 /* DigitCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DigitCollection.m; sourceTree = "<group>"; };
 		914CB04F81F03B4475E8AAE0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		914CB0700106B8A8C8F342B4 /* Operator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Operator.h; sourceTree = "<group>"; };
@@ -46,13 +49,17 @@
 		914CB1120D5FDF945F364A6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		914CB1BC285DED776267516E /* DateMathsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DateMathsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		914CB23BB76D29EF686EF388 /* OperatorCellDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperatorCellDelegate.h; sourceTree = "<group>"; };
+		914CB39403D9213F00A48F59 /* ResultsCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsCollectionViewDataSource.h; sourceTree = "<group>"; };
 		914CB3D91A7F0934FAF71BC5 /* Digit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Digit.h; sourceTree = "<group>"; };
 		914CB479BAD5699ED9B7C2FA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		914CB50977B4279E38952DA1 /* DateMathsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateMathsTests.m; sourceTree = "<group>"; };
 		914CB54EA3F6E6AABF8ED12E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		914CB617A680D7BFA7DA0596 /* DigitCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DigitCollection.h; sourceTree = "<group>"; };
 		914CB6375BE3E96890A1CF32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		914CB7F71ECE5F0052D94EBB /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
+		914CB825CD98CCA1B4807C80 /* ResultsCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsCollectionViewDataSource.m; sourceTree = "<group>"; };
 		914CB86A2BA424D049C9CD24 /* Digit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Digit.m; sourceTree = "<group>"; };
+		914CB8970D544B93903FFBAD /* ResultsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsCollectionViewCell.h; sourceTree = "<group>"; };
 		914CB8A696E0C0265376F126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		914CB9D3C69619BA9B98BB48 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		914CBA329EF88E051638C3E2 /* DateMathsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateMathsViewModel.m; sourceTree = "<group>"; };
@@ -164,6 +171,11 @@
 				914CB0700106B8A8C8F342B4 /* Operator.h */,
 				914CBF9599D355C4D331DEC9 /* OperatorCollection.m */,
 				914CBCB103C20492A80FAA0A /* OperatorCollection.h */,
+				914CB825CD98CCA1B4807C80 /* ResultsCollectionViewDataSource.m */,
+				914CB39403D9213F00A48F59 /* ResultsCollectionViewDataSource.h */,
+				914CB00225B86F58B8E9DDD2 /* ResultsCollectionViewCell.m */,
+				914CB8970D544B93903FFBAD /* ResultsCollectionViewCell.h */,
+				914CB7F71ECE5F0052D94EBB /* Cell.h */,
 			);
 			path = DateMaths;
 			sourceTree = "<group>";
@@ -291,6 +303,8 @@
 				9E7651021ACEB5400072D761 /* DateCellViewController.m in Sources */,
 				914CB829FA4F1B405DBAC68F /* Operator.m in Sources */,
 				914CB640AB30B8F16E5D475C /* OperatorCollection.m in Sources */,
+				914CBB15F093CCA67FEB163D /* ResultsCollectionViewDataSource.m in Sources */,
+				914CBC8DD36BB2BB4C9925D5 /* ResultsCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

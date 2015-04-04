@@ -2,10 +2,10 @@
 #import <UIKit/UIKit.h>
 
 @class Digit;
-@protocol Cell;
+@protocol Item;
 
 @interface ResultsCollectionViewDataSource : NSObject<UICollectionViewDataSource>
 
-- (void)addDigit:(id<Cell>)digit;
+- (void)addItem:(id<Item>)item;
 
 @end

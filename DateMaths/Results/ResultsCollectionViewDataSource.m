@@ -1,6 +1,6 @@
 #import "ResultsCollectionViewDataSource.h"
 #import "Digit.h"
-#import "ResultsCollectionViewCell.h"
+#import "SimpleCollectionViewCell.h"
 
 @interface ResultsCollectionViewDataSource ()
 @property (nonatomic, strong) NSMutableArray *items;
@@ -20,11 +20,6 @@
     return self;
 }
 
-- (void)addDigit:(id<Cell>)digit
-{
-    [self.items addObject:digit];
-}
-
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return [self.items count];
@@ -32,12 +27,18 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    ResultsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-    Digit *digit = self.items[(NSUInteger)indexPath.row];
+    SimpleCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"simpleCell" forIndexPath:indexPath];
+    id<Item> item = self.items[(NSUInteger)indexPath.row];
 
-    cell.label.text = [NSString stringWithFormat:@"%li", (long)digit.digit];
-
+    cell.label.text = item.value;
+    cell.backgroundColor = [UIColor whiteColor];
+    cell.label.textColor = [UIColor blackColor];
     return cell;
+}
+
+- (void)addItem:(id<Item>)item
+{
+    [self.items addObject:item];
 }
 
 @end

@@ -7,4 +7,6 @@
 
 
 @interface OperatorCollection : NSObject<NSFastEnumeration>
+- (NSInteger)count;
+- (id)objectAtIndexedSubscript:(NSInteger)idx;
 @end

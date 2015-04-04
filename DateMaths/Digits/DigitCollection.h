@@ -5,10 +5,15 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol Item;
+
 
 @interface DigitCollection : NSObject<NSFastEnumeration>
 
 - (instancetype)init __unavailable;
 - (instancetype)initWithDate:(NSDate *)date;
 
+- (void)addObject:(id<Item>)digit;
+- (NSInteger)count;
+- (id)objectAtIndexedSubscript:(NSInteger)idx;
 @end

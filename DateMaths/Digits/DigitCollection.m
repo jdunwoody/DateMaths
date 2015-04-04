@@ -5,6 +5,7 @@
 
 #import "DigitCollection.h"
 #import "Digit.h"
+#import "Item.h"
 
 
 @interface DigitCollection ()
@@ -57,4 +58,18 @@
     return [self.digits countByEnumeratingWithState:state objects:buffer count:len];
 }
 
+- (void)addObject:(id<Item>)digit
+{
+    [self.digits addObject:digit];
+}
+
+- (NSInteger)count
+{
+    return [self.digits count];
+}
+
+- (id)objectAtIndexedSubscript:(NSInteger)idx
+{
+    return self.digits[(NSUInteger)idx];
+}
 @end

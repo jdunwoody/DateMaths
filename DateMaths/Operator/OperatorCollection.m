@@ -37,4 +37,13 @@
     return [self.data countByEnumeratingWithState:state objects:buffer count:len];
 }
 
+- (NSInteger)count
+{
+    return [self.data count];
+}
+
+- (id)objectAtIndexedSubscript:(NSInteger)idx
+{
+    return self.data[(NSUInteger)idx];
+}
 @end

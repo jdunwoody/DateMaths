@@ -4,11 +4,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Item.h"
 
 
-@interface Operator : NSObject
+@interface Operator : NSObject<Item>
 
 @property (nonatomic, copy) NSString *symbol;
+@property (strong, nonatomic) NSString *value;
 
 - (instancetype)init __unavailable;
 - (id)initWithSymbol:(NSString *)string;

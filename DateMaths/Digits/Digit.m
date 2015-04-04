@@ -21,4 +21,10 @@
 
     return self;
 }
+
+- (NSString *)value
+{
+    return [NSString stringWithFormat:@"%li", (long)self.digit];
+}
+
 @end

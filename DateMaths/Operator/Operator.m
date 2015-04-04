@@ -20,4 +20,9 @@
     return self;
 }
 
+- (NSString *)value
+{
+    return self.symbol;
+}
+
 @end

@@ -3,8 +3,10 @@
 // Copyright (c) 2015 ___FULLUSERNAME___. All rights reserved.
 //
 
-#import "ResultsCollectionViewCell.h"
+#import <Foundation/Foundation.h>
 
+@protocol Item<NSObject>
 
-@implementation ResultsCollectionViewCell
+@property (strong, nonatomic) NSString *value;
+
 @end

@@ -4,9 +4,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Item.h"
+#import "DataItem.h"
 
-@interface Digit : NSObject<Item>
+@interface Digit : NSObject<DataItem>
 @property (nonatomic, readonly) double digit;
 @property (strong, nonatomic) NSString *value;
 

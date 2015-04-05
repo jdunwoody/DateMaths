@@ -5,7 +5,7 @@
 
 #import "DigitCollection.h"
 #import "Digit.h"
-#import "Item.h"
+#import "DataItem.h"
 
 
 @interface DigitCollection ()
@@ -58,7 +58,7 @@
     return [self.digits countByEnumeratingWithState:state objects:buffer count:len];
 }
 
-- (void)addObject:(id<Item>)digit
+- (void)addObject:(id<DataItem>)digit
 {
     [self.digits addObject:digit];
 }

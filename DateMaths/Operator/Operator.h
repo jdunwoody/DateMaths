@@ -4,10 +4,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Item.h"
+#import "DataItem.h"
 
 
-@interface Operator : NSObject<Item>
+@interface Operator : NSObject<DataItem>
 
 @property (nonatomic, copy) NSString *symbol;
 @property (strong, nonatomic) NSString *value;

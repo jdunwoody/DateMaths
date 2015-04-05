@@ -13,7 +13,6 @@
 #import "DigitCollectionDataSource.h"
 #import "OperatorCollectionDataSource.h"
 #import "ResultsCollectionViewDataSource.h"
-#import "SimpleCollectionViewCell.h"
 
 @interface DateMathsViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *digitLabel;
@@ -38,20 +37,22 @@
     self.digitCollection = [[DigitCollection alloc] initWithDate:[NSDate date]];
     self.operatorCollection = [[OperatorCollection alloc] init];
 
+    UINib *nib = [UINib nibWithNibName:@"SimpleCollectionViewCell" bundle:[NSBundle mainBundle]];
+
     self.digitCollectionDataSource = [[DigitCollectionDataSource alloc] initWithDigitCollection:self.digitCollection];
     self.digitCollectionView.dataSource = self.digitCollectionDataSource;
     self.digitCollectionView.delegate = self;
-    [self.digitCollectionView registerClass:[SimpleCollectionViewCell class] forCellWithReuseIdentifier:@"simpleCell"];
+    [self.digitCollectionView registerNib:nib forCellWithReuseIdentifier:@"simpleCell"];
 
     self.operatorCollectionDataSource = [[OperatorCollectionDataSource alloc] initWithOperatorCollection:self.operatorCollection];
     self.operatorCollectionView.dataSource = self.operatorCollectionDataSource;
     self.operatorCollectionView.delegate = self;
-    [self.operatorCollectionView registerClass:[SimpleCollectionViewCell class] forCellWithReuseIdentifier:@"simpleCell"];
+    [self.operatorCollectionView registerNib:nib forCellWithReuseIdentifier:@"simpleCell"];
 
     self.resultsCollectionViewDataSource = [[ResultsCollectionViewDataSource alloc] init];
     self.resultsCollectionView.dataSource = self.resultsCollectionViewDataSource;
     self.resultsCollectionView.delegate = self;
-    [self.resultsCollectionView registerClass:[SimpleCollectionViewCell class] forCellWithReuseIdentifier:@"simpleCell"];
+    [self.resultsCollectionView registerNib:nib forCellWithReuseIdentifier:@"simpleCell"];
 
     [self.digitCollectionView.layer addBlackBorder];
     [self.operatorCollectionView.layer addBlackBorder];

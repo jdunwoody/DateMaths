@@ -53,7 +53,7 @@
 		914CB50977B4279E38952DA1 /* DateMathsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateMathsTests.m; sourceTree = "<group>"; };
 		914CB54EA3F6E6AABF8ED12E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		914CB6375BE3E96890A1CF32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
-		914CB7F71ECE5F0052D94EBB /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		914CB7F71ECE5F0052D94EBB /* DataItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataItem.h; sourceTree = "<group>"; };
 		914CB8A696E0C0265376F126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		914CB9D3C69619BA9B98BB48 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		914CBA329EF88E051638C3E2 /* DateMathsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateMathsViewModel.m; sourceTree = "<group>"; };
@@ -162,7 +162,7 @@
 				914CB479BAD5699ED9B7C2FA /* AppDelegate.m */,
 				914CBAA50A5591BB3AD060B6 /* CALayer+NewCategory.h */,
 				914CBF0DCA8CC6E6EDFE659A /* CALayer+NewCategory.m */,
-				914CB7F71ECE5F0052D94EBB /* Item.h */,
+				914CB7F71ECE5F0052D94EBB /* DataItem.h */,
 				9E7650F61ACEB5400072D761 /* Cells */,
 				9E89CC101AC7F58B0086C816 /* DateMathsViewController.h */,
 				9E89CC111AC7F58B0086C816 /* DateMathsViewController.m */,

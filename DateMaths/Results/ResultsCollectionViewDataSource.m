@@ -20,25 +20,24 @@
     return self;
 }
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
-{
-    return [self.items count];
-}
-
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     SimpleCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"simpleCell" forIndexPath:indexPath];
-    id<Item> item = self.items[(NSUInteger)indexPath.row];
+    id<DataItem> dataItem = self.items[(NSUInteger)indexPath.row];
 
-    cell.label.text = item.value;
-    cell.backgroundColor = [UIColor whiteColor];
-    cell.label.textColor = [UIColor blackColor];
+    cell.label.text = dataItem.value;
+
     return cell;
 }
 
-- (void)addItem:(id<Item>)item
+- (void)addItem:(id<DataItem>)item
 {
     [self.items addObject:item];
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return [self.items count];
 }
 
 @end

@@ -4,7 +4,7 @@
 //
 
 #import "DigitCollectionDataSource.h"
-#import "Item.h"
+#import "DataItem.h"
 #import "Digit.h"
 #import "DigitCollection.h"
 #import "SimpleCollectionViewCell.h"
@@ -36,14 +36,7 @@
 {
     SimpleCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"simpleCell" forIndexPath:indexPath];
     Digit *digit = self.collection[(NSUInteger)indexPath.row];
-    UILabel *label = [[UILabel alloc] init];
-    cell.label = label;
-    [cell.contentView addSubview:label];
-
-    NSString *text = [NSString stringWithFormat:@"%li", (long)digit.digit];
-    cell.label.text = text;
-    cell.label.textColor = [UIColor blackColor];
-    cell.backgroundColor = [UIColor whiteColor];
+    cell.label.text = digit.value;
 
     return cell;
 }

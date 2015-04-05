@@ -10,4 +10,12 @@
 
 @implementation SimpleCollectionViewCell
 
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+
+    self.label.textColor = [UIColor blackColor];
+    self.backgroundColor = [UIColor whiteColor];
+}
+
 @end

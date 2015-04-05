@@ -5,7 +5,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol Item<NSObject>
+@protocol DataItem<NSObject>
 
 @property (strong, nonatomic) NSString *value;
 

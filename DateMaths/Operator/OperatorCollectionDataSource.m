@@ -6,7 +6,7 @@
 #import "OperatorCollectionDataSource.h"
 #import "OperatorCollection.h"
 #import "SimpleCollectionViewCell.h"
-#import "Item.h"
+#import "DataItem.h"
 
 
 @interface OperatorCollectionDataSource ()
@@ -35,11 +35,9 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     SimpleCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"simpleCell" forIndexPath:indexPath];
-    id<Item> item = self.collection[(NSUInteger)indexPath.row];
+    id<DataItem> item = self.collection[(NSUInteger)indexPath.row];
 
     cell.label.text =  item.value;
-    cell.backgroundColor = [UIColor whiteColor];
-    cell.label.textColor = [UIColor blackColor];
 
     return cell;
 }

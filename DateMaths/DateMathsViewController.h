@@ -7,9 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DateMathsViewDelegate.h"
-#import "ResultsCellViewDelegate.h"
-#import "OperatorCellDelegate.h"
 #import "CollectionDataSourceDelegate.h"
 
 @class ResultsCollectionViewDataSource;

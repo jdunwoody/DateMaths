@@ -19,12 +19,6 @@
 		9E00B5001AD0026700049AB1 /* SimpleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E00B4FE1AD0026700049AB1 /* SimpleCollectionViewCell.m */; };
 		9E00B5011AD0026700049AB1 /* SimpleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E00B4FF1AD0026700049AB1 /* SimpleCollectionViewCell.xib */; };
 		9E40C3C91AD239D700A31F2C /* CompletedCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E40C3C81AD239D700A31F2C /* CompletedCollectionViewDataSource.m */; };
-		9E5F76C41AD236E0001D69F5 /* DateCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5F76A01AD236E0001D69F5 /* DateCellViewController.m */; };
-		9E5F76C51AD236E0001D69F5 /* DateCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E5F76A11AD236E0001D69F5 /* DateCellViewController.xib */; };
-		9E5F76C61AD236E0001D69F5 /* OperatorCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5F76A51AD236E0001D69F5 /* OperatorCellViewController.m */; };
-		9E5F76C71AD236E0001D69F5 /* OperatorCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E5F76A61AD236E0001D69F5 /* OperatorCellViewController.xib */; };
-		9E5F76C81AD236E0001D69F5 /* ResultsCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5F76A81AD236E0001D69F5 /* ResultsCellViewController.m */; };
-		9E5F76C91AD236E0001D69F5 /* ResultsCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E5F76A91AD236E0001D69F5 /* ResultsCellViewController.xib */; };
 		9E5F76CC1AD236E0001D69F5 /* CompletedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5F76B11AD236E0001D69F5 /* CompletedItem.m */; };
 		9E5F76CD1AD236E0001D69F5 /* Digit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5F76B51AD236E0001D69F5 /* Digit.m */; };
 		9E5F76CE1AD236E0001D69F5 /* DigitCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5F76B71AD236E0001D69F5 /* DigitCollection.m */; };
@@ -72,18 +66,6 @@
 		9E00B4FF1AD0026700049AB1 /* SimpleCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleCollectionViewCell.xib; sourceTree = "<group>"; };
 		9E40C3C71AD239D700A31F2C /* CompletedCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompletedCollectionViewDataSource.h; sourceTree = "<group>"; };
 		9E40C3C81AD239D700A31F2C /* CompletedCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompletedCollectionViewDataSource.m; sourceTree = "<group>"; };
-		9E5F769F1AD236E0001D69F5 /* DateCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateCellViewController.h; sourceTree = "<group>"; };
-		9E5F76A01AD236E0001D69F5 /* DateCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateCellViewController.m; sourceTree = "<group>"; };
-		9E5F76A11AD236E0001D69F5 /* DateCellViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateCellViewController.xib; sourceTree = "<group>"; };
-		9E5F76A21AD236E0001D69F5 /* DateMathsViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateMathsViewDelegate.h; sourceTree = "<group>"; };
-		9E5F76A31AD236E0001D69F5 /* OperatorCellDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperatorCellDelegate.h; sourceTree = "<group>"; };
-		9E5F76A41AD236E0001D69F5 /* OperatorCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperatorCellViewController.h; sourceTree = "<group>"; };
-		9E5F76A51AD236E0001D69F5 /* OperatorCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperatorCellViewController.m; sourceTree = "<group>"; };
-		9E5F76A61AD236E0001D69F5 /* OperatorCellViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OperatorCellViewController.xib; sourceTree = "<group>"; };
-		9E5F76A71AD236E0001D69F5 /* ResultsCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsCellViewController.h; sourceTree = "<group>"; };
-		9E5F76A81AD236E0001D69F5 /* ResultsCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsCellViewController.m; sourceTree = "<group>"; };
-		9E5F76A91AD236E0001D69F5 /* ResultsCellViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultsCellViewController.xib; sourceTree = "<group>"; };
-		9E5F76AA1AD236E0001D69F5 /* ResultsCellViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsCellViewDelegate.h; sourceTree = "<group>"; };
 		9E5F76B01AD236E0001D69F5 /* CompletedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompletedItem.h; sourceTree = "<group>"; };
 		9E5F76B11AD236E0001D69F5 /* CompletedItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompletedItem.m; sourceTree = "<group>"; };
 		9E5F76B31AD236E0001D69F5 /* CollectionDataSourceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionDataSourceDelegate.h; sourceTree = "<group>"; };
@@ -170,7 +152,6 @@
 		914CBC5C97790867B37B96F4 /* DateMaths */ = {
 			isa = PBXGroup;
 			children = (
-				9E5F769E1AD236E0001D69F5 /* Cells */,
 				9E5F76AB1AD236E0001D69F5 /* Completed */,
 				9E5F76B21AD236E0001D69F5 /* Digits */,
 				9E5F76BA1AD236E0001D69F5 /* Operator */,
@@ -195,25 +176,6 @@
 				914CB8ECE2DC34F51FC0FB4F /* Supporting Files */,
 			);
 			path = DateMaths;
-			sourceTree = "<group>";
-		};
-		9E5F769E1AD236E0001D69F5 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				9E5F769F1AD236E0001D69F5 /* DateCellViewController.h */,
-				9E5F76A01AD236E0001D69F5 /* DateCellViewController.m */,
-				9E5F76A11AD236E0001D69F5 /* DateCellViewController.xib */,
-				9E5F76A21AD236E0001D69F5 /* DateMathsViewDelegate.h */,
-				9E5F76A31AD236E0001D69F5 /* OperatorCellDelegate.h */,
-				9E5F76A41AD236E0001D69F5 /* OperatorCellViewController.h */,
-				9E5F76A51AD236E0001D69F5 /* OperatorCellViewController.m */,
-				9E5F76A61AD236E0001D69F5 /* OperatorCellViewController.xib */,
-				9E5F76A71AD236E0001D69F5 /* ResultsCellViewController.h */,
-				9E5F76A81AD236E0001D69F5 /* ResultsCellViewController.m */,
-				9E5F76A91AD236E0001D69F5 /* ResultsCellViewController.xib */,
-				9E5F76AA1AD236E0001D69F5 /* ResultsCellViewDelegate.h */,
-			);
-			path = Cells;
 			sourceTree = "<group>";
 		};
 		9E5F76AB1AD236E0001D69F5 /* Completed */ = {
@@ -342,12 +304,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E5F76C91AD236E0001D69F5 /* ResultsCellViewController.xib in Resources */,
 				9E00B5011AD0026700049AB1 /* SimpleCollectionViewCell.xib in Resources */,
 				914CBD7FCD50F049842EDC89 /* Images.xcassets in Resources */,
 				914CB12CD7B79FA6332C1BFB /* LaunchScreen.xib in Resources */,
-				9E5F76C51AD236E0001D69F5 /* DateCellViewController.xib in Resources */,
-				9E5F76C71AD236E0001D69F5 /* OperatorCellViewController.xib in Resources */,
 				914CB6631C2F1FAD9401E283 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,15 +326,12 @@
 				9E89CC121AC7F58B0086C816 /* DateMathsViewController.m in Sources */,
 				9E40C3C91AD239D700A31F2C /* CompletedCollectionViewDataSource.m in Sources */,
 				9E5F76CF1AD236E0001D69F5 /* DigitCollectionDataSource.m in Sources */,
-				9E5F76C81AD236E0001D69F5 /* ResultsCellViewController.m in Sources */,
 				9E5F76CE1AD236E0001D69F5 /* DigitCollection.m in Sources */,
 				914CBCC3B96D5CA79BEE8C77 /* DateMathsViewModel.m in Sources */,
 				914CBA5C037D61EFAE1DB001 /* CALayer+NewCategory.m in Sources */,
-				9E5F76C61AD236E0001D69F5 /* OperatorCellViewController.m in Sources */,
 				9E5F76D21AD236E0001D69F5 /* OperatorCollectionDataSource.m in Sources */,
 				9E00B5001AD0026700049AB1 /* SimpleCollectionViewCell.m in Sources */,
 				9E5F76D11AD236E0001D69F5 /* OperatorCollection.m in Sources */,
-				9E5F76C41AD236E0001D69F5 /* DateCellViewController.m in Sources */,
 				9E5F76D01AD236E0001D69F5 /* Operator.m in Sources */,
 				914CBD0733831C5B835E92EF /* CompletedCollection.m in Sources */,
 			);

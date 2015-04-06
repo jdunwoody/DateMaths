@@ -6,6 +6,7 @@
 #import "ResultsCollectionViewDataSource.h"
 #import "Digit.h"
 #import "CompletedCollectionViewDataSource.h"
+#import "CompletedCollection.h"
 
 @interface DateMathsViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *digitLabel;
@@ -51,7 +52,8 @@
     [self.resultsCollectionView registerNib:nib forCellWithReuseIdentifier:@"simpleCell"];
 
     //Completed
-    self.completedCollectionViewDataSource = [[CompletedCollectionViewDataSource alloc] init];
+    CompletedCollection *completedCollection = [[CompletedCollection alloc] init];
+    self.completedCollectionViewDataSource = [[CompletedCollectionViewDataSource alloc] initWithOperatorCollection:completedCollection];
     self.completedCollectionView.dataSource = self.completedCollectionViewDataSource;
     self.completedCollectionView.delegate = self;
     [self.completedCollectionView registerNib:nib forCellWithReuseIdentifier:@"simpleCell"];

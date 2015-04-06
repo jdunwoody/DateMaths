@@ -6,6 +6,11 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+@class CompletedCollection;
+
 @interface CompletedCollectionViewDataSource : NSObject<UICollectionViewDataSource>
+
+- (instancetype)init __unavailable;
+- (instancetype)initWithOperatorCollection:(CompletedCollection *)collection;
 
 @end

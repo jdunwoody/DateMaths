@@ -4,6 +4,7 @@
 //
 
 #import "CompletedCollection.h"
+#import "CompletedItem.h"
 
 
 @interface CompletedCollection ()
@@ -21,7 +22,7 @@
 
     NSMutableArray *mutableData = [[NSMutableArray alloc] init];
     for (int i = 1; i <= 20; i++) {
-        [mutableData addObject:@(i)];
+        [mutableData addObject:[[CompletedItem alloc] initWithNumber:i]];
     }
 
     _data = mutableData;

@@ -40,4 +40,14 @@
     return [self.items count];
 }
 
+- (id)objectAtIndexedSubscript:(NSInteger)idx
+{
+    return self.items[(NSUInteger)idx];
+}
+
+- (void)removeItem:(id<DataItem>)resultItem
+{
+    [self.items removeObject:resultItem];
+}
+
 @end

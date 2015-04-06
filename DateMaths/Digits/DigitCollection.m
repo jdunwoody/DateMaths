@@ -5,7 +5,6 @@
 
 #import "DigitCollection.h"
 #import "Digit.h"
-#import "DataItem.h"
 
 
 @interface DigitCollection ()
@@ -39,7 +38,6 @@
     return formattedDate;
 }
 
-
 - (NSMutableArray *)buildDigitsFromString:(NSString *)formattedDate
 {
     NSString *digitString = [[formattedDate componentsSeparatedByCharactersInSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]] componentsJoinedByString:@""];
@@ -72,4 +70,10 @@
 {
     return self.digits[(NSUInteger)idx];
 }
+
+- (NSUInteger)indexOfItem:(id<DataItem>)item
+{
+    return [self.digits indexOfObject:item];
+}
+
 @end

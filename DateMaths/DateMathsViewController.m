@@ -57,7 +57,6 @@
     self.completedCollectionView.dataSource = self.completedCollectionViewDataSource;
     self.completedCollectionView.delegate = self;
     [self.completedCollectionView registerNib:nib forCellWithReuseIdentifier:@"simpleCell"];
-
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
@@ -78,7 +77,16 @@
         [self.operatorCollectionView reloadItemsAtIndexPaths:@[indexPath]];
 
     } else if (collectionView == self.resultsCollectionView) {
+        id<DataItem> resultItem = self.resultsCollectionViewDataSource[indexPath.row];
 
+        if ([resultItem isKindOfClass:[Digit class]]) {
+            Digit *digit = resultItem;
+            digit.used = FALSE;
+            [self.digitCollectionView reloadData];
+        }
+
+        [self.resultsCollectionViewDataSource removeItem:resultItem];
+        [self.resultsCollectionView reloadData];
     }
 }
 

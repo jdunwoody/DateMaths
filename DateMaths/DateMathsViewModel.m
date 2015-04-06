@@ -22,7 +22,6 @@
 
     _dateFormatter = [[NSDateFormatter alloc] init];
     _dateFormatter.dateFormat = @"dd/MM/YYYY";
-//    _dateFormatter.dateStyle = NSDateFormatterShortStyle;
 
     _formattedDate = [self.dateFormatter stringFromDate:date];
 

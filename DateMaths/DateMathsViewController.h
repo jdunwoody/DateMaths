@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *digitCollectionView;
 @property (weak, nonatomic) IBOutlet UICollectionView *operatorCollectionView;
 @property (weak, nonatomic) IBOutlet UICollectionView *resultsCollectionView;
+@property (weak, nonatomic) IBOutlet UICollectionView *completedCollectionView;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *digitHeightLayoutConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *operatorHeightLayoutConstraint;

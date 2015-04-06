@@ -12,24 +12,27 @@
 		914CBA5C037D61EFAE1DB001 /* CALayer+NewCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CBF0DCA8CC6E6EDFE659A /* CALayer+NewCategory.m */; };
 		914CBB2005A6995428799172 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB479BAD5699ED9B7C2FA /* AppDelegate.m */; };
 		914CBCC3B96D5CA79BEE8C77 /* DateMathsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CBA329EF88E051638C3E2 /* DateMathsViewModel.m */; };
+		914CBD0733831C5B835E92EF /* CompletedCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB0AB8CF42B17FA193E71 /* CompletedCollection.m */; };
 		914CBD7FCD50F049842EDC89 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 914CB9D3C69619BA9B98BB48 /* Images.xcassets */; };
 		914CBF176BC1052841FFB9D1 /* DateMathsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB50977B4279E38952DA1 /* DateMathsTests.m */; };
 		914CBF27319C07554EC7C084 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB04F81F03B4475E8AAE0 /* main.m */; };
 		9E00B5001AD0026700049AB1 /* SimpleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E00B4FE1AD0026700049AB1 /* SimpleCollectionViewCell.m */; };
 		9E00B5011AD0026700049AB1 /* SimpleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E00B4FF1AD0026700049AB1 /* SimpleCollectionViewCell.xib */; };
-		9E7651021ACEB5400072D761 /* DateCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E7650F81ACEB5400072D761 /* DateCellViewController.m */; };
-		9E7651031ACEB5400072D761 /* DateCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E7650F91ACEB5400072D761 /* DateCellViewController.xib */; };
-		9E7651041ACEB5400072D761 /* OperatorCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E7650FC1ACEB5400072D761 /* OperatorCellViewController.m */; };
-		9E7651051ACEB5400072D761 /* OperatorCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E7650FD1ACEB5400072D761 /* OperatorCellViewController.xib */; };
-		9E7651061ACEB5400072D761 /* ResultsCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E7650FF1ACEB5400072D761 /* ResultsCellViewController.m */; };
-		9E7651071ACEB5400072D761 /* ResultsCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E7651001ACEB5400072D761 /* ResultsCellViewController.xib */; };
-		9E87F0C31AD005D5001028A9 /* Digit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E87F0B01AD005D5001028A9 /* Digit.m */; };
-		9E87F0C41AD005D5001028A9 /* DigitCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E87F0B21AD005D5001028A9 /* DigitCollection.m */; };
-		9E87F0C51AD005D5001028A9 /* DigitCollectionDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E87F0B41AD005D5001028A9 /* DigitCollectionDataSource.m */; };
-		9E87F0C71AD005D5001028A9 /* Operator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E87F0B91AD005D5001028A9 /* Operator.m */; };
-		9E87F0C81AD005D5001028A9 /* OperatorCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E87F0BB1AD005D5001028A9 /* OperatorCollection.m */; };
-		9E87F0C91AD005D5001028A9 /* OperatorCollectionDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E87F0BD1AD005D5001028A9 /* OperatorCollectionDataSource.m */; };
-		9E87F0CB1AD005D5001028A9 /* ResultsCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E87F0C21AD005D5001028A9 /* ResultsCollectionViewDataSource.m */; };
+		9E40C3C91AD239D700A31F2C /* CompletedCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E40C3C81AD239D700A31F2C /* CompletedCollectionViewDataSource.m */; };
+		9E5F76C41AD236E0001D69F5 /* DateCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5F76A01AD236E0001D69F5 /* DateCellViewController.m */; };
+		9E5F76C51AD236E0001D69F5 /* DateCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E5F76A11AD236E0001D69F5 /* DateCellViewController.xib */; };
+		9E5F76C61AD236E0001D69F5 /* OperatorCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5F76A51AD236E0001D69F5 /* OperatorCellViewController.m */; };
+		9E5F76C71AD236E0001D69F5 /* OperatorCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E5F76A61AD236E0001D69F5 /* OperatorCellViewController.xib */; };
+		9E5F76C81AD236E0001D69F5 /* ResultsCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5F76A81AD236E0001D69F5 /* ResultsCellViewController.m */; };
+		9E5F76C91AD236E0001D69F5 /* ResultsCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E5F76A91AD236E0001D69F5 /* ResultsCellViewController.xib */; };
+		9E5F76CC1AD236E0001D69F5 /* CompletedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5F76B11AD236E0001D69F5 /* CompletedItem.m */; };
+		9E5F76CD1AD236E0001D69F5 /* Digit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5F76B51AD236E0001D69F5 /* Digit.m */; };
+		9E5F76CE1AD236E0001D69F5 /* DigitCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5F76B71AD236E0001D69F5 /* DigitCollection.m */; };
+		9E5F76CF1AD236E0001D69F5 /* DigitCollectionDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5F76B91AD236E0001D69F5 /* DigitCollectionDataSource.m */; };
+		9E5F76D01AD236E0001D69F5 /* Operator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5F76BC1AD236E0001D69F5 /* Operator.m */; };
+		9E5F76D11AD236E0001D69F5 /* OperatorCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5F76BE1AD236E0001D69F5 /* OperatorCollection.m */; };
+		9E5F76D21AD236E0001D69F5 /* OperatorCollectionDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5F76C01AD236E0001D69F5 /* OperatorCollectionDataSource.m */; };
+		9E5F76D31AD236E0001D69F5 /* ResultsCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5F76C31AD236E0001D69F5 /* ResultsCollectionViewDataSource.m */; };
 		9E89CC121AC7F58B0086C816 /* DateMathsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E89CC111AC7F58B0086C816 /* DateMathsViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -46,12 +49,14 @@
 /* Begin PBXFileReference section */
 		914CB04F81F03B4475E8AAE0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		914CB0A91F98BAB9285CBFFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		914CB0AB8CF42B17FA193E71 /* CompletedCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompletedCollection.m; sourceTree = "<group>"; };
 		914CB1120D5FDF945F364A6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		914CB1BC285DED776267516E /* DateMathsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DateMathsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		914CB23BB76D29EF686EF388 /* OperatorCellDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperatorCellDelegate.h; sourceTree = "<group>"; };
 		914CB479BAD5699ED9B7C2FA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		914CB50977B4279E38952DA1 /* DateMathsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateMathsTests.m; sourceTree = "<group>"; };
 		914CB54EA3F6E6AABF8ED12E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		914CB552AF226115249FE52E /* CompletedCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompletedCollection.h; sourceTree = "<group>"; };
+		914CB6201E3ED770072C3CBB /* CompletedItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CompletedItem.m; path = Completed/CompletedItem.m; sourceTree = "<group>"; };
 		914CB6375BE3E96890A1CF32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		914CB7F71ECE5F0052D94EBB /* DataItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataItem.h; sourceTree = "<group>"; };
 		914CB8A696E0C0265376F126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,37 +64,43 @@
 		914CBA329EF88E051638C3E2 /* DateMathsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateMathsViewModel.m; sourceTree = "<group>"; };
 		914CBAA50A5591BB3AD060B6 /* CALayer+NewCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+NewCategory.h"; sourceTree = "<group>"; };
 		914CBABF8458B64D6C56CCB5 /* DateMathsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateMathsViewModel.h; sourceTree = "<group>"; };
-		914CBB1593196CBEF7DC08AD /* CollectionDataSourceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionDataSourceDelegate.h; sourceTree = "<group>"; };
+		914CBC7825301962F8B48C7D /* CompletedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CompletedItem.h; path = Completed/CompletedItem.h; sourceTree = "<group>"; };
 		914CBD7B0D8FA667D1F3DFD3 /* DateMaths.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DateMaths.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		914CBF0DCA8CC6E6EDFE659A /* CALayer+NewCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+NewCategory.m"; sourceTree = "<group>"; };
 		9E00B4FD1AD0026700049AB1 /* SimpleCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleCollectionViewCell.h; sourceTree = "<group>"; };
 		9E00B4FE1AD0026700049AB1 /* SimpleCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleCollectionViewCell.m; sourceTree = "<group>"; };
 		9E00B4FF1AD0026700049AB1 /* SimpleCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleCollectionViewCell.xib; sourceTree = "<group>"; };
-		9E7650F71ACEB5400072D761 /* DateCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateCellViewController.h; sourceTree = "<group>"; };
-		9E7650F81ACEB5400072D761 /* DateCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateCellViewController.m; sourceTree = "<group>"; };
-		9E7650F91ACEB5400072D761 /* DateCellViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateCellViewController.xib; sourceTree = "<group>"; };
-		9E7650FA1ACEB5400072D761 /* DateMathsViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateMathsViewDelegate.h; sourceTree = "<group>"; };
-		9E7650FB1ACEB5400072D761 /* OperatorCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperatorCellViewController.h; sourceTree = "<group>"; };
-		9E7650FC1ACEB5400072D761 /* OperatorCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperatorCellViewController.m; sourceTree = "<group>"; };
-		9E7650FD1ACEB5400072D761 /* OperatorCellViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OperatorCellViewController.xib; sourceTree = "<group>"; };
-		9E7650FE1ACEB5400072D761 /* ResultsCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsCellViewController.h; sourceTree = "<group>"; };
-		9E7650FF1ACEB5400072D761 /* ResultsCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsCellViewController.m; sourceTree = "<group>"; };
-		9E7651001ACEB5400072D761 /* ResultsCellViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultsCellViewController.xib; sourceTree = "<group>"; };
-		9E7651011ACEB5400072D761 /* ResultsCellViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsCellViewDelegate.h; sourceTree = "<group>"; };
-		9E87F0AF1AD005D5001028A9 /* Digit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Digit.h; sourceTree = "<group>"; };
-		9E87F0B01AD005D5001028A9 /* Digit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Digit.m; sourceTree = "<group>"; };
-		9E87F0B11AD005D5001028A9 /* DigitCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DigitCollection.h; sourceTree = "<group>"; };
-		9E87F0B21AD005D5001028A9 /* DigitCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DigitCollection.m; sourceTree = "<group>"; };
-		9E87F0B31AD005D5001028A9 /* DigitCollectionDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DigitCollectionDataSource.h; sourceTree = "<group>"; };
-		9E87F0B41AD005D5001028A9 /* DigitCollectionDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DigitCollectionDataSource.m; sourceTree = "<group>"; };
-		9E87F0B81AD005D5001028A9 /* Operator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Operator.h; sourceTree = "<group>"; };
-		9E87F0B91AD005D5001028A9 /* Operator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Operator.m; sourceTree = "<group>"; };
-		9E87F0BA1AD005D5001028A9 /* OperatorCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperatorCollection.h; sourceTree = "<group>"; };
-		9E87F0BB1AD005D5001028A9 /* OperatorCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperatorCollection.m; sourceTree = "<group>"; };
-		9E87F0BC1AD005D5001028A9 /* OperatorCollectionDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperatorCollectionDataSource.h; sourceTree = "<group>"; };
-		9E87F0BD1AD005D5001028A9 /* OperatorCollectionDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperatorCollectionDataSource.m; sourceTree = "<group>"; };
-		9E87F0C11AD005D5001028A9 /* ResultsCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsCollectionViewDataSource.h; sourceTree = "<group>"; };
-		9E87F0C21AD005D5001028A9 /* ResultsCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsCollectionViewDataSource.m; sourceTree = "<group>"; };
+		9E40C3C71AD239D700A31F2C /* CompletedCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompletedCollectionViewDataSource.h; sourceTree = "<group>"; };
+		9E40C3C81AD239D700A31F2C /* CompletedCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompletedCollectionViewDataSource.m; sourceTree = "<group>"; };
+		9E5F769F1AD236E0001D69F5 /* DateCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateCellViewController.h; sourceTree = "<group>"; };
+		9E5F76A01AD236E0001D69F5 /* DateCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateCellViewController.m; sourceTree = "<group>"; };
+		9E5F76A11AD236E0001D69F5 /* DateCellViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateCellViewController.xib; sourceTree = "<group>"; };
+		9E5F76A21AD236E0001D69F5 /* DateMathsViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateMathsViewDelegate.h; sourceTree = "<group>"; };
+		9E5F76A31AD236E0001D69F5 /* OperatorCellDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperatorCellDelegate.h; sourceTree = "<group>"; };
+		9E5F76A41AD236E0001D69F5 /* OperatorCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperatorCellViewController.h; sourceTree = "<group>"; };
+		9E5F76A51AD236E0001D69F5 /* OperatorCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperatorCellViewController.m; sourceTree = "<group>"; };
+		9E5F76A61AD236E0001D69F5 /* OperatorCellViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OperatorCellViewController.xib; sourceTree = "<group>"; };
+		9E5F76A71AD236E0001D69F5 /* ResultsCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsCellViewController.h; sourceTree = "<group>"; };
+		9E5F76A81AD236E0001D69F5 /* ResultsCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsCellViewController.m; sourceTree = "<group>"; };
+		9E5F76A91AD236E0001D69F5 /* ResultsCellViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultsCellViewController.xib; sourceTree = "<group>"; };
+		9E5F76AA1AD236E0001D69F5 /* ResultsCellViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsCellViewDelegate.h; sourceTree = "<group>"; };
+		9E5F76B01AD236E0001D69F5 /* CompletedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompletedItem.h; sourceTree = "<group>"; };
+		9E5F76B11AD236E0001D69F5 /* CompletedItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompletedItem.m; sourceTree = "<group>"; };
+		9E5F76B31AD236E0001D69F5 /* CollectionDataSourceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionDataSourceDelegate.h; sourceTree = "<group>"; };
+		9E5F76B41AD236E0001D69F5 /* Digit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Digit.h; sourceTree = "<group>"; };
+		9E5F76B51AD236E0001D69F5 /* Digit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Digit.m; sourceTree = "<group>"; };
+		9E5F76B61AD236E0001D69F5 /* DigitCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DigitCollection.h; sourceTree = "<group>"; };
+		9E5F76B71AD236E0001D69F5 /* DigitCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DigitCollection.m; sourceTree = "<group>"; };
+		9E5F76B81AD236E0001D69F5 /* DigitCollectionDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DigitCollectionDataSource.h; sourceTree = "<group>"; };
+		9E5F76B91AD236E0001D69F5 /* DigitCollectionDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DigitCollectionDataSource.m; sourceTree = "<group>"; };
+		9E5F76BB1AD236E0001D69F5 /* Operator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Operator.h; sourceTree = "<group>"; };
+		9E5F76BC1AD236E0001D69F5 /* Operator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Operator.m; sourceTree = "<group>"; };
+		9E5F76BD1AD236E0001D69F5 /* OperatorCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperatorCollection.h; sourceTree = "<group>"; };
+		9E5F76BE1AD236E0001D69F5 /* OperatorCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperatorCollection.m; sourceTree = "<group>"; };
+		9E5F76BF1AD236E0001D69F5 /* OperatorCollectionDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperatorCollectionDataSource.h; sourceTree = "<group>"; };
+		9E5F76C01AD236E0001D69F5 /* OperatorCollectionDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperatorCollectionDataSource.m; sourceTree = "<group>"; };
+		9E5F76C21AD236E0001D69F5 /* ResultsCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsCollectionViewDataSource.h; sourceTree = "<group>"; };
+		9E5F76C31AD236E0001D69F5 /* ResultsCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsCollectionViewDataSource.m; sourceTree = "<group>"; };
 		9E89CC101AC7F58B0086C816 /* DateMathsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateMathsViewController.h; sourceTree = "<group>"; };
 		9E89CC111AC7F58B0086C816 /* DateMathsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateMathsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,9 +152,9 @@
 		914CB79FD4C44969035FF80D = {
 			isa = PBXGroup;
 			children = (
-				914CB686278262773B0FDF07 /* Products */,
 				914CBC5C97790867B37B96F4 /* DateMaths */,
 				914CB63F45E87E6A734ED989 /* DateMathsTests */,
+				914CB686278262773B0FDF07 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,22 +170,25 @@
 		914CBC5C97790867B37B96F4 /* DateMaths */ = {
 			isa = PBXGroup;
 			children = (
+				9E5F769E1AD236E0001D69F5 /* Cells */,
+				9E5F76AB1AD236E0001D69F5 /* Completed */,
+				9E5F76B21AD236E0001D69F5 /* Digits */,
+				9E5F76BA1AD236E0001D69F5 /* Operator */,
+				9E5F76C11AD236E0001D69F5 /* Results */,
 				914CB54EA3F6E6AABF8ED12E /* AppDelegate.h */,
 				914CB479BAD5699ED9B7C2FA /* AppDelegate.m */,
 				914CBAA50A5591BB3AD060B6 /* CALayer+NewCategory.h */,
 				914CBF0DCA8CC6E6EDFE659A /* CALayer+NewCategory.m */,
+				914CBC7825301962F8B48C7D /* CompletedItem.h */,
+				914CB6201E3ED770072C3CBB /* CompletedItem.m */,
 				914CB7F71ECE5F0052D94EBB /* DataItem.h */,
-				9E7650F61ACEB5400072D761 /* Cells */,
 				9E89CC101AC7F58B0086C816 /* DateMathsViewController.h */,
 				9E89CC111AC7F58B0086C816 /* DateMathsViewController.m */,
 				914CBABF8458B64D6C56CCB5 /* DateMathsViewModel.h */,
 				914CBA329EF88E051638C3E2 /* DateMathsViewModel.m */,
-				9E87F0AE1AD005D5001028A9 /* Digits */,
 				914CB9D3C69619BA9B98BB48 /* Images.xcassets */,
 				914CB5E39B366B313E1A520F /* LaunchScreen.xib */,
 				914CBB52F83F3C1DAC8B6625 /* Main.storyboard */,
-				9E87F0B71AD005D5001028A9 /* Operator */,
-				9E87F0BE1AD005D5001028A9 /* Results */,
 				9E00B4FD1AD0026700049AB1 /* SimpleCollectionViewCell.h */,
 				9E00B4FE1AD0026700049AB1 /* SimpleCollectionViewCell.m */,
 				9E00B4FF1AD0026700049AB1 /* SimpleCollectionViewCell.xib */,
@@ -183,57 +197,70 @@
 			path = DateMaths;
 			sourceTree = "<group>";
 		};
-		9E7650F61ACEB5400072D761 /* Cells */ = {
+		9E5F769E1AD236E0001D69F5 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				9E7650F71ACEB5400072D761 /* DateCellViewController.h */,
-				9E7650F81ACEB5400072D761 /* DateCellViewController.m */,
-				9E7650F91ACEB5400072D761 /* DateCellViewController.xib */,
-				9E7650FA1ACEB5400072D761 /* DateMathsViewDelegate.h */,
-				9E7650FB1ACEB5400072D761 /* OperatorCellViewController.h */,
-				9E7650FC1ACEB5400072D761 /* OperatorCellViewController.m */,
-				9E7650FD1ACEB5400072D761 /* OperatorCellViewController.xib */,
-				9E7650FE1ACEB5400072D761 /* ResultsCellViewController.h */,
-				9E7650FF1ACEB5400072D761 /* ResultsCellViewController.m */,
-				9E7651001ACEB5400072D761 /* ResultsCellViewController.xib */,
-				9E7651011ACEB5400072D761 /* ResultsCellViewDelegate.h */,
-				914CB23BB76D29EF686EF388 /* OperatorCellDelegate.h */,
+				9E5F769F1AD236E0001D69F5 /* DateCellViewController.h */,
+				9E5F76A01AD236E0001D69F5 /* DateCellViewController.m */,
+				9E5F76A11AD236E0001D69F5 /* DateCellViewController.xib */,
+				9E5F76A21AD236E0001D69F5 /* DateMathsViewDelegate.h */,
+				9E5F76A31AD236E0001D69F5 /* OperatorCellDelegate.h */,
+				9E5F76A41AD236E0001D69F5 /* OperatorCellViewController.h */,
+				9E5F76A51AD236E0001D69F5 /* OperatorCellViewController.m */,
+				9E5F76A61AD236E0001D69F5 /* OperatorCellViewController.xib */,
+				9E5F76A71AD236E0001D69F5 /* ResultsCellViewController.h */,
+				9E5F76A81AD236E0001D69F5 /* ResultsCellViewController.m */,
+				9E5F76A91AD236E0001D69F5 /* ResultsCellViewController.xib */,
+				9E5F76AA1AD236E0001D69F5 /* ResultsCellViewDelegate.h */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		9E87F0AE1AD005D5001028A9 /* Digits */ = {
+		9E5F76AB1AD236E0001D69F5 /* Completed */ = {
 			isa = PBXGroup;
 			children = (
-				9E87F0AF1AD005D5001028A9 /* Digit.h */,
-				9E87F0B01AD005D5001028A9 /* Digit.m */,
-				9E87F0B11AD005D5001028A9 /* DigitCollection.h */,
-				9E87F0B21AD005D5001028A9 /* DigitCollection.m */,
-				9E87F0B31AD005D5001028A9 /* DigitCollectionDataSource.h */,
-				9E87F0B41AD005D5001028A9 /* DigitCollectionDataSource.m */,
-				914CBB1593196CBEF7DC08AD /* CollectionDataSourceDelegate.h */,
+				9E40C3C71AD239D700A31F2C /* CompletedCollectionViewDataSource.h */,
+				9E40C3C81AD239D700A31F2C /* CompletedCollectionViewDataSource.m */,
+				9E5F76B01AD236E0001D69F5 /* CompletedItem.h */,
+				9E5F76B11AD236E0001D69F5 /* CompletedItem.m */,
+				914CB552AF226115249FE52E /* CompletedCollection.h */,
+				914CB0AB8CF42B17FA193E71 /* CompletedCollection.m */,
+			);
+			path = Completed;
+			sourceTree = "<group>";
+		};
+		9E5F76B21AD236E0001D69F5 /* Digits */ = {
+			isa = PBXGroup;
+			children = (
+				9E5F76B31AD236E0001D69F5 /* CollectionDataSourceDelegate.h */,
+				9E5F76B41AD236E0001D69F5 /* Digit.h */,
+				9E5F76B51AD236E0001D69F5 /* Digit.m */,
+				9E5F76B61AD236E0001D69F5 /* DigitCollection.h */,
+				9E5F76B71AD236E0001D69F5 /* DigitCollection.m */,
+				9E5F76B81AD236E0001D69F5 /* DigitCollectionDataSource.h */,
+				9E5F76B91AD236E0001D69F5 /* DigitCollectionDataSource.m */,
 			);
 			path = Digits;
 			sourceTree = "<group>";
 		};
-		9E87F0B71AD005D5001028A9 /* Operator */ = {
+		9E5F76BA1AD236E0001D69F5 /* Operator */ = {
 			isa = PBXGroup;
 			children = (
-				9E87F0B81AD005D5001028A9 /* Operator.h */,
-				9E87F0B91AD005D5001028A9 /* Operator.m */,
-				9E87F0BA1AD005D5001028A9 /* OperatorCollection.h */,
-				9E87F0BB1AD005D5001028A9 /* OperatorCollection.m */,
-				9E87F0BC1AD005D5001028A9 /* OperatorCollectionDataSource.h */,
-				9E87F0BD1AD005D5001028A9 /* OperatorCollectionDataSource.m */,
+				9E5F76BB1AD236E0001D69F5 /* Operator.h */,
+				9E5F76BC1AD236E0001D69F5 /* Operator.m */,
+				9E5F76BD1AD236E0001D69F5 /* OperatorCollection.h */,
+				9E5F76BE1AD236E0001D69F5 /* OperatorCollection.m */,
+				9E5F76BF1AD236E0001D69F5 /* OperatorCollectionDataSource.h */,
+				9E5F76C01AD236E0001D69F5 /* OperatorCollectionDataSource.m */,
 			);
 			path = Operator;
 			sourceTree = "<group>";
 		};
-		9E87F0BE1AD005D5001028A9 /* Results */ = {
+		9E5F76C11AD236E0001D69F5 /* Results */ = {
 			isa = PBXGroup;
 			children = (
-				9E87F0C11AD005D5001028A9 /* ResultsCollectionViewDataSource.h */,
-				9E87F0C21AD005D5001028A9 /* ResultsCollectionViewDataSource.m */,
+				9E5F76C21AD236E0001D69F5 /* ResultsCollectionViewDataSource.h */,
+				9E5F76C31AD236E0001D69F5 /* ResultsCollectionViewDataSource.m */,
 			);
 			path = Results;
 			sourceTree = "<group>";
@@ -282,6 +309,7 @@
 		914CB53B2735A6BBBB7F30D1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = "___FULLUSERNAME___";
 			};
 			buildConfigurationList = 914CBBD1CC29564A2FEED67F /* Build configuration list for PBXProject "DateMaths" */;
@@ -314,13 +342,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E5F76C91AD236E0001D69F5 /* ResultsCellViewController.xib in Resources */,
 				9E00B5011AD0026700049AB1 /* SimpleCollectionViewCell.xib in Resources */,
 				914CBD7FCD50F049842EDC89 /* Images.xcassets in Resources */,
-				9E7651051ACEB5400072D761 /* OperatorCellViewController.xib in Resources */,
 				914CB12CD7B79FA6332C1BFB /* LaunchScreen.xib in Resources */,
+				9E5F76C51AD236E0001D69F5 /* DateCellViewController.xib in Resources */,
+				9E5F76C71AD236E0001D69F5 /* OperatorCellViewController.xib in Resources */,
 				914CB6631C2F1FAD9401E283 /* Main.storyboard in Resources */,
-				9E7651031ACEB5400072D761 /* DateCellViewController.xib in Resources */,
-				9E7651071ACEB5400072D761 /* ResultsCellViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,22 +359,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E5F76CC1AD236E0001D69F5 /* CompletedItem.m in Sources */,
 				914CBF27319C07554EC7C084 /* main.m in Sources */,
+				9E5F76D31AD236E0001D69F5 /* ResultsCollectionViewDataSource.m in Sources */,
+				9E5F76CD1AD236E0001D69F5 /* Digit.m in Sources */,
 				914CBB2005A6995428799172 /* AppDelegate.m in Sources */,
 				9E89CC121AC7F58B0086C816 /* DateMathsViewController.m in Sources */,
-				9E87F0C71AD005D5001028A9 /* Operator.m in Sources */,
-				9E7651061ACEB5400072D761 /* ResultsCellViewController.m in Sources */,
+				9E40C3C91AD239D700A31F2C /* CompletedCollectionViewDataSource.m in Sources */,
+				9E5F76CF1AD236E0001D69F5 /* DigitCollectionDataSource.m in Sources */,
+				9E5F76C81AD236E0001D69F5 /* ResultsCellViewController.m in Sources */,
+				9E5F76CE1AD236E0001D69F5 /* DigitCollection.m in Sources */,
 				914CBCC3B96D5CA79BEE8C77 /* DateMathsViewModel.m in Sources */,
-				9E87F0C41AD005D5001028A9 /* DigitCollection.m in Sources */,
-				9E7651041ACEB5400072D761 /* OperatorCellViewController.m in Sources */,
-				9E87F0C91AD005D5001028A9 /* OperatorCollectionDataSource.m in Sources */,
-				9E87F0C31AD005D5001028A9 /* Digit.m in Sources */,
 				914CBA5C037D61EFAE1DB001 /* CALayer+NewCategory.m in Sources */,
+				9E5F76C61AD236E0001D69F5 /* OperatorCellViewController.m in Sources */,
+				9E5F76D21AD236E0001D69F5 /* OperatorCollectionDataSource.m in Sources */,
 				9E00B5001AD0026700049AB1 /* SimpleCollectionViewCell.m in Sources */,
-				9E87F0CB1AD005D5001028A9 /* ResultsCollectionViewDataSource.m in Sources */,
-				9E7651021ACEB5400072D761 /* DateCellViewController.m in Sources */,
-				9E87F0C51AD005D5001028A9 /* DigitCollectionDataSource.m in Sources */,
-				9E87F0C81AD005D5001028A9 /* OperatorCollection.m in Sources */,
+				9E5F76D11AD236E0001D69F5 /* OperatorCollection.m in Sources */,
+				9E5F76C41AD236E0001D69F5 /* DateCellViewController.m in Sources */,
+				9E5F76D01AD236E0001D69F5 /* Operator.m in Sources */,
+				914CBD0733831C5B835E92EF /* CompletedCollection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

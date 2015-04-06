@@ -1,11 +1,11 @@
 #import "DateMathsViewController.h"
 #import "DigitCollection.h"
-#import "CALayer+NewCategory.h"
 #import "OperatorCollection.h"
 #import "DigitCollectionDataSource.h"
 #import "OperatorCollectionDataSource.h"
 #import "ResultsCollectionViewDataSource.h"
 #import "Digit.h"
+#import "CompletedCollectionViewDataSource.h"
 
 @interface DateMathsViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *digitLabel;
@@ -19,6 +19,7 @@
 @property (nonatomic, strong) DigitCollectionDataSource *digitCollectionDataSource;
 @property (nonatomic, strong) OperatorCollectionDataSource *operatorCollectionDataSource;
 @property (nonatomic, strong) ResultsCollectionViewDataSource *resultsCollectionViewDataSource;
+@property (nonatomic, strong) CompletedCollectionViewDataSource *completedCollectionViewDataSource;
 @end
 
 @implementation DateMathsViewController
@@ -35,7 +36,6 @@
     self.digitCollectionView.dataSource = self.digitCollectionDataSource;
     self.digitCollectionView.delegate = self;
     [self.digitCollectionView registerNib:nib forCellWithReuseIdentifier:@"simpleCell"];
-//    [self.digitCollectionView.layer addBlackBorder];
 
     //Operators
     self.operatorCollection = [[OperatorCollection alloc] init];
@@ -43,14 +43,19 @@
     self.operatorCollectionView.dataSource = self.operatorCollectionDataSource;
     self.operatorCollectionView.delegate = self;
     [self.operatorCollectionView registerNib:nib forCellWithReuseIdentifier:@"simpleCell"];
-//    [self.operatorCollectionView.layer addBlackBorder];
 
     //Results
     self.resultsCollectionViewDataSource = [[ResultsCollectionViewDataSource alloc] init];
     self.resultsCollectionView.dataSource = self.resultsCollectionViewDataSource;
     self.resultsCollectionView.delegate = self;
     [self.resultsCollectionView registerNib:nib forCellWithReuseIdentifier:@"simpleCell"];
-//    [self.resultsCollectionView.layer addBlackBorder];
+
+    //Completed
+    self.completedCollectionViewDataSource = [[CompletedCollectionViewDataSource alloc] init];
+    self.completedCollectionView.dataSource = self.completedCollectionViewDataSource;
+    self.completedCollectionView.delegate = self;
+    [self.completedCollectionView registerNib:nib forCellWithReuseIdentifier:@"simpleCell"];
+
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath

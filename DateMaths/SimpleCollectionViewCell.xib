@@ -22,6 +22,7 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="centerY" secondItem="1W9-6R-10G" secondAttribute="centerY" id="WE9-AF-ib6"/>
                 <constraint firstAttribute="centerX" secondItem="1W9-6R-10G" secondAttribute="centerX" id="mBI-i5-SgE"/>

@@ -35,7 +35,7 @@
     self.digitCollectionView.dataSource = self.digitCollectionDataSource;
     self.digitCollectionView.delegate = self;
     [self.digitCollectionView registerNib:nib forCellWithReuseIdentifier:@"simpleCell"];
-    [self.digitCollectionView.layer addBlackBorder];
+//    [self.digitCollectionView.layer addBlackBorder];
 
     //Operators
     self.operatorCollection = [[OperatorCollection alloc] init];
@@ -43,14 +43,14 @@
     self.operatorCollectionView.dataSource = self.operatorCollectionDataSource;
     self.operatorCollectionView.delegate = self;
     [self.operatorCollectionView registerNib:nib forCellWithReuseIdentifier:@"simpleCell"];
-    [self.operatorCollectionView.layer addBlackBorder];
+//    [self.operatorCollectionView.layer addBlackBorder];
 
     //Results
     self.resultsCollectionViewDataSource = [[ResultsCollectionViewDataSource alloc] init];
     self.resultsCollectionView.dataSource = self.resultsCollectionViewDataSource;
     self.resultsCollectionView.delegate = self;
     [self.resultsCollectionView registerNib:nib forCellWithReuseIdentifier:@"simpleCell"];
-    [self.resultsCollectionView.layer addBlackBorder];
+//    [self.resultsCollectionView.layer addBlackBorder];
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath

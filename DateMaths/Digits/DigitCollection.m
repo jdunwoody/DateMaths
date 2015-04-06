@@ -56,11 +56,6 @@
     return [self.digits countByEnumeratingWithState:state objects:buffer count:len];
 }
 
-- (void)addObject:(id<DataItem>)digit
-{
-    [self.digits addObject:digit];
-}
-
 - (NSInteger)count
 {
     return [self.digits count];
@@ -69,11 +64,6 @@
 - (id)objectAtIndexedSubscript:(NSInteger)idx
 {
     return self.digits[(NSUInteger)idx];
-}
-
-- (NSUInteger)indexOfItem:(id<DataItem>)item
-{
-    return [self.digits indexOfObject:item];
 }
 
 @end

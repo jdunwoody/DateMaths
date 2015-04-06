@@ -8,9 +8,7 @@
 - (instancetype)init __unavailable;
 - (instancetype)initWithDate:(NSDate *)date;
 
-- (void)addObject:(id<DataItem>)digit;
 - (NSInteger)count;
 - (id)objectAtIndexedSubscript:(NSInteger)idx;
-- (NSUInteger)indexOfItem:(id<DataItem>)item;
 
 @end

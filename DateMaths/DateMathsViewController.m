@@ -7,6 +7,7 @@
 #import "Digit.h"
 #import "CompletedCollectionViewDataSource.h"
 #import "CompletedCollection.h"
+#import "ResultsCollection.h"
 
 @interface DateMathsViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *digitLabel;
@@ -21,6 +22,8 @@
 @property (nonatomic, strong) OperatorCollectionDataSource *operatorCollectionDataSource;
 @property (nonatomic, strong) ResultsCollectionViewDataSource *resultsCollectionViewDataSource;
 @property (nonatomic, strong) CompletedCollectionViewDataSource *completedCollectionViewDataSource;
+@property (nonatomic, strong) ResultsCollection *resultsCollection;
+@property (nonatomic, strong) CompletedCollection *completedCollection;
 @end
 
 @implementation DateMathsViewController
@@ -46,14 +49,15 @@
     [self.operatorCollectionView registerNib:nib forCellWithReuseIdentifier:@"simpleCell"];
 
     //Results
-    self.resultsCollectionViewDataSource = [[ResultsCollectionViewDataSource alloc] init];
+    self.resultsCollection = [[ResultsCollection alloc] init];
+    self.resultsCollectionViewDataSource = [[ResultsCollectionViewDataSource alloc] initWithCollection:self.resultsCollection];
     self.resultsCollectionView.dataSource = self.resultsCollectionViewDataSource;
     self.resultsCollectionView.delegate = self;
     [self.resultsCollectionView registerNib:nib forCellWithReuseIdentifier:@"simpleCell"];
 
     //Completed
-    CompletedCollection *completedCollection = [[CompletedCollection alloc] init];
-    self.completedCollectionViewDataSource = [[CompletedCollectionViewDataSource alloc] initWithOperatorCollection:completedCollection];
+    self.completedCollection = [[CompletedCollection alloc] init];
+    self.completedCollectionViewDataSource = [[CompletedCollectionViewDataSource alloc] initWithOperatorCollection:self.completedCollection];
     self.completedCollectionView.dataSource = self.completedCollectionViewDataSource;
     self.completedCollectionView.delegate = self;
     [self.completedCollectionView registerNib:nib forCellWithReuseIdentifier:@"simpleCell"];
@@ -88,6 +92,10 @@
         [self.resultsCollectionViewDataSource removeItem:resultItem];
         [self.resultsCollectionView reloadData];
     }
+
+    NSInteger sum = self.resultsCollection.sum;
+    [self.completedCollection makeCurrent:sum];
+    [self.completedCollectionView reloadData];
 }
 
 - (void)didLayoutCell:(NSIndexPath *)path inCollectionView:(UICollectionView *)view

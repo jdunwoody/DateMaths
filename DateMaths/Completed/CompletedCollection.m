@@ -45,4 +45,11 @@
     return [self.data countByEnumeratingWithState:state objects:buffer count:len];
 }
 
+- (void)makeCurrent:(NSInteger)sum
+{
+    for (CompletedItem *completedItem in self.data) {
+        completedItem.completed = completedItem.number == sum;
+    }
+}
+
 @end

@@ -11,6 +11,7 @@
 		914CB6631C2F1FAD9401E283 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 914CBB52F83F3C1DAC8B6625 /* Main.storyboard */; };
 		914CBA5C037D61EFAE1DB001 /* CALayer+NewCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CBF0DCA8CC6E6EDFE659A /* CALayer+NewCategory.m */; };
 		914CBB2005A6995428799172 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB479BAD5699ED9B7C2FA /* AppDelegate.m */; };
+		914CBC31A9FEB09E009C5F71 /* ResultsCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CBC34DFE9F966B62C8E5A /* ResultsCollection.m */; };
 		914CBCC3B96D5CA79BEE8C77 /* DateMathsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CBA329EF88E051638C3E2 /* DateMathsViewModel.m */; };
 		914CBD0733831C5B835E92EF /* CompletedCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB0AB8CF42B17FA193E71 /* CompletedCollection.m */; };
 		914CBD7FCD50F049842EDC89 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 914CB9D3C69619BA9B98BB48 /* Images.xcassets */; };
@@ -52,12 +53,14 @@
 		914CB552AF226115249FE52E /* CompletedCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompletedCollection.h; sourceTree = "<group>"; };
 		914CB6201E3ED770072C3CBB /* CompletedItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CompletedItem.m; path = Completed/CompletedItem.m; sourceTree = "<group>"; };
 		914CB6375BE3E96890A1CF32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		914CB690CEEFC313A6A8BFEA /* ResultsCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsCollection.h; sourceTree = "<group>"; };
 		914CB7F71ECE5F0052D94EBB /* DataItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataItem.h; sourceTree = "<group>"; };
 		914CB8A696E0C0265376F126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		914CB9D3C69619BA9B98BB48 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		914CBA329EF88E051638C3E2 /* DateMathsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateMathsViewModel.m; sourceTree = "<group>"; };
 		914CBAA50A5591BB3AD060B6 /* CALayer+NewCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+NewCategory.h"; sourceTree = "<group>"; };
 		914CBABF8458B64D6C56CCB5 /* DateMathsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateMathsViewModel.h; sourceTree = "<group>"; };
+		914CBC34DFE9F966B62C8E5A /* ResultsCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsCollection.m; sourceTree = "<group>"; };
 		914CBC7825301962F8B48C7D /* CompletedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CompletedItem.h; path = Completed/CompletedItem.h; sourceTree = "<group>"; };
 		914CBD7B0D8FA667D1F3DFD3 /* DateMaths.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DateMaths.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		914CBF0DCA8CC6E6EDFE659A /* CALayer+NewCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+NewCategory.m"; sourceTree = "<group>"; };
@@ -223,6 +226,8 @@
 			children = (
 				9E5F76C21AD236E0001D69F5 /* ResultsCollectionViewDataSource.h */,
 				9E5F76C31AD236E0001D69F5 /* ResultsCollectionViewDataSource.m */,
+				914CBC34DFE9F966B62C8E5A /* ResultsCollection.m */,
+				914CB690CEEFC313A6A8BFEA /* ResultsCollection.h */,
 			);
 			path = Results;
 			sourceTree = "<group>";
@@ -334,6 +339,7 @@
 				9E5F76D11AD236E0001D69F5 /* OperatorCollection.m in Sources */,
 				9E5F76D01AD236E0001D69F5 /* Operator.m in Sources */,
 				914CBD0733831C5B835E92EF /* CompletedCollection.m in Sources */,
+				914CBC31A9FEB09E009C5F71 /* ResultsCollection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

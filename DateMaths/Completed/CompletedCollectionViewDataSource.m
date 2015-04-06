@@ -7,9 +7,10 @@
 #import "CompletedCollection.h"
 #import "SimpleCollectionViewCell.h"
 #import "DataItem.h"
+#import "CompletedItem.h"
 
 @interface CompletedCollectionViewDataSource ()
-@property (nonatomic, strong) id collection;
+@property (nonatomic, strong) CompletedCollection *collection;
 @end
 
 @implementation CompletedCollectionViewDataSource
@@ -34,9 +35,10 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     SimpleCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"simpleCell" forIndexPath:indexPath];
-    id<DataItem> item = self.collection[(NSUInteger)indexPath.row];
+    CompletedItem *item = self.collection[(NSUInteger)indexPath.row];
 
     cell.label.text = item.value;
+    cell.label.textColor = item.completed ? [UIColor blackColor] : [UIColor lightGrayColor];
 
     return cell;
 }

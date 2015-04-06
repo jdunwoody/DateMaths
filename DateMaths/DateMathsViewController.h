@@ -11,6 +11,8 @@
 
 @class ResultsCollectionViewDataSource;
 @class OperatorCollectionDataSource;
+@class ResultsCollection;
+@class CompletedCollection;
 
 @interface DateMathsViewController : UIViewController<UICollectionViewDelegate, CollectionDataSourceDelegate>
 

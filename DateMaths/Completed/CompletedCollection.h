@@ -6,11 +6,12 @@
 #import <Foundation/Foundation.h>
 
 @protocol DataItem;
-
+@class CompletedItem;
 
 @interface CompletedCollection : NSObject<NSFastEnumeration>
 
 - (NSInteger)count;
 - (id)objectAtIndexedSubscript:(NSInteger)idx;
 
+- (void)makeCurrent:(NSInteger)sum;
 @end

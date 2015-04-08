@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		914CB12CD7B79FA6332C1BFB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 914CB5E39B366B313E1A520F /* LaunchScreen.xib */; };
 		914CB1AD74274B059E6A4CA4 /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB36BCCAAA8E0D4787F5E /* Parser.m */; };
+		914CB625B5561B8DF7E0CFC0 /* ParseItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB814F2E3FE9B8984137D /* ParseItem.m */; };
 		914CB6631C2F1FAD9401E283 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 914CBB52F83F3C1DAC8B6625 /* Main.storyboard */; };
 		914CBA5C037D61EFAE1DB001 /* CALayer+NewCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CBF0DCA8CC6E6EDFE659A /* CALayer+NewCategory.m */; };
 		914CBB2005A6995428799172 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB479BAD5699ED9B7C2FA /* AppDelegate.m */; };
@@ -29,7 +30,9 @@
 		9E5F76D11AD236E0001D69F5 /* OperatorCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5F76BE1AD236E0001D69F5 /* OperatorCollection.m */; };
 		9E5F76D21AD236E0001D69F5 /* OperatorCollectionDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5F76C01AD236E0001D69F5 /* OperatorCollectionDataSource.m */; };
 		9E5F76D31AD236E0001D69F5 /* ResultsCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5F76C31AD236E0001D69F5 /* ResultsCollectionViewDataSource.m */; };
+		9E7CF4341AD5481E00317897 /* ParserTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB4207F649F3FD0605CF7 /* ParserTest.m */; };
 		9E89CC121AC7F58B0086C816 /* DateMathsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E89CC111AC7F58B0086C816 /* DateMathsViewController.m */; };
+		A830C24FDC4ADA5850A9DC5F /* Pods_DateMathsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF786EAEB303B88BA017ABF7 /* Pods_DateMathsTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +50,10 @@
 		914CB0A91F98BAB9285CBFFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		914CB0AB8CF42B17FA193E71 /* CompletedCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompletedCollection.m; sourceTree = "<group>"; };
 		914CB1120D5FDF945F364A6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		914CB17E859B3E1BFBFCC30B /* ParseItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParseItem.h; path = Parser/ParseItem.h; sourceTree = "<group>"; };
 		914CB1BC285DED776267516E /* DateMathsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DateMathsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		914CB36BCCAAA8E0D4787F5E /* Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Parser.m; path = Parser/Parser.m; sourceTree = "<group>"; };
+		914CB4207F649F3FD0605CF7 /* ParserTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParserTest.m; path = Parser/ParserTest.m; sourceTree = "<group>"; };
 		914CB479BAD5699ED9B7C2FA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		914CB50977B4279E38952DA1 /* DateMathsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateMathsTests.m; sourceTree = "<group>"; };
 		914CB54EA3F6E6AABF8ED12E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -58,6 +63,7 @@
 		914CB690CEEFC313A6A8BFEA /* ResultsCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsCollection.h; sourceTree = "<group>"; };
 		914CB73BA09CEFB74D83EEFA /* Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Parser.h; path = Parser/Parser.h; sourceTree = "<group>"; };
 		914CB7F71ECE5F0052D94EBB /* DataItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataItem.h; sourceTree = "<group>"; };
+		914CB814F2E3FE9B8984137D /* ParseItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParseItem.m; path = Parser/ParseItem.m; sourceTree = "<group>"; };
 		914CB8A696E0C0265376F126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		914CB9D3C69619BA9B98BB48 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		914CBA329EF88E051638C3E2 /* DateMathsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateMathsViewModel.m; sourceTree = "<group>"; };
@@ -91,6 +97,9 @@
 		9E5F76C31AD236E0001D69F5 /* ResultsCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsCollectionViewDataSource.m; sourceTree = "<group>"; };
 		9E89CC101AC7F58B0086C816 /* DateMathsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateMathsViewController.h; sourceTree = "<group>"; };
 		9E89CC111AC7F58B0086C816 /* DateMathsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateMathsViewController.m; sourceTree = "<group>"; };
+		BDA24A1FF30C550BE15C6B56 /* Pods-DateMathsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateMathsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DateMathsTests/Pods-DateMathsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EF786EAEB303B88BA017ABF7 /* Pods_DateMathsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DateMathsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD25788D443D0AC2A71F8ED8 /* Pods-DateMathsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateMathsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DateMathsTests/Pods-DateMathsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,12 +114,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A830C24FDC4ADA5850A9DC5F /* Pods_DateMathsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		283BA2893EB1C610375889E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF786EAEB303B88BA017ABF7 /* Pods_DateMathsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		914CB3B821B5EDE5E8C139F1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +142,7 @@
 			children = (
 				914CB3B821B5EDE5E8C139F1 /* Supporting Files */,
 				914CB50977B4279E38952DA1 /* DateMathsTests.m */,
+				914CB4207F649F3FD0605CF7 /* ParserTest.m */,
 			);
 			path = DateMathsTests;
 			sourceTree = "<group>";
@@ -143,6 +162,8 @@
 				914CBC5C97790867B37B96F4 /* DateMaths */,
 				914CB63F45E87E6A734ED989 /* DateMathsTests */,
 				914CB686278262773B0FDF07 /* Products */,
+				D7D9C219463019C586459BEA /* Pods */,
+				283BA2893EB1C610375889E5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -182,6 +203,8 @@
 				914CB8ECE2DC34F51FC0FB4F /* Supporting Files */,
 				914CB36BCCAAA8E0D4787F5E /* Parser.m */,
 				914CB73BA09CEFB74D83EEFA /* Parser.h */,
+				914CB814F2E3FE9B8984137D /* ParseItem.m */,
+				914CB17E859B3E1BFBFCC30B /* ParseItem.h */,
 			);
 			path = DateMaths;
 			sourceTree = "<group>";
@@ -237,6 +260,15 @@
 			path = Results;
 			sourceTree = "<group>";
 		};
+		D7D9C219463019C586459BEA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BDA24A1FF30C550BE15C6B56 /* Pods-DateMathsTests.debug.xcconfig */,
+				FD25788D443D0AC2A71F8ED8 /* Pods-DateMathsTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -244,9 +276,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 914CBCB7192BE08DCAC809BE /* Build configuration list for PBXNativeTarget "DateMathsTests" */;
 			buildPhases = (
+				A22BCE6375ADB43456F7CC2B /* Check Pods Manifest.lock */,
 				914CB5742FBD58B7668BAC0F /* Sources */,
 				914CB941924E778EFB3379C8 /* Frameworks */,
 				914CB16CF052AD8CAA59586D /* Resources */,
+				5829382E963DECB2D05C61EB /* Embed Pods Frameworks */,
+				8FFA9401ADE93666C7CC8E2E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -323,6 +358,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5829382E963DECB2D05C61EB /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DateMathsTests/Pods-DateMathsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8FFA9401ADE93666C7CC8E2E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DateMathsTests/Pods-DateMathsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A22BCE6375ADB43456F7CC2B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		914CB3414112A468B8E89004 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -346,6 +429,7 @@
 				914CBD0733831C5B835E92EF /* CompletedCollection.m in Sources */,
 				914CBC31A9FEB09E009C5F71 /* ResultsCollection.m in Sources */,
 				914CB1AD74274B059E6A4CA4 /* Parser.m in Sources */,
+				914CB625B5561B8DF7E0CFC0 /* ParseItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +437,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E7CF4341AD5481E00317897 /* ParserTest.m in Sources */,
 				914CBF176BC1052841FFB9D1 /* DateMathsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -477,6 +562,7 @@
 		};
 		914CB923F787E384D6CE06AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDA24A1FF30C550BE15C6B56 /* Pods-DateMathsTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DateMaths.app/DateMaths";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -492,6 +578,7 @@
 		};
 		914CB96193239CF7F6453C85 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD25788D443D0AC2A71F8ED8 /* Pods-DateMathsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DateMaths.app/DateMaths";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -511,6 +598,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DateMaths/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;

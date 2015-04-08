@@ -7,4 +7,7 @@
 
 
 @interface Parser : NSObject
+- (instancetype)init __unavailable;
+- (instancetype)initWithParseItems:(NSArray *)parseItems;
+- (double)expression;
 @end

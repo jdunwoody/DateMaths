@@ -62,6 +62,11 @@
     return withinMinimum && withinMaximum;
 }
 
+- (BOOL)isOperator
+{
+    return ![self isDigit];
+}
+
 - (double)digit
 {
     return self.character - (int)('0');

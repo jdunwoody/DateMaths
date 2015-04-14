@@ -19,6 +19,7 @@
 
 @property (nonatomic, readonly) double digit;
 
+@property (nonatomic) BOOL isOperator;
 - (instancetype)init __unavailable;
 - (instancetype)initWithCharacter:(unichar)i;
 

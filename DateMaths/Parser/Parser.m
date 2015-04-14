@@ -13,6 +13,14 @@
 * <factor>     ::= <digit>  | "(" <expression> ")"
 * <digit>      ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
 */
+
+/**
+* <expression> ::= <term> | <term> "+" <expression>
+* <term>       ::= <factor> | <factor> "*" <term>
+* <factor>     ::= <digit>  | "(" <expression> ")"
+* <digit>      ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+*/
+
 @implementation Parser
 
 - (instancetype)initWithParseItems:(NSArray *)parseItems
@@ -34,21 +42,19 @@
 - (double)expression
 {
     double result = [self term];
-    [self advance];
 
     if (self.hasNext) {
         ParseItem *operator = [self next];
+
         if (operator.isPlus) {
+            [self advance];
             result = result + [self expression];
 
         } else if (operator.isMinus) {
+            [self advance];
             result = result - [self expression];
 
-        } else {
-            NSAssert(false, @"Unexpected operator %@", operator);
         }
-
-        [self advance];
     }
 
     return result;
@@ -60,26 +66,19 @@
 
 - (double)term
 {
-    double result;
+    double result = [self factor];
 
-    if ([self isFactor]) {
-        result = [self factor];
-    } else {
-        result = [self term];
+    ParseItem *operator = [self next];
 
-        ParseItem *operator = [self next];
-        if (operator.isMulti) {
-            result = result * [self factor];
+    if (operator.isMulti) {
+        [self advance];
+        result = result * [self term];
 
-        } else if (operator.isDivide) {
-            result = result / [self factor];
+    } else if (operator.isDivide) {
+        [self advance];
+        result = result / [self term];
 
-        } else {
-            NSAssert(false, @"Unexpected operator %@", operator);
-        }
     }
-
-    [self advance];
 
     return result;
 }
@@ -108,6 +107,12 @@
     }
 
     return result;
+}
+
+- (BOOL)isOperator
+{
+    ParseItem *parseItem = [self next];
+    return parseItem.isOperator;
 }
 
 - (BOOL)isFactor

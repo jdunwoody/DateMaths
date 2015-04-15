@@ -38,7 +38,7 @@
     CompletedItem *item = self.collection[(NSUInteger)indexPath.row];
 
     cell.label.text = item.value;
-    cell.label.textColor = item.completed ? [UIColor blackColor] : [UIColor lightGrayColor];
+    cell.backgroundColor = item.completed ? [UIColor whiteColor] : [UIColor lightGrayColor];
 
     return cell;
 }

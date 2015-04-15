@@ -9,7 +9,7 @@
 
 @interface ResultsCollection : NSObject<NSFastEnumeration>
 
-@property (nonatomic, readonly) NSInteger sum;
+@property (nonatomic, readonly) NSNumber *sum;
 
 - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained[])buffer count:(NSUInteger)len;
 - (NSInteger)count;

@@ -11,6 +11,7 @@
 		914CB1AD74274B059E6A4CA4 /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB36BCCAAA8E0D4787F5E /* Parser.m */; };
 		914CB625B5561B8DF7E0CFC0 /* ParseItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB814F2E3FE9B8984137D /* ParseItem.m */; };
 		914CB6631C2F1FAD9401E283 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 914CBB52F83F3C1DAC8B6625 /* Main.storyboard */; };
+		914CB870AECF941BDF14E8C2 /* ExpressionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB5A346BB740958DDE8B4 /* ExpressionTest.m */; };
 		914CBA5C037D61EFAE1DB001 /* CALayer+NewCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CBF0DCA8CC6E6EDFE659A /* CALayer+NewCategory.m */; };
 		914CBB2005A6995428799172 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB479BAD5699ED9B7C2FA /* AppDelegate.m */; };
 		914CBC31A9FEB09E009C5F71 /* ResultsCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CBC34DFE9F966B62C8E5A /* ResultsCollection.m */; };
@@ -19,6 +20,7 @@
 		914CBD7FCD50F049842EDC89 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 914CB9D3C69619BA9B98BB48 /* Images.xcassets */; };
 		914CBF176BC1052841FFB9D1 /* DateMathsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB50977B4279E38952DA1 /* DateMathsTests.m */; };
 		914CBF27319C07554EC7C084 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB04F81F03B4475E8AAE0 /* main.m */; };
+		914CBFF934113B500AA477F7 /* ParserTestUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CBFE8D7832200898A7360 /* ParserTestUtils.m */; };
 		9E00B5001AD0026700049AB1 /* SimpleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E00B4FE1AD0026700049AB1 /* SimpleCollectionViewCell.m */; };
 		9E00B5011AD0026700049AB1 /* SimpleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E00B4FF1AD0026700049AB1 /* SimpleCollectionViewCell.xib */; };
 		9E40C3C91AD239D700A31F2C /* CompletedCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E40C3C81AD239D700A31F2C /* CompletedCollectionViewDataSource.m */; };
@@ -52,12 +54,14 @@
 		914CB1120D5FDF945F364A6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		914CB17E859B3E1BFBFCC30B /* ParseItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParseItem.h; path = Parser/ParseItem.h; sourceTree = "<group>"; };
 		914CB1BC285DED776267516E /* DateMathsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DateMathsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		914CB2A9B34A6BE6F1F305A0 /* ParserTestUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParserTestUtils.h; path = Parser/ParserTestUtils.h; sourceTree = "<group>"; };
 		914CB36BCCAAA8E0D4787F5E /* Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Parser.m; path = Parser/Parser.m; sourceTree = "<group>"; };
 		914CB4207F649F3FD0605CF7 /* ParserTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParserTest.m; path = Parser/ParserTest.m; sourceTree = "<group>"; };
 		914CB479BAD5699ED9B7C2FA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		914CB50977B4279E38952DA1 /* DateMathsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateMathsTests.m; sourceTree = "<group>"; };
 		914CB54EA3F6E6AABF8ED12E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		914CB552AF226115249FE52E /* CompletedCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompletedCollection.h; sourceTree = "<group>"; };
+		914CB5A346BB740958DDE8B4 /* ExpressionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpressionTest.m; path = Expression/ExpressionTest.m; sourceTree = "<group>"; };
 		914CB6201E3ED770072C3CBB /* CompletedItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CompletedItem.m; path = Completed/CompletedItem.m; sourceTree = "<group>"; };
 		914CB6375BE3E96890A1CF32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		914CB690CEEFC313A6A8BFEA /* ResultsCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsCollection.h; sourceTree = "<group>"; };
@@ -73,6 +77,7 @@
 		914CBC7825301962F8B48C7D /* CompletedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CompletedItem.h; path = Completed/CompletedItem.h; sourceTree = "<group>"; };
 		914CBD7B0D8FA667D1F3DFD3 /* DateMaths.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DateMaths.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		914CBF0DCA8CC6E6EDFE659A /* CALayer+NewCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+NewCategory.m"; sourceTree = "<group>"; };
+		914CBFE8D7832200898A7360 /* ParserTestUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParserTestUtils.m; path = Parser/ParserTestUtils.m; sourceTree = "<group>"; };
 		9E00B4FD1AD0026700049AB1 /* SimpleCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleCollectionViewCell.h; sourceTree = "<group>"; };
 		9E00B4FE1AD0026700049AB1 /* SimpleCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleCollectionViewCell.m; sourceTree = "<group>"; };
 		9E00B4FF1AD0026700049AB1 /* SimpleCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -143,6 +148,9 @@
 				914CB3B821B5EDE5E8C139F1 /* Supporting Files */,
 				914CB50977B4279E38952DA1 /* DateMathsTests.m */,
 				914CB4207F649F3FD0605CF7 /* ParserTest.m */,
+				914CBFE8D7832200898A7360 /* ParserTestUtils.m */,
+				914CB2A9B34A6BE6F1F305A0 /* ParserTestUtils.h */,
+				914CB5A346BB740958DDE8B4 /* ExpressionTest.m */,
 			);
 			path = DateMathsTests;
 			sourceTree = "<group>";
@@ -439,6 +447,8 @@
 			files = (
 				9E7CF4341AD5481E00317897 /* ParserTest.m in Sources */,
 				914CBF176BC1052841FFB9D1 /* DateMathsTests.m in Sources */,
+				914CBFF934113B500AA477F7 /* ParserTestUtils.m in Sources */,
+				914CB870AECF941BDF14E8C2 /* ExpressionTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

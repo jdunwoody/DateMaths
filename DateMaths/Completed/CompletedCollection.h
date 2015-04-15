@@ -13,5 +13,5 @@
 - (NSInteger)count;
 - (id)objectAtIndexedSubscript:(NSInteger)idx;
 
-- (void)makeCurrent:(NSInteger)sum;
+- (void)makeCurrent:(NSNumber *)sum;
 @end

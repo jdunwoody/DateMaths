@@ -61,6 +61,8 @@
     self.completedCollectionView.dataSource = self.completedCollectionViewDataSource;
     self.completedCollectionView.delegate = self;
     [self.completedCollectionView registerNib:nib forCellWithReuseIdentifier:@"simpleCell"];
+
+    self.totalLabel.text = [self showValue:nil];
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
@@ -93,15 +95,25 @@
         [self.resultsCollectionView reloadData];
     }
 
-    NSInteger sum = self.resultsCollection.sum;
+    NSNumber *sum = self.resultsCollection.sum;
     [self.completedCollection makeCurrent:sum];
     [self.completedCollectionView reloadData];
+
+    self.totalLabel.text = [self showValue:sum];
 }
 
 - (void)didLayoutCell:(NSIndexPath *)path inCollectionView:(UICollectionView *)view
 {
     self.digitHeightLayoutConstraint.constant = self.digitCollectionView.contentSize.height;
     self.operatorHeightLayoutConstraint.constant = self.operatorCollectionView.contentSize.height;
+}
+
+- (NSString *)showValue:(NSNumber *)sum
+{
+    if (!sum) {
+        return @"Error";
+    }
+    return [NSString stringWithFormat:@"%i", [sum intValue]];
 }
 
 @end

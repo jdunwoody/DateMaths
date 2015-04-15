@@ -2,10 +2,12 @@
 #import <Expecta/Expecta.h>
 #import "Parser.h"
 #import "ParseItem.h"
-
+#import "ParserTestUtils.h"
 
 SpecBegin(Parser)
+
     describe(@"Parser", ^{
+        __block ParserTestUtils *parserTestUtils = [[ParserTestUtils alloc] init];
 
         describe(@"Digits", ^{
 
@@ -167,6 +169,84 @@ SpecBegin(Parser)
                 double actualTotal = [parser expression];
 
                 expect(actualTotal).to.equal(15);
+            });
+
+            it(@"should parse with parenthesis", ^{
+                Parser *parser = [[Parser alloc] initWithParseItems:@[
+                    [[ParseItem alloc] initWithCharacter:'('],
+                    [[ParseItem alloc] initWithCharacter:'2'],
+                    [[ParseItem alloc] initWithCharacter:'+'],
+                    [[ParseItem alloc] initWithCharacter:'1'],
+                    [[ParseItem alloc] initWithCharacter:')'],
+                ]];
+                double actualTotal = [parser expression];
+
+                expect(actualTotal).to.equal(3);
+            });
+
+            it(@"should parse number in parenthesis", ^{
+                Parser *parser = [[Parser alloc] initWithParseItems:[parserTestUtils parseItemsFromString:@"(2)"]];
+
+                double actualTotal = [parser expression];
+
+                expect(actualTotal).to.equal(2);
+            });
+
+            it(@"should parse number in parenthesis", ^{
+                Parser *parser = [[Parser alloc] initWithParseItems:[parserTestUtils parseItemsFromString:@"(2+1)"]];
+
+                double actualTotal = [parser expression];
+
+                expect(actualTotal).to.equal(3);
+            });
+
+            it(@"should parse number in parenthesis", ^{
+                Parser *parser = [[Parser alloc] initWithParseItems:[parserTestUtils parseItemsFromString:@"(2*2)"]];
+
+                double actualTotal = [parser expression];
+
+                expect(actualTotal).to.equal(4);
+            });
+
+            it(@"should parse a really complex expression", ^{
+                Parser *parser = [[Parser alloc] initWithParseItems:[parserTestUtils parseItemsFromString:@"(2+78)/4"]];
+
+                double actualTotal = [parser expression];
+
+                expect(actualTotal).to.equal(20);
+            });
+
+
+            it(@"should parse a really complex expression", ^{
+                Parser *parser = [[Parser alloc] initWithParseItems:[parserTestUtils parseItemsFromString:@"(2+78)+4-(2+1)"]];
+
+                double actualTotal = [parser expression];
+
+                expect(actualTotal).to.equal(81);
+            });
+
+            it(@"should parse a really complex expression", ^{
+                Parser *parser = [[Parser alloc] initWithParseItems:[parserTestUtils parseItemsFromString:@"(2+78)/4*(2+1)"]];
+
+                double actualTotal = [parser expression];
+
+                expect(actualTotal).to.equal(60);
+            });
+
+            pending(@"should parse nested parenthesis", ^{
+                Parser *parser = [[Parser alloc] initWithParseItems:[parserTestUtils parseItemsFromString:@"3*(2*(3+1))/4/(2)"]];
+
+                double actualTotal = [parser expression];
+
+                expect(actualTotal).to.equal(1);
+            });
+
+            it(@"should parse nested parenthesis", ^{
+                Parser *parser = [[Parser alloc] initWithParseItems:[parserTestUtils parseItemsFromString:@"2*(3+1)/4/(2)"]];
+
+                double actualTotal = [parser expression];
+
+                expect(actualTotal).to.equal(1);
             });
         });
     });

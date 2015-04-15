@@ -23,5 +23,6 @@
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *digitHeightLayoutConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *operatorHeightLayoutConstraint;
+@property (weak, nonatomic) IBOutlet UILabel *totalLabel;
 
 @end

@@ -24,7 +24,7 @@
         [[Operator alloc] initWithSymbol:@"+"],
         [[Operator alloc] initWithSymbol:@"-"],
         [[Operator alloc] initWithSymbol:@"*"],
-        [[Operator alloc] initWithSymbol:@"%"],
+        [[Operator alloc] initWithSymbol:@"/"],
         [[Operator alloc] initWithSymbol:@"("],
         [[Operator alloc] initWithSymbol:@")"],
     ];

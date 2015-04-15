@@ -5,7 +5,6 @@
 
 #import "ResultsCollection.h"
 #import "DataItem.h"
-#import "Digit.h"
 
 
 @interface ResultsCollection ()
@@ -51,21 +50,28 @@
     [self.data removeObject:resultItem];
 }
 
-- (NSInteger)sum
+- (NSNumber *)sum
 {
-    int sum = 0;
-
-    for (id<DataItem> dataItem in self.data) {
-        if ([dataItem isKindOfClass:[Digit class]]) {
-            Digit *digit = dataItem;
-            sum += digit.digit;
-
-        } else {
-
-        }
+    NSMutableArray *integers = [NSMutableArray array];
+    for (id<DataItem> completed in self) {
+        [integers addObject:completed.value];
     }
 
-    return sum;
+    NSString *format = [integers componentsJoinedByString:@""];
+    if (!format.length) {
+        return nil;
+    }
+
+    NSExpression *expression;
+    @try {
+        expression = [NSExpression expressionWithFormat:format];
+    } @catch (NSException *exception) {
+        return nil;
+    }
+
+    id value = [expression expressionValueWithObject:nil context:nil];
+
+    return value;
 }
 
 @end

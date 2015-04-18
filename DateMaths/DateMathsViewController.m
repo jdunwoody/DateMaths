@@ -5,8 +5,8 @@
 #import "OperatorCollectionDataSource.h"
 #import "ResultsCollectionViewDataSource.h"
 #import "Digit.h"
-#import "CompletedCollectionViewDataSource.h"
-#import "CompletedCollection.h"
+#import "TargetCollectionViewDataSource.h"
+#import "TargetCollection.h"
 #import "ResultsCollection.h"
 
 @interface DateMathsViewController ()
@@ -21,9 +21,9 @@
 @property (nonatomic, strong) DigitCollectionDataSource *digitCollectionDataSource;
 @property (nonatomic, strong) OperatorCollectionDataSource *operatorCollectionDataSource;
 @property (nonatomic, strong) ResultsCollectionViewDataSource *resultsCollectionViewDataSource;
-@property (nonatomic, strong) CompletedCollectionViewDataSource *completedCollectionViewDataSource;
+@property (nonatomic, strong) TargetCollectionViewDataSource *completedCollectionViewDataSource;
 @property (nonatomic, strong) ResultsCollection *resultsCollection;
-@property (nonatomic, strong) CompletedCollection *completedCollection;
+@property (nonatomic, strong) TargetCollection *completedCollection;
 @end
 
 @implementation DateMathsViewController
@@ -55,9 +55,9 @@
     self.resultsCollectionView.delegate = self;
     [self.resultsCollectionView registerNib:nib forCellWithReuseIdentifier:@"simpleCell"];
 
-    //Completed
-    self.completedCollection = [[CompletedCollection alloc] init];
-    self.completedCollectionViewDataSource = [[CompletedCollectionViewDataSource alloc] initWithOperatorCollection:self.completedCollection];
+    //Target
+    self.completedCollection = [[TargetCollection alloc] init];
+    self.completedCollectionViewDataSource = [[TargetCollectionViewDataSource alloc] initWithOperatorCollection:self.completedCollection];
     self.completedCollectionView.dataSource = self.completedCollectionViewDataSource;
     self.completedCollectionView.delegate = self;
     [self.completedCollectionView registerNib:nib forCellWithReuseIdentifier:@"simpleCell"];
@@ -96,7 +96,6 @@
     }
 
     NSNumber *sum = self.resultsCollection.sum;
-    [self.completedCollection makeCurrent:sum];
     [self.completedCollectionView reloadData];
 
     self.totalLabel.text = [self showValue:sum];

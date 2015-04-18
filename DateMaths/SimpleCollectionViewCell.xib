@@ -7,14 +7,32 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="simpleCell" id="peQ-RA-eiI" customClass="SimpleCollectionViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+            <rect key="frame" x="0.0" y="0.0" width="396" height="270"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="396" height="270"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1W9-6R-10G">
-                        <rect key="frame" x="1" y="12" width="42" height="21"/>
+                        <rect key="frame" x="177" y="125" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⭐︎" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntU-CN-taC" userLabel="Star A">
+                        <rect key="frame" x="0.0" y="249" width="22" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="☆" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1cT-xE-62T" userLabel="Star C">
+                        <rect key="frame" x="379" y="249" width="17" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⭐︎" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVt-bd-pXb" userLabel="Star B">
+                        <rect key="frame" x="187" y="249" width="22" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -24,12 +42,24 @@
             </view>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="1cT-xE-62T" secondAttribute="trailing" id="39n-3F-5QZ"/>
+                <constraint firstItem="yVt-bd-pXb" firstAttribute="centerY" secondItem="1cT-xE-62T" secondAttribute="centerY" id="BNp-33-hpp"/>
+                <constraint firstItem="ntU-CN-taC" firstAttribute="leading" secondItem="peQ-RA-eiI" secondAttribute="leading" id="QRh-rn-aPn"/>
+                <constraint firstAttribute="centerX" secondItem="yVt-bd-pXb" secondAttribute="centerX" id="RNW-y0-aXj"/>
                 <constraint firstAttribute="centerY" secondItem="1W9-6R-10G" secondAttribute="centerY" id="WE9-AF-ib6"/>
+                <constraint firstItem="yVt-bd-pXb" firstAttribute="centerY" secondItem="ntU-CN-taC" secondAttribute="centerY" id="byD-dp-0rN"/>
                 <constraint firstAttribute="centerX" secondItem="1W9-6R-10G" secondAttribute="centerX" id="mBI-i5-SgE"/>
+                <constraint firstAttribute="bottom" secondItem="ntU-CN-taC" secondAttribute="bottom" id="pOf-bM-nfe"/>
+                <constraint firstAttribute="bottom" secondItem="1cT-xE-62T" secondAttribute="bottom" id="wKh-dP-aJB"/>
             </constraints>
+            <size key="customSize" width="396" height="270"/>
             <connections>
                 <outlet property="label" destination="1W9-6R-10G" id="VJw-iK-ps1"/>
+                <outlet property="starA" destination="ntU-CN-taC" id="seK-vz-DoG"/>
+                <outlet property="starB" destination="yVt-bd-pXb" id="1DB-dt-O1j"/>
+                <outlet property="starC" destination="1cT-xE-62T" id="Iuk-QU-rsO"/>
             </connections>
+            <point key="canvasLocation" x="454" y="470"/>
         </collectionViewCell>
     </objects>
 </document>

@@ -12,7 +12,7 @@
 @class ResultsCollectionViewDataSource;
 @class OperatorCollectionDataSource;
 @class ResultsCollection;
-@class CompletedCollection;
+@class TargetCollection;
 
 @interface DateMathsViewController : UIViewController<UICollectionViewDelegate, CollectionDataSourceDelegate>
 

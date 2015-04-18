@@ -16,15 +16,12 @@
 		914CBB2005A6995428799172 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB479BAD5699ED9B7C2FA /* AppDelegate.m */; };
 		914CBC31A9FEB09E009C5F71 /* ResultsCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CBC34DFE9F966B62C8E5A /* ResultsCollection.m */; };
 		914CBCC3B96D5CA79BEE8C77 /* DateMathsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CBA329EF88E051638C3E2 /* DateMathsViewModel.m */; };
-		914CBD0733831C5B835E92EF /* TargetCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB0AB8CF42B17FA193E71 /* TargetCollection.m */; };
 		914CBD7FCD50F049842EDC89 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 914CB9D3C69619BA9B98BB48 /* Images.xcassets */; };
 		914CBF176BC1052841FFB9D1 /* DateMathsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB50977B4279E38952DA1 /* DateMathsTests.m */; };
 		914CBF27319C07554EC7C084 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB04F81F03B4475E8AAE0 /* main.m */; };
 		914CBFF934113B500AA477F7 /* ParserTestUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CBFE8D7832200898A7360 /* ParserTestUtils.m */; };
 		9E00B5001AD0026700049AB1 /* SimpleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E00B4FE1AD0026700049AB1 /* SimpleCollectionViewCell.m */; };
 		9E00B5011AD0026700049AB1 /* SimpleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E00B4FF1AD0026700049AB1 /* SimpleCollectionViewCell.xib */; };
-		9E40C3C91AD239D700A31F2C /* TargetCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E40C3C81AD239D700A31F2C /* TargetCollectionViewDataSource.m */; };
-		9E5F76CC1AD236E0001D69F5 /* TargetItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5F76B11AD236E0001D69F5 /* TargetItem.m */; };
 		9E5F76CD1AD236E0001D69F5 /* Digit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5F76B51AD236E0001D69F5 /* Digit.m */; };
 		9E5F76CE1AD236E0001D69F5 /* DigitCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5F76B71AD236E0001D69F5 /* DigitCollection.m */; };
 		9E5F76CF1AD236E0001D69F5 /* DigitCollectionDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5F76B91AD236E0001D69F5 /* DigitCollectionDataSource.m */; };
@@ -50,7 +47,6 @@
 /* Begin PBXFileReference section */
 		914CB04F81F03B4475E8AAE0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		914CB0A91F98BAB9285CBFFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
-		914CB0AB8CF42B17FA193E71 /* TargetCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetCollection.m; sourceTree = "<group>"; };
 		914CB1120D5FDF945F364A6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		914CB17E859B3E1BFBFCC30B /* ParseItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParseItem.h; path = Parser/ParseItem.h; sourceTree = "<group>"; };
 		914CB1BC285DED776267516E /* DateMathsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DateMathsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,7 +56,6 @@
 		914CB479BAD5699ED9B7C2FA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		914CB50977B4279E38952DA1 /* DateMathsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateMathsTests.m; sourceTree = "<group>"; };
 		914CB54EA3F6E6AABF8ED12E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		914CB552AF226115249FE52E /* TargetCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetCollection.h; sourceTree = "<group>"; };
 		914CB5A346BB740958DDE8B4 /* ExpressionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpressionTest.m; path = Expression/ExpressionTest.m; sourceTree = "<group>"; };
 		914CB6201E3ED770072C3CBB /* TargetItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TargetItem.m; path = Target/TargetItem.m; sourceTree = "<group>"; };
 		914CB6375BE3E96890A1CF32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
@@ -81,10 +76,6 @@
 		9E00B4FD1AD0026700049AB1 /* SimpleCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleCollectionViewCell.h; sourceTree = "<group>"; };
 		9E00B4FE1AD0026700049AB1 /* SimpleCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleCollectionViewCell.m; sourceTree = "<group>"; };
 		9E00B4FF1AD0026700049AB1 /* SimpleCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleCollectionViewCell.xib; sourceTree = "<group>"; };
-		9E40C3C71AD239D700A31F2C /* TargetCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetCollectionViewDataSource.h; sourceTree = "<group>"; };
-		9E40C3C81AD239D700A31F2C /* TargetCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetCollectionViewDataSource.m; sourceTree = "<group>"; };
-		9E5F76B01AD236E0001D69F5 /* TargetItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetItem.h; sourceTree = "<group>"; };
-		9E5F76B11AD236E0001D69F5 /* TargetItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetItem.m; sourceTree = "<group>"; };
 		9E5F76B31AD236E0001D69F5 /* CollectionDataSourceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionDataSourceDelegate.h; sourceTree = "<group>"; };
 		9E5F76B41AD236E0001D69F5 /* Digit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Digit.h; sourceTree = "<group>"; };
 		9E5F76B51AD236E0001D69F5 /* Digit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Digit.m; sourceTree = "<group>"; };
@@ -188,46 +179,32 @@
 			isa = PBXGroup;
 			children = (
 				914CB54EA3F6E6AABF8ED12E /* AppDelegate.h */,
+				914CB479BAD5699ED9B7C2FA /* AppDelegate.m */,
 				914CBAA50A5591BB3AD060B6 /* CALayer+NewCategory.h */,
+				914CBF0DCA8CC6E6EDFE659A /* CALayer+NewCategory.m */,
 				914CB7F71ECE5F0052D94EBB /* DataItem.h */,
 				9E89CC101AC7F58B0086C816 /* DateMathsViewController.h */,
-				914CBABF8458B64D6C56CCB5 /* DateMathsViewModel.h */,
-				914CB17E859B3E1BFBFCC30B /* ParseItem.h */,
-				914CB73BA09CEFB74D83EEFA /* Parser.h */,
-				9E00B4FD1AD0026700049AB1 /* SimpleCollectionViewCell.h */,
-				914CBC7825301962F8B48C7D /* TargetItem.h */,
-				914CB479BAD5699ED9B7C2FA /* AppDelegate.m */,
-				914CBF0DCA8CC6E6EDFE659A /* CALayer+NewCategory.m */,
 				9E89CC111AC7F58B0086C816 /* DateMathsViewController.m */,
+				914CBABF8458B64D6C56CCB5 /* DateMathsViewModel.h */,
 				914CBA329EF88E051638C3E2 /* DateMathsViewModel.m */,
-				914CB814F2E3FE9B8984137D /* ParseItem.m */,
-				914CB36BCCAAA8E0D4787F5E /* Parser.m */,
-				9E00B4FE1AD0026700049AB1 /* SimpleCollectionViewCell.m */,
-				914CB6201E3ED770072C3CBB /* TargetItem.m */,
-				914CB9D3C69619BA9B98BB48 /* Images.xcassets */,
-				9E00B4FF1AD0026700049AB1 /* SimpleCollectionViewCell.xib */,
 				9E5F76B21AD236E0001D69F5 /* Digits */,
+				914CB9D3C69619BA9B98BB48 /* Images.xcassets */,
 				914CB5E39B366B313E1A520F /* LaunchScreen.xib */,
 				914CBB52F83F3C1DAC8B6625 /* Main.storyboard */,
 				9E5F76BA1AD236E0001D69F5 /* Operator */,
+				914CB17E859B3E1BFBFCC30B /* ParseItem.h */,
+				914CB814F2E3FE9B8984137D /* ParseItem.m */,
+				914CB73BA09CEFB74D83EEFA /* Parser.h */,
+				914CB36BCCAAA8E0D4787F5E /* Parser.m */,
 				9E5F76C11AD236E0001D69F5 /* Results */,
+				9E00B4FD1AD0026700049AB1 /* SimpleCollectionViewCell.h */,
+				9E00B4FE1AD0026700049AB1 /* SimpleCollectionViewCell.m */,
+				9E00B4FF1AD0026700049AB1 /* SimpleCollectionViewCell.xib */,
 				914CB8ECE2DC34F51FC0FB4F /* Supporting Files */,
-				9E5F76AB1AD236E0001D69F5 /* Target */,
+				914CBC7825301962F8B48C7D /* TargetItem.h */,
+				914CB6201E3ED770072C3CBB /* TargetItem.m */,
 			);
 			path = DateMaths;
-			sourceTree = "<group>";
-		};
-		9E5F76AB1AD236E0001D69F5 /* Target */ = {
-			isa = PBXGroup;
-			children = (
-				9E40C3C71AD239D700A31F2C /* TargetCollectionViewDataSource.h */,
-				9E40C3C81AD239D700A31F2C /* TargetCollectionViewDataSource.m */,
-				9E5F76B01AD236E0001D69F5 /* TargetItem.h */,
-				9E5F76B11AD236E0001D69F5 /* TargetItem.m */,
-				914CB552AF226115249FE52E /* TargetCollection.h */,
-				914CB0AB8CF42B17FA193E71 /* TargetCollection.m */,
-			);
-			path = Target;
 			sourceTree = "<group>";
 		};
 		9E5F76B21AD236E0001D69F5 /* Digits */ = {
@@ -419,13 +396,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E5F76CC1AD236E0001D69F5 /* TargetItem.m in Sources */,
 				914CBF27319C07554EC7C084 /* main.m in Sources */,
 				9E5F76D31AD236E0001D69F5 /* ResultsCollectionViewDataSource.m in Sources */,
 				9E5F76CD1AD236E0001D69F5 /* Digit.m in Sources */,
 				914CBB2005A6995428799172 /* AppDelegate.m in Sources */,
 				9E89CC121AC7F58B0086C816 /* DateMathsViewController.m in Sources */,
-				9E40C3C91AD239D700A31F2C /* TargetCollectionViewDataSource.m in Sources */,
 				9E5F76CF1AD236E0001D69F5 /* DigitCollectionDataSource.m in Sources */,
 				9E5F76CE1AD236E0001D69F5 /* DigitCollection.m in Sources */,
 				914CBCC3B96D5CA79BEE8C77 /* DateMathsViewModel.m in Sources */,
@@ -434,7 +409,6 @@
 				9E00B5001AD0026700049AB1 /* SimpleCollectionViewCell.m in Sources */,
 				9E5F76D11AD236E0001D69F5 /* OperatorCollection.m in Sources */,
 				9E5F76D01AD236E0001D69F5 /* Operator.m in Sources */,
-				914CBD0733831C5B835E92EF /* TargetCollection.m in Sources */,
 				914CBC31A9FEB09E009C5F71 /* ResultsCollection.m in Sources */,
 				914CB1AD74274B059E6A4CA4 /* Parser.m in Sources */,
 				914CB625B5561B8DF7E0CFC0 /* ParseItem.m in Sources */,

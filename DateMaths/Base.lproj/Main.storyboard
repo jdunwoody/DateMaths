@@ -67,7 +67,7 @@
                                     </mask>
                                 </variation>
                             </collectionView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Eu3-a7-zjb" userLabel="Completed Collection View">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Eu3-a7-zjb" userLabel="Level Collection View">
                                 <rect key="frame" x="16" y="376" width="568" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -109,7 +109,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="completedCollectionView" destination="Eu3-a7-zjb" id="0be-3a-UJh"/>
+                        <outlet property="levelCollectionView" destination="Eu3-a7-zjb" id="0be-3a-UJh"/>
                         <outlet property="digitCollectionView" destination="tK5-5c-J1z" id="gx4-FT-Yl9"/>
                         <outlet property="operatorCollectionView" destination="vU8-70-u2O" id="ffs-cF-Hhu"/>
                         <outlet property="resultsCollectionView" destination="irY-uj-KQk" id="DVc-Jf-CLg"/>

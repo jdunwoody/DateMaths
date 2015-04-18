@@ -9,36 +9,37 @@
 #import "DigitCollection.h"
 #import "SimpleCollectionViewCell.h"
 #import "CollectionDataSourceDelegate.h"
+#import "LevelCollection.h"
 
 @interface DigitCollectionDataSource ()
-@property (nonatomic, strong) DigitCollection *collection;
+@property (nonatomic, strong) LevelCollection *collection;
 @property (nonatomic, readonly) id<CollectionDataSourceDelegate> delegate;
 @end
 
 @implementation DigitCollectionDataSource
 
-- (instancetype)initWithDigitCollection:(DigitCollection *)collection withDelegate:(id<CollectionDataSourceDelegate>)delegate
+- (instancetype)initWithCollection:(LevelCollection *)collection withDelegate:(id<CollectionDataSourceDelegate>)delegate
 {
     self = [super init];
     if (!self) {
         return self;
     }
-    
+
     _delegate = delegate;
-    self.collection = collection;
+    _collection = collection;
 
     return self;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return [self.collection count];
+    return [self.collection.digits count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     SimpleCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"simpleCell" forIndexPath:indexPath];
-    Digit *digit = self.collection[(NSUInteger)indexPath.row];
+    Digit *digit = self.collection.digits[(NSUInteger)indexPath.row];
     cell.label.text = digit.value;
 
     if (digit.used) {

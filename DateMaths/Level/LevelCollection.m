@@ -3,17 +3,20 @@
 // Copyright (c) 2015 ___FULLUSERNAME___. All rights reserved.
 //
 
-#import "TargetCollection.h"
-#import "TargetItem.h"
+#import "LevelCollection.h"
+#import "LevelItem.h"
+#import "DigitCollection.h"
+#import "OperatorCollection.h"
+#import "ResultsCollection.h"
 
 
-@interface TargetCollection ()
+@interface LevelCollection ()
 @property (nonatomic, strong) NSArray *data;
 @end
 
-@implementation TargetCollection
+@implementation LevelCollection
 
-- (instancetype)init
+- (instancetype)initWithDate:(NSDate *)date
 {
     self = [super init];
     if (!self) {
@@ -22,9 +25,11 @@
 
     NSMutableArray *mutableData = [[NSMutableArray alloc] init];
     for (int i = 1; i <= 20; i++) {
-        [mutableData addObject:[[TargetItem alloc] initWithNumber:i]];
-    }
+        LevelItem *levelItem = [[LevelItem alloc] initWithNumber:i withDate:date];
 
+        [mutableData addObject:levelItem];
+    }
+   
     _data = mutableData;
     _current = _data[0];
 
@@ -46,4 +51,18 @@
     return [self.data countByEnumeratingWithState:state objects:buffer count:len];
 }
 
+- (DigitCollection *)digits
+{
+    return self.current.digitCollection;
+}
+
+- (OperatorCollection *)operators
+{
+    return self.current.operatorCollection;
+}
+
+- (ResultsCollection *)results
+{
+    return self.current.resultsCollection;
+}
 @end

@@ -6,11 +6,11 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@class TargetCollection;
+@class LevelCollection;
 
-@interface TargetCollectionViewDataSource : NSObject<UICollectionViewDataSource>
+@interface LevelCollectionViewDataSource : NSObject<UICollectionViewDataSource>
 
 - (instancetype)init __unavailable;
-- (instancetype)initWithOperatorCollection:(TargetCollection *)collection;
+- (instancetype)initWithCollection:(LevelCollection *)collection;
 
 @end

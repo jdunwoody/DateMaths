@@ -12,14 +12,14 @@
 @class ResultsCollectionViewDataSource;
 @class OperatorCollectionDataSource;
 @class ResultsCollection;
-@class TargetCollection;
+@class LevelCollection;
 
 @interface DateMathsViewController : UIViewController<UICollectionViewDelegate, CollectionDataSourceDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *digitCollectionView;
 @property (weak, nonatomic) IBOutlet UICollectionView *operatorCollectionView;
 @property (weak, nonatomic) IBOutlet UICollectionView *resultsCollectionView;
-@property (weak, nonatomic) IBOutlet UICollectionView *completedCollectionView;
+@property (weak, nonatomic) IBOutlet UICollectionView *levelCollectionView;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *digitHeightLayoutConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *operatorHeightLayoutConstraint;

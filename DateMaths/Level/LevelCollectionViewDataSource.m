@@ -1,21 +1,16 @@
-//
-// Created by James Dunwoody on 6/04/15.
-// Copyright (c) 2015 ___FULLUSERNAME___. All rights reserved.
-//
-
-#import "TargetCollectionViewDataSource.h"
-#import "TargetCollection.h"
+#import "LevelCollectionViewDataSource.h"
+#import "LevelCollection.h"
 #import "SimpleCollectionViewCell.h"
 #import "DataItem.h"
-#import "TargetItem.h"
+#import "LevelItem.h"
 
-@interface TargetCollectionViewDataSource ()
-@property (nonatomic, strong) TargetCollection *collection;
+@interface LevelCollectionViewDataSource ()
+@property (nonatomic, strong) LevelCollection *collection;
 @end
 
-@implementation TargetCollectionViewDataSource
+@implementation LevelCollectionViewDataSource
 
-- (instancetype)initWithOperatorCollection:(TargetCollection *)collection
+- (instancetype)initWithCollection:(LevelCollection *)collection
 {
     self = [super init];
     if (!self) {
@@ -35,7 +30,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     SimpleCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"simpleCell" forIndexPath:indexPath];
-    TargetItem *item = self.collection[(NSUInteger)indexPath.row];
+    LevelItem *item = self.collection[(NSUInteger)indexPath.row];
 
     cell.label.text = item.value;
     cell.backgroundColor = self.collection.current == item ? [UIColor whiteColor] : [UIColor lightGrayColor];

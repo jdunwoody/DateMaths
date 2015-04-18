@@ -7,18 +7,24 @@
 #import "DataItem.h"
 
 @class DigitCollection;
+@class OperatorCollection;
+@class ResultsCollection;
 
-@interface TargetItem : NSObject<DataItem>
+@interface LevelItem : NSObject<DataItem>
 
 @property (nonatomic, readonly) double number;
 @property (strong, nonatomic) NSString *value;
 
 - (instancetype)init __unavailable;
-- (instancetype)initWithNumber:(double)number;
+- (instancetype)initWithNumber:(double)number withDate:(NSDate *)date;
 
 @property (nonatomic) BOOL starA;
 @property (nonatomic) BOOL starB;
 @property (nonatomic) BOOL starC;
+
+@property (nonatomic, strong, readonly) DigitCollection *digitCollection;
+@property (nonatomic, strong, readonly) OperatorCollection *operatorCollection;
+@property (nonatomic, strong, readonly) ResultsCollection *resultsCollection;
 
 - (void)updateStarsWithSum:(NSNumber *)sum witDigitsCollection:(DigitCollection *)digitCollection;
 

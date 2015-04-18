@@ -7,7 +7,8 @@
 #import <UIKit/UIKit.h>
 
 @class OperatorCollection;
+@class LevelCollection;
 
 @interface OperatorCollectionDataSource : NSObject<UICollectionViewDataSource>
-- (instancetype)initWithOperatorCollection:(OperatorCollection *)collection;
+- (instancetype)initWithCollection:(LevelCollection *)collection;
 @end

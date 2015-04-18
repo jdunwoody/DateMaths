@@ -22,9 +22,9 @@
 		914CBFF934113B500AA477F7 /* ParserTestUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CBFE8D7832200898A7360 /* ParserTestUtils.m */; };
 		9E00B5001AD0026700049AB1 /* SimpleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E00B4FE1AD0026700049AB1 /* SimpleCollectionViewCell.m */; };
 		9E00B5011AD0026700049AB1 /* SimpleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E00B4FF1AD0026700049AB1 /* SimpleCollectionViewCell.xib */; };
-		9E42E76E1AE2486B0084B471 /* TargetCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E42E7691AE2486B0084B471 /* TargetCollection.m */; };
-		9E42E76F1AE2486B0084B471 /* TargetCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E42E76B1AE2486B0084B471 /* TargetCollectionViewDataSource.m */; };
-		9E42E7701AE2486B0084B471 /* TargetItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E42E76D1AE2486B0084B471 /* TargetItem.m */; };
+		9E42E76E1AE2486B0084B471 /* LevelCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E42E7691AE2486B0084B471 /* LevelCollection.m */; };
+		9E42E76F1AE2486B0084B471 /* LevelCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E42E76B1AE2486B0084B471 /* LevelCollectionViewDataSource.m */; };
+		9E42E7701AE2486B0084B471 /* LevelItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E42E76D1AE2486B0084B471 /* LevelItem.m */; };
 		9E5F76CD1AD236E0001D69F5 /* Digit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5F76B51AD236E0001D69F5 /* Digit.m */; };
 		9E5F76CE1AD236E0001D69F5 /* DigitCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5F76B71AD236E0001D69F5 /* DigitCollection.m */; };
 		9E5F76CF1AD236E0001D69F5 /* DigitCollectionDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5F76B91AD236E0001D69F5 /* DigitCollectionDataSource.m */; };
@@ -77,12 +77,12 @@
 		9E00B4FD1AD0026700049AB1 /* SimpleCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleCollectionViewCell.h; sourceTree = "<group>"; };
 		9E00B4FE1AD0026700049AB1 /* SimpleCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleCollectionViewCell.m; sourceTree = "<group>"; };
 		9E00B4FF1AD0026700049AB1 /* SimpleCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleCollectionViewCell.xib; sourceTree = "<group>"; };
-		9E42E7681AE2486B0084B471 /* TargetCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetCollection.h; sourceTree = "<group>"; };
-		9E42E7691AE2486B0084B471 /* TargetCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetCollection.m; sourceTree = "<group>"; };
-		9E42E76A1AE2486B0084B471 /* TargetCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetCollectionViewDataSource.h; sourceTree = "<group>"; };
-		9E42E76B1AE2486B0084B471 /* TargetCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetCollectionViewDataSource.m; sourceTree = "<group>"; };
-		9E42E76C1AE2486B0084B471 /* TargetItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetItem.h; sourceTree = "<group>"; };
-		9E42E76D1AE2486B0084B471 /* TargetItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetItem.m; sourceTree = "<group>"; };
+		9E42E7681AE2486B0084B471 /* LevelCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelCollection.h; sourceTree = "<group>"; };
+		9E42E7691AE2486B0084B471 /* LevelCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelCollection.m; sourceTree = "<group>"; };
+		9E42E76A1AE2486B0084B471 /* LevelCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelCollectionViewDataSource.h; sourceTree = "<group>"; };
+		9E42E76B1AE2486B0084B471 /* LevelCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelCollectionViewDataSource.m; sourceTree = "<group>"; };
+		9E42E76C1AE2486B0084B471 /* LevelItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelItem.h; sourceTree = "<group>"; };
+		9E42E76D1AE2486B0084B471 /* LevelItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelItem.m; sourceTree = "<group>"; };
 		9E5F76B31AD236E0001D69F5 /* CollectionDataSourceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionDataSourceDelegate.h; sourceTree = "<group>"; };
 		9E5F76B41AD236E0001D69F5 /* Digit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Digit.h; sourceTree = "<group>"; };
 		9E5F76B51AD236E0001D69F5 /* Digit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Digit.m; sourceTree = "<group>"; };
@@ -204,7 +204,7 @@
 				914CB73BA09CEFB74D83EEFA /* Parser.h */,
 				914CB36BCCAAA8E0D4787F5E /* Parser.m */,
 				9E5F76C11AD236E0001D69F5 /* Results */,
-				9E42E7671AE2486B0084B471 /* Section */,
+				9E42E7671AE2486B0084B471 /* Level */,
 				9E00B4FD1AD0026700049AB1 /* SimpleCollectionViewCell.h */,
 				9E00B4FE1AD0026700049AB1 /* SimpleCollectionViewCell.m */,
 				9E00B4FF1AD0026700049AB1 /* SimpleCollectionViewCell.xib */,
@@ -213,17 +213,17 @@
 			path = DateMaths;
 			sourceTree = "<group>";
 		};
-		9E42E7671AE2486B0084B471 /* Section */ = {
+		9E42E7671AE2486B0084B471 /* Level */ = {
 			isa = PBXGroup;
 			children = (
-				9E42E7681AE2486B0084B471 /* TargetCollection.h */,
-				9E42E7691AE2486B0084B471 /* TargetCollection.m */,
-				9E42E76A1AE2486B0084B471 /* TargetCollectionViewDataSource.h */,
-				9E42E76B1AE2486B0084B471 /* TargetCollectionViewDataSource.m */,
-				9E42E76C1AE2486B0084B471 /* TargetItem.h */,
-				9E42E76D1AE2486B0084B471 /* TargetItem.m */,
+				9E42E7681AE2486B0084B471 /* LevelCollection.h */,
+				9E42E7691AE2486B0084B471 /* LevelCollection.m */,
+				9E42E76A1AE2486B0084B471 /* LevelCollectionViewDataSource.h */,
+				9E42E76B1AE2486B0084B471 /* LevelCollectionViewDataSource.m */,
+				9E42E76C1AE2486B0084B471 /* LevelItem.h */,
+				9E42E76D1AE2486B0084B471 /* LevelItem.m */,
 			);
-			path = Section;
+			path = Level;
 			sourceTree = "<group>";
 		};
 		9E5F76B21AD236E0001D69F5 /* Digits */ = {
@@ -417,17 +417,17 @@
 			files = (
 				914CBF27319C07554EC7C084 /* main.m in Sources */,
 				9E5F76D31AD236E0001D69F5 /* ResultsCollectionViewDataSource.m in Sources */,
-				9E42E76F1AE2486B0084B471 /* TargetCollectionViewDataSource.m in Sources */,
+				9E42E76F1AE2486B0084B471 /* LevelCollectionViewDataSource.m in Sources */,
 				9E5F76CD1AD236E0001D69F5 /* Digit.m in Sources */,
 				914CBB2005A6995428799172 /* AppDelegate.m in Sources */,
 				9E89CC121AC7F58B0086C816 /* DateMathsViewController.m in Sources */,
-				9E42E7701AE2486B0084B471 /* TargetItem.m in Sources */,
+				9E42E7701AE2486B0084B471 /* LevelItem.m in Sources */,
 				9E5F76CF1AD236E0001D69F5 /* DigitCollectionDataSource.m in Sources */,
 				9E5F76CE1AD236E0001D69F5 /* DigitCollection.m in Sources */,
 				914CBCC3B96D5CA79BEE8C77 /* DateMathsViewModel.m in Sources */,
 				914CBA5C037D61EFAE1DB001 /* CALayer+NewCategory.m in Sources */,
 				9E5F76D21AD236E0001D69F5 /* OperatorCollectionDataSource.m in Sources */,
-				9E42E76E1AE2486B0084B471 /* TargetCollection.m in Sources */,
+				9E42E76E1AE2486B0084B471 /* LevelCollection.m in Sources */,
 				9E00B5001AD0026700049AB1 /* SimpleCollectionViewCell.m in Sources */,
 				9E5F76D11AD236E0001D69F5 /* OperatorCollection.m in Sources */,
 				9E5F76D01AD236E0001D69F5 /* Operator.m in Sources */,

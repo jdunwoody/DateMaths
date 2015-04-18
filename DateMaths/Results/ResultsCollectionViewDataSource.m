@@ -2,22 +2,23 @@
 #import "Digit.h"
 #import "SimpleCollectionViewCell.h"
 #import "ResultsCollection.h"
+#import "LevelCollection.h"
 
 @interface ResultsCollectionViewDataSource ()
-@property (nonatomic, strong) ResultsCollection *collection;
+@property (nonatomic, strong) LevelCollection *collection;
 @end
 
 @implementation ResultsCollectionViewDataSource
 
 
-- (instancetype)initWithCollection:(ResultsCollection *)collection
+- (instancetype)initWithCollection:(LevelCollection *)collection
 {
     self = [super init];
     if (!self) {
         return self;
     }
 
-    self.collection = collection;
+    _collection = collection;
 
     return self;
 }
@@ -25,7 +26,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     SimpleCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"simpleCell" forIndexPath:indexPath];
-    id<DataItem> dataItem = self.collection[(NSUInteger)indexPath.row];
+    id<DataItem> dataItem = self.collection.results[(NSUInteger)indexPath.row];
 
     cell.label.text = dataItem.value;
 
@@ -34,22 +35,22 @@
 
 - (void)addItem:(id<DataItem>)item
 {
-    [self.collection addObject:item];
+    [self.collection.results addObject:item];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return [self.collection count];
+    return [self.collection.results count];
 }
 
 - (id)objectAtIndexedSubscript:(NSInteger)idx
 {
-    return self.collection[(NSUInteger)idx];
+    return self.collection.results[(NSUInteger)idx];
 }
 
 - (void)removeItem:(id<DataItem>)resultItem
 {
-    [self.collection removeObject:resultItem];
+    [self.collection.results removeObject:resultItem];
 }
 
 @end

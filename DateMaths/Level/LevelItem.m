@@ -1,13 +1,15 @@
-#import "TargetItem.h"
+#import "LevelItem.h"
 #import "DigitCollection.h"
+#import "OperatorCollection.h"
+#import "ResultsCollection.h"
 
 
-@interface TargetItem ()
+@interface LevelItem ()
 @end
 
-@implementation TargetItem
+@implementation LevelItem
 
-- (instancetype)initWithNumber:(double)number
+- (instancetype)initWithNumber:(double)number withDate:(NSDate *)date
 {
     self = [super init];
     if (!self) {
@@ -18,6 +20,10 @@
     _starA = NO;
     _starB = NO;
     _starC = NO;
+
+    _digitCollection = [[DigitCollection alloc] initWithDate:date];
+    _operatorCollection = [[OperatorCollection alloc] init];
+    _resultsCollection = [[ResultsCollection alloc] init];
 
     return self;
 }

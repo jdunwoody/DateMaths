@@ -5,6 +5,9 @@
 
 @interface DigitCollection : NSObject<NSFastEnumeration>
 
+@property (nonatomic, readonly) int numUsed;
+@property (nonatomic, readonly) int percentageUsed;
+
 - (instancetype)init __unavailable;
 - (instancetype)initWithDate:(NSDate *)date;
 

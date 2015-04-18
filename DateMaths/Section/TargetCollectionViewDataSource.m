@@ -40,9 +40,9 @@
     cell.label.text = item.value;
     cell.backgroundColor = self.collection.current == item ? [UIColor whiteColor] : [UIColor lightGrayColor];
 
-    cell.starA.hidden = item.starA;
-    cell.starB.hidden = item.starB;
-    cell.starC.hidden = item.starC;
+    cell.starA.hidden = !item.starA;
+    cell.starB.hidden = !item.starB;
+    cell.starC.hidden = !item.starC;
 
     return cell;
 }

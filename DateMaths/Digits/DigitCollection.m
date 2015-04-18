@@ -66,4 +66,26 @@
     return self.digits[(NSUInteger)idx];
 }
 
+- (int)numUsed
+{
+    int n = 0;
+
+    for (Digit *digit in self.digits) {
+        if (digit.used) {
+            n++;
+        }
+    }
+
+    return n;
+}
+
+- (int)percentageUsed
+{
+    int numUsed = [self numUsed];
+    NSInteger count = [self count];
+
+    double fraction = ((double)numUsed) / count;
+    return (int)(fraction * 100);
+}
+
 @end

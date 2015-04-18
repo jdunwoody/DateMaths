@@ -13,6 +13,7 @@
     }
 
     _digit = digit;
+    _used = NO;
 
     return self;
 }

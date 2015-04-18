@@ -8,6 +8,7 @@
 #import "TargetCollectionViewDataSource.h"
 #import "TargetCollection.h"
 #import "ResultsCollection.h"
+#import "TargetItem.h"
 
 @interface DateMathsViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *digitLabel;
@@ -96,6 +97,9 @@
     }
 
     NSNumber *sum = self.resultsCollection.sum;
+    TargetItem *current = self.completedCollection.current;
+    [current updateStarsWithSum:sum witDigitsCollection:self.digitCollection];
+
     [self.completedCollectionView reloadData];
 
     self.totalLabel.text = [self showValue:sum];

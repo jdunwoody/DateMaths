@@ -6,6 +6,8 @@
 #import <Foundation/Foundation.h>
 #import "DataItem.h"
 
+@class DigitCollection;
+
 @interface TargetItem : NSObject<DataItem>
 
 @property (nonatomic, readonly) double number;
@@ -17,5 +19,7 @@
 @property (nonatomic) BOOL starA;
 @property (nonatomic) BOOL starB;
 @property (nonatomic) BOOL starC;
+
+- (void)updateStarsWithSum:(NSNumber *)sum witDigitsCollection:(DigitCollection *)digitCollection;
 
 @end

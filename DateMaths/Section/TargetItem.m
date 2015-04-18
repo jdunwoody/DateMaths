@@ -1,4 +1,5 @@
 #import "TargetItem.h"
+#import "DigitCollection.h"
 
 
 @interface TargetItem ()
@@ -24,6 +25,23 @@
 - (NSString *)value
 {
     return [NSString stringWithFormat:@"%li", (long)self.number];
+}
+
+- (void)updateStarsWithSum:(NSNumber *)sum witDigitsCollection:(DigitCollection *)digitCollection
+{
+    if (self.number == [sum doubleValue]) {
+        if (digitCollection.numUsed > 0) {
+            self.starA = YES;
+        }
+
+        if (digitCollection.percentageUsed >= 50) {
+            self.starB = YES;
+        }
+
+        if (digitCollection.percentageUsed == 100) {
+            self.starC = YES;
+        }
+    }
 }
 
 @end

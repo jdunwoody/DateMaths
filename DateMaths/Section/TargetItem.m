@@ -1,6 +1,9 @@
 #import "TargetItem.h"
 
 
+@interface TargetItem ()
+@end
+
 @implementation TargetItem
 
 - (instancetype)initWithNumber:(double)number
@@ -11,6 +14,9 @@
     }
 
     _number = number;
+    _starA = NO;
+    _starB = NO;
+    _starC = NO;
 
     return self;
 }

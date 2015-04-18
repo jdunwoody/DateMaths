@@ -14,4 +14,8 @@
 - (instancetype)init __unavailable;
 - (instancetype)initWithNumber:(double)number;
 
+@property (nonatomic) BOOL starA;
+@property (nonatomic) BOOL starB;
+@property (nonatomic) BOOL starC;
+
 @end

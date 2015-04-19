@@ -9,4 +9,6 @@
 
 @property (strong, nonatomic) NSString *value;
 
+- (BOOL)isDigit;
+
 @end

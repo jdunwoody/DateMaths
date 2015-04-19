@@ -25,4 +25,9 @@
     return self.symbol;
 }
 
+- (BOOL)isDigit
+{
+    return NO;
+}
+
 @end

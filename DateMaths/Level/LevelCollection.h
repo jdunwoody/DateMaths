@@ -19,7 +19,7 @@
 @property (strong, nonatomic) LevelItem *current;
 @property (nonatomic, readonly) DigitCollection *digits;
 @property (nonatomic, readonly) OperatorCollection *operators;
-@property (nonatomic, readonly) ResultsCollection * results;
+@property (nonatomic, readonly) ResultsCollection *results;
 
 - (instancetype)init __unavailable;
 - (instancetype)initWithDate:(NSDate *)date;

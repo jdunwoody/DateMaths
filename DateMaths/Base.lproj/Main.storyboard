@@ -20,7 +20,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="irY-uj-KQk" userLabel="Results Collection View">
                                 <rect key="frame" x="16" y="20" width="568" height="319"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="vU2-lD-qed">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="vU2-lD-qed" customClass="ResultCollectionViewLayout">
                                     <size key="itemSize" width="44" height="44"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -109,8 +109,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="levelCollectionView" destination="Eu3-a7-zjb" id="0be-3a-UJh"/>
                         <outlet property="digitCollectionView" destination="tK5-5c-J1z" id="gx4-FT-Yl9"/>
+                        <outlet property="levelCollectionView" destination="Eu3-a7-zjb" id="0be-3a-UJh"/>
                         <outlet property="operatorCollectionView" destination="vU8-70-u2O" id="ffs-cF-Hhu"/>
                         <outlet property="resultsCollectionView" destination="irY-uj-KQk" id="DVc-Jf-CLg"/>
                         <outlet property="totalLabel" destination="obf-Av-vxb" id="Awh-ks-uG6"/>

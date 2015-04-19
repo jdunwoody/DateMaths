@@ -10,6 +10,7 @@
 #import "ResultsCollection.h"
 #import "LevelItem.h"
 #import "Operator.h"
+#import "ResultCollectionViewLayout.h"
 
 @interface DateMathsViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *digitLabel;
@@ -58,6 +59,8 @@
     self.resultsCollectionView.dataSource = self.resultsCollectionViewDataSource;
     self.resultsCollectionView.delegate = self;
     [self.resultsCollectionView registerNib:nib forCellWithReuseIdentifier:@"simpleCell"];
+    ResultCollectionViewLayout *layout = (ResultCollectionViewLayout *)self.resultsCollectionView.collectionViewLayout;
+    layout.levelCollection = self.levelCollection;
 
     self.totalLabel.text = [self showValue:nil];
 }

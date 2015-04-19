@@ -23,4 +23,9 @@
     return [NSString stringWithFormat:@"%li", (long)self.digit];
 }
 
+- (BOOL)isDigit
+{
+    return YES;
+}
+
 @end

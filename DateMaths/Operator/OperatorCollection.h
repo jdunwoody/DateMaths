@@ -4,9 +4,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "IndexableCollection.h"
+@class Operator;
 
+@interface OperatorCollection : NSObject<IndexableCollection>
 
-@interface OperatorCollection : NSObject<NSFastEnumeration>
 - (NSInteger)count;
-- (id)objectAtIndexedSubscript:(NSInteger)idx;
+- (Operator *)operatorWithSymbol:(NSString *)symbol;
+
 @end

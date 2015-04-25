@@ -5,6 +5,7 @@
 
 #import "ResultsCollection.h"
 #import "DataItem.h"
+#import "Digit.h"
 
 
 @interface ResultsCollection ()
@@ -35,9 +36,9 @@
     return [self.data count];
 }
 
-- (id)objectAtIndexedSubscript:(NSInteger)idx
+- (id)objectAtIndexedSubscript:(NSUInteger)idx
 {
-    return self.data[(NSUInteger)idx];
+    return self.data[idx];
 }
 
 - (void)addObject:(id<DataItem>)dataItem

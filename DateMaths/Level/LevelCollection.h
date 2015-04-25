@@ -4,17 +4,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "IndexableCollection.h"
 
 @protocol DataItem;
 @class LevelItem;
 @class DigitCollection;
 @class OperatorCollection;
 @class ResultsCollection;
+@class DigitFactory;
+@class OperatorFactory;
 
-@interface LevelCollection : NSObject<NSFastEnumeration>
-
-- (NSInteger)count;
-- (id)objectAtIndexedSubscript:(NSInteger)idx;
+@interface LevelCollection : NSObject<IndexableCollection>
 
 @property (strong, nonatomic) LevelItem *current;
 @property (nonatomic, readonly) DigitCollection *digits;
@@ -22,6 +22,8 @@
 @property (nonatomic, readonly) ResultsCollection *results;
 
 - (instancetype)init __unavailable;
-- (instancetype)initWithDate:(NSDate *)date;
+- (instancetype)initWithDigitsFactory:(DigitFactory *)digitFactory operatorFactory:(OperatorFactory *)operatorFactory;
+
+- (NSInteger)count;
 
 @end

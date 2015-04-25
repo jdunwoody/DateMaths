@@ -5,50 +5,25 @@
 
 #import "DigitCollection.h"
 #import "Digit.h"
+#import "DigitFactory.h"
 
 
 @interface DigitCollection ()
-@property (nonatomic, strong) NSMutableArray *digits;
+@property (nonatomic, strong) NSArray *digits;
 @end
 
 @implementation DigitCollection
 
-- (instancetype)initWithDate:(NSDate *)date
+- (instancetype)initWithDigitFactory:(DigitFactory *)digitFactory
 {
     self = [super init];
     if (!self) {
         return self;
     }
 
-    NSString *formattedDate = [self formattedDate:date];
-
-    self.digits = [self buildDigitsFromString:formattedDate];
+    _digits = [digitFactory digitsFromDate];
 
     return self;
-}
-
-- (NSString *)formattedDate:(NSDate *)date
-{
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    dateFormatter.dateFormat = @"dd/MM/YYYY";
-
-    NSString *formattedDate = [dateFormatter stringFromDate:date];
-
-    NSAssert(formattedDate.length > 0, @"No formatted date");
-    return formattedDate;
-}
-
-- (NSMutableArray *)buildDigitsFromString:(NSString *)formattedDate
-{
-    NSString *digitString = [[formattedDate componentsSeparatedByCharactersInSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]] componentsJoinedByString:@""];
-    NSUInteger numberOfDigits = [digitString length];
-    NSMutableArray *digits = [[NSMutableArray alloc] init];
-    for (int i = 0; i < numberOfDigits; i++) {
-        NSString *character = [NSString stringWithFormat:@"%c", [digitString characterAtIndex:(NSUInteger)i]];
-
-        [digits addObject:[[Digit alloc] initWithDigit:character.doubleValue]];
-    }
-    return digits;
 }
 
 - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained[])buffer count:(NSUInteger)len
@@ -61,7 +36,7 @@
     return [self.digits count];
 }
 
-- (id)objectAtIndexedSubscript:(NSInteger)idx
+- (id)objectAtIndexedSubscript:(NSUInteger)idx
 {
     return self.digits[(NSUInteger)idx];
 }
@@ -88,4 +63,14 @@
     return (int)(fraction * 100);
 }
 
+- (Digit *)digitWithSymbol:(NSString *)symbol
+{
+    for (Digit *digit in self.digits) {
+        if ([digit.value isEqualToString:symbol]) {
+            return digit;
+        }
+    }
+
+    return nil;
+}
 @end

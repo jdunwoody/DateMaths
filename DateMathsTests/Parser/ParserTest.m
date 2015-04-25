@@ -216,7 +216,6 @@ SpecBegin(Parser)
                 expect(actualTotal).to.equal(20);
             });
 
-
             it(@"should parse a really complex expression", ^{
                 Parser *parser = [[Parser alloc] initWithParseItems:[parserTestUtils parseItemsFromString:@"(2+78)+4-(2+1)"]];
 

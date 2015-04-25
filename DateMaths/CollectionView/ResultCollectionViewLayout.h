@@ -5,5 +5,7 @@
 @interface ResultCollectionViewLayout : UICollectionViewLayout
 
 @property (nonatomic, strong) LevelCollection *levelCollection;
+@property (nonatomic, strong) NSMutableArray *calculatedLayout;
+
 
 @end

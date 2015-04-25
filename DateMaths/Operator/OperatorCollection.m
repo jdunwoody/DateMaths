@@ -8,33 +8,21 @@
 
 
 @interface OperatorCollection ()
-@property (nonatomic, strong) NSArray *data;
+@property (nonatomic, strong, readonly) NSArray *data;
 @end
 
 @implementation OperatorCollection
 
-- (instancetype)init
+- (instancetype)initWithOperators:(NSArray *)operators
 {
     self = [super init];
     if (!self) {
         return self;
     }
 
-    self.data = @[
-        [[Operator alloc] initWithSymbol:@"+"],
-        [[Operator alloc] initWithSymbol:@"-"],
-        [[Operator alloc] initWithSymbol:@"*"],
-        [[Operator alloc] initWithSymbol:@"/"],
-        [[Operator alloc] initWithSymbol:@"("],
-        [[Operator alloc] initWithSymbol:@")"],
-    ];
+    _data = operators;
 
     return self;
-}
-
-- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained[])buffer count:(NSUInteger)len
-{
-    return [self.data countByEnumeratingWithState:state objects:buffer count:len];
 }
 
 - (NSInteger)count
@@ -42,9 +30,24 @@
     return [self.data count];
 }
 
-- (id)objectAtIndexedSubscript:(NSInteger)idx
+- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained[])buffer count:(NSUInteger)len
+{
+    return [self.data countByEnumeratingWithState:state objects:buffer count:len];
+}
+
+- (id)objectAtIndexedSubscript:(NSUInteger)idx
 {
     return self.data[(NSUInteger)idx];
 }
 
+- (Operator *)operatorWithSymbol:(NSString *)symbol
+{
+    for (Operator *operator in self.data) {
+        if ([operator.symbol isEqualToString:symbol]) {
+            return operator;
+        }
+    }
+
+    return nil;
+}
 @end

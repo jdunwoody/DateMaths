@@ -14,4 +14,24 @@
     self.starC.hidden = YES;
 }
 
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (!self) {
+        return self;
+    }
+
+    return self;
+}
+
+//- (instancetype)initWithFrame:(CGRect)frame
+//{
+//    self = [super initWithFrame:frame];
+//    if (!self) {
+//        return self;
+//    }
+//
+//    return self;
+//}
+
 @end

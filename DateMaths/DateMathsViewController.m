@@ -1,5 +1,4 @@
 #import "DateMathsViewController.h"
-#import "DigitCollection.h"
 #import "OperatorCollection.h"
 #import "DigitCollectionDataSource.h"
 #import "OperatorCollectionDataSource.h"
@@ -10,7 +9,9 @@
 #import "ResultsCollection.h"
 #import "LevelItem.h"
 #import "Operator.h"
-#import "ResultCollectionViewLayout.h"
+#import "OperatorFactory.h"
+#import "DigitFactory.h"
+#import "DigitCollection.h"
 
 @interface DateMathsViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *digitLabel;
@@ -32,9 +33,11 @@
 {
     [super viewDidLoad];
 
-    UINib *nib = [UINib nibWithNibName:@"SimpleCollectionViewCell" bundle:[NSBundle mainBundle]];
+    UINib *nib = [UINib nibWithNibName:@"SimpleCollectionViewCell3" bundle:[NSBundle mainBundle]];
 
-    self.levelCollection = [[LevelCollection alloc] initWithDate:[NSDate date]];
+    DigitFactory *digitFactory = [[DigitFactory alloc] initWithDate:[NSDate date]];
+    OperatorFactory *operatorFactory = [[OperatorFactory alloc] initWithSymbols:@[@"+", @"-", @"/", @"%", @"(", @")"]];
+    self.levelCollection = [[LevelCollection alloc] initWithDigitsFactory:digitFactory operatorFactory:operatorFactory];
 
     //Level
     self.levelCollectionViewDataSource = [[LevelCollectionViewDataSource alloc] initWithCollection:self.levelCollection];
@@ -44,7 +47,7 @@
 
     //Digits
     self.digitCollectionDataSource = [[DigitCollectionDataSource alloc] initWithCollection:self.levelCollection withDelegate:self];
-    self.digitCollectionView.dataSource = self.digitCollectionDataSource;
+    //    self.digitCollectionView.dataSource = self.digitCollectionDataSource;
     self.digitCollectionView.delegate = self;
     [self.digitCollectionView registerNib:nib forCellWithReuseIdentifier:@"simpleCell"];
 
@@ -59,8 +62,9 @@
     self.resultsCollectionView.dataSource = self.resultsCollectionViewDataSource;
     self.resultsCollectionView.delegate = self;
     [self.resultsCollectionView registerNib:nib forCellWithReuseIdentifier:@"simpleCell"];
-    ResultCollectionViewLayout *layout = (ResultCollectionViewLayout *)self.resultsCollectionView.collectionViewLayout;
-    layout.levelCollection = self.levelCollection;
+
+    //    ResultCollectionViewLayout *layout = (ResultCollectionViewLayout *)self.resultsCollectionView.collectionViewLayout;
+    //    layout.levelCollection = self.levelCollection;
 
     self.totalLabel.text = [self showValue:nil];
 }
@@ -68,18 +72,22 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     if (collectionView == self.digitCollectionView) {
-        Digit *digit = self.levelCollection.digits[indexPath.row];
+        Digit *digit = self.levelCollection.digits[(NSUInteger)indexPath.row];
         if (digit.used) {
             return;
         }
+
+        [self.levelCollection.current useDigit:digit];
+
         digit.used = YES;
-        [self.resultsCollectionViewDataSource addItem:digit];
 
         [self.resultsCollectionView reloadData];
         [self.digitCollectionView reloadItemsAtIndexPaths:@[indexPath]];
 
     } else if (collectionView == self.operatorCollectionView) {
-        [self.resultsCollectionViewDataSource addItem:self.levelCollection.operators[indexPath.row]];
+        Operator *operator= self.levelCollection.operators[(NSUInteger)indexPath.row];
+
+        [self.levelCollection.current useOperator:operator];
 
         [self.resultsCollectionView reloadData];
         [self.operatorCollectionView reloadItemsAtIndexPaths:@[indexPath]];
@@ -103,7 +111,7 @@
         }
 
     } else if (collectionView == self.levelCollectionView) {
-        LevelItem *target = self.levelCollection[indexPath.row];
+        LevelItem *target = self.levelCollection[(NSUInteger)indexPath.row];
         self.levelCollection.current = target;
 
         [self.resultsCollectionView reloadData];

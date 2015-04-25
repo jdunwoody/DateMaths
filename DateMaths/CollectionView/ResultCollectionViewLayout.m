@@ -1,6 +1,7 @@
 #import "ResultCollectionViewLayout.h"
 #import "LevelCollection.h"
 #import "ResultsCollection.h"
+#import "DataItem.h"
 
 @protocol DataItem;
 
@@ -8,9 +9,8 @@
 
 - (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-//    id<DataItem> resultItem = [self.levelCollection.results objectAtIndexedSubscript:indexPath.row];
-
     UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
+
     NSInteger cellWidth = 50;
     NSInteger cellHeight = 50;
     attributes.frame = CGRectMake(indexPath.row * cellWidth, 0, cellWidth, cellHeight);
@@ -116,29 +116,43 @@
     return results;
 }
 
-//- (void)prepareLayout
-//{
-//    [super prepareLayout];
-//
-//    for (NSUInteger i = 0; i < [self.collectionView numberOfSections]; i++) {
-//        NSMutableArray *itemsToKeepTogether = [NSMutableArray array];
-//
-//        BOOL previousIsDigit = NO;
-//
-//        for (NSUInteger j = 0; j < [self.collectionView numberOfItemsInSection:i]; j++) {
-//            id<DataItem> resultItem = [self.levelCollection.results objectAtIndexedSubscript:j];
-//            if (resultItem.isDigit) {
-//                if (previousIsDigit) {
-//                    [itemsToKeepTogether addObject:resultItem];
-//                }
-//
-//                previousIsDigit = YES;
-//            } else {
-//                previousIsDigit = NO;
-//                [itemsToKeepTogether removeAllObjects];
-//            }
-//        }
-//    }
-//}
+- (void)prepareLayout
+{
+    [super prepareLayout];
+
+    self.calculatedLayout = [NSMutableArray arrayWithCapacity:(NSUInteger)self.levelCollection.results.count];
+
+    NSMutableArray *itemsToKeepTogether = [NSMutableArray array];
+    BOOL previousIsDigit = NO;
+
+    int x = 0;
+    int y = 0;
+    const int cellWidth = 0;
+    const int cellHeight = 0;
+
+    for (id<DataItem> resultItem in self.levelCollection.results) {
+
+        if (resultItem.isDigit) {
+            [itemsToKeepTogether addObject:resultItem];
+
+            previousIsDigit = YES;
+        } else {
+            [self moveToNewLine:itemsToKeepTogether];
+
+            previousIsDigit = NO;
+            [itemsToKeepTogether removeAllObjects];
+        }
+
+        CGRect rect = CGRectMake(x, y, cellWidth, cellHeight);
+        [self.calculatedLayout addObject:[NSValue valueWithCGRect:rect]];
+
+        x += cellWidth;
+    }
+}
+
+- (void)moveToNewLine:(NSMutableArray *)array
+{
+
+}
 
 @end

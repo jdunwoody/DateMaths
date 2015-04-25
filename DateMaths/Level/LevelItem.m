@@ -2,6 +2,10 @@
 #import "DigitCollection.h"
 #import "OperatorCollection.h"
 #import "ResultsCollection.h"
+#import "Digit.h"
+#import "Operator.h"
+#import "DigitFactory.h"
+#import "OperatorFactory.h"
 
 
 @interface LevelItem ()
@@ -9,7 +13,7 @@
 
 @implementation LevelItem
 
-- (instancetype)initWithNumber:(double)number withDate:(NSDate *)date
+- (instancetype)initWithNumber:(double)number digitFactory:(DigitFactory *)digitFactory operatorFactory:(OperatorFactory *)operatorFactory
 {
     self = [super init];
     if (!self) {
@@ -21,7 +25,7 @@
     _starB = NO;
     _starC = NO;
 
-    _digitCollection = [[DigitCollection alloc] initWithDate:date];
+    _digitCollection = [[DigitCollection alloc] initWithDigitFactory:digitFactory];
     _operatorCollection = [[OperatorCollection alloc] init];
     _resultsCollection = [[ResultsCollection alloc] init];
 
@@ -48,6 +52,22 @@
             self.starC = YES;
         }
     }
+}
+
+- (void)useDigit:(Digit *)digit
+{
+    digit.used = YES;
+    [self.resultsCollection addObject:digit];
+}
+
+- (void)useOperator:(Operator *)operator
+{
+    [self.resultsCollection addObject:operator];
+}
+
+- (BOOL)isDigit
+{
+    return NO;
 }
 
 @end

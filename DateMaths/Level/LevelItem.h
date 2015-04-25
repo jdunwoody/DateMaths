@@ -9,6 +9,10 @@
 @class DigitCollection;
 @class OperatorCollection;
 @class ResultsCollection;
+@class Digit;
+@class Operator;
+@class OperatorFactory;
+@class DigitFactory;
 
 @interface LevelItem : NSObject<DataItem>
 
@@ -16,7 +20,7 @@
 @property (strong, nonatomic) NSString *value;
 
 - (instancetype)init __unavailable;
-- (instancetype)initWithNumber:(double)number withDate:(NSDate *)date;
+- (instancetype)initWithNumber:(double)number digitFactory:(DigitFactory *)digitFactory operatorFactory:(OperatorFactory *)operatorFactory;
 
 @property (nonatomic) BOOL starA;
 @property (nonatomic) BOOL starB;
@@ -28,4 +32,6 @@
 
 - (void)updateStarsWithSum:(NSNumber *)sum witDigitsCollection:(DigitCollection *)digitCollection;
 
+- (void)useDigit:(Digit *)digit;
+- (void)useOperator:(Operator *)anOperator;
 @end

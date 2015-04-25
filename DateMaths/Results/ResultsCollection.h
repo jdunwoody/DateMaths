@@ -4,17 +4,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "IndexableCollection.h"
 
 @protocol DataItem;
+@class Digit;
 
-@interface ResultsCollection : NSObject<NSFastEnumeration>
+@interface ResultsCollection : NSObject<IndexableCollection>
 
 @property (nonatomic, readonly) NSNumber *sum;
 
-- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained[])buffer count:(NSUInteger)len;
+//- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained[])buffer count:(NSUInteger)len;
 - (NSInteger)count;
-- (id)objectAtIndexedSubscript:(NSInteger)idx;
-- (void)addObject:(id<DataItem>)o;
+- (void)addObject:(id<DataItem>)dataItem;
 - (void)removeObject:(id<DataItem>)resultItem;
 
 @end

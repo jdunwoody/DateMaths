@@ -11,7 +11,6 @@
 - (instancetype)init __unavailable;
 - (instancetype)initWithCollection:(LevelCollection *)collection;
 
-- (void)addItem:(id<DataItem>)item;
 - (id)objectAtIndexedSubscript:(NSInteger)idx;
 - (void)removeItem:(id<DataItem>)resultItem;
 @end

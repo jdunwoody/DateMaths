@@ -33,11 +33,6 @@
     return cell;
 }
 
-- (void)addItem:(id<DataItem>)item
-{
-    [self.collection.results addObject:item];
-}
-
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return [self.collection.results count];

@@ -8,6 +8,8 @@
 #import "DigitCollection.h"
 #import "OperatorCollection.h"
 #import "ResultsCollection.h"
+#import "DigitFactory.h"
+#import "OperatorFactory.h"
 
 
 @interface LevelCollection ()
@@ -16,7 +18,7 @@
 
 @implementation LevelCollection
 
-- (instancetype)initWithDate:(NSDate *)date
+- (instancetype)initWithDigitsFactory:(DigitFactory *)digitFactory operatorFactory:(OperatorFactory *)operatorFactory
 {
     self = [super init];
     if (!self) {
@@ -25,11 +27,11 @@
 
     NSMutableArray *mutableData = [[NSMutableArray alloc] init];
     for (int i = 1; i <= 20; i++) {
-        LevelItem *levelItem = [[LevelItem alloc] initWithNumber:i withDate:date];
+        LevelItem *levelItem = [[LevelItem alloc] initWithNumber:i digitFactory:digitFactory operatorFactory:operatorFactory];
 
         [mutableData addObject:levelItem];
     }
-   
+
     _data = mutableData;
     _current = _data[0];
 
@@ -41,7 +43,7 @@
     return self.data.count;
 }
 
-- (id)objectAtIndexedSubscript:(NSInteger)idx
+- (id)objectAtIndexedSubscript:(NSUInteger)idx
 {
     return self.data[(NSUInteger)idx];
 }

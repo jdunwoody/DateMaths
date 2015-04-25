@@ -120,6 +120,7 @@
 
     self.calculatedLayout = [NSMutableArray arrayWithCapacity:(NSUInteger)self.levelCollection.results.count];
 
+
     NSMutableArray *itemsToKeepTogether = [NSMutableArray array];
     BOOL previousIsDigit = NO;
 
@@ -139,6 +140,11 @@
 
             previousIsDigit = NO;
             [itemsToKeepTogether removeAllObjects];
+        }
+
+        if (x + cellWidth > self.collectionView.contentSize.width) {
+            x = 0;
+            y += cellHeight;
         }
 
         CGRect rect = CGRectMake(x, y, cellWidth, cellHeight);

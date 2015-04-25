@@ -33,7 +33,7 @@
 {
     [super viewDidLoad];
 
-    UINib *nib = [UINib nibWithNibName:@"SimpleCollectionViewCell3" bundle:[NSBundle mainBundle]];
+    UINib *nib = [UINib nibWithNibName:@"SimpleCollectionViewCell" bundle:[NSBundle mainBundle]];
 
     DigitFactory *digitFactory = [[DigitFactory alloc] initWithDate:[NSDate date]];
     OperatorFactory *operatorFactory = [[OperatorFactory alloc] initWithSymbols:@[@"+", @"-", @"/", @"%", @"(", @")"]];

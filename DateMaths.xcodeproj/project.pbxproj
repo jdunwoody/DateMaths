@@ -39,8 +39,7 @@
 		9E5F76D31AD236E0001D69F5 /* ResultsCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5F76C31AD236E0001D69F5 /* ResultsCollectionViewDataSource.m */; };
 		9E7CF4341AD5481E00317897 /* ParserTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB4207F649F3FD0605CF7 /* ParserTest.m */; };
 		9E89CC121AC7F58B0086C816 /* DateMathsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E89CC111AC7F58B0086C816 /* DateMathsViewController.m */; };
-		9E9B14531AEB63390044EC90 /* SimpleCollectionViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E9B14521AEB63390044EC90 /* SimpleCollectionViewCell2.xib */; };
-		9E9B14551AEB6B720044EC90 /* SimpleCollectionViewCell3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E9B14541AEB6B720044EC90 /* SimpleCollectionViewCell3.xib */; };
+		9E9B14561AEB6D9B0044EC90 /* SimpleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 914CBA6A542E628E5ADD25FD /* SimpleCollectionViewCell.xib */; };
 		A830C24FDC4ADA5850A9DC5F /* Pods_DateMathsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF786EAEB303B88BA017ABF7 /* Pods_DateMathsTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -119,8 +118,6 @@
 		9E5F76C31AD236E0001D69F5 /* ResultsCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsCollectionViewDataSource.m; sourceTree = "<group>"; };
 		9E89CC101AC7F58B0086C816 /* DateMathsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateMathsViewController.h; sourceTree = "<group>"; };
 		9E89CC111AC7F58B0086C816 /* DateMathsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateMathsViewController.m; sourceTree = "<group>"; };
-		9E9B14521AEB63390044EC90 /* SimpleCollectionViewCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleCollectionViewCell2.xib; sourceTree = "<group>"; };
-		9E9B14541AEB6B720044EC90 /* SimpleCollectionViewCell3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleCollectionViewCell3.xib; sourceTree = "<group>"; };
 		BDA24A1FF30C550BE15C6B56 /* Pods-DateMathsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateMathsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DateMathsTests/Pods-DateMathsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF786EAEB303B88BA017ABF7 /* Pods_DateMathsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DateMathsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD25788D443D0AC2A71F8ED8 /* Pods-DateMathsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateMathsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DateMathsTests/Pods-DateMathsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -244,8 +241,6 @@
 				914CBB122EB9CF6F5DEE4671 /* SimpleCollectionViewCell.h */,
 				914CBD7A65D60D3F09EB8C7C /* SimpleCollectionViewCell.m */,
 				914CBA6A542E628E5ADD25FD /* SimpleCollectionViewCell.xib */,
-				9E9B14521AEB63390044EC90 /* SimpleCollectionViewCell2.xib */,
-				9E9B14541AEB6B720044EC90 /* SimpleCollectionViewCell3.xib */,
 			);
 			name = CollectionView;
 			path = DateMaths/CollectionView;
@@ -398,8 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				914CBD7FCD50F049842EDC89 /* Images.xcassets in Resources */,
-				9E9B14551AEB6B720044EC90 /* SimpleCollectionViewCell3.xib in Resources */,
-				9E9B14531AEB63390044EC90 /* SimpleCollectionViewCell2.xib in Resources */,
+				9E9B14561AEB6D9B0044EC90 /* SimpleCollectionViewCell.xib in Resources */,
 				914CB12CD7B79FA6332C1BFB /* LaunchScreen.xib in Resources */,
 				914CB6631C2F1FAD9401E283 /* Main.storyboard in Resources */,
 			);

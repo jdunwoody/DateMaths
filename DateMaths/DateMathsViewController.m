@@ -12,6 +12,7 @@
 #import "OperatorFactory.h"
 #import "DigitFactory.h"
 #import "DigitCollection.h"
+#import "ResultCollectionViewLayout.h"
 
 @interface DateMathsViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *digitLabel;
@@ -63,8 +64,8 @@
     self.resultsCollectionView.delegate = self;
     [self.resultsCollectionView registerNib:nib forCellWithReuseIdentifier:@"simpleCell"];
 
-    //    ResultCollectionViewLayout *layout = (ResultCollectionViewLayout *)self.resultsCollectionView.collectionViewLayout;
-    //    layout.levelCollection = self.levelCollection;
+    ResultCollectionViewLayout *layout = (ResultCollectionViewLayout *)self.resultsCollectionView.collectionViewLayout;
+    layout.levelCollection = self.levelCollection;
 
     self.totalLabel.text = [self showValue:nil];
 }
@@ -85,7 +86,7 @@
         [self.digitCollectionView reloadItemsAtIndexPaths:@[indexPath]];
 
     } else if (collectionView == self.operatorCollectionView) {
-        Operator *operator= self.levelCollection.operators[(NSUInteger)indexPath.row];
+        Operator *operator = self.levelCollection.operators[(NSUInteger)indexPath.row];
 
         [self.levelCollection.current useOperator:operator];
 

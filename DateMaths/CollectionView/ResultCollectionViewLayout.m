@@ -11,9 +11,8 @@
 {
     UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
 
-    NSInteger cellWidth = 50;
-    NSInteger cellHeight = 50;
-    attributes.frame = CGRectMake(indexPath.row * cellWidth, 0, cellWidth, cellHeight);
+    NSValue *rect = self.calculatedLayout[(NSUInteger)indexPath.row];
+    attributes.frame = rect.CGRectValue;
 
     return attributes;
 }
@@ -31,7 +30,6 @@
     return layoutAttributes;
 }
 
-//
 //    NSMutableArray *elementsInRect = [NSMutableArray array];
 //
 //    //iterate over all cells in this collection
@@ -127,8 +125,8 @@
 
     int x = 0;
     int y = 0;
-    const int cellWidth = 0;
-    const int cellHeight = 0;
+    const int cellWidth = 50;
+    const int cellHeight = 50;
 
     for (id<DataItem> resultItem in self.levelCollection.results) {
 

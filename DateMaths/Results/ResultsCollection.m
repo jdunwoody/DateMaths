@@ -66,7 +66,9 @@
     NSExpression *expression;
     @try {
         expression = [NSExpression expressionWithFormat:format];
-    } @catch (NSException *exception) {
+    }
+    @catch (NSException *exception)
+    {
         return nil;
     }
 

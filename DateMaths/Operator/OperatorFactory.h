@@ -7,5 +7,9 @@
 
 
 @interface OperatorFactory : NSObject
+
 - (instancetype)initWithSymbols:(NSArray *)symbols;
+
+- (NSArray *)operators;
+
 @end

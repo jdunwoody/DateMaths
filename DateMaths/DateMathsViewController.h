@@ -21,8 +21,8 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *resultsCollectionView;
 @property (weak, nonatomic) IBOutlet UICollectionView *levelCollectionView;
 
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *digitHeightLayoutConstraint;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *operatorHeightLayoutConstraint;
+//@property (weak, nonatomic) IBOutlet NSLayoutConstraint *digitHeightLayoutConstraint;
+//@property (weak, nonatomic) IBOutlet NSLayoutConstraint *operatorHeightLayoutConstraint;
 @property (weak, nonatomic) IBOutlet UILabel *totalLabel;
 
 @end

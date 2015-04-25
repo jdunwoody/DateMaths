@@ -5,6 +5,7 @@
 
 #import "OperatorCollection.h"
 #import "Operator.h"
+#import "OperatorFactory.h"
 
 
 @interface OperatorCollection ()
@@ -13,14 +14,14 @@
 
 @implementation OperatorCollection
 
-- (instancetype)initWithOperators:(NSArray *)operators
+- (instancetype)initWithOperatorFactory:(OperatorFactory *)factory
 {
     self = [super init];
     if (!self) {
         return self;
     }
 
-    _data = operators;
+    _data = [factory operators];
 
     return self;
 }

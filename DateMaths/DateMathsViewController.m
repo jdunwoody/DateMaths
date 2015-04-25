@@ -36,7 +36,7 @@
     UINib *nib = [UINib nibWithNibName:@"SimpleCollectionViewCell" bundle:[NSBundle mainBundle]];
 
     DigitFactory *digitFactory = [[DigitFactory alloc] initWithDate:[NSDate date]];
-    OperatorFactory *operatorFactory = [[OperatorFactory alloc] initWithSymbols:@[@"+", @"-", @"/", @"%", @"(", @")"]];
+    OperatorFactory *operatorFactory = [[OperatorFactory alloc] initWithSymbols:@[@"+", @"-", @"/", @"*", @"(", @")"]];
     self.levelCollection = [[LevelCollection alloc] initWithDigitsFactory:digitFactory operatorFactory:operatorFactory];
 
     //Level
@@ -47,7 +47,7 @@
 
     //Digits
     self.digitCollectionDataSource = [[DigitCollectionDataSource alloc] initWithCollection:self.levelCollection withDelegate:self];
-    //    self.digitCollectionView.dataSource = self.digitCollectionDataSource;
+    self.digitCollectionView.dataSource = self.digitCollectionDataSource;
     self.digitCollectionView.delegate = self;
     [self.digitCollectionView registerNib:nib forCellWithReuseIdentifier:@"simpleCell"];
 
@@ -130,8 +130,8 @@
 
 - (void)didLayoutCell:(NSIndexPath *)path inCollectionView:(UICollectionView *)view
 {
-    self.digitHeightLayoutConstraint.constant = self.digitCollectionView.contentSize.height;
-    self.operatorHeightLayoutConstraint.constant = self.operatorCollectionView.contentSize.height;
+//    self.digitHeightLayoutConstraint.constant = self.digitCollectionView.contentSize.height;
+//    self.operatorHeightLayoutConstraint.constant = self.operatorCollectionView.contentSize.height;
 }
 
 - (NSString *)showValue:(NSNumber *)sum

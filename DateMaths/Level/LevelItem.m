@@ -26,7 +26,7 @@
     _starC = NO;
 
     _digitCollection = [[DigitCollection alloc] initWithDigitFactory:digitFactory];
-    _operatorCollection = [[OperatorCollection alloc] init];
+    _operatorCollection = [[OperatorCollection alloc] initWithOperatorFactory:operatorFactory];
     _resultsCollection = [[ResultsCollection alloc] init];
 
     return self;

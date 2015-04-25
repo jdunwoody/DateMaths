@@ -4,6 +4,7 @@
 //
 
 #import "OperatorFactory.h"
+#import "Operator.h"
 
 
 @interface OperatorFactory ()
@@ -21,6 +22,18 @@
     _symbols = symbols;
 
     return self;
+}
+
+- (NSArray *)operators
+{
+    NSUInteger numberOfSymbols = self.symbols.count;
+
+    NSMutableArray *symbols = [[NSMutableArray alloc] initWithCapacity:numberOfSymbols];
+
+    for (int i = 0; i < numberOfSymbols; i++) {
+        [symbols addObject:[[Operator alloc] initWithSymbol:self.symbols[i]]];
+    }
+    return symbols;
 }
 
 @end

@@ -5,11 +5,14 @@
 
 #import <Foundation/Foundation.h>
 #import "IndexableCollection.h"
+
 @class Operator;
+@class OperatorFactory;
 
 @interface OperatorCollection : NSObject<IndexableCollection>
 
 - (NSInteger)count;
+- (instancetype)initWithOperatorFactory:(OperatorFactory *)factory;
 - (Operator *)operatorWithSymbol:(NSString *)symbol;
 
 @end

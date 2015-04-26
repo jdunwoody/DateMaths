@@ -14,45 +14,59 @@
 
 + (NSDictionary *)calculateLayoutSizesForDataItems:(NSArray *)items inSize:(CGSize)size ofSize:(CGSize)cellSize
 {
-    NSMutableDictionary *calculatedLayout = [NSMutableDictionary dictionaryWithCapacity:(NSUInteger)items.count];
+    NSMutableArray *rows = [NSMutableArray array];
+    NSMutableArray *currentRow = [NSMutableArray array];
+    [rows addObject:currentRow];
 
     NSMutableArray *itemsToKeepTogether = [NSMutableArray array];
-
-    int x = 0;
-    int y = 0;
 
     for (id<DataItem> resultItem in items) {
 
         if (resultItem.isDigit) {
             [itemsToKeepTogether addObject:resultItem];
-        }
-
-        if (x + cellSize.width > size.width) {
-            if (itemsToKeepTogether.count > 0 && itemsToKeepTogether.count * cellSize.width <= size.width && x > 0) {
-                x = 0;
-                y += cellSize.height;
-                for (id<DataItem> digit in itemsToKeepTogether) {
-                    calculatedLayout[digit] = [NSValue valueWithCGRect:CGRectMake(x, y, cellSize.width, cellSize.height)];
-                    x += cellSize.width;
-                }
-            } else {
-                x = 0;
-                y += cellSize.height;
-
-                CGRect rect = CGRectMake(x, y, cellSize.width, cellSize.height);
-                calculatedLayout[resultItem] = [NSValue valueWithCGRect:rect];
-                x += cellSize.width;
-            }
         } else {
-            CGRect rect = CGRectMake(x, y, cellSize.width, cellSize.height);
-            calculatedLayout[resultItem] = [NSValue valueWithCGRect:rect];
-
-            x += cellSize.width;
-        }
-
-        if (!resultItem.isDigit) {
             [itemsToKeepTogether removeAllObjects];
         }
+
+        if ((currentRow.count + 1) * cellSize.width > size.width) {
+            if (itemsToKeepTogether.count > 0 && itemsToKeepTogether.count * cellSize.width <= size.width) {
+                for (NSMutableArray *row in rows) {
+                    [row removeObjectsInArray:itemsToKeepTogether];
+                }
+
+                currentRow = [NSMutableArray array];
+                [rows addObject:currentRow];
+
+                for (id<DataItem> digit in itemsToKeepTogether) {
+                    [currentRow addObject:digit];
+                }
+            } else {
+                currentRow = [NSMutableArray array];
+                [rows addObject:currentRow];
+
+                [currentRow addObject:resultItem];
+            }
+        } else {
+            [currentRow addObject:resultItem];
+        }
+
+//        if (!resultItem.isDigit) {
+//            [itemsToKeepTogether removeAllObjects];
+//        }
+
+    }
+
+    NSMutableDictionary *calculatedLayout = [NSMutableDictionary dictionaryWithCapacity:(NSUInteger)items.count];
+
+    int y = 0;
+    for (NSArray *row in rows) {
+        int x = 0;
+        for (id<DataItem> item in row) {
+            CGRect rect = CGRectMake(x, y, cellSize.width, cellSize.height);
+            calculatedLayout[item] = [NSValue valueWithCGRect:rect];
+            x += cellSize.width;
+        }
+        y += cellSize.height;
     }
 
     return calculatedLayout;

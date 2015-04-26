@@ -30,4 +30,27 @@
     return NO;
 }
 
+- (id)copyWithZone:(NSZone *)zone
+{
+    return [[Operator alloc] initWithSymbol:self.symbol];
+}
+
+- (BOOL)isEqual:(id)object
+{
+    if (self == object) {
+        return YES;
+    }
+
+    if (![object isKindOfClass:[Operator class]]) {
+        return NO;
+    }
+
+    return self.symbol == ((Operator *)object).symbol;
+}
+
+- (NSUInteger)hash
+{
+    return [self.symbol hash];
+}
+
 @end

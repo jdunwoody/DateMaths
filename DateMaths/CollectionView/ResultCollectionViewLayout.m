@@ -2,8 +2,13 @@
 #import "LevelCollection.h"
 #import "ResultsCollection.h"
 #import "DataItem.h"
+#import "NumberWrappingLayoutCalculator.h"
 
 @protocol DataItem;
+
+@interface ResultCollectionViewLayout ()
+@property (nonatomic, strong) NSDictionary *calculatedLayout;
+@end
 
 @implementation ResultCollectionViewLayout
 
@@ -11,7 +16,8 @@
 {
     UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
 
-    NSValue *rect = self.calculatedLayout[(NSUInteger)indexPath.row];
+    id<DataItem> item = self.levelCollection.results[(NSUInteger)indexPath.row];
+    NSValue *rect = self.calculatedLayout[item];
     attributes.frame = rect.CGRectValue;
 
     return attributes;
@@ -29,71 +35,6 @@
 
     return layoutAttributes;
 }
-
-//    NSMutableArray *elementsInRect = [NSMutableArray array];
-//
-//    //iterate over all cells in this collection
-//    for (NSUInteger i = 0; i < [self.collectionView numberOfSections]; i++) {
-//        for (NSUInteger j = 0; j < [self.collectionView numberOfItemsInSection:i]; j++) {
-//            //this is the cell at row j in section i
-//            CGRect cellFrame = CGRectMake(
-//                /* calculate your origin x */,
-//                /* calculate your origin y */,
-//                /* calculate your width */,
-//                /* calculate your height */);
-//
-//            //see if the collection view needs this cell
-//            if (CGRectIntersectsRect(cellFrame, rect)) {
-//                //create the attributes object
-//                NSIndexPath *indexPath = [NSIndexPath indexPathForRow:j inSection:i];
-//                UICollectionViewLayoutAttributes *attr = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
-//
-//                //set the frame for this attributes object
-//                attr.frame = cellFrame;
-//                [elementsInRect addObject:attr];
-//            }
-//        }
-//    }
-//
-//    return elementsInRect;
-//}
-
-//- (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    UICollectionViewLayoutAttributes *attr = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
-//
-//    CGRect cellFrame = CGRectZero;
-////    CGRectMake(/* calculate your origin x */,
-////        /* calculate your origin y */,
-////        /* calculate your width */,
-////       /* calculate your height */);
-//    attr.frame = cellFrame;
-//
-//    return attr;
-//}
-
-//- (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect
-//{
-//    NSArray *attributes = [super layoutAttributesForElementsInRect:rect];
-//
-//    [attributes enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-//        UICollectionViewLayoutAttributes *attr = obj;
-//        float newYCoord = [self calculationMethodYouHaveToWriteFor:attr.frame];
-//        attr.frame = CGRectMake(attr.frame.origin.x, newYCoord, attr.size.width, attr.size.height);
-//    }];
-//
-//    return attributes;
-//}
-//
-//- (float)calculationMethodYouHaveToWriteFor:(CGRect)rect
-//{
-//    return 0;
-//}
-//- (CGSize)collectionViewContentSize
-//{
-//    return CGSizeMake(200.0, 200.0);
-//}
-//
 
 - (CGSize)collectionViewContentSize
 {
@@ -118,45 +59,9 @@
 {
     [super prepareLayout];
 
-    self.calculatedLayout = [NSMutableArray arrayWithCapacity:(NSUInteger)self.levelCollection.results.count];
+    CGSize cellSize = CGSizeMake(50.0, 50.0);
 
-
-    NSMutableArray *itemsToKeepTogether = [NSMutableArray array];
-    BOOL previousIsDigit = NO;
-
-    int x = 0;
-    int y = 0;
-    const int cellWidth = 50;
-    const int cellHeight = 50;
-
-    for (id<DataItem> resultItem in self.levelCollection.results) {
-
-        if (resultItem.isDigit) {
-            [itemsToKeepTogether addObject:resultItem];
-
-            previousIsDigit = YES;
-        } else {
-            [self moveToNewLine:itemsToKeepTogether];
-
-            previousIsDigit = NO;
-            [itemsToKeepTogether removeAllObjects];
-        }
-
-        if (x + cellWidth > self.collectionView.contentSize.width) {
-            x = 0;
-            y += cellHeight;
-        }
-
-        CGRect rect = CGRectMake(x, y, cellWidth, cellHeight);
-        [self.calculatedLayout addObject:[NSValue valueWithCGRect:rect]];
-
-        x += cellWidth;
-    }
-}
-
-- (void)moveToNewLine:(NSMutableArray *)array
-{
-
+    self.calculatedLayout = [NumberWrappingLayoutCalculator calculateLayoutSizesForDataItems:self.levelCollection.results.items inSize:self.collectionView.contentSize ofSize:(cellSize)];
 }
 
 @end

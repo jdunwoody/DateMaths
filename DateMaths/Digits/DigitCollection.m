@@ -5,7 +5,6 @@
 
 #import "DigitCollection.h"
 #import "Digit.h"
-#import "DigitFactory.h"
 
 
 @interface DigitCollection ()
@@ -14,14 +13,14 @@
 
 @implementation DigitCollection
 
-- (instancetype)initWithDigitFactory:(DigitFactory *)digitFactory
+- (instancetype)initWithDigits:(NSArray *)digits
 {
     self = [super init];
     if (!self) {
         return self;
     }
 
-    _digits = [digitFactory digitsFromDate];
+    _digits = digits;
 
     return self;
 }
@@ -39,6 +38,17 @@
 - (id)objectAtIndexedSubscript:(NSUInteger)idx
 {
     return self.digits[(NSUInteger)idx];
+}
+
+- (id)objectForKeyedSubscript:(id)key
+{
+    for (Digit *digit in self.digits) {
+        if (digit == key) {
+            return digit;
+        }
+    }
+
+    return nil;
 }
 
 - (int)numUsed

@@ -9,9 +9,9 @@
 
 @interface DigitFactory : NSObject
 
-- (instancetype)initWithDate:(NSDate *)date;
+@property (strong, nonatomic) NSArray *digits;
 
-- (NSArray *)digitsFromSymbolArray:(NSArray *)symbols;
-- (NSArray *)digitsFromDate;
+- (instancetype)initWithDate:(NSDate *)date;
+- (instancetype)initWithSymbols:(NSArray *)symbols;
 
 @end

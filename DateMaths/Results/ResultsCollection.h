@@ -12,8 +12,8 @@
 @interface ResultsCollection : NSObject<IndexableCollection>
 
 @property (nonatomic, readonly) NSNumber *sum;
+@property (strong, nonatomic, readonly) NSMutableArray *items;
 
-//- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained[])buffer count:(NSUInteger)len;
 - (NSInteger)count;
 - (void)addObject:(id<DataItem>)dataItem;
 - (void)removeObject:(id<DataItem>)resultItem;

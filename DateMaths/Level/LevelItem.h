@@ -20,7 +20,7 @@
 @property (strong, nonatomic) NSString *value;
 
 - (instancetype)init __unavailable;
-- (instancetype)initWithNumber:(double)number digitFactory:(DigitFactory *)digitFactory operatorFactory:(OperatorFactory *)operatorFactory;
+- (instancetype)initWithNumber:(double)number digits:(NSArray *)digits operatorFactory:(OperatorFactory *)operatorFactory;
 
 @property (nonatomic) BOOL starA;
 @property (nonatomic) BOOL starB;

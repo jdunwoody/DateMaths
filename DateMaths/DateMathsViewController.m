@@ -38,7 +38,7 @@
 
     DigitFactory *digitFactory = [[DigitFactory alloc] initWithDate:[NSDate date]];
     OperatorFactory *operatorFactory = [[OperatorFactory alloc] initWithSymbols:@[@"+", @"-", @"/", @"*", @"(", @")"]];
-    self.levelCollection = [[LevelCollection alloc] initWithDigitsFactory:digitFactory operatorFactory:operatorFactory];
+    self.levelCollection = [[LevelCollection alloc] initWithDigits:digitFactory.digits operatorFactory:operatorFactory];
 
     //Level
     self.levelCollectionViewDataSource = [[LevelCollectionViewDataSource alloc] initWithCollection:self.levelCollection];

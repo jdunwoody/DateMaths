@@ -18,7 +18,7 @@
 
 @implementation LevelCollection
 
-- (instancetype)initWithDigitsFactory:(DigitFactory *)digitFactory operatorFactory:(OperatorFactory *)operatorFactory
+- (instancetype)initWithDigits:(NSArray *)digits operatorFactory:(OperatorFactory *)operatorFactory
 {
     self = [super init];
     if (!self) {
@@ -27,7 +27,7 @@
 
     NSMutableArray *mutableData = [[NSMutableArray alloc] init];
     for (int i = 1; i <= 20; i++) {
-        LevelItem *levelItem = [[LevelItem alloc] initWithNumber:i digitFactory:digitFactory operatorFactory:operatorFactory];
+        LevelItem *levelItem = [[LevelItem alloc] initWithNumber:i digits:digits operatorFactory:operatorFactory];
 
         [mutableData addObject:levelItem];
     }

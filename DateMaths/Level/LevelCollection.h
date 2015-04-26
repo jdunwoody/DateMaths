@@ -22,7 +22,7 @@
 @property (nonatomic, readonly) ResultsCollection *results;
 
 - (instancetype)init __unavailable;
-- (instancetype)initWithDigitsFactory:(DigitFactory *)digitFactory operatorFactory:(OperatorFactory *)operatorFactory;
+- (instancetype)initWithDigits:(NSArray *)digits operatorFactory:(OperatorFactory *)operatorFactory;
 
 - (NSInteger)count;
 

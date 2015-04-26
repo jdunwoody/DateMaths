@@ -13,7 +13,7 @@
 
 @implementation LevelItem
 
-- (instancetype)initWithNumber:(double)number digitFactory:(DigitFactory *)digitFactory operatorFactory:(OperatorFactory *)operatorFactory
+- (instancetype)initWithNumber:(double)number digits:(NSArray *)digits operatorFactory:(OperatorFactory *)operatorFactory
 {
     self = [super init];
     if (!self) {
@@ -25,7 +25,7 @@
     _starB = NO;
     _starC = NO;
 
-    _digitCollection = [[DigitCollection alloc] initWithDigitFactory:digitFactory];
+    _digitCollection = [[DigitCollection alloc] initWithDigits:digits];
     _operatorCollection = [[OperatorCollection alloc] initWithOperatorFactory:operatorFactory];
     _resultsCollection = [[ResultsCollection alloc] init];
 

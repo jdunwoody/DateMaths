@@ -1,18 +1,21 @@
 #import <Foundation/Foundation.h>
 #import "IndexableCollection.h"
+#import "KeyedCollection.h"
 
 @protocol DataItem;
 @protocol IndexableCollection;
 @class Digit;
 @class DigitFactory;
 
-@interface DigitCollection : NSObject<IndexableCollection>
+@protocol IndexedCollection;
+
+@interface DigitCollection : NSObject<IndexableCollection, KeyedCollection>
 
 @property (nonatomic, readonly) int numUsed;
 @property (nonatomic, readonly) int percentageUsed;
 
 - (instancetype)init __unavailable;
-- (instancetype)initWithDigitFactory:(DigitFactory *)digitFactory;
+- (instancetype)initWithDigits:(NSArray *)digits;
 
 - (NSInteger)count;
 - (Digit *)digitWithSymbol:(NSString *)symbol;

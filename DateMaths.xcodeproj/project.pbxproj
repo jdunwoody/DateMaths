@@ -10,7 +10,7 @@
 		914CB11C266DEB2DADC299AA /* ResultCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB793D6A5DE2475A826AD /* ResultCollectionViewLayout.m */; };
 		914CB12CD7B79FA6332C1BFB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 914CB5E39B366B313E1A520F /* LaunchScreen.xib */; };
 		914CB1AD74274B059E6A4CA4 /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB36BCCAAA8E0D4787F5E /* Parser.m */; };
-		914CB247703FFE19862A4699 /* ResultsLayoutTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB8ADF7B1A78F95D55BAB /* ResultsLayoutTest.m */; };
+		914CB247703FFE19862A4699 /* NumberWrappingLayoutCalculatorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB8ADF7B1A78F95D55BAB /* NumberWrappingLayoutCalculatorTest.m */; };
 		914CB25FA31E1796A5461766 /* TestFixtures.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB32BDECB75AAFDE8A8ED /* TestFixtures.m */; };
 		914CB3B555D13EE7DE8E2E47 /* OperatorBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB77DD62A3DD2D0A84DE4 /* OperatorBuilder.m */; };
 		914CB54CEA6F806041B8ABD3 /* SimpleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CBD7A65D60D3F09EB8C7C /* SimpleCollectionViewCell.m */; };
@@ -40,6 +40,7 @@
 		9E7CF4341AD5481E00317897 /* ParserTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB4207F649F3FD0605CF7 /* ParserTest.m */; };
 		9E89CC121AC7F58B0086C816 /* DateMathsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E89CC111AC7F58B0086C816 /* DateMathsViewController.m */; };
 		9E9B14561AEB6D9B0044EC90 /* SimpleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 914CBA6A542E628E5ADD25FD /* SimpleCollectionViewCell.xib */; };
+		9ED3179D1AEC636900AC2FD2 /* NumberWrappingLayoutCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3179C1AEC636900AC2FD2 /* NumberWrappingLayoutCalculator.m */; };
 		A830C24FDC4ADA5850A9DC5F /* Pods_DateMathsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF786EAEB303B88BA017ABF7 /* Pods_DateMathsTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		914CB1120D5FDF945F364A6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		914CB13955935C364A5CDCFF /* TestFixtures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFixtures.h; sourceTree = "<group>"; };
 		914CB17E859B3E1BFBFCC30B /* ParseItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParseItem.h; path = Parser/ParseItem.h; sourceTree = "<group>"; };
+		914CB19C2AE9ADF7C4635112 /* KeyedCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyedCollection.h; sourceTree = "<group>"; };
 		914CB1BC285DED776267516E /* DateMathsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DateMathsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		914CB27102B12DCA48BEAB64 /* OperatorBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperatorBuilder.h; sourceTree = "<group>"; };
 		914CB2A9B34A6BE6F1F305A0 /* ParserTestUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParserTestUtils.h; path = Parser/ParserTestUtils.h; sourceTree = "<group>"; };
@@ -80,7 +82,7 @@
 		914CB7F71ECE5F0052D94EBB /* DataItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataItem.h; sourceTree = "<group>"; };
 		914CB814F2E3FE9B8984137D /* ParseItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParseItem.m; path = Parser/ParseItem.m; sourceTree = "<group>"; };
 		914CB8A696E0C0265376F126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		914CB8ADF7B1A78F95D55BAB /* ResultsLayoutTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResultsLayoutTest.m; path = ResultsLayout/ResultsLayoutTest.m; sourceTree = "<group>"; };
+		914CB8ADF7B1A78F95D55BAB /* NumberWrappingLayoutCalculatorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NumberWrappingLayoutCalculatorTest.m; path = ResultsLayout/NumberWrappingLayoutCalculatorTest.m; sourceTree = "<group>"; };
 		914CB9392C0D8F598BECCF7B /* OperatorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperatorFactory.m; sourceTree = "<group>"; };
 		914CB9D3C69619BA9B98BB48 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		914CBA329EF88E051638C3E2 /* DateMathsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateMathsViewModel.m; sourceTree = "<group>"; };
@@ -118,6 +120,8 @@
 		9E5F76C31AD236E0001D69F5 /* ResultsCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsCollectionViewDataSource.m; sourceTree = "<group>"; };
 		9E89CC101AC7F58B0086C816 /* DateMathsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateMathsViewController.h; sourceTree = "<group>"; };
 		9E89CC111AC7F58B0086C816 /* DateMathsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateMathsViewController.m; sourceTree = "<group>"; };
+		9ED3179B1AEC636900AC2FD2 /* NumberWrappingLayoutCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberWrappingLayoutCalculator.h; sourceTree = "<group>"; };
+		9ED3179C1AEC636900AC2FD2 /* NumberWrappingLayoutCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberWrappingLayoutCalculator.m; sourceTree = "<group>"; };
 		BDA24A1FF30C550BE15C6B56 /* Pods-DateMathsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateMathsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DateMathsTests/Pods-DateMathsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF786EAEB303B88BA017ABF7 /* Pods_DateMathsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DateMathsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD25788D443D0AC2A71F8ED8 /* Pods-DateMathsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateMathsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DateMathsTests/Pods-DateMathsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -167,7 +171,7 @@
 				914CBFE8D7832200898A7360 /* ParserTestUtils.m */,
 				914CB2A9B34A6BE6F1F305A0 /* ParserTestUtils.h */,
 				914CB5A346BB740958DDE8B4 /* ExpressionTest.m */,
-				914CB8ADF7B1A78F95D55BAB /* ResultsLayoutTest.m */,
+				914CB8ADF7B1A78F95D55BAB /* NumberWrappingLayoutCalculatorTest.m */,
 				914CB32BDECB75AAFDE8A8ED /* TestFixtures.m */,
 				914CB13955935C364A5CDCFF /* TestFixtures.h */,
 			);
@@ -236,6 +240,8 @@
 		9E1E01E01AE2829E0035A5D7 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				9ED3179B1AEC636900AC2FD2 /* NumberWrappingLayoutCalculator.h */,
+				9ED3179C1AEC636900AC2FD2 /* NumberWrappingLayoutCalculator.m */,
 				914CB4F47E503E9FE60ED675 /* ResultCollectionViewLayout.h */,
 				914CB793D6A5DE2475A826AD /* ResultCollectionViewLayout.m */,
 				914CBB122EB9CF6F5DEE4671 /* SimpleCollectionViewCell.h */,
@@ -271,6 +277,7 @@
 				9E5F76B91AD236E0001D69F5 /* DigitCollectionDataSource.m */,
 				914CB33E3160E188773DD3F1 /* DigitFactory.h */,
 				914CB3131E40C29EC3077D4A /* DigitFactory.m */,
+				914CB19C2AE9ADF7C4635112 /* KeyedCollection.h */,
 			);
 			path = Digits;
 			sourceTree = "<group>";
@@ -460,6 +467,7 @@
 				9E5F76CD1AD236E0001D69F5 /* Digit.m in Sources */,
 				914CBB2005A6995428799172 /* AppDelegate.m in Sources */,
 				9E89CC121AC7F58B0086C816 /* DateMathsViewController.m in Sources */,
+				9ED3179D1AEC636900AC2FD2 /* NumberWrappingLayoutCalculator.m in Sources */,
 				9E42E7701AE2486B0084B471 /* LevelItem.m in Sources */,
 				9E5F76CF1AD236E0001D69F5 /* DigitCollectionDataSource.m in Sources */,
 				9E5F76CE1AD236E0001D69F5 /* DigitCollection.m in Sources */,
@@ -489,7 +497,7 @@
 				914CBF176BC1052841FFB9D1 /* DateMathsTests.m in Sources */,
 				914CBFF934113B500AA477F7 /* ParserTestUtils.m in Sources */,
 				914CB870AECF941BDF14E8C2 /* ExpressionTest.m in Sources */,
-				914CB247703FFE19862A4699 /* ResultsLayoutTest.m in Sources */,
+				914CB247703FFE19862A4699 /* NumberWrappingLayoutCalculatorTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

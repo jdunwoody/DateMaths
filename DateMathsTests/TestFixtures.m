@@ -18,7 +18,7 @@
 {
     DigitFactory *digitFactory = [[DigitFactory alloc] initWithDate:[NSDate date]];
     OperatorFactory *operatorFactory = [[OperatorFactory alloc] initWithSymbols:operatorSymbols];
-    LevelCollection *levelCollection = [[LevelCollection alloc] initWithDigitsFactory:digitFactory operatorFactory:operatorFactory];
+    LevelCollection *levelCollection = [[LevelCollection alloc] initWithDigits:digitFactory.digits operatorFactory:operatorFactory];
 
     for (NSString *resultSymbol in resultSymbols) {
         Digit *digit = [levelCollection.current.digitCollection digitWithSymbol:resultSymbol];

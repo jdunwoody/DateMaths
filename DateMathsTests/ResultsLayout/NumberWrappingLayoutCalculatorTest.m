@@ -79,6 +79,34 @@ SpecBegin(NumberWrappingLayoutCalculator)
                     expect(((NSValue *)calculated[digit3]).CGRectValue).to.equal(CGRectMake(50.0, 50.0, 50.0, 50.0));
                 });
 
+                it(@"should split digits when whole number wont fit on entire row", ^{
+                    Digit *digit1 = [[Digit alloc] initWithDigit:1.0];
+                    Operator *anOperator = [[Operator alloc] initWithSymbol:@"+"];
+                    Digit *digit2 = [[Digit alloc] initWithDigit:2.0];
+                    Digit *digit3 = [[Digit alloc] initWithDigit:3.0];
+                    Digit *digit4 = [[Digit alloc] initWithDigit:4.0];
+                    Digit *digit5 = [[Digit alloc] initWithDigit:5.0];
+                    NSArray *items = @[
+                        digit1,
+                        anOperator,
+                        digit2,
+                        digit3,
+                        digit4,
+                        digit5,
+                    ];
+
+                    CGSize size = CGSizeMake(150.0, 100.0);
+
+                    NSDictionary *calculated = [NumberWrappingLayoutCalculator calculateLayoutSizesForDataItems:items inSize:size ofSize:CGSizeMake(50.0, 50.0)];
+
+                    expect(calculated.count).to.equal(6);
+                    expect(((NSValue *)calculated[digit1]).CGRectValue).to.equal(CGRectMake(0, 0, 50, 50));
+                    expect(((NSValue *)calculated[anOperator]).CGRectValue).to.equal(CGRectMake(50.0, 0.0, 50.0, 50.0));
+                    expect(((NSValue *)calculated[digit2]).CGRectValue).to.equal(CGRectMake(100.0, 50.0, 50.0, 50.0));
+                    expect(((NSValue *)calculated[digit3]).CGRectValue).to.equal(CGRectMake(0.0, 50.0, 50.0, 50.0));
+                    expect(((NSValue *)calculated[digit4]).CGRectValue).to.equal(CGRectMake(50.0, 50.0, 50.0, 50.0));
+                    expect(((NSValue *)calculated[digit5]).CGRectValue).to.equal(CGRectMake(100.0, 50.0, 50.0, 50.0));
+                });
             });
         });
     });

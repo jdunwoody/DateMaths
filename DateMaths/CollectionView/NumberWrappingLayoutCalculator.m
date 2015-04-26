@@ -14,10 +14,36 @@
 
 + (NSDictionary *)calculateLayoutSizesForDataItems:(NSArray *)items inSize:(CGSize)size ofSize:(CGSize)cellSize
 {
+    NSMutableArray *rows = [self buildRowsWithItems:items size:&size cellSize:&cellSize];
+
+    NSMutableDictionary *calculatedLayout = [self buildlayoutDirectionaryWithItems:items cellSize:&cellSize rows:rows];
+
+    return calculatedLayout;
+}
+
++ (NSMutableDictionary *)buildlayoutDirectionaryWithItems:(NSArray *)items cellSize:(CGSize *)cellSize rows:(NSMutableArray *)rows
+{
+    NSMutableDictionary *calculatedLayout = [NSMutableDictionary dictionaryWithCapacity:(NSUInteger)items.count];
+
+    int y = 0;
+    for (NSArray *row in rows) {
+        int x = 0;
+        for (id<DataItem> item in row) {
+            CGRect rect = CGRectMake(x, y, (*cellSize).width, (*cellSize).height);
+            calculatedLayout[item] = [NSValue valueWithCGRect:rect];
+            x += (*cellSize).width;
+        }
+        y += (*cellSize).height;
+    }
+    return calculatedLayout;
+}
+
++ (NSMutableArray *)buildRowsWithItems:(NSArray *)items size:(CGSize *)size cellSize:(CGSize *)cellSize
+{
     NSMutableArray *rows = [NSMutableArray array];
+
     NSMutableArray *currentRow = [NSMutableArray array];
     [rows addObject:currentRow];
-
     NSMutableArray *itemsToKeepTogether = [NSMutableArray array];
 
     for (id<DataItem> resultItem in items) {
@@ -28,8 +54,8 @@
             [itemsToKeepTogether removeAllObjects];
         }
 
-        if ((currentRow.count + 1) * cellSize.width > size.width) {
-            if (itemsToKeepTogether.count > 0 && itemsToKeepTogether.count * cellSize.width <= size.width) {
+        if ((currentRow.count + 1) * (*cellSize).width > (*size).width) {
+            if (itemsToKeepTogether.count > 0 && itemsToKeepTogether.count * (*cellSize).width <= (*size).width) {
                 for (NSMutableArray *row in rows) {
                     [row removeObjectsInArray:itemsToKeepTogether];
                 }
@@ -49,27 +75,9 @@
         } else {
             [currentRow addObject:resultItem];
         }
-
-//        if (!resultItem.isDigit) {
-//            [itemsToKeepTogether removeAllObjects];
-//        }
-
     }
 
-    NSMutableDictionary *calculatedLayout = [NSMutableDictionary dictionaryWithCapacity:(NSUInteger)items.count];
-
-    int y = 0;
-    for (NSArray *row in rows) {
-        int x = 0;
-        for (id<DataItem> item in row) {
-            CGRect rect = CGRectMake(x, y, cellSize.width, cellSize.height);
-            calculatedLayout[item] = [NSValue valueWithCGRect:rect];
-            x += cellSize.width;
-        }
-        y += cellSize.height;
-    }
-
-    return calculatedLayout;
+    return rows;
 }
 
 @end

@@ -9,10 +9,11 @@
 
 @interface Operator : NSObject<DataItem>
 
-@property (nonatomic, copy) NSString *symbol;
-@property (strong, nonatomic) NSString *value;
+@property (nonatomic, strong, readonly) NSString *symbol;
+@property (strong, nonatomic, readonly) NSString *value;
 
 - (instancetype)init __unavailable;
-- (id)initWithSymbol:(NSString *)string;
 
+- (instancetype)initWithSymbol:(NSString *)string;
+- (instancetype)initWithOperator:(Operator *)anOperator;
 @end

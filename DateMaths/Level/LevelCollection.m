@@ -67,4 +67,5 @@
 {
     return self.current.resultsCollection;
 }
+
 @end

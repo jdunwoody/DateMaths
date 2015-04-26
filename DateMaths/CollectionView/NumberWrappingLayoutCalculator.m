@@ -28,13 +28,20 @@
         }
 
         if (x + cellSize.width > size.width) {
-            if (itemsToKeepTogether.count > 0) {
+            if (itemsToKeepTogether.count > 0 && itemsToKeepTogether.count * cellSize.width <= size.width && x > 0) {
                 x = 0;
                 y += cellSize.height;
                 for (id<DataItem> digit in itemsToKeepTogether) {
                     calculatedLayout[digit] = [NSValue valueWithCGRect:CGRectMake(x, y, cellSize.width, cellSize.height)];
                     x += cellSize.width;
                 }
+            } else {
+                x = 0;
+                y += cellSize.height;
+
+                CGRect rect = CGRectMake(x, y, cellSize.width, cellSize.height);
+                calculatedLayout[resultItem] = [NSValue valueWithCGRect:rect];
+                x += cellSize.width;
             }
         } else {
             CGRect rect = CGRectMake(x, y, cellSize.width, cellSize.height);

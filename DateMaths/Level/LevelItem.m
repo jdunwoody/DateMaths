@@ -4,7 +4,6 @@
 #import "ResultsCollection.h"
 #import "Digit.h"
 #import "Operator.h"
-#import "DigitFactory.h"
 #import "OperatorFactory.h"
 
 
@@ -30,6 +29,11 @@
     _resultsCollection = [[ResultsCollection alloc] init];
 
     return self;
+}
+
+- (id)copyWithZone:(NSZone *)zone
+{
+    return nil;
 }
 
 - (NSString *)value

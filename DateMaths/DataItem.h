@@ -7,7 +7,7 @@
 
 @protocol DataItem<NSObject, NSCopying>
 
-@property (strong, nonatomic) NSString *value;
+@property (strong, nonatomic, readonly) NSString *value;
 
 - (BOOL)isDigit;
 

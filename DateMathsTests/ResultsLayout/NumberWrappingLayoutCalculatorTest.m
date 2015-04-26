@@ -102,7 +102,7 @@ SpecBegin(NumberWrappingLayoutCalculator)
                     expect(calculated.count).to.equal(6);
                     expect(((NSValue *)calculated[digit1]).CGRectValue).to.equal(CGRectMake(0, 0, 50, 50));
                     expect(((NSValue *)calculated[anOperator]).CGRectValue).to.equal(CGRectMake(50.0, 0.0, 50.0, 50.0));
-                    expect(((NSValue *)calculated[digit2]).CGRectValue).to.equal(CGRectMake(100.0, 50.0, 50.0, 50.0));
+                    expect(((NSValue *)calculated[digit2]).CGRectValue).to.equal(CGRectMake(100.0, 0.0, 50.0, 50.0));
                     expect(((NSValue *)calculated[digit3]).CGRectValue).to.equal(CGRectMake(0.0, 50.0, 50.0, 50.0));
                     expect(((NSValue *)calculated[digit4]).CGRectValue).to.equal(CGRectMake(50.0, 50.0, 50.0, 50.0));
                     expect(((NSValue *)calculated[digit5]).CGRectValue).to.equal(CGRectMake(100.0, 50.0, 50.0, 50.0));

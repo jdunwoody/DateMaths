@@ -86,7 +86,8 @@
         [self.digitCollectionView reloadItemsAtIndexPaths:@[indexPath]];
 
     } else if (collectionView == self.operatorCollectionView) {
-        Operator *operator = self.levelCollection.operators[(NSUInteger)indexPath.row];
+        Operator *operatorTemplate = self.levelCollection.operators[(NSUInteger)indexPath.row];
+        Operator *operator = [[Operator alloc] initWithOperator:operatorTemplate];
 
         [self.levelCollection.current useOperator:operator];
 

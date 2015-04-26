@@ -32,24 +32,24 @@
 
 - (id)copyWithZone:(NSZone *)zone
 {
-    return [[Digit alloc] initWithDigit:self.digit];
+    return self;
 }
 
-- (BOOL)isEqual:(id)object
-{
-    if (self == object) {
-        return YES;
-    }
-
-    if (![object isKindOfClass:[Digit class]]) {
-        return NO;
-    }
-
-    return self.digit == ((Digit *)object).digit;
-}
-
-- (NSUInteger)hash
-{
-    return (NSUInteger)(self.digit * 1000.0);
-}
+//- (BOOL)isEqual:(id)object
+//{
+//    if (self == object) {
+//        return YES;
+//    }
+//
+//    if (![object isKindOfClass:[Digit class]]) {
+//        return NO;
+//    }
+//
+//    return self.digit == ((Digit *)object).digit;
+//}
+//
+//- (NSUInteger)hash
+//{
+//    return (NSUInteger)(self.digit * 1000.0);
+//}
 @end

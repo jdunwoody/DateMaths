@@ -4,7 +4,7 @@
 @interface Digit : NSObject<DataItem>
 
 @property (nonatomic, readonly) double digit;
-@property (strong, nonatomic) NSString *value;
+@property (strong, nonatomic, readonly) NSString *value;
 @property (nonatomic) BOOL used;
 
 - (instancetype)init __unavailable;

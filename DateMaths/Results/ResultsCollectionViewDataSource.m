@@ -27,6 +27,7 @@
 {
     SimpleCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"simpleCell" forIndexPath:indexPath];
     id<DataItem> dataItem = self.collection.results[(NSUInteger)indexPath.row];
+    cell.dataItem = dataItem;
 
     cell.label.text = dataItem.value;
 

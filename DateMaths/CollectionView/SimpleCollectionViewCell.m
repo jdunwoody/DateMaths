@@ -1,5 +1,6 @@
 #import "SimpleCollectionViewCell.h"
 #import "CALayer+NewCategory.h"
+#import "DataItem.h"
 
 @implementation SimpleCollectionViewCell
 

@@ -10,18 +10,22 @@
 #import "NumberWrappingLayoutCalculator.h"
 #import "DataItem.h"
 
+@interface NumberWrappingLayoutCalculator ()
+@property (nonatomic, strong) NSMutableArray *rows;
+@end
+
 @implementation NumberWrappingLayoutCalculator
 
-+ (NSDictionary *)calculateLayoutSizesForDataItems:(NSArray *)items inSize:(CGSize)size ofSize:(CGSize)cellSize
+- (NSDictionary *)calculateLayoutSizesForDataItems:(NSArray *)items inSize:(CGSize)size ofSize:(CGSize)cellSize
 {
-    NSMutableArray *rows = [self buildRowsWithItems:items size:&size cellSize:&cellSize];
+    self.rows = [self buildRowsWithItems:items size:&size cellSize:&cellSize];
 
-    NSMutableDictionary *calculatedLayout = [self buildlayoutDirectionaryWithItems:items cellSize:&cellSize rows:rows];
+    NSMutableDictionary *calculatedLayout = [self buildlayoutDirectionaryWithItems:items cellSize:&cellSize rows:self.rows];
 
     return calculatedLayout;
 }
 
-+ (NSMutableDictionary *)buildlayoutDirectionaryWithItems:(NSArray *)items cellSize:(CGSize *)cellSize rows:(NSMutableArray *)rows
+- (NSMutableDictionary *)buildlayoutDirectionaryWithItems:(NSArray *)items cellSize:(CGSize *)cellSize rows:(NSMutableArray *)rows
 {
     NSMutableDictionary *calculatedLayout = [NSMutableDictionary dictionaryWithCapacity:(NSUInteger)items.count];
 
@@ -38,7 +42,7 @@
     return calculatedLayout;
 }
 
-+ (NSMutableArray *)buildRowsWithItems:(NSArray *)items size:(CGSize *)size cellSize:(CGSize *)cellSize
+- (NSMutableArray *)buildRowsWithItems:(NSArray *)items size:(CGSize *)size cellSize:(CGSize *)cellSize
 {
     NSMutableArray *rows = [NSMutableArray array];
 
@@ -78,6 +82,12 @@
     }
 
     return rows;
+}
+
+- (CGPoint)locationOfNearestEdgeOfCellNearLocation:(CGPoint)point
+{
+    CGPoint result;
+    return result;
 }
 
 @end

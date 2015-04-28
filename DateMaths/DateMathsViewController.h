@@ -13,6 +13,7 @@
 @class OperatorCollectionDataSource;
 @class ResultsCollection;
 @class LevelCollection;
+@class ResultCollectionViewLayout;
 
 @interface DateMathsViewController : UIViewController<UICollectionViewDelegate, CollectionDataSourceDelegate>
 
@@ -21,8 +22,9 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *resultsCollectionView;
 @property (weak, nonatomic) IBOutlet UICollectionView *levelCollectionView;
 
-//@property (weak, nonatomic) IBOutlet NSLayoutConstraint *digitHeightLayoutConstraint;
-//@property (weak, nonatomic) IBOutlet NSLayoutConstraint *operatorHeightLayoutConstraint;
 @property (weak, nonatomic) IBOutlet UILabel *totalLabel;
+
+- (IBAction)panned:(id)sender;
+@property (strong, nonatomic) IBOutlet UIPanGestureRecognizer *dragResultsPanGestureRecogniser;
 
 @end

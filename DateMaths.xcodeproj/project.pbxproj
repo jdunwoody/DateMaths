@@ -41,6 +41,7 @@
 		9E89CC121AC7F58B0086C816 /* DateMathsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E89CC111AC7F58B0086C816 /* DateMathsViewController.m */; };
 		9E9B14561AEB6D9B0044EC90 /* SimpleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 914CBA6A542E628E5ADD25FD /* SimpleCollectionViewCell.xib */; };
 		9ED3179D1AEC636900AC2FD2 /* NumberWrappingLayoutCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3179C1AEC636900AC2FD2 /* NumberWrappingLayoutCalculator.m */; };
+		9ED317A01AED104D00AC2FD2 /* DragResultsMovingDynamicBehaviour.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3179F1AED104D00AC2FD2 /* DragResultsMovingDynamicBehaviour.m */; };
 		A830C24FDC4ADA5850A9DC5F /* Pods_DateMathsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF786EAEB303B88BA017ABF7 /* Pods_DateMathsTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -122,6 +123,8 @@
 		9E89CC111AC7F58B0086C816 /* DateMathsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateMathsViewController.m; sourceTree = "<group>"; };
 		9ED3179B1AEC636900AC2FD2 /* NumberWrappingLayoutCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberWrappingLayoutCalculator.h; sourceTree = "<group>"; };
 		9ED3179C1AEC636900AC2FD2 /* NumberWrappingLayoutCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberWrappingLayoutCalculator.m; sourceTree = "<group>"; };
+		9ED3179E1AED104D00AC2FD2 /* DragResultsMovingDynamicBehaviour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DragResultsMovingDynamicBehaviour.h; path = Animation/DragResultsMovingDynamicBehaviour.h; sourceTree = "<group>"; };
+		9ED3179F1AED104D00AC2FD2 /* DragResultsMovingDynamicBehaviour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DragResultsMovingDynamicBehaviour.m; path = Animation/DragResultsMovingDynamicBehaviour.m; sourceTree = "<group>"; };
 		BDA24A1FF30C550BE15C6B56 /* Pods-DateMathsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateMathsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DateMathsTests/Pods-DateMathsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF786EAEB303B88BA017ABF7 /* Pods_DateMathsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DateMathsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD25788D443D0AC2A71F8ED8 /* Pods-DateMathsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateMathsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DateMathsTests/Pods-DateMathsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -247,6 +250,8 @@
 				914CBB122EB9CF6F5DEE4671 /* SimpleCollectionViewCell.h */,
 				914CBD7A65D60D3F09EB8C7C /* SimpleCollectionViewCell.m */,
 				914CBA6A542E628E5ADD25FD /* SimpleCollectionViewCell.xib */,
+				9ED3179E1AED104D00AC2FD2 /* DragResultsMovingDynamicBehaviour.h */,
+				9ED3179F1AED104D00AC2FD2 /* DragResultsMovingDynamicBehaviour.m */,
 			);
 			name = CollectionView;
 			path = DateMaths/CollectionView;
@@ -465,6 +470,7 @@
 				9E5F76D31AD236E0001D69F5 /* ResultsCollectionViewDataSource.m in Sources */,
 				9E42E76F1AE2486B0084B471 /* LevelCollectionViewDataSource.m in Sources */,
 				9E5F76CD1AD236E0001D69F5 /* Digit.m in Sources */,
+				9ED317A01AED104D00AC2FD2 /* DragResultsMovingDynamicBehaviour.m in Sources */,
 				914CBB2005A6995428799172 /* AppDelegate.m in Sources */,
 				9E89CC121AC7F58B0086C816 /* DateMathsViewController.m in Sources */,
 				9ED3179D1AEC636900AC2FD2 /* NumberWrappingLayoutCalculator.m in Sources */,

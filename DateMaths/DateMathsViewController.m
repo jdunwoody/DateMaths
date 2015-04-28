@@ -13,6 +13,7 @@
 #import "DigitFactory.h"
 #import "DigitCollection.h"
 #import "ResultCollectionViewLayout.h"
+#import "SimpleCollectionViewCell.h"
 
 @interface DateMathsViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *digitLabel;
@@ -26,6 +27,9 @@
 @property (nonatomic, strong) LevelCollectionViewDataSource *levelCollectionViewDataSource;
 
 @property (nonatomic, strong) LevelCollection *levelCollection;
+@property (nonatomic, strong) UIView *draggingImageView;
+@property (nonatomic, strong) ResultCollectionViewLayout *layout;
+@property (nonatomic, strong) SimpleCollectionViewCell *selectedCell;
 @end
 
 @implementation DateMathsViewController
@@ -64,8 +68,8 @@
     self.resultsCollectionView.delegate = self;
     [self.resultsCollectionView registerNib:nib forCellWithReuseIdentifier:@"simpleCell"];
 
-    ResultCollectionViewLayout *layout = (ResultCollectionViewLayout *)self.resultsCollectionView.collectionViewLayout;
-    layout.levelCollection = self.levelCollection;
+    self.layout = (ResultCollectionViewLayout *)self.resultsCollectionView.collectionViewLayout;
+    self.layout.levelCollection = self.levelCollection;
 
     self.totalLabel.text = [self showValue:nil];
 }
@@ -132,8 +136,6 @@
 
 - (void)didLayoutCell:(NSIndexPath *)path inCollectionView:(UICollectionView *)view
 {
-//    self.digitHeightLayoutConstraint.constant = self.digitCollectionView.contentSize.height;
-//    self.operatorHeightLayoutConstraint.constant = self.operatorCollectionView.contentSize.height;
 }
 
 - (NSString *)showValue:(NSNumber *)sum
@@ -142,6 +144,49 @@
         return @"Error";
     }
     return [NSString stringWithFormat:@"%i", [sum intValue]];
+}
+
+- (IBAction)panned:(id)sender
+{
+    if (self.dragResultsPanGestureRecogniser.state == UIGestureRecognizerStateBegan) {
+        CGPoint location = [self.dragResultsPanGestureRecogniser locationInView:self.resultsCollectionView];
+        self.selectedCell = (SimpleCollectionViewCell *)[self.resultsCollectionView hitTest:location withEvent:nil];
+
+        CGPoint nearestCellEdgeLocation = [self.layout locationOfNearestEdgeOfCellNearLocation:location];
+
+        if (!self.draggingImageView) {
+            self.draggingImageView = [[UIView alloc] initWithFrame:CGRectMake(nearestCellEdgeLocation.x, nearestCellEdgeLocation.y, 3, SIMPLE_COLLECTION_VIEW_CELL_HEIGHT)];
+            self.draggingImageView.backgroundColor = [UIColor redColor];
+            [self.resultsCollectionView addSubview:self.draggingImageView];
+        }
+
+        self.draggingImageView.frame = CGRectMake(
+            nearestCellEdgeLocation.x,
+            nearestCellEdgeLocation.y,
+            self.draggingImageView.frame.size.width,
+            self.draggingImageView.frame.size.height);
+
+    } else if (self.dragResultsPanGestureRecogniser.state == UIGestureRecognizerStateEnded) {
+        [self.draggingImageView removeFromSuperview];
+        self.draggingImageView = nil;
+
+        CGPoint location = [self.dragResultsPanGestureRecogniser locationInView:self.resultsCollectionView];
+
+        SimpleCollectionViewCell *nearestDataItemCell = (SimpleCollectionViewCell *)[self.resultsCollectionView hitTest:location withEvent:nil];
+
+//        [self.levelCollection.current.resultsCollection moveDataItem:self.selectedCell.dataItem afterDataItem:nearestDataItemCell.dataItem];
+        self.selectedCell = nil;
+
+    } else {
+        CGPoint location = [self.dragResultsPanGestureRecogniser locationInView:self.resultsCollectionView];
+        CGPoint nearestCellEdgeLocation = [self.layout locationOfNearestEdgeOfCellNearLocation:location];
+
+        self.draggingImageView.frame = CGRectMake(
+            nearestCellEdgeLocation.x,
+            nearestCellEdgeLocation.y,
+            self.draggingImageView.frame.size.width,
+            self.draggingImageView.frame.size.height);
+    }
 }
 
 @end

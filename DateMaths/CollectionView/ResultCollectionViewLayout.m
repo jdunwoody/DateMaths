@@ -3,14 +3,45 @@
 #import "ResultsCollection.h"
 #import "DataItem.h"
 #import "NumberWrappingLayoutCalculator.h"
+#import "SimpleCollectionViewCell.h"
 
 @protocol DataItem;
 
 @interface ResultCollectionViewLayout ()
 @property (nonatomic, strong) NSDictionary *calculatedLayout;
+@property (nonatomic, strong) NumberWrappingLayoutCalculator *calculator;
 @end
 
 @implementation ResultCollectionViewLayout
+
+- (instancetype)init
+{
+    self = [super init];
+    if (!self) {
+        return self;
+    }
+
+    [self commonInit];
+
+    return self;
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super init];
+    if (!self) {
+        return self;
+    }
+
+    [self commonInit];
+
+    return self;
+}
+
+- (void)commonInit
+{
+    self.calculator = [[NumberWrappingLayoutCalculator alloc] init];
+}
 
 - (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -59,9 +90,14 @@
 {
     [super prepareLayout];
 
-    CGSize cellSize = CGSizeMake(50.0, 50.0);
+    CGSize cellSize = CGSizeMake(SIMPLE_COLLECTION_VIEW_CELL_WIDTH, SIMPLE_COLLECTION_VIEW_CELL_WIDTH);
 
-    self.calculatedLayout = [NumberWrappingLayoutCalculator calculateLayoutSizesForDataItems:self.levelCollection.results.items inSize:self.collectionView.contentSize ofSize:(cellSize)];
+    self.calculatedLayout = [self.calculator calculateLayoutSizesForDataItems:self.levelCollection.results.items inSize:self.collectionView.contentSize ofSize:(cellSize)];
+}
+
+- (CGPoint)locationOfNearestEdgeOfCellNearLocation:(CGPoint)point
+{
+    return [self.calculator locationOfNearestEdgeOfCellNearLocation:point];
 }
 
 @end

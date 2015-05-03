@@ -4,6 +4,7 @@
 #import "DataItem.h"
 #import "NumberWrappingLayoutCalculator.h"
 #import "SimpleCollectionViewCell.h"
+#import "LevelItem.h"
 
 @protocol DataItem;
 
@@ -47,7 +48,7 @@
 {
     UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
 
-    id<DataItem> item = self.levelCollection.results[(NSUInteger)indexPath.row];
+    id<DataItem> item = self.levelCollection.current.resultsCollection[(NSUInteger)indexPath.row];
     NSValue *rect = self.calculatedLayout[item];
     attributes.frame = rect.CGRectValue;
 
@@ -78,9 +79,12 @@
 {
     NSMutableArray *results = [NSMutableArray array];
 
-    int row = 0;
-    for (id<DataItem> item in self.levelCollection.results) {
-        [results addObject:[NSIndexPath indexPathForRow:row++ inSection:0]];
+//    for (id<DataItem> item in self.levelCollection.current.resultsCollection) {
+//        [results addObject:item];
+//    }
+
+    for (int i = 0; i < self.levelCollection.current.resultsCollection.count; i++) {
+        [results addObject:[NSIndexPath indexPathForRow:i inSection:0]];
     }
 
     return results;
@@ -92,7 +96,7 @@
 
     CGSize cellSize = CGSizeMake(SIMPLE_COLLECTION_VIEW_CELL_WIDTH, SIMPLE_COLLECTION_VIEW_CELL_WIDTH);
 
-    self.calculatedLayout = [self.calculator calculateLayoutSizesForDataItems:self.levelCollection.results.items inSize:self.collectionView.contentSize ofSize:(cellSize)];
+    self.calculatedLayout = [self.calculator calculateLayoutSizesForDataItems:self.levelCollection.current.resultsCollection.items inSize:self.collectionView.contentSize ofSize:(cellSize)];
 }
 
 - (CGPoint)locationOfNearestEdgeOfCellNearLocation:(CGPoint)point

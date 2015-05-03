@@ -5,6 +5,7 @@
 #import "Digit.h"
 #import "Operator.h"
 #import "OperatorFactory.h"
+#import "DigitFactory.h"
 
 
 @interface LevelItem ()
@@ -12,7 +13,7 @@
 
 @implementation LevelItem
 
-- (instancetype)initWithNumber:(double)number digits:(NSArray *)digits operatorFactory:(OperatorFactory *)operatorFactory
+- (instancetype)initWithNumber:(double)number digitFactory:(DigitFactory *)digitFactory operatorFactory:(OperatorFactory *)operatorFactory
 {
     self = [super init];
     if (!self) {
@@ -24,8 +25,8 @@
     _starB = NO;
     _starC = NO;
 
-    _digitCollection = [[DigitCollection alloc] initWithDigits:digits];
-    _operatorCollection = [[OperatorCollection alloc] initWithOperatorFactory:operatorFactory];
+    _digitCollection = [[DigitCollection alloc] initWithDigits:digitFactory.digits];
+    _operatorCollection = [[OperatorCollection alloc] initWithOperators:operatorFactory.operators];
     _resultsCollection = [[ResultsCollection alloc] init];
 
     return self;

@@ -9,6 +9,6 @@
 @interface DigitCollectionDataSource : NSObject<UICollectionViewDataSource>
 
 - (instancetype)init __unavailable;
-- (instancetype)initWithCollection:(LevelCollection *)collection withDelegate:(id<CollectionDataSourceDelegate>)delegate;
+- (instancetype)initWithLevelCollection:(LevelCollection *)levelCollection withDelegate:(id<CollectionDataSourceDelegate>)delegate;
 
 @end

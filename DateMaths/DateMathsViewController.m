@@ -42,7 +42,7 @@
 
     DigitFactory *digitFactory = [[DigitFactory alloc] initWithDate:[NSDate date]];
     OperatorFactory *operatorFactory = [[OperatorFactory alloc] initWithSymbols:@[@"+", @"-", @"/", @"*", @"(", @")"]];
-    self.levelCollection = [[LevelCollection alloc] initWithDigits:digitFactory.digits operatorFactory:operatorFactory];
+    self.levelCollection = [[LevelCollection alloc] initWithDigitFactory:digitFactory operatorFactory:operatorFactory];
 
     //Level
     self.levelCollectionViewDataSource = [[LevelCollectionViewDataSource alloc] initWithCollection:self.levelCollection];
@@ -51,19 +51,19 @@
     [self.levelCollectionView registerNib:nib forCellWithReuseIdentifier:@"simpleCell"];
 
     //Digits
-    self.digitCollectionDataSource = [[DigitCollectionDataSource alloc] initWithCollection:self.levelCollection withDelegate:self];
+    self.digitCollectionDataSource = [[DigitCollectionDataSource alloc] initWithLevelCollection:self.levelCollection withDelegate:self];
     self.digitCollectionView.dataSource = self.digitCollectionDataSource;
     self.digitCollectionView.delegate = self;
     [self.digitCollectionView registerNib:nib forCellWithReuseIdentifier:@"simpleCell"];
 
     //Operators
-    self.operatorCollectionDataSource = [[OperatorCollectionDataSource alloc] initWithCollection:self.levelCollection];
+    self.operatorCollectionDataSource = [[OperatorCollectionDataSource alloc] initWithLevelCollection:self.levelCollection];
     self.operatorCollectionView.dataSource = self.operatorCollectionDataSource;
     self.operatorCollectionView.delegate = self;
     [self.operatorCollectionView registerNib:nib forCellWithReuseIdentifier:@"simpleCell"];
 
     //Results
-    self.resultsCollectionViewDataSource = [[ResultsCollectionViewDataSource alloc] initWithCollection:self.levelCollection];
+    self.resultsCollectionViewDataSource = [[ResultsCollectionViewDataSource alloc] initWithLevelCollection:self.levelCollection];
     self.resultsCollectionView.dataSource = self.resultsCollectionViewDataSource;
     self.resultsCollectionView.delegate = self;
     [self.resultsCollectionView registerNib:nib forCellWithReuseIdentifier:@"simpleCell"];
@@ -77,61 +77,81 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     if (collectionView == self.digitCollectionView) {
-        Digit *digit = self.levelCollection.digits[(NSUInteger)indexPath.row];
-        if (digit.used) {
-            return;
-        }
-
-        [self.levelCollection.current useDigit:digit];
-
-        digit.used = YES;
-
-        [self.resultsCollectionView reloadData];
-        [self.digitCollectionView reloadItemsAtIndexPaths:@[indexPath]];
+        [self clickedDigitCollectionAtIndexPath:indexPath];
 
     } else if (collectionView == self.operatorCollectionView) {
-        Operator *operatorTemplate = self.levelCollection.operators[(NSUInteger)indexPath.row];
-        Operator *operator = [[Operator alloc] initWithOperator:operatorTemplate];
-
-        [self.levelCollection.current useOperator:operator];
-
-        [self.resultsCollectionView reloadData];
-        [self.operatorCollectionView reloadItemsAtIndexPaths:@[indexPath]];
+        [self clickedOperatorCollectionAtIndexPath:indexPath];
 
     } else if (collectionView == self.resultsCollectionView) {
-        id<DataItem> resultItem = self.resultsCollectionViewDataSource[indexPath.row];
-
-        if ([resultItem isKindOfClass:[Digit class]]) {
-            Digit *digit = resultItem;
-            digit.used = NO;
-            [self.digitCollectionView reloadData];
-        }
-
-        [self.resultsCollectionViewDataSource removeItem:resultItem];
-
-        [self.resultsCollectionView reloadData];
-        if ([resultItem isKindOfClass:Operator.class]) {
-            [self.operatorCollectionView reloadData];
-        } else {
-            [self.digitCollectionView reloadData];
-        }
+        [self clickedResultsCollectionAtIndexPath:indexPath];
 
     } else if (collectionView == self.levelCollectionView) {
-        LevelItem *target = self.levelCollection[(NSUInteger)indexPath.row];
-        self.levelCollection.current = target;
-
-        [self.resultsCollectionView reloadData];
-        [self.operatorCollectionView reloadData];
-        [self.digitCollectionView reloadData];
+        [self clickedLevelCollectionAtIndexpath:indexPath];
     }
 
-    NSNumber *sum = self.levelCollection.results.sum;
+    NSNumber *sum = self.levelCollection.current.resultsCollection.sum;
     LevelItem *current = self.levelCollection.current;
-    [current updateStarsWithSum:sum witDigitsCollection:self.levelCollection.digits];
+    [current updateStarsWithSum:sum witDigitsCollection:self.levelCollection.current.digitCollection];
 
     [self.levelCollectionView reloadData];
 
     self.totalLabel.text = [self showValue:sum];
+}
+
+- (void)clickedLevelCollectionAtIndexpath:(NSIndexPath *)indexPath
+{
+    LevelItem *target = self.levelCollection[(NSUInteger)indexPath.row];
+    self.levelCollection.current = target;
+
+    [self.resultsCollectionView reloadData];
+    [self.operatorCollectionView reloadData];
+    [self.digitCollectionView reloadData];
+}
+
+- (void)clickedResultsCollectionAtIndexPath:(NSIndexPath *)indexPath
+{
+    id<DataItem> resultItem = self.resultsCollectionViewDataSource[indexPath.row];
+
+    if ([resultItem isKindOfClass:[Digit class]]) {
+        Digit *digit = resultItem;
+        digit.used = NO;
+        [self.digitCollectionView reloadData];
+    }
+
+    [self.resultsCollectionViewDataSource removeItem:resultItem];
+
+    [self.resultsCollectionView reloadData];
+    if ([resultItem isKindOfClass:Operator.class]) {
+        [self.operatorCollectionView reloadData];
+    } else {
+        [self.digitCollectionView reloadData];
+    }
+}
+
+- (void)clickedOperatorCollectionAtIndexPath:(NSIndexPath *)indexPath
+{
+    Operator *operatorTemplate = self.levelCollection.current.operatorCollection[(NSUInteger)indexPath.row];
+    Operator *operator = [[Operator alloc] initWithOperator:operatorTemplate];
+
+    [self.levelCollection.current useOperator:operator];
+
+    [self.resultsCollectionView reloadData];
+    [self.operatorCollectionView reloadItemsAtIndexPaths:@[indexPath]];
+}
+
+- (void)clickedDigitCollectionAtIndexPath:(NSIndexPath *)indexPath
+{
+    Digit *digit = self.levelCollection.current.digitCollection[(NSUInteger)indexPath.row];
+    if (digit.used) {
+        return;
+    }
+
+    [self.levelCollection.current useDigit:digit];
+
+    digit.used = YES;
+
+    [self.resultsCollectionView reloadData];
+    [self.digitCollectionView reloadItemsAtIndexPaths:@[indexPath]];
 }
 
 - (void)didLayoutCell:(NSIndexPath *)path inCollectionView:(UICollectionView *)view
@@ -170,11 +190,11 @@
         [self.draggingImageView removeFromSuperview];
         self.draggingImageView = nil;
 
-        CGPoint location = [self.dragResultsPanGestureRecogniser locationInView:self.resultsCollectionView];
+//        CGPoint location = [self.dragResultsPanGestureRecogniser locationInView:self.resultsCollectionView];
 
-        SimpleCollectionViewCell *nearestDataItemCell = (SimpleCollectionViewCell *)[self.resultsCollectionView hitTest:location withEvent:nil];
+        //        SimpleCollectionViewCell *nearestDataItemCell = (SimpleCollectionViewCell *)[self.resultsCollectionView hitTest:location withEvent:nil];
 
-//        [self.levelCollection.current.resultsCollection moveDataItem:self.selectedCell.dataItem afterDataItem:nearestDataItemCell.dataItem];
+        //        [self.levelCollection.current.resultsCollection moveDataItem:self.selectedCell.dataItem afterDataItem:nearestDataItemCell.dataItem];
         self.selectedCell = nil;
 
     } else {

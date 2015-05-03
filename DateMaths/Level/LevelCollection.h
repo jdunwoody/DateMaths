@@ -17,12 +17,9 @@
 @interface LevelCollection : NSObject<IndexableCollection>
 
 @property (strong, nonatomic) LevelItem *current;
-@property (nonatomic, readonly) DigitCollection *digits;
-@property (nonatomic, readonly) OperatorCollection *operators;
-@property (nonatomic, readonly) ResultsCollection *results;
 
 - (instancetype)init __unavailable;
-- (instancetype)initWithDigits:(NSArray *)digits operatorFactory:(OperatorFactory *)operatorFactory;
+- (instancetype)initWithDigitFactory:(DigitFactory *)digitFactory operatorFactory:(OperatorFactory *)operatorFactory;
 
 - (NSInteger)count;
 

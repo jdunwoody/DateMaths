@@ -8,6 +8,7 @@
 
 
 @interface DigitFactory ()
+@property (nonatomic, strong) NSDate *date;
 @end
 
 @implementation DigitFactory
@@ -19,21 +20,26 @@
         return self;
     }
 
-    self.digits = [self digitsFromDate:date];
+    self.date = date;
 
     return self;
 }
 
-- (instancetype)initWithSymbols:(NSArray *)symbols
+//- (instancetype)initWithSymbols:(NSArray *)symbols
+//{
+//    self = [super init];
+//    if (!self) {
+//        return self;
+//    }
+//
+//    self.digits = [self digitsFromSymbolArray:symbols];
+//
+//    return self;
+//}
+
+- (NSArray *)digits
 {
-    self = [super init];
-    if (!self) {
-        return self;
-    }
-
-    self.digits = [self digitsFromSymbolArray:symbols];
-
-    return self;
+    return [self digitsFromDate:self.date];
 }
 
 - (NSArray *)digitsFromDate:(NSDate *)date

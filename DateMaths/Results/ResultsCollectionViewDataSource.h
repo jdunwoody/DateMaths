@@ -9,7 +9,7 @@
 @interface ResultsCollectionViewDataSource : NSObject<UICollectionViewDataSource>
 
 - (instancetype)init __unavailable;
-- (instancetype)initWithCollection:(LevelCollection *)collection;
+- (instancetype)initWithLevelCollection:(LevelCollection *)levelCollection;
 
 - (id)objectAtIndexedSubscript:(NSInteger)idx;
 - (void)removeItem:(id<DataItem>)resultItem;

@@ -7,7 +7,6 @@
 #import "SimpleCollectionViewCell.h"
 #import "DataItem.h"
 #import "LevelCollection.h"
-#import "OperatorCollection.h"
 
 @interface OperatorCollectionDataSource ()
 @property (nonatomic, readonly) LevelCollection *collection;
@@ -15,7 +14,7 @@
 
 @implementation OperatorCollectionDataSource
 
-- (instancetype)initWithCollection:(LevelCollection *)collection
+- (instancetype)initWithLevelCollection:(LevelCollection *)collection
 {
     self = [super init];
     if (!self) {
@@ -29,13 +28,13 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return [self.collection.operators count];
+    return [self.collection count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     SimpleCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"simpleCell" forIndexPath:indexPath];
-    id<DataItem> item = self.collection.operators[(NSUInteger)indexPath.row];
+    id<DataItem> item = self.collection[(NSUInteger)indexPath.row];
 
     cell.label.text = item.value;
 

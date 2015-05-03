@@ -10,6 +10,7 @@
 #import "SimpleCollectionViewCell.h"
 #import "CollectionDataSourceDelegate.h"
 #import "LevelCollection.h"
+#import "LevelItem.h"
 
 @interface DigitCollectionDataSource ()
 @property (nonatomic, strong) LevelCollection *collection;
@@ -18,7 +19,7 @@
 
 @implementation DigitCollectionDataSource
 
-- (instancetype)initWithCollection:(LevelCollection *)collection withDelegate:(id<CollectionDataSourceDelegate>)delegate
+- (instancetype)initWithLevelCollection:(LevelCollection *)levelCollection withDelegate:(id<CollectionDataSourceDelegate>)delegate
 {
     self = [super init];
     if (!self) {
@@ -26,20 +27,20 @@
     }
 
     _delegate = delegate;
-    _collection = collection;
+    _collection = levelCollection;
 
     return self;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return [self.collection.digits count];
+    return [self.collection.current.digitCollection count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     SimpleCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"simpleCell" forIndexPath:indexPath];
-    Digit *digit = self.collection.digits[(NSUInteger)indexPath.row];
+    Digit *digit = self.collection.current.digitCollection[(NSUInteger)indexPath.row];
     cell.label.text = digit.value;
 
     if (digit.used) {

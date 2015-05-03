@@ -12,7 +12,7 @@
 @interface OperatorCollection : NSObject<IndexableCollection>
 
 - (NSInteger)count;
-- (instancetype)initWithOperatorFactory:(OperatorFactory *)factory;
+- (instancetype)initWithOperators:(NSArray *)operators;
 - (Operator *)operatorWithSymbol:(NSString *)symbol;
 
 @end

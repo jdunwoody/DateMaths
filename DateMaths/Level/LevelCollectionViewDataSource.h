@@ -11,6 +11,6 @@
 @interface LevelCollectionViewDataSource : NSObject<UICollectionViewDataSource>
 
 - (instancetype)init __unavailable;
-- (instancetype)initWithCollection:(LevelCollection *)collection;
+- (instancetype)initWithCollection:(LevelCollection *)levelCollection;
 
 @end

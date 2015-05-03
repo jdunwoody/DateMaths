@@ -10,5 +10,5 @@
 @class LevelCollection;
 
 @interface OperatorCollectionDataSource : NSObject<UICollectionViewDataSource>
-- (instancetype)initWithLevelCollection:(LevelCollection *)collection;
+- (instancetype)initWithLevelCollection:(LevelCollection *)levelCollection;
 @end

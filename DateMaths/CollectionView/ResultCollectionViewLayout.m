@@ -96,7 +96,8 @@
 
     CGSize cellSize = CGSizeMake(SIMPLE_COLLECTION_VIEW_CELL_WIDTH, SIMPLE_COLLECTION_VIEW_CELL_WIDTH);
 
-    self.calculatedLayout = [self.calculator calculateLayoutSizesForDataItems:self.levelCollection.current.resultsCollection.items inSize:self.collectionView.contentSize ofSize:(cellSize)];
+    [self.calculator calculateLayoutSizesForDataItems:self.levelCollection.current.resultsCollection.items inSize:self.collectionView.contentSize ofSize:(cellSize)];
+    self.calculatedLayout = self.calculator.calculatedLayout;
 }
 
 - (CGPoint)locationOfNearestEdgeOfCellNearLocation:(CGPoint)point

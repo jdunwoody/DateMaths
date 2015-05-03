@@ -10,7 +10,8 @@
 
 @interface NumberWrappingLayoutCalculator : NSObject
 
-- (NSDictionary *)calculateLayoutSizesForDataItems:(NSArray *)items inSize:(CGSize)size ofSize:(CGSize)size1;
+@property (nonatomic, strong) NSMutableDictionary *calculatedLayout;
+- (void)calculateLayoutSizesForDataItems:(NSArray *)items inSize:(CGSize)size ofSize:(CGSize)size1;
 
 - (CGPoint)locationOfNearestEdgeOfCellNearLocation:(CGPoint)point;
 

@@ -24,7 +24,6 @@
 		914CBC31A9FEB09E009C5F71 /* ResultsCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CBC34DFE9F966B62C8E5A /* ResultsCollection.m */; };
 		914CBCC3B96D5CA79BEE8C77 /* DateMathsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CBA329EF88E051638C3E2 /* DateMathsViewModel.m */; };
 		914CBD7FCD50F049842EDC89 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 914CB9D3C69619BA9B98BB48 /* Images.xcassets */; };
-		914CBF176BC1052841FFB9D1 /* DateMathsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB50977B4279E38952DA1 /* DateMathsTests.m */; };
 		914CBF27319C07554EC7C084 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB04F81F03B4475E8AAE0 /* main.m */; };
 		914CBFF934113B500AA477F7 /* ParserTestUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CBFE8D7832200898A7360 /* ParserTestUtils.m */; };
 		9E42E76E1AE2486B0084B471 /* LevelCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E42E7691AE2486B0084B471 /* LevelCollection.m */; };
@@ -72,7 +71,6 @@
 		914CB4207F649F3FD0605CF7 /* ParserTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParserTest.m; path = Parser/ParserTest.m; sourceTree = "<group>"; };
 		914CB479BAD5699ED9B7C2FA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		914CB4F47E503E9FE60ED675 /* ResultCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultCollectionViewLayout.h; sourceTree = "<group>"; };
-		914CB50977B4279E38952DA1 /* DateMathsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateMathsTests.m; sourceTree = "<group>"; };
 		914CB54EA3F6E6AABF8ED12E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		914CB5A346BB740958DDE8B4 /* ExpressionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpressionTest.m; path = Expression/ExpressionTest.m; sourceTree = "<group>"; };
 		914CB6375BE3E96890A1CF32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
@@ -169,7 +167,6 @@
 			isa = PBXGroup;
 			children = (
 				914CB3B821B5EDE5E8C139F1 /* Supporting Files */,
-				914CB50977B4279E38952DA1 /* DateMathsTests.m */,
 				914CB4207F649F3FD0605CF7 /* ParserTest.m */,
 				914CBFE8D7832200898A7360 /* ParserTestUtils.m */,
 				914CB2A9B34A6BE6F1F305A0 /* ParserTestUtils.h */,
@@ -500,7 +497,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E7CF4341AD5481E00317897 /* ParserTest.m in Sources */,
-				914CBF176BC1052841FFB9D1 /* DateMathsTests.m in Sources */,
 				914CBFF934113B500AA477F7 /* ParserTestUtils.m in Sources */,
 				914CB870AECF941BDF14E8C2 /* ExpressionTest.m in Sources */,
 				914CB247703FFE19862A4699 /* NumberWrappingLayoutCalculatorTest.m in Sources */,

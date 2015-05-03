@@ -16,16 +16,14 @@
 
 @implementation NumberWrappingLayoutCalculator
 
-- (NSDictionary *)calculateLayoutSizesForDataItems:(NSArray *)items inSize:(CGSize)size ofSize:(CGSize)cellSize
+- (void)calculateLayoutSizesForDataItems:(NSArray *)items inSize:(CGSize)size ofSize:(CGSize)cellSize
 {
     self.rows = [self buildRowsWithItems:items size:&size cellSize:&cellSize];
 
-    NSMutableDictionary *calculatedLayout = [self buildlayoutDirectionaryWithItems:items cellSize:&cellSize rows:self.rows];
-
-    return calculatedLayout;
+    self.calculatedLayout = [self buildDataItemToRectLayoutDictionaryWithItems:items cellSize:&cellSize rows:self.rows];
 }
 
-- (NSMutableDictionary *)buildlayoutDirectionaryWithItems:(NSArray *)items cellSize:(CGSize *)cellSize rows:(NSMutableArray *)rows
+- (NSMutableDictionary *)buildDataItemToRectLayoutDictionaryWithItems:(NSArray *)items cellSize:(CGSize *)cellSize rows:(NSMutableArray *)rows
 {
     NSMutableDictionary *calculatedLayout = [NSMutableDictionary dictionaryWithCapacity:(NSUInteger)items.count];
 
@@ -86,7 +84,23 @@
 
 - (CGPoint)locationOfNearestEdgeOfCellNearLocation:(CGPoint)point
 {
-    CGPoint result;
+    __block CGPoint result;
+
+    [self.calculatedLayout enumerateKeysAndObjectsUsingBlock:^(id<DataItem> dataItem, NSValue *valueRect, BOOL *stop) {
+        CGRect rect = valueRect.CGRectValue;
+
+        if (point.y > CGRectGetMinY(rect) && point.y < CGRectGetMaxY(rect)) {
+            result = rect.origin;
+
+            if (point.x > CGRectGetMinX(rect) && point.x < CGRectGetMaxX(rect)) {
+                *stop = YES;
+
+            } else {
+
+            }
+        }
+    }];
+
     return result;
 }
 

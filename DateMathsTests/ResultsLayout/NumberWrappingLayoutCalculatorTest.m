@@ -25,8 +25,8 @@ SpecBegin(NumberWrappingLayoutCalculator)
                     CGSize size = CGSizeMake(100.0, 100.0);
                     NumberWrappingLayoutCalculator *calculator = [[NumberWrappingLayoutCalculator alloc] init];
 
-                    [calculator calculateLayoutSizesForDataItems:items inSize:size ofSize:CGSizeMake(50.0, 50.0)];
-                    NSDictionary *calculated = calculator.calculatedLayout;
+                    [calculator calculateLayoutSizesForDataItems:items inSize:size];
+                    NSDictionary *calculated = calculator.laidOutDataItems;
 
                     expect(calculated.count).to.equal(2);
                     expect(((NSValue *)calculated[digit1]).CGRectValue).to.equal(CGRectMake(0, 0, 50, 50));
@@ -51,8 +51,8 @@ SpecBegin(NumberWrappingLayoutCalculator)
                     CGSize size = CGSizeMake(100.0, 100.0);
 
                     NumberWrappingLayoutCalculator *calculator = [[NumberWrappingLayoutCalculator alloc] init];
-                    [calculator calculateLayoutSizesForDataItems:items inSize:size ofSize:CGSizeMake(50.0, 50.0)];
-                    NSDictionary *calculated =calculator.calculatedLayout;
+                    [calculator calculateLayoutSizesForDataItems:items inSize:size];
+                    NSDictionary *calculated =calculator.laidOutDataItems;
                     
                     expect(calculated.count).to.equal(3);
                     expect(((NSValue *)calculated[digit1]).CGRectValue).to.equal(CGRectMake(0, 0, 50, 50));
@@ -75,8 +75,8 @@ SpecBegin(NumberWrappingLayoutCalculator)
                     CGSize size = CGSizeMake(150.0, 100.0);
 
                     NumberWrappingLayoutCalculator *calculator = [[NumberWrappingLayoutCalculator alloc] init];
-                    [calculator calculateLayoutSizesForDataItems:items inSize:size ofSize:CGSizeMake(50.0, 50.0)];
-                    NSDictionary *calculated =calculator.calculatedLayout;
+                    [calculator calculateLayoutSizesForDataItems:items inSize:size];
+                    NSDictionary *calculated =calculator.laidOutDataItems;
                     
                     expect(calculated.count).to.equal(4);
                     expect(((NSValue *)calculated[digit1]).CGRectValue).to.equal(CGRectMake(0, 0, 50, 50));
@@ -104,8 +104,8 @@ SpecBegin(NumberWrappingLayoutCalculator)
                     CGSize size = CGSizeMake(150.0, 100.0);
 
                     NumberWrappingLayoutCalculator *calculator = [[NumberWrappingLayoutCalculator alloc] init];
-                    [calculator calculateLayoutSizesForDataItems:items inSize:size ofSize:CGSizeMake(50.0, 50.0)];
-                    NSDictionary *calculated =calculator.calculatedLayout;
+                    [calculator calculateLayoutSizesForDataItems:items inSize:size];
+                    NSDictionary *calculated =calculator.laidOutDataItems;
                     
                     expect(((NSValue *)calculated[digit1]).CGRectValue).to.equal(CGRectMake(0, 0, 50, 50));
                     expect(((NSValue *)calculated[anOperator]).CGRectValue).to.equal(CGRectMake(50.0, 0.0, 50.0, 50.0));

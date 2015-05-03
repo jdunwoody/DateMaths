@@ -7,6 +7,6 @@
 
 @property (nonatomic, strong) LevelCollection *levelCollection;
 
-
 - (CGPoint)locationOfNearestEdgeOfCellNearLocation:(CGPoint)point;
+
 @end

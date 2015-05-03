@@ -190,6 +190,9 @@
         [self.draggingImageView removeFromSuperview];
         self.draggingImageView = nil;
 
+        CGPoint location = [self.dragResultsPanGestureRecogniser locationInView:self.resultsCollectionView];
+        CGPoint nearestCellEdgeLocation = [self.layout locationOfNearestEdgeOfCellNearLocation:location];
+
 //        CGPoint location = [self.dragResultsPanGestureRecogniser locationInView:self.resultsCollectionView];
 
         //        SimpleCollectionViewCell *nearestDataItemCell = (SimpleCollectionViewCell *)[self.resultsCollectionView hitTest:location withEvent:nil];

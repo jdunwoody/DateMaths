@@ -22,6 +22,7 @@
 		914CBA5C037D61EFAE1DB001 /* CALayer+NewCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CBF0DCA8CC6E6EDFE659A /* CALayer+NewCategory.m */; };
 		914CBB2005A6995428799172 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB479BAD5699ED9B7C2FA /* AppDelegate.m */; };
 		914CBC31A9FEB09E009C5F71 /* ResultsCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CBC34DFE9F966B62C8E5A /* ResultsCollection.m */; };
+		914CBCB678D93ADF1E4946BD /* DataItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB1306033F9C4BDCA20F6 /* DataItemView.m */; };
 		914CBCC3B96D5CA79BEE8C77 /* DateMathsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CBA329EF88E051638C3E2 /* DateMathsViewModel.m */; };
 		914CBD7FCD50F049842EDC89 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 914CB9D3C69619BA9B98BB48 /* Images.xcassets */; };
 		914CBF27319C07554EC7C084 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB04F81F03B4475E8AAE0 /* main.m */; };
@@ -58,6 +59,7 @@
 		914CB04F81F03B4475E8AAE0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		914CB0A91F98BAB9285CBFFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		914CB1120D5FDF945F364A6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		914CB1306033F9C4BDCA20F6 /* DataItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataItemView.m; sourceTree = "<group>"; };
 		914CB13955935C364A5CDCFF /* TestFixtures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFixtures.h; sourceTree = "<group>"; };
 		914CB17E859B3E1BFBFCC30B /* ParseItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParseItem.h; path = Parser/ParseItem.h; sourceTree = "<group>"; };
 		914CB19C2AE9ADF7C4635112 /* KeyedCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyedCollection.h; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		914CBD7A65D60D3F09EB8C7C /* SimpleCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleCollectionViewCell.m; sourceTree = "<group>"; };
 		914CBD7B0D8FA667D1F3DFD3 /* DateMaths.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DateMaths.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		914CBD9F8BA54369A74D0677 /* IndexableCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IndexableCollection.h; path = Digits/IndexableCollection.h; sourceTree = "<group>"; };
+		914CBEF5684FDE8D8D5B99B3 /* DataItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataItemView.h; sourceTree = "<group>"; };
 		914CBF0DCA8CC6E6EDFE659A /* CALayer+NewCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+NewCategory.m"; sourceTree = "<group>"; };
 		914CBFE8D7832200898A7360 /* ParserTestUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParserTestUtils.m; path = Parser/ParserTestUtils.m; sourceTree = "<group>"; };
 		9E42E7681AE2486B0084B471 /* LevelCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelCollection.h; sourceTree = "<group>"; };
@@ -249,6 +252,8 @@
 				914CBA6A542E628E5ADD25FD /* SimpleCollectionViewCell.xib */,
 				9ED3179E1AED104D00AC2FD2 /* DragResultsMovingDynamicBehaviour.h */,
 				9ED3179F1AED104D00AC2FD2 /* DragResultsMovingDynamicBehaviour.m */,
+				914CB1306033F9C4BDCA20F6 /* DataItemView.m */,
+				914CBEF5684FDE8D8D5B99B3 /* DataItemView.h */,
 			);
 			name = CollectionView;
 			path = DateMaths/CollectionView;
@@ -489,6 +494,7 @@
 				914CB715B7F26799094FEBFC /* DigitFactory.m in Sources */,
 				914CB3B555D13EE7DE8E2E47 /* OperatorBuilder.m in Sources */,
 				914CB95E9202F381887EBAFB /* OperatorFactory.m in Sources */,
+				914CBCB678D93ADF1E4946BD /* DataItemView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

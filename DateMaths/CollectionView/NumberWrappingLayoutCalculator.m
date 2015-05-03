@@ -9,38 +9,40 @@
 
 #import "NumberWrappingLayoutCalculator.h"
 #import "DataItem.h"
+#import "DataItemView.h"
 
 @interface NumberWrappingLayoutCalculator ()
-@property (nonatomic, strong) NSMutableArray *rows;
 @end
 
 @implementation NumberWrappingLayoutCalculator
 
-- (void)calculateLayoutSizesForDataItems:(NSArray *)items inSize:(CGSize)size ofSize:(CGSize)cellSize
+- (void)calculateLayoutSizesForDataItems:(NSArray *)items inSize:(CGSize)size
 {
-    self.rows = [self buildRowsWithItems:items size:&size cellSize:&cellSize];
+    NSArray *rows = [self buildRowsWithItems:items size:&size];
 
-    self.calculatedLayout = [self buildDataItemToRectLayoutDictionaryWithItems:items cellSize:&cellSize rows:self.rows];
+    self.laidOutDataItems = [self buildDataItemViewsFromItems:items rows:rows];
 }
 
-- (NSMutableDictionary *)buildDataItemToRectLayoutDictionaryWithItems:(NSArray *)items cellSize:(CGSize *)cellSize rows:(NSMutableArray *)rows
+- (NSArray *)buildDataItemViewsFromItems:(NSArray *)items rows:(NSArray *)rows
 {
-    NSMutableDictionary *calculatedLayout = [NSMutableDictionary dictionaryWithCapacity:(NSUInteger)items.count];
+    NSMutableArray *dataItems = [NSMutableArray arrayWithCapacity:(NSUInteger)items.count];
 
     int y = 0;
     for (NSArray *row in rows) {
         int x = 0;
         for (id<DataItem> item in row) {
-            CGRect rect = CGRectMake(x, y, (*cellSize).width, (*cellSize).height);
-            calculatedLayout[item] = [NSValue valueWithCGRect:rect];
-            x += (*cellSize).width;
+            CGPoint origin = CGPointMake(x, y);
+            DataItemView *dataItemView = [[DataItemView alloc] initWithOriginPoint:origin dataItem:item];
+            [dataItems addObject:dataItemView];
+            x += dataItemView.rect.size.width;
         }
-        y += (*cellSize).height;
+        y += [DataItemView cellSize].height;
     }
-    return calculatedLayout;
+
+    return dataItems;
 }
 
-- (NSMutableArray *)buildRowsWithItems:(NSArray *)items size:(CGSize *)size cellSize:(CGSize *)cellSize
+- (NSArray *)buildRowsWithItems:(NSArray *)items size:(CGSize *)size
 {
     NSMutableArray *rows = [NSMutableArray array];
 
@@ -56,8 +58,8 @@
             [itemsToKeepTogether removeAllObjects];
         }
 
-        if ((currentRow.count + 1) * (*cellSize).width > (*size).width) {
-            if (itemsToKeepTogether.count > 0 && itemsToKeepTogether.count * (*cellSize).width <= (*size).width) {
+        if ((currentRow.count + 1) * [DataItemView cellSize].width > (*size).width) {
+            if (itemsToKeepTogether.count > 0 && itemsToKeepTogether.count * [DataItemView cellSize].width <= (*size).width) {
                 for (NSMutableArray *row in rows) {
                     [row removeObjectsInArray:itemsToKeepTogether];
                 }
@@ -82,24 +84,23 @@
     return rows;
 }
 
-- (CGPoint)locationOfNearestEdgeOfCellNearLocation:(CGPoint)point
+- (CGPoint)locationOfNearestEdgeOfCellNearLocation:(CGPoint)location
 {
-    __block CGPoint result;
+    __block CGPoint result = CGPointZero;
 
-    [self.calculatedLayout enumerateKeysAndObjectsUsingBlock:^(id<DataItem> dataItem, NSValue *valueRect, BOOL *stop) {
-        CGRect rect = valueRect.CGRectValue;
+    for (DataItemView *dataItemView in self.laidOutDataItems) {
+        CGRect rect = dataItemView.rect;
 
-        if (point.y > CGRectGetMinY(rect) && point.y < CGRectGetMaxY(rect)) {
-            result = rect.origin;
+        if (location.y > CGRectGetMinY(rect) && location.y < CGRectGetMaxY(rect)) {
 
-            if (point.x > CGRectGetMinX(rect) && point.x < CGRectGetMaxX(rect)) {
-                *stop = YES;
+            if (location.x > CGRectGetMinX(rect) && location.x < CGRectGetMaxX(rect)) {
+                return rect.origin;
 
             } else {
-
+                result = rect.origin;
             }
         }
-    }];
+    }
 
     return result;
 }

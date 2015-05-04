@@ -86,11 +86,11 @@
     return value;
 }
 
-- (void)moveDataItem:(id<DataItem>)dataItem afterDataItem:(id<DataItem>)item
+- (void)moveDataItem:(id<DataItem>)dataItem toDataItem:(id<DataItem>)item
 {
+    NSUInteger indexOfObject = [self.items indexOfObject:item];
     [self.items removeObject:dataItem];
-    NSUInteger indexAfterDataItem = [self.items indexOfObject:item];
-    [self.items insertObject:dataItem atIndex:indexAfterDataItem + 1];
+    [self.items insertObject:dataItem atIndex:indexOfObject];
 }
 
 @end

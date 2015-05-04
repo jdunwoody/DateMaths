@@ -14,6 +14,7 @@
 #import "DigitCollection.h"
 #import "ResultCollectionViewLayout.h"
 #import "SimpleCollectionViewCell.h"
+#import "DataItemView.h"
 
 @interface DateMathsViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *digitLabel;
@@ -29,7 +30,7 @@
 @property (nonatomic, strong) LevelCollection *levelCollection;
 @property (nonatomic, strong) UIView *draggingImageView;
 @property (nonatomic, strong) ResultCollectionViewLayout *layout;
-@property (nonatomic, strong) SimpleCollectionViewCell *selectedCell;
+@property (nonatomic, strong) id<DataItem> selectedDataItem;
 @end
 
 @implementation DateMathsViewController
@@ -170,19 +171,22 @@
 {
     if (self.dragResultsPanGestureRecogniser.state == UIGestureRecognizerStateBegan) {
         CGPoint location = [self.dragResultsPanGestureRecogniser locationInView:self.resultsCollectionView];
-        self.selectedCell = (SimpleCollectionViewCell *)[self.resultsCollectionView hitTest:location withEvent:nil];
+        NSIndexPath *indexPathForSelectedItem = [self.resultsCollectionView indexPathForItemAtPoint:location];
+        self.selectedDataItem = self.resultsCollectionViewDataSource[indexPathForSelectedItem.row];
+        self.selectedDataItem.dragging = YES;
+        [self.resultsCollectionView reloadItemsAtIndexPaths:@[indexPathForSelectedItem]];
 
-        CGPoint nearestCellEdgeLocation = [self.layout locationOfNearestEdgeOfCellNearLocation:location];
+        DataItemView *dataItemView = [self.layout dataitemViewNearestLocation:location];
 
         if (!self.draggingImageView) {
-            self.draggingImageView = [[UIView alloc] initWithFrame:CGRectMake(nearestCellEdgeLocation.x, nearestCellEdgeLocation.y, 3, SIMPLE_COLLECTION_VIEW_CELL_HEIGHT)];
+            self.draggingImageView = [[UIView alloc] initWithFrame:CGRectMake(dataItemView.rect.origin.x, dataItemView.rect.origin.y, 3, SIMPLE_COLLECTION_VIEW_CELL_HEIGHT)];
             self.draggingImageView.backgroundColor = [UIColor redColor];
             [self.resultsCollectionView addSubview:self.draggingImageView];
         }
 
         self.draggingImageView.frame = CGRectMake(
-            nearestCellEdgeLocation.x,
-            nearestCellEdgeLocation.y,
+            dataItemView.rect.origin.x,
+            dataItemView.rect.origin.y,
             self.draggingImageView.frame.size.width,
             self.draggingImageView.frame.size.height);
 
@@ -191,24 +195,40 @@
         self.draggingImageView = nil;
 
         CGPoint location = [self.dragResultsPanGestureRecogniser locationInView:self.resultsCollectionView];
-        CGPoint nearestCellEdgeLocation = [self.layout locationOfNearestEdgeOfCellNearLocation:location];
+        NSIndexPath *indexPathForTargetDataItem = [self.resultsCollectionView indexPathForItemAtPoint:location];
+        id<DataItem> targetDataItem = self.resultsCollectionViewDataSource[indexPathForTargetDataItem.row];
 
-//        CGPoint location = [self.dragResultsPanGestureRecogniser locationInView:self.resultsCollectionView];
+        if (targetDataItem != self.selectedDataItem) {
+            [self.levelCollection.current.resultsCollection moveDataItem:self.selectedDataItem toDataItem:targetDataItem];
+        }
 
-        //        SimpleCollectionViewCell *nearestDataItemCell = (SimpleCollectionViewCell *)[self.resultsCollectionView hitTest:location withEvent:nil];
+        self.selectedDataItem.dragging = NO;
+        self.selectedDataItem = nil;
+        for (id<DataItem> dataItem in self.levelCollection.current.resultsCollection) {
+            if (dataItem.dragging) {
+                NSAssert(NO, @"Shouldn't get here");
+            }
+        }
+        [self.resultsCollectionView  reloadData];
 
-        //        [self.levelCollection.current.resultsCollection moveDataItem:self.selectedCell.dataItem afterDataItem:nearestDataItemCell.dataItem];
-        self.selectedCell = nil;
-
-    } else {
+    } else if (self.dragResultsPanGestureRecogniser.state == UIGestureRecognizerStateChanged) {
         CGPoint location = [self.dragResultsPanGestureRecogniser locationInView:self.resultsCollectionView];
-        CGPoint nearestCellEdgeLocation = [self.layout locationOfNearestEdgeOfCellNearLocation:location];
+        DataItemView *dataItemView = [self.layout dataitemViewNearestLocation:location];
 
         self.draggingImageView.frame = CGRectMake(
-            nearestCellEdgeLocation.x,
-            nearestCellEdgeLocation.y,
+            dataItemView.rect.origin.x,
+            dataItemView.rect.origin.y,
             self.draggingImageView.frame.size.width,
             self.draggingImageView.frame.size.height);
+
+    } else if (self.dragResultsPanGestureRecogniser.state == UIGestureRecognizerStateCancelled) {
+        NSAssert(NO, @"Shouldn't get here");
+
+    } else if (self.dragResultsPanGestureRecogniser.state == UIGestureRecognizerStateFailed) {
+        NSAssert(NO, @"Shouldn't get here");
+
+    } else {
+        NSAssert(NO, @"Shouldn't get here");
     }
 }
 

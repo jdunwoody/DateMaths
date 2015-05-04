@@ -2,11 +2,12 @@
 
 @class LevelCollection;
 @class NumberWrappingLayoutCalculator;
+@class DataItemView;
 
 @interface ResultCollectionViewLayout : UICollectionViewLayout
 
 @property (nonatomic, strong) LevelCollection *levelCollection;
 
-- (CGPoint)locationOfNearestEdgeOfCellNearLocation:(CGPoint)point;
+- (DataItemView *)dataitemViewNearestLocation:(CGPoint)point;
 
 @end

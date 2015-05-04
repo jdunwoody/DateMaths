@@ -11,6 +11,7 @@
 
 @property (nonatomic, strong, readonly) NSString *symbol;
 @property (strong, nonatomic, readonly) NSString *value;
+@property (nonatomic) BOOL dragging;
 
 - (instancetype)init __unavailable;
 

@@ -18,6 +18,7 @@
 
 @property (nonatomic, readonly) double number;
 @property (strong, nonatomic) NSString *value;
+@property (nonatomic) BOOL dragging;
 
 - (instancetype)init __unavailable;
 - (instancetype)initWithNumber:(double)number digitFactory:(DigitFactory *)digitFactory operatorFactory:(OperatorFactory *)operatorFactory;

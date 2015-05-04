@@ -84,10 +84,6 @@
 {
     NSMutableArray *results = [NSMutableArray array];
 
-//    for (id<DataItem> item in self.levelCollection.current.resultsCollection) {
-//        [results addObject:item];
-//    }
-
     for (int i = 0; i < self.levelCollection.current.resultsCollection.count; i++) {
         [results addObject:[NSIndexPath indexPathForRow:i inSection:0]];
     }
@@ -100,12 +96,12 @@
     [super prepareLayout];
 
     [self.calculator calculateLayoutSizesForDataItems:self.levelCollection.current.resultsCollection.items inSize:self.collectionView.contentSize];
-    self.calculatedLayout = self.calculator.laidOutDataItems;
+    self.calculatedLayout = self.calculator.dataItems;
 }
 
-- (CGPoint)locationOfNearestEdgeOfCellNearLocation:(CGPoint)point
+- (DataItemView *)dataitemViewNearestLocation:(CGPoint)point
 {
-    return [self.calculator locationOfNearestEdgeOfCellNearLocation:point];
+    return [self.calculator dataItemViewNearestLocationNearLocation:point];
 }
 
 @end

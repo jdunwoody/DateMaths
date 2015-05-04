@@ -8,6 +8,7 @@
 @protocol DataItem<NSObject, NSCopying>
 
 @property (strong, nonatomic, readonly) NSString *value;
+@property (nonatomic) BOOL dragging;
 
 - (BOOL)isDigit;
 

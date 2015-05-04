@@ -18,5 +18,5 @@
 - (void)addObject:(id<DataItem>)dataItem;
 - (void)removeObject:(id<DataItem>)resultItem;
 
-- (void)moveDataItem:(id<DataItem>)dataItem afterDataItem:(id<DataItem>)item;
+- (void)moveDataItem:(id<DataItem>)dataItem toDataItem:(id<DataItem>)item;
 @end

@@ -29,7 +29,7 @@
     SimpleCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"simpleCell" forIndexPath:indexPath];
     id<DataItem> dataItem = self.levelCollection.current.resultsCollection[(NSUInteger)indexPath.row];
     cell.dataItem = dataItem;
-
+    cell.backgroundColor = dataItem.dragging ? [UIColor grayColor] : [UIColor whiteColor];
     cell.label.text = dataItem.value;
 
     return cell;

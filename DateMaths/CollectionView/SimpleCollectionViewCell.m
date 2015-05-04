@@ -1,6 +1,5 @@
 #import "SimpleCollectionViewCell.h"
 #import "CALayer+NewCategory.h"
-#import "DataItem.h"
 
 @implementation SimpleCollectionViewCell
 
@@ -24,15 +23,5 @@
 
     return self;
 }
-
-//- (instancetype)initWithFrame:(CGRect)frame
-//{
-//    self = [super initWithFrame:frame];
-//    if (!self) {
-//        return self;
-//    }
-//
-//    return self;
-//}
 
 @end

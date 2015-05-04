@@ -20,7 +20,7 @@
 {
     NSArray *rows = [self buildRowsWithItems:items size:&size];
 
-    self.laidOutDataItems = [self buildDataItemViewsFromItems:items rows:rows];
+    self.dataItems = [self buildDataItemViewsFromItems:items rows:rows];
 }
 
 - (NSArray *)buildDataItemViewsFromItems:(NSArray *)items rows:(NSArray *)rows
@@ -84,20 +84,20 @@
     return rows;
 }
 
-- (CGPoint)locationOfNearestEdgeOfCellNearLocation:(CGPoint)location
+- (DataItemView *)dataItemViewNearestLocationNearLocation:(CGPoint)location
 {
-    __block CGPoint result = CGPointZero;
+    DataItemView *result;
 
-    for (DataItemView *dataItemView in self.laidOutDataItems) {
+    for (DataItemView *dataItemView in self.dataItems) {
         CGRect rect = dataItemView.rect;
 
         if (location.y > CGRectGetMinY(rect) && location.y < CGRectGetMaxY(rect)) {
 
             if (location.x > CGRectGetMinX(rect) && location.x < CGRectGetMaxX(rect)) {
-                return rect.origin;
+                return dataItemView;
 
             } else {
-                result = rect.origin;
+                result = dataItemView;
             }
         }
     }

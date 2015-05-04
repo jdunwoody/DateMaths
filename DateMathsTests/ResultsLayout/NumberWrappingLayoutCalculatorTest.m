@@ -1,5 +1,5 @@
+#import "DataItemView.h"
 #import <Specta/Specta.h>
-#import "ResultCollectionViewLayout.h"
 #import "LevelItem.h"
 #import "Digit.h"
 #import <Expecta/Expecta.h>
@@ -14,23 +14,23 @@ SpecBegin(NumberWrappingLayoutCalculator)
             describe(@"Single Row", ^{
 
                 it(@"should layout on one row", ^{
-                    Digit *digit1 = [[Digit alloc] initWithDigit:1.0];
-                    Digit *digit2 = [[Digit alloc] initWithDigit:2.0];
+                    Digit *digit1 = [[Digit alloc] initWithDigit:1];
+                    Digit *digit2 = [[Digit alloc] initWithDigit:2];
 
                     NSArray *items = @[
                         digit1,
                         digit2,
                     ];
 
-                    CGSize size = CGSizeMake(100.0, 100.0);
+                    CGSize size = CGSizeMake(0.0, 100.0);
                     NumberWrappingLayoutCalculator *calculator = [[NumberWrappingLayoutCalculator alloc] init];
 
                     [calculator calculateLayoutSizesForDataItems:items inSize:size];
-                    NSDictionary *calculated = calculator.laidOutDataItems;
+                    NSArray *dataItems = calculator.dataItems;
 
-                    expect(calculated.count).to.equal(2);
-                    expect(((NSValue *)calculated[digit1]).CGRectValue).to.equal(CGRectMake(0, 0, 50, 50));
-                    expect(((NSValue *)calculated[digit2]).CGRectValue).to.equal(CGRectMake(50.0, 0.0, 50.0, 50.0));
+                    expect(dataItems.count).to.equal(2);
+                    expect(((DataItemView *)dataItems[0]).rect).to.equal(CGRectMake(0.0, 0.0, 50.0, 50.0));
+                    expect(((DataItemView *)dataItems[1]).rect).to.equal(CGRectMake(50.0, 0.0, 50.0, 50.0));
                 });
 
             });
@@ -52,12 +52,12 @@ SpecBegin(NumberWrappingLayoutCalculator)
 
                     NumberWrappingLayoutCalculator *calculator = [[NumberWrappingLayoutCalculator alloc] init];
                     [calculator calculateLayoutSizesForDataItems:items inSize:size];
-                    NSDictionary *calculated =calculator.laidOutDataItems;
-                    
+                    NSArray *calculated = calculator.dataItems;
+
                     expect(calculated.count).to.equal(3);
-                    expect(((NSValue *)calculated[digit1]).CGRectValue).to.equal(CGRectMake(0, 0, 50, 50));
-                    expect(((NSValue *)calculated[anOperator]).CGRectValue).to.equal(CGRectMake(50.0, 0.0, 50.0, 50.0));
-                    expect(((NSValue *)calculated[digit2]).CGRectValue).to.equal(CGRectMake(0.0, 50.0, 50.0, 50.0));
+                    expect(((DataItemView *)calculated[0]).rect).to.equal(CGRectMake(0, 0, 50, 50));
+                    expect(((DataItemView *)calculated[1]).rect).to.equal(CGRectMake(50.0, 0, 50, 50));
+                    expect(((DataItemView *)calculated[2]).rect).to.equal(CGRectMake(0, 50.0, 50, 50));
                 });
 
                 it(@"should not split digits, wrapping them to the next line", ^{
@@ -76,13 +76,13 @@ SpecBegin(NumberWrappingLayoutCalculator)
 
                     NumberWrappingLayoutCalculator *calculator = [[NumberWrappingLayoutCalculator alloc] init];
                     [calculator calculateLayoutSizesForDataItems:items inSize:size];
-                    NSDictionary *calculated =calculator.laidOutDataItems;
-                    
+                    NSArray *calculated = calculator.dataItems;
+
                     expect(calculated.count).to.equal(4);
-                    expect(((NSValue *)calculated[digit1]).CGRectValue).to.equal(CGRectMake(0, 0, 50, 50));
-                    expect(((NSValue *)calculated[anOperator]).CGRectValue).to.equal(CGRectMake(50.0, 0.0, 50.0, 50.0));
-                    expect(((NSValue *)calculated[digit2]).CGRectValue).to.equal(CGRectMake(0.0, 50.0, 50.0, 50.0));
-                    expect(((NSValue *)calculated[digit3]).CGRectValue).to.equal(CGRectMake(50.0, 50.0, 50.0, 50.0));
+                    expect(((DataItemView *)calculated[0]).rect).to.equal(CGRectMake(0, 0, 50, 50));
+                    expect(((DataItemView *)calculated[1]).rect).to.equal(CGRectMake(50.0, 0, 50, 50));
+                    expect(((DataItemView *)calculated[2]).rect).to.equal(CGRectMake(0, 50.0, 50, 50));
+                    expect(((DataItemView *)calculated[3]).rect).to.equal(CGRectMake(50.0, 50.0, 50, 50));
                 });
 
                 it(@"should split digits when whole number wont fit on entire row", ^{
@@ -105,14 +105,14 @@ SpecBegin(NumberWrappingLayoutCalculator)
 
                     NumberWrappingLayoutCalculator *calculator = [[NumberWrappingLayoutCalculator alloc] init];
                     [calculator calculateLayoutSizesForDataItems:items inSize:size];
-                    NSDictionary *calculated =calculator.laidOutDataItems;
-                    
-                    expect(((NSValue *)calculated[digit1]).CGRectValue).to.equal(CGRectMake(0, 0, 50, 50));
-                    expect(((NSValue *)calculated[anOperator]).CGRectValue).to.equal(CGRectMake(50.0, 0.0, 50.0, 50.0));
-                    expect(((NSValue *)calculated[digit2]).CGRectValue).to.equal(CGRectMake(100.0, 0.0, 50.0, 50.0));
-                    expect(((NSValue *)calculated[digit3]).CGRectValue).to.equal(CGRectMake(0.0, 50.0, 50.0, 50.0));
-                    expect(((NSValue *)calculated[digit4]).CGRectValue).to.equal(CGRectMake(50.0, 50.0, 50.0, 50.0));
-                    expect(((NSValue *)calculated[digit5]).CGRectValue).to.equal(CGRectMake(100.0, 50.0, 50.0, 50.0));
+                    NSArray *calculated = calculator.dataItems;
+
+                    expect(((DataItemView *)calculated[0]).rect).to.equal(CGRectMake(0, 0, 50, 50));
+                    expect(((DataItemView *)calculated[1]).rect).to.equal(CGRectMake(50, 0, 50, 50));
+                    expect(((DataItemView *)calculated[2]).rect).to.equal(CGRectMake(100, 0, 50, 50));
+                    expect(((DataItemView *)calculated[3]).rect).to.equal(CGRectMake(0, 0, 50, 50));
+                    expect(((DataItemView *)calculated[4]).rect).to.equal(CGRectMake(50, 50, 50, 50));
+                    expect(((DataItemView *)calculated[5]).rect).to.equal(CGRectMake(0, 100, 50, 50));
                 });
             });
         });

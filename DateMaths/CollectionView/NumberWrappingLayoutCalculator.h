@@ -8,11 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@class DataItemView;
+
 @interface NumberWrappingLayoutCalculator : NSObject
 
-@property (nonatomic, strong) NSArray *laidOutDataItems;
+@property (nonatomic, strong) NSArray *dataItems;
 - (void)calculateLayoutSizesForDataItems:(NSArray *)items inSize:(CGSize)size;
 
-- (CGPoint)locationOfNearestEdgeOfCellNearLocation:(CGPoint)location;
+- (DataItemView *)dataItemViewNearestLocationNearLocation:(CGPoint)location;
 
 @end

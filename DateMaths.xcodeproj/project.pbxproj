@@ -44,6 +44,7 @@
 		9E8B18B21AF8C627009EE106 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E8B18B11AF8C627009EE106 /* AVFoundation.framework */; };
 		9E8B18BF1AF8F16E009EE106 /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9E8B18BD1AF8F16E009EE106 /* background.mp3 */; };
 		9E8B18C01AF8F16E009EE106 /* marimba.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 9E8B18BE1AF8F16E009EE106 /* marimba.m4a */; };
+		9E8B18C31AF8F4F5009EE106 /* SplashScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8B18C21AF8F4F5009EE106 /* SplashScreenViewController.m */; };
 		9E9B14561AEB6D9B0044EC90 /* SimpleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 914CBA6A542E628E5ADD25FD /* SimpleCollectionViewCell.xib */; };
 		9ED3179D1AEC636900AC2FD2 /* NumberWrappingLayoutCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3179C1AEC636900AC2FD2 /* NumberWrappingLayoutCalculator.m */; };
 		9ED317A01AED104D00AC2FD2 /* DragResultsMovingDynamicBehaviour.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3179F1AED104D00AC2FD2 /* DragResultsMovingDynamicBehaviour.m */; };
@@ -135,6 +136,8 @@
 		9E8B18B11AF8C627009EE106 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		9E8B18BD1AF8F16E009EE106 /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
 		9E8B18BE1AF8F16E009EE106 /* marimba.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = marimba.m4a; sourceTree = "<group>"; };
+		9E8B18C11AF8F4F5009EE106 /* SplashScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreenViewController.h; sourceTree = "<group>"; };
+		9E8B18C21AF8F4F5009EE106 /* SplashScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreenViewController.m; sourceTree = "<group>"; };
 		9ED3179B1AEC636900AC2FD2 /* NumberWrappingLayoutCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberWrappingLayoutCalculator.h; sourceTree = "<group>"; };
 		9ED3179C1AEC636900AC2FD2 /* NumberWrappingLayoutCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberWrappingLayoutCalculator.m; sourceTree = "<group>"; };
 		9ED3179E1AED104D00AC2FD2 /* DragResultsMovingDynamicBehaviour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DragResultsMovingDynamicBehaviour.h; path = Animation/DragResultsMovingDynamicBehaviour.h; sourceTree = "<group>"; };
@@ -258,6 +261,8 @@
 				914CB8ECE2DC34F51FC0FB4F /* Supporting Files */,
 				914CBDB11C87B48FF1C5B7FD /* Sounds.m */,
 				914CB41D925564E2995D5B39 /* Sounds.h */,
+				9E8B18C11AF8F4F5009EE106 /* SplashScreenViewController.h */,
+				9E8B18C21AF8F4F5009EE106 /* SplashScreenViewController.m */,
 			);
 			path = DateMaths;
 			sourceTree = "<group>";
@@ -520,6 +525,7 @@
 				9E5F76D11AD236E0001D69F5 /* OperatorCollection.m in Sources */,
 				9E5F76D01AD236E0001D69F5 /* Operator.m in Sources */,
 				914CBC31A9FEB09E009C5F71 /* ResultsCollection.m in Sources */,
+				9E8B18C31AF8F4F5009EE106 /* SplashScreenViewController.m in Sources */,
 				914CB1AD74274B059E6A4CA4 /* Parser.m in Sources */,
 				914CB625B5561B8DF7E0CFC0 /* ParseItem.m in Sources */,
 				914CB11C266DEB2DADC299AA /* ResultCollectionViewLayout.m in Sources */,

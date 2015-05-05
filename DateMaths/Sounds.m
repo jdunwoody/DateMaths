@@ -19,6 +19,20 @@
     return self;
 }
 
+#pragma mark - Play Sounds
+
+- (void)playSoundEffect
+{
+    [self playFromBeginningWithPlayer:self.audioPlayer];
+}
+
+- (void)playBackgroundMusic
+{
+    [self playFromBeginningWithPlayer:self.backgroundAudioPlayer];
+}
+
+#pragma mark - Configure Audio
+
 - (void)prepareAudio
 {
     self.audioPlayer = [self buildAudioPlayer:@"marimba" ext:@"m4a"];
@@ -42,18 +56,11 @@
     return audioPlayer;
 }
 
-- (void)playSound
+- (void)playFromBeginningWithPlayer:(AVAudioPlayer *)audioPlayer
 {
-    self.audioPlayer.currentTime = 0.0;
+    audioPlayer.currentTime = 0.0;
 
-    [self.audioPlayer play];
-}
-
-- (void)playBackgroundMusic
-{
-    self.backgroundAudioPlayer.currentTime = 0.0;
-
-    [self.backgroundAudioPlayer play];
+    [audioPlayer play];
 }
 
 @end

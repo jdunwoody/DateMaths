@@ -8,7 +8,7 @@
 
 @interface Sounds : NSObject<AVAudioPlayerDelegate>
 
-- (void)playSound;
-
+- (void)playSoundEffect;
 - (void)playBackgroundMusic;
+
 @end

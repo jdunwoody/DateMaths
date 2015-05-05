@@ -18,8 +18,6 @@
 #import "Sounds.h"
 
 @interface DateMathsViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *digitLabel;
-@property (weak, nonatomic) IBOutlet UILabel *formattedDateLabel;
 
 @property (nonatomic, readonly) NSString *formattedDate;
 
@@ -120,7 +118,7 @@
 
 - (void)clickedResultsCollectionAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.sounds playSound];
+    [self.sounds playSoundEffect];
     id<DataItem> resultItem = self.resultsCollectionViewDataSource[indexPath.row];
 
     if ([resultItem isKindOfClass:[Digit class]]) {
@@ -141,7 +139,7 @@
 
 - (void)clickedOperatorCollectionAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.sounds playSound];
+    [self.sounds playSoundEffect];
     Operator *operatorTemplate = self.levelCollection.current.operatorCollection[(NSUInteger)indexPath.row];
     Operator *operator = [[Operator alloc] initWithOperator:operatorTemplate];
 
@@ -153,7 +151,7 @@
 
 - (void)clickedDigitCollectionAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.sounds playSound];
+    [self.sounds playSoundEffect];
     Digit *digit = self.levelCollection.current.digitCollection[(NSUInteger)indexPath.row];
     if (digit.used) {
         return;

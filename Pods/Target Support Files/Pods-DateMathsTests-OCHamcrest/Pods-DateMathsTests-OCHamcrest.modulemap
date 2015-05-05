@@ -1,0 +1,6 @@
+framework module OCHamcrest {
+  umbrella header "Pods-DateMathsTests-OCHamcrest-umbrella.h"
+
+  export *
+  module * { export * }
+}

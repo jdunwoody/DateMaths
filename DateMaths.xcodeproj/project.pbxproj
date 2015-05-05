@@ -18,6 +18,7 @@
 		914CB6631C2F1FAD9401E283 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 914CBB52F83F3C1DAC8B6625 /* Main.storyboard */; };
 		914CB715B7F26799094FEBFC /* DigitFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB3131E40C29EC3077D4A /* DigitFactory.m */; };
 		914CB870AECF941BDF14E8C2 /* ExpressionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB5A346BB740958DDE8B4 /* ExpressionTest.m */; };
+		914CB937C64DEF7107080830 /* Sounds.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CBDB11C87B48FF1C5B7FD /* Sounds.m */; };
 		914CB95E9202F381887EBAFB /* OperatorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB9392C0D8F598BECCF7B /* OperatorFactory.m */; };
 		914CBA5C037D61EFAE1DB001 /* CALayer+NewCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CBF0DCA8CC6E6EDFE659A /* CALayer+NewCategory.m */; };
 		914CBB2005A6995428799172 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB479BAD5699ED9B7C2FA /* AppDelegate.m */; };
@@ -37,8 +38,12 @@
 		9E5F76D11AD236E0001D69F5 /* OperatorCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5F76BE1AD236E0001D69F5 /* OperatorCollection.m */; };
 		9E5F76D21AD236E0001D69F5 /* OperatorCollectionDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5F76C01AD236E0001D69F5 /* OperatorCollectionDataSource.m */; };
 		9E5F76D31AD236E0001D69F5 /* ResultsCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5F76C31AD236E0001D69F5 /* ResultsCollectionViewDataSource.m */; };
+		9E744F701AF7A4E10017174D /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E744F6F1AF7A4E10017174D /* CoreAudio.framework */; };
 		9E7CF4341AD5481E00317897 /* ParserTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB4207F649F3FD0605CF7 /* ParserTest.m */; };
 		9E89CC121AC7F58B0086C816 /* DateMathsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E89CC111AC7F58B0086C816 /* DateMathsViewController.m */; };
+		9E8B18B21AF8C627009EE106 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E8B18B11AF8C627009EE106 /* AVFoundation.framework */; };
+		9E8B18B41AF8C82E009EE106 /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9E8B18B31AF8C82E009EE106 /* background.mp3 */; };
+		9E8B18BB1AF8EB7B009EE106 /* marimba.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 9E8B18BA1AF8E95D009EE106 /* marimba.m4a */; };
 		9E9B14561AEB6D9B0044EC90 /* SimpleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 914CBA6A542E628E5ADD25FD /* SimpleCollectionViewCell.xib */; };
 		9ED3179D1AEC636900AC2FD2 /* NumberWrappingLayoutCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3179C1AEC636900AC2FD2 /* NumberWrappingLayoutCalculator.m */; };
 		9ED317A01AED104D00AC2FD2 /* DragResultsMovingDynamicBehaviour.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3179F1AED104D00AC2FD2 /* DragResultsMovingDynamicBehaviour.m */; };
@@ -70,6 +75,7 @@
 		914CB32BDECB75AAFDE8A8ED /* TestFixtures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestFixtures.m; sourceTree = "<group>"; };
 		914CB33E3160E188773DD3F1 /* DigitFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DigitFactory.h; sourceTree = "<group>"; };
 		914CB36BCCAAA8E0D4787F5E /* Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Parser.m; path = Parser/Parser.m; sourceTree = "<group>"; };
+		914CB41D925564E2995D5B39 /* Sounds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sounds.h; sourceTree = "<group>"; };
 		914CB4207F649F3FD0605CF7 /* ParserTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParserTest.m; path = Parser/ParserTest.m; sourceTree = "<group>"; };
 		914CB479BAD5699ED9B7C2FA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		914CB4F47E503E9FE60ED675 /* ResultCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultCollectionViewLayout.h; sourceTree = "<group>"; };
@@ -96,6 +102,7 @@
 		914CBD7A65D60D3F09EB8C7C /* SimpleCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleCollectionViewCell.m; sourceTree = "<group>"; };
 		914CBD7B0D8FA667D1F3DFD3 /* DateMaths.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DateMaths.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		914CBD9F8BA54369A74D0677 /* IndexableCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IndexableCollection.h; path = Digits/IndexableCollection.h; sourceTree = "<group>"; };
+		914CBDB11C87B48FF1C5B7FD /* Sounds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sounds.m; sourceTree = "<group>"; };
 		914CBEF5684FDE8D8D5B99B3 /* DataItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataItemView.h; sourceTree = "<group>"; };
 		914CBF0DCA8CC6E6EDFE659A /* CALayer+NewCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+NewCategory.m"; sourceTree = "<group>"; };
 		914CBFE8D7832200898A7360 /* ParserTestUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParserTestUtils.m; path = Parser/ParserTestUtils.m; sourceTree = "<group>"; };
@@ -120,8 +127,14 @@
 		9E5F76C01AD236E0001D69F5 /* OperatorCollectionDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperatorCollectionDataSource.m; sourceTree = "<group>"; };
 		9E5F76C21AD236E0001D69F5 /* ResultsCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsCollectionViewDataSource.h; sourceTree = "<group>"; };
 		9E5F76C31AD236E0001D69F5 /* ResultsCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsCollectionViewDataSource.m; sourceTree = "<group>"; };
+		9E744F6F1AF7A4E10017174D /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		9E744F711AF7A5070017174D /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		9E744F731AF7A5100017174D /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = System/Library/Frameworks/CoreAudioKit.framework; sourceTree = SDKROOT; };
 		9E89CC101AC7F58B0086C816 /* DateMathsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateMathsViewController.h; sourceTree = "<group>"; };
 		9E89CC111AC7F58B0086C816 /* DateMathsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateMathsViewController.m; sourceTree = "<group>"; };
+		9E8B18B11AF8C627009EE106 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		9E8B18B31AF8C82E009EE106 /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
+		9E8B18BA1AF8E95D009EE106 /* marimba.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = marimba.m4a; sourceTree = "<group>"; };
 		9ED3179B1AEC636900AC2FD2 /* NumberWrappingLayoutCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberWrappingLayoutCalculator.h; sourceTree = "<group>"; };
 		9ED3179C1AEC636900AC2FD2 /* NumberWrappingLayoutCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberWrappingLayoutCalculator.m; sourceTree = "<group>"; };
 		9ED3179E1AED104D00AC2FD2 /* DragResultsMovingDynamicBehaviour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DragResultsMovingDynamicBehaviour.h; path = Animation/DragResultsMovingDynamicBehaviour.h; sourceTree = "<group>"; };
@@ -136,6 +149,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E8B18B21AF8C627009EE106 /* AVFoundation.framework in Frameworks */,
+				9E744F701AF7A4E10017174D /* CoreAudio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +168,10 @@
 		283BA2893EB1C610375889E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9E8B18B11AF8C627009EE106 /* AVFoundation.framework */,
+				9E744F731AF7A5100017174D /* CoreAudioKit.framework */,
+				9E744F711AF7A5070017174D /* AdSupport.framework */,
+				9E744F6F1AF7A4E10017174D /* CoreAudio.framework */,
 				EF786EAEB303B88BA017ABF7 /* Pods_DateMathsTests.framework */,
 			);
 			name = Frameworks;
@@ -193,6 +212,8 @@
 		914CB79FD4C44969035FF80D = {
 			isa = PBXGroup;
 			children = (
+				9E8B18BA1AF8E95D009EE106 /* marimba.m4a */,
+				9E8B18B31AF8C82E009EE106 /* background.mp3 */,
 				9E1E01E01AE2829E0035A5D7 /* CollectionView */,
 				914CBC5C97790867B37B96F4 /* DateMaths */,
 				914CB63F45E87E6A734ED989 /* DateMathsTests */,
@@ -236,6 +257,8 @@
 				914CB36BCCAAA8E0D4787F5E /* Parser.m */,
 				9E5F76C11AD236E0001D69F5 /* Results */,
 				914CB8ECE2DC34F51FC0FB4F /* Supporting Files */,
+				914CBDB11C87B48FF1C5B7FD /* Sounds.m */,
+				914CB41D925564E2995D5B39 /* Sounds.h */,
 			);
 			path = DateMaths;
 			sourceTree = "<group>";
@@ -374,7 +397,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0620;
-				ORGANIZATIONNAME = "___FULLUSERNAME___";
+				ORGANIZATIONNAME = "";
 			};
 			buildConfigurationList = 914CBBD1CC29564A2FEED67F /* Build configuration list for PBXProject "DateMaths" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -409,6 +432,8 @@
 				914CBD7FCD50F049842EDC89 /* Images.xcassets in Resources */,
 				9E9B14561AEB6D9B0044EC90 /* SimpleCollectionViewCell.xib in Resources */,
 				914CB12CD7B79FA6332C1BFB /* LaunchScreen.xib in Resources */,
+				9E8B18B41AF8C82E009EE106 /* background.mp3 in Resources */,
+				9E8B18BB1AF8EB7B009EE106 /* marimba.m4a in Resources */,
 				914CB6631C2F1FAD9401E283 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -495,6 +520,7 @@
 				914CB3B555D13EE7DE8E2E47 /* OperatorBuilder.m in Sources */,
 				914CB95E9202F381887EBAFB /* OperatorFactory.m in Sources */,
 				914CBCB678D93ADF1E4946BD /* DataItemView.m in Sources */,
+				914CB937C64DEF7107080830 /* Sounds.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

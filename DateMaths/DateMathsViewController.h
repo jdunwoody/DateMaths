@@ -14,6 +14,7 @@
 @class ResultsCollection;
 @class LevelCollection;
 @class ResultCollectionViewLayout;
+@class Sounds;
 
 @interface DateMathsViewController : UIViewController<UICollectionViewDelegate, CollectionDataSourceDelegate>
 

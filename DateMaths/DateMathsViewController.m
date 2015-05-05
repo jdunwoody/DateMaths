@@ -15,6 +15,7 @@
 #import "ResultCollectionViewLayout.h"
 #import "SimpleCollectionViewCell.h"
 #import "DataItemView.h"
+#import "Sounds.h"
 
 @interface DateMathsViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *digitLabel;
@@ -31,6 +32,7 @@
 @property (nonatomic, strong) UIView *draggingImageView;
 @property (nonatomic, strong) ResultCollectionViewLayout *layout;
 @property (nonatomic, strong) id<DataItem> selectedDataItem;
+@property (nonatomic, strong) Sounds *sounds;
 @end
 
 @implementation DateMathsViewController
@@ -73,6 +75,13 @@
     self.layout.levelCollection = self.levelCollection;
 
     self.totalLabel.text = [self showValue:nil];
+    self.sounds = [[Sounds alloc] init];
+    [self playBackgroundMusic];
+}
+
+- (void)playBackgroundMusic
+{
+    [self.sounds playBackgroundMusic];
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
@@ -111,6 +120,7 @@
 
 - (void)clickedResultsCollectionAtIndexPath:(NSIndexPath *)indexPath
 {
+    [self.sounds playSound];
     id<DataItem> resultItem = self.resultsCollectionViewDataSource[indexPath.row];
 
     if ([resultItem isKindOfClass:[Digit class]]) {
@@ -131,6 +141,7 @@
 
 - (void)clickedOperatorCollectionAtIndexPath:(NSIndexPath *)indexPath
 {
+    [self.sounds playSound];
     Operator *operatorTemplate = self.levelCollection.current.operatorCollection[(NSUInteger)indexPath.row];
     Operator *operator = [[Operator alloc] initWithOperator:operatorTemplate];
 
@@ -142,6 +153,7 @@
 
 - (void)clickedDigitCollectionAtIndexPath:(NSIndexPath *)indexPath
 {
+    [self.sounds playSound];
     Digit *digit = self.levelCollection.current.digitCollection[(NSUInteger)indexPath.row];
     if (digit.used) {
         return;
@@ -209,7 +221,7 @@
                 NSAssert(NO, @"Shouldn't get here");
             }
         }
-        [self.resultsCollectionView  reloadData];
+        [self.resultsCollectionView reloadData];
 
     } else if (self.dragResultsPanGestureRecogniser.state == UIGestureRecognizerStateChanged) {
         CGPoint location = [self.dragResultsPanGestureRecogniser locationInView:self.resultsCollectionView];

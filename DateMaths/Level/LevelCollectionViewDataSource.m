@@ -33,11 +33,13 @@
     LevelItem *item = self.levelCollection[(NSUInteger)indexPath.row];
 
     cell.label.text = item.value;
-    cell.backgroundColor = self.levelCollection.current == item ? [UIColor whiteColor] : [UIColor lightGrayColor];
+//    cell.backgroundColor = self.levelCollection.current == item ? [UIColor whiteColor] : [UIColor lightGrayColor];
 
     cell.starA.hidden = !item.starA;
     cell.starB.hidden = !item.starB;
     cell.starC.hidden = !item.starC;
+
+    cell.illuminated = self.levelCollection.current == item;
 
     return cell;
 }

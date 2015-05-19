@@ -39,6 +39,7 @@
     id<DataItem> item = self.levelCollection.current.operatorCollection[(NSUInteger)indexPath.row];
 
     cell.label.text = item.value;
+    cell.illuminated = YES;
 
     return cell;
 }

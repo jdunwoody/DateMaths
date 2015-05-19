@@ -11,6 +11,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *starC;
 
 @property (nonatomic, strong) id<DataItem> dataItem;
+@property (nonatomic) BOOL illuminated;
+
+- (void)configureBorder;
+
 @end
 
 static CGFloat SIMPLE_COLLECTION_VIEW_CELL_WIDTH = 50.0;

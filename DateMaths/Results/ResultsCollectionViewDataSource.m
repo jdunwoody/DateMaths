@@ -32,6 +32,10 @@
     cell.backgroundColor = dataItem.dragging ? [UIColor grayColor] : [UIColor whiteColor];
     cell.label.text = dataItem.value;
 
+    cell.illuminated = !dataItem.dragging;
+
+    [cell configureBorder];
+
     return cell;
 }
 

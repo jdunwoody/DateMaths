@@ -13,6 +13,7 @@
 @property (strong, nonatomic, readonly) NSString *value;
 @property (nonatomic) BOOL dragging;
 
+@property (nonatomic, strong) id operatorMap;
 - (instancetype)init __unavailable;
 
 - (instancetype)initWithSymbol:(NSString *)string;

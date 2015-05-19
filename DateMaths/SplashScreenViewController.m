@@ -24,12 +24,7 @@
 
 - (void)timerFireMethod:(NSTimer *)timer
 {
-    [self performSegueWithIdentifier:@"dateMaths" sender:self];
-}
-
-- (void)timerFireMethod2
-{
-    [self performSegueWithIdentifier:@"dateMaths" sender:self];
+    [self performSegueWithIdentifier:@"datePicker" sender:self];
 }
 
 @end

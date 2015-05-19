@@ -43,11 +43,13 @@
     Digit *digit = self.collection.current.digitCollection[(NSUInteger)indexPath.row];
     cell.label.text = digit.value;
 
-    if (digit.used) {
-        cell.backgroundColor = [UIColor grayColor];
-    } else {
-        cell.backgroundColor = [UIColor whiteColor];
-    }
+    cell.illuminated = !digit.used;
+
+//    if (digit.used) {
+//        cell.backgroundColor = [UIColor grayColor];
+//    } else {
+//        cell.backgroundColor = [UIColor whiteColor];
+//    }
 
     [self.delegate didLayoutCell:indexPath inCollectionView:collectionView];
 

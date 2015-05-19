@@ -4,6 +4,7 @@
 //
 
 #import "Operator.h"
+#import "OperatorMap.h"
 
 
 @implementation Operator
@@ -14,8 +15,8 @@
     if (!self) {
         return self;
     }
-
-    _symbol = symbol;
+    _operatorMap = [[OperatorMap alloc] init];
+    _symbol = self.operatorMap[symbol];
 
     return self;
 }
@@ -29,7 +30,6 @@
 {
     return self.symbol;
 }
-
 
 - (BOOL)isDigit
 {

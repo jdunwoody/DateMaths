@@ -17,6 +17,7 @@
 		914CB625B5561B8DF7E0CFC0 /* ParseItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB814F2E3FE9B8984137D /* ParseItem.m */; };
 		914CB6631C2F1FAD9401E283 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 914CBB52F83F3C1DAC8B6625 /* Main.storyboard */; };
 		914CB715B7F26799094FEBFC /* DigitFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB3131E40C29EC3077D4A /* DigitFactory.m */; };
+		914CB790977D82F97414D330 /* OperatorMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CBEC5335B4BF2B8CF491D /* OperatorMap.m */; };
 		914CB870AECF941BDF14E8C2 /* ExpressionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB5A346BB740958DDE8B4 /* ExpressionTest.m */; };
 		914CB937C64DEF7107080830 /* Sounds.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CBDB11C87B48FF1C5B7FD /* Sounds.m */; };
 		914CB95E9202F381887EBAFB /* OperatorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB9392C0D8F598BECCF7B /* OperatorFactory.m */; };
@@ -46,6 +47,7 @@
 		9E8B18C01AF8F16E009EE106 /* marimba.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 9E8B18BE1AF8F16E009EE106 /* marimba.m4a */; };
 		9E8B18C31AF8F4F5009EE106 /* SplashScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8B18C21AF8F4F5009EE106 /* SplashScreenViewController.m */; };
 		9E9B14561AEB6D9B0044EC90 /* SimpleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 914CBA6A542E628E5ADD25FD /* SimpleCollectionViewCell.xib */; };
+		9E9E3C5B1B0B54AD00D49818 /* Neon Glow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E9E3C5A1B0B54AD00D49818 /* Neon Glow.ttf */; };
 		9ED3179D1AEC636900AC2FD2 /* NumberWrappingLayoutCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3179C1AEC636900AC2FD2 /* NumberWrappingLayoutCalculator.m */; };
 		9ED317A01AED104D00AC2FD2 /* DragResultsMovingDynamicBehaviour.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED3179F1AED104D00AC2FD2 /* DragResultsMovingDynamicBehaviour.m */; };
 		A830C24FDC4ADA5850A9DC5F /* Pods_DateMathsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF786EAEB303B88BA017ABF7 /* Pods_DateMathsTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -99,11 +101,13 @@
 		914CBABF8458B64D6C56CCB5 /* DateMathsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateMathsViewModel.h; sourceTree = "<group>"; };
 		914CBB122EB9CF6F5DEE4671 /* SimpleCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleCollectionViewCell.h; sourceTree = "<group>"; };
 		914CBB93D8423EF1CC2BF154 /* OperatorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperatorFactory.h; sourceTree = "<group>"; };
+		914CBBCCFB18AC4CCD919045 /* OperatorMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperatorMap.h; sourceTree = "<group>"; };
 		914CBC34DFE9F966B62C8E5A /* ResultsCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsCollection.m; sourceTree = "<group>"; };
 		914CBD7A65D60D3F09EB8C7C /* SimpleCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleCollectionViewCell.m; sourceTree = "<group>"; };
 		914CBD7B0D8FA667D1F3DFD3 /* DateMaths.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DateMaths.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		914CBD9F8BA54369A74D0677 /* IndexableCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IndexableCollection.h; path = Digits/IndexableCollection.h; sourceTree = "<group>"; };
 		914CBDB11C87B48FF1C5B7FD /* Sounds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sounds.m; sourceTree = "<group>"; };
+		914CBEC5335B4BF2B8CF491D /* OperatorMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperatorMap.m; sourceTree = "<group>"; };
 		914CBEF5684FDE8D8D5B99B3 /* DataItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataItemView.h; sourceTree = "<group>"; };
 		914CBF0DCA8CC6E6EDFE659A /* CALayer+NewCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+NewCategory.m"; sourceTree = "<group>"; };
 		914CBFE8D7832200898A7360 /* ParserTestUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParserTestUtils.m; path = Parser/ParserTestUtils.m; sourceTree = "<group>"; };
@@ -138,6 +142,7 @@
 		9E8B18BE1AF8F16E009EE106 /* marimba.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = marimba.m4a; sourceTree = "<group>"; };
 		9E8B18C11AF8F4F5009EE106 /* SplashScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreenViewController.h; sourceTree = "<group>"; };
 		9E8B18C21AF8F4F5009EE106 /* SplashScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreenViewController.m; sourceTree = "<group>"; };
+		9E9E3C5A1B0B54AD00D49818 /* Neon Glow.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Neon Glow.ttf"; sourceTree = "<group>"; };
 		9ED3179B1AEC636900AC2FD2 /* NumberWrappingLayoutCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberWrappingLayoutCalculator.h; sourceTree = "<group>"; };
 		9ED3179C1AEC636900AC2FD2 /* NumberWrappingLayoutCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberWrappingLayoutCalculator.m; sourceTree = "<group>"; };
 		9ED3179E1AED104D00AC2FD2 /* DragResultsMovingDynamicBehaviour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DragResultsMovingDynamicBehaviour.h; path = Animation/DragResultsMovingDynamicBehaviour.h; sourceTree = "<group>"; };
@@ -257,12 +262,13 @@
 				914CB814F2E3FE9B8984137D /* ParseItem.m */,
 				914CB73BA09CEFB74D83EEFA /* Parser.h */,
 				914CB36BCCAAA8E0D4787F5E /* Parser.m */,
+				9E9E3C591B0B54AD00D49818 /* Resources */,
 				9E5F76C11AD236E0001D69F5 /* Results */,
-				914CB8ECE2DC34F51FC0FB4F /* Supporting Files */,
-				914CBDB11C87B48FF1C5B7FD /* Sounds.m */,
 				914CB41D925564E2995D5B39 /* Sounds.h */,
+				914CBDB11C87B48FF1C5B7FD /* Sounds.m */,
 				9E8B18C11AF8F4F5009EE106 /* SplashScreenViewController.h */,
 				9E8B18C21AF8F4F5009EE106 /* SplashScreenViewController.m */,
+				914CB8ECE2DC34F51FC0FB4F /* Supporting Files */,
 			);
 			path = DateMaths;
 			sourceTree = "<group>";
@@ -329,6 +335,8 @@
 				914CB27102B12DCA48BEAB64 /* OperatorBuilder.h */,
 				914CB9392C0D8F598BECCF7B /* OperatorFactory.m */,
 				914CBB93D8423EF1CC2BF154 /* OperatorFactory.h */,
+				914CBEC5335B4BF2B8CF491D /* OperatorMap.m */,
+				914CBBCCFB18AC4CCD919045 /* OperatorMap.h */,
 			);
 			path = Operator;
 			sourceTree = "<group>";
@@ -352,6 +360,14 @@
 			);
 			name = sounds;
 			path = DateMaths/sounds;
+			sourceTree = "<group>";
+		};
+		9E9E3C591B0B54AD00D49818 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9E9E3C5A1B0B54AD00D49818 /* Neon Glow.ttf */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		D7D9C219463019C586459BEA /* Pods */ = {
@@ -443,6 +459,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E9E3C5B1B0B54AD00D49818 /* Neon Glow.ttf in Resources */,
 				914CBD7FCD50F049842EDC89 /* Images.xcassets in Resources */,
 				9E8B18BF1AF8F16E009EE106 /* background.mp3 in Resources */,
 				9E9B14561AEB6D9B0044EC90 /* SimpleCollectionViewCell.xib in Resources */,
@@ -536,6 +553,7 @@
 				914CB95E9202F381887EBAFB /* OperatorFactory.m in Sources */,
 				914CBCB678D93ADF1E4946BD /* DataItemView.m in Sources */,
 				914CB937C64DEF7107080830 /* Sounds.m in Sources */,
+				914CB790977D82F97414D330 /* OperatorMap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

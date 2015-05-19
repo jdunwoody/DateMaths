@@ -79,7 +79,7 @@
 
 - (void)playBackgroundMusic
 {
-    [self.sounds playBackgroundMusic];
+//    [self.sounds playBackgroundMusic];
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
@@ -97,12 +97,16 @@
         [self clickedLevelCollectionAtIndexpath:indexPath];
     }
 
+    [self updateSum];
+
+    [self.levelCollectionView reloadData];
+}
+
+- (void)updateSum
+{
     NSNumber *sum = self.levelCollection.current.resultsCollection.sum;
     LevelItem *current = self.levelCollection.current;
     [current updateStarsWithSum:sum witDigitsCollection:self.levelCollection.current.digitCollection];
-
-    [self.levelCollectionView reloadData];
-
     self.totalLabel.text = [self showValue:sum];
 }
 
@@ -174,7 +178,7 @@
     if (!sum) {
         return @"Error";
     }
-    return [NSString stringWithFormat:@"%i", [sum intValue]];
+    return [NSString stringWithFormat:@"= %i", [sum intValue]];
 }
 
 - (IBAction)panned:(id)sender
@@ -200,6 +204,8 @@
             self.draggingImageView.frame.size.width,
             self.draggingImageView.frame.size.height);
 
+//        [self.sounds playSoundEffect];
+
     } else if (self.dragResultsPanGestureRecogniser.state == UIGestureRecognizerStateEnded) {
         [self.draggingImageView removeFromSuperview];
         self.draggingImageView = nil;
@@ -220,16 +226,22 @@
             }
         }
         [self.resultsCollectionView reloadData];
+//        [self.sounds playSoundEffect];
+        [self updateSum];
 
     } else if (self.dragResultsPanGestureRecogniser.state == UIGestureRecognizerStateChanged) {
         CGPoint location = [self.dragResultsPanGestureRecogniser locationInView:self.resultsCollectionView];
         DataItemView *dataItemView = [self.layout dataitemViewNearestLocation:location];
 
-        self.draggingImageView.frame = CGRectMake(
-            dataItemView.rect.origin.x,
-            dataItemView.rect.origin.y,
-            self.draggingImageView.frame.size.width,
-            self.draggingImageView.frame.size.height);
+        if (!CGPointEqualToPoint(self.draggingImageView.frame.origin, dataItemView.rect.origin)) {
+            self.draggingImageView.frame = CGRectMake(
+                dataItemView.rect.origin.x,
+                dataItemView.rect.origin.y,
+                self.draggingImageView.frame.size.width,
+                self.draggingImageView.frame.size.height);
+
+            [self.sounds playSoundEffect];
+        }
 
     } else if (self.dragResultsPanGestureRecogniser.state == UIGestureRecognizerStateCancelled) {
         NSAssert(NO, @"Shouldn't get here");

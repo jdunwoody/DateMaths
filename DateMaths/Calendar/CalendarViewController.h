@@ -12,7 +12,7 @@
 
 @interface CalendarViewController : UIViewController<UIPickerViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 @property (strong, nonatomic) UIColor *datePickerTextColor;
+@property (weak, nonatomic) IBOutlet UIPickerView *picker;
 
 @end

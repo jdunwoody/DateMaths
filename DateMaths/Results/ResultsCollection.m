@@ -63,12 +63,12 @@
 
 - (NSNumber *)sum
 {
-    NSMutableArray *integers = [NSMutableArray array];
+    NSMutableArray *dataItems = [NSMutableArray array];
     for (id<DataItem> completed in self) {
-        [integers addObject:completed.value];
+        [dataItems addObject:completed.value];
     }
 
-    NSString *format = [integers componentsJoinedByString:@""];
+    NSString *format = [dataItems componentsJoinedByString:@""];
     if (!format.length) {
         return nil;
     }

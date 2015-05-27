@@ -25,6 +25,11 @@
     return [NSString stringWithFormat:@"%li", (long)self.digit];
 }
 
+- (NSString *)displayValue
+{
+    return self.value;
+}
+
 - (BOOL)isDigit
 {
     return YES;

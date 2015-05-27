@@ -32,7 +32,7 @@
     SimpleCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"simpleCell" forIndexPath:indexPath];
     LevelItem *item = self.levelCollection[(NSUInteger)indexPath.row];
 
-    cell.label.text = item.value;
+    cell.label.text = item.displayValue;
 //    cell.backgroundColor = self.levelCollection.current == item ? [UIColor whiteColor] : [UIColor lightGrayColor];
 
     cell.starA.hidden = !item.starA;

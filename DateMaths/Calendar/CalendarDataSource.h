@@ -10,5 +10,15 @@
 
 @interface CalendarDataSource : NSObject<UIPickerViewDataSource>
 
-- (NSString *)titleForRow:(NSInteger)row component:(NSInteger)component;
+@property (nonatomic, readonly) NSRange dateRange;
+@property (nonatomic, readonly) NSRange monthRange;
+@property (nonatomic, readonly) NSRange yearRange;
+
+typedef enum
+{
+    CalendarDatePickerDayComponent = 0,
+    CalendarDatePickerMonthComponent = 1,
+    CalendarDatePickerYearComponent = 2,
+} ComponentsInDatePicker;
+
 @end

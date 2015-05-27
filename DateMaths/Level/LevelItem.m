@@ -42,6 +42,11 @@
     return [NSString stringWithFormat:@"%li", (long)self.number];
 }
 
+- (NSString *)displayValue
+{
+    return self.value;
+}
+
 - (void)updateStarsWithSum:(NSNumber *)sum witDigitsCollection:(DigitCollection *)digitCollection
 {
     if (self.number == [sum doubleValue]) {

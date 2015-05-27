@@ -9,19 +9,9 @@
 #import "CalendarDataSource.h"
 
 @interface CalendarDataSource ()
-@property (nonatomic, readonly) NSRange dateRange;
-@property (nonatomic, readonly) NSRange monthRange;
-@property (nonatomic, readonly) NSRange yearRange;
 @end
 
 @implementation CalendarDataSource
-
-typedef enum
-{
-    CalendarDatePickerDayComponent = 0,
-    CalendarDatePickerMonthComponent = 1,
-    CalendarDatePickerYearComponent = 2,
-} ComponentsInDatePicker;
 
 - (instancetype)init
 {
@@ -63,27 +53,6 @@ typedef enum
     }
 
     return numberOfRows;
-}
-
-- (NSString *)titleForRow:(NSInteger)row component:(NSInteger)component
-{
-    NSUInteger titleInteger;
-
-    switch ((ComponentsInDatePicker)component) {
-        case CalendarDatePickerDayComponent:
-            titleInteger = self.dateRange.location + row;
-            break;
-        case CalendarDatePickerMonthComponent:
-            titleInteger = self.monthRange.location + row;
-            break;
-        case CalendarDatePickerYearComponent:
-            titleInteger = self.yearRange.location + row;
-            break;
-        default:
-            titleInteger = 0;
-    }
-
-    return [NSString stringWithFormat:@"%u", titleInteger];
 }
 
 @end

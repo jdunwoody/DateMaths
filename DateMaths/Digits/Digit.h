@@ -4,7 +4,8 @@
 @interface Digit : NSObject<DataItem>
 
 @property (nonatomic, readonly) double digit;
-@property (strong, nonatomic, readonly) NSString *value;
+@property (nonatomic, readonly) NSString *value;
+@property (nonatomic, readonly) NSString *displayValue;
 @property (nonatomic) BOOL used;
 @property (nonatomic) BOOL dragging;
 

@@ -17,7 +17,9 @@
 @interface LevelItem : NSObject<DataItem>
 
 @property (nonatomic, readonly) double number;
-@property (strong, nonatomic) NSString *value;
+@property (nonatomic) NSString *value;
+@property (nonatomic) NSString *displayValue;
+
 @property (nonatomic) BOOL dragging;
 
 - (instancetype)init __unavailable;
@@ -27,9 +29,9 @@
 @property (nonatomic) BOOL starB;
 @property (nonatomic) BOOL starC;
 
-@property (nonatomic, strong, readonly) DigitCollection *digitCollection;
-@property (nonatomic, strong, readonly) OperatorCollection *operatorCollection;
-@property (nonatomic, strong, readonly) ResultsCollection *resultsCollection;
+@property (nonatomic, readonly) DigitCollection *digitCollection;
+@property (nonatomic, readonly) OperatorCollection *operatorCollection;
+@property (nonatomic, readonly) ResultsCollection *resultsCollection;
 
 - (void)updateStarsWithSum:(NSNumber *)sum witDigitsCollection:(DigitCollection *)digitCollection;
 

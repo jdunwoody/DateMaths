@@ -7,6 +7,10 @@
 #import "OperatorMap.h"
 
 
+@interface Operator ()
+@property (nonatomic, readonly) id displaySymbol;
+@end
+
 @implementation Operator
 
 - (id)initWithSymbol:(NSString *)symbol
@@ -15,8 +19,9 @@
     if (!self) {
         return self;
     }
-    _operatorMap = [[OperatorMap alloc] init];
-    _symbol = self.operatorMap[symbol];
+    OperatorMap *operatorMap = [[OperatorMap alloc] init];
+    _symbol = symbol;
+    _displaySymbol = operatorMap[symbol];
 
     return self;
 }
@@ -29,6 +34,11 @@
 - (NSString *)value
 {
     return self.symbol;
+}
+
+- (NSString *)displayValue
+{
+    return self.displaySymbol;
 }
 
 - (BOOL)isDigit

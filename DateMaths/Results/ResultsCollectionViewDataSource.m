@@ -30,7 +30,7 @@
     id<DataItem> dataItem = self.levelCollection.current.resultsCollection[(NSUInteger)indexPath.row];
     cell.dataItem = dataItem;
     cell.backgroundColor = dataItem.dragging ? [UIColor grayColor] : [UIColor clearColor];
-    cell.label.text = dataItem.value;
+    cell.label.text = dataItem.displayValue;
 
     cell.illuminated = !dataItem.dragging;
 

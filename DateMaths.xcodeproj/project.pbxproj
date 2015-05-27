@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		914CB005DE9BE64B633FB760 /* UIColor+NewCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CBA71EE1481B1E79FF2B1 /* UIColor+NewCategory.m */; };
 		914CB11C266DEB2DADC299AA /* ResultCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB793D6A5DE2475A826AD /* ResultCollectionViewLayout.m */; };
 		914CB12CD7B79FA6332C1BFB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 914CB5E39B366B313E1A520F /* LaunchScreen.xib */; };
 		914CB1AD74274B059E6A4CA4 /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB36BCCAAA8E0D4787F5E /* Parser.m */; };
@@ -88,6 +89,7 @@
 		914CB4F47E503E9FE60ED675 /* ResultCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultCollectionViewLayout.h; sourceTree = "<group>"; };
 		914CB54EA3F6E6AABF8ED12E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		914CB5A346BB740958DDE8B4 /* ExpressionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpressionTest.m; path = Expression/ExpressionTest.m; sourceTree = "<group>"; };
+		914CB5A5CD6CDED4AA7ADDF3 /* UIColor+NewCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+NewCategory.h"; sourceTree = "<group>"; };
 		914CB6375BE3E96890A1CF32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		914CB690CEEFC313A6A8BFEA /* ResultsCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsCollection.h; sourceTree = "<group>"; };
 		914CB73BA09CEFB74D83EEFA /* Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Parser.h; path = Parser/Parser.h; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 		914CB9D3C69619BA9B98BB48 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		914CBA329EF88E051638C3E2 /* DateMathsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateMathsViewModel.m; sourceTree = "<group>"; };
 		914CBA6A542E628E5ADD25FD /* SimpleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleCollectionViewCell.xib; sourceTree = "<group>"; };
+		914CBA71EE1481B1E79FF2B1 /* UIColor+NewCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+NewCategory.m"; sourceTree = "<group>"; };
 		914CBAA50A5591BB3AD060B6 /* CALayer+NewCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+NewCategory.h"; sourceTree = "<group>"; };
 		914CBABF8458B64D6C56CCB5 /* DateMathsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateMathsViewModel.h; sourceTree = "<group>"; };
 		914CBB122EB9CF6F5DEE4671 /* SimpleCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleCollectionViewCell.h; sourceTree = "<group>"; };
@@ -294,6 +297,8 @@
 				9E0E2A3F1B14A0E800640211 /* CalendarViewController.m */,
 				9E0E2A411B14A71800640211 /* CalendarDataSource.h */,
 				9E0E2A421B14A71800640211 /* CalendarDataSource.m */,
+				914CBA71EE1481B1E79FF2B1 /* UIColor+NewCategory.m */,
+				914CB5A5CD6CDED4AA7ADDF3 /* UIColor+NewCategory.h */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -594,6 +599,7 @@
 				914CBCB678D93ADF1E4946BD /* DataItemView.m in Sources */,
 				914CB937C64DEF7107080830 /* Sounds.m in Sources */,
 				914CB790977D82F97414D330 /* OperatorMap.m in Sources */,
+				914CB005DE9BE64B633FB760 /* UIColor+NewCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

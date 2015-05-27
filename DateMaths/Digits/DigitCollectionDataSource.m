@@ -41,7 +41,7 @@
 {
     SimpleCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"simpleCell" forIndexPath:indexPath];
     Digit *digit = self.collection.current.digitCollection[(NSUInteger)indexPath.row];
-    cell.label.text = digit.value;
+    cell.label.text = digit.displayValue;
 
     cell.illuminated = !digit.used;
 

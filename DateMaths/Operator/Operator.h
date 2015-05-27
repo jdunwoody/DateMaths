@@ -9,11 +9,11 @@
 
 @interface Operator : NSObject<DataItem>
 
-@property (nonatomic, strong, readonly) NSString *symbol;
-@property (strong, nonatomic, readonly) NSString *value;
+@property (nonatomic, readonly) NSString *symbol;
+@property (nonatomic, readonly) NSString *value;
+@property (nonatomic, readonly) NSString *displayValue;
 @property (nonatomic) BOOL dragging;
 
-@property (nonatomic, strong) id operatorMap;
 - (instancetype)init __unavailable;
 
 - (instancetype)initWithSymbol:(NSString *)string;

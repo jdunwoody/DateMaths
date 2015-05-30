@@ -10,4 +10,6 @@
 
 @interface SplashScreenViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *mathsText;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @end

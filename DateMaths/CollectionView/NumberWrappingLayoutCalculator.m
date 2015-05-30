@@ -27,6 +27,8 @@
 {
     NSMutableArray *dataItems = [NSMutableArray arrayWithCapacity:(NSUInteger)items.count];
 
+    CGSize cellSpacing = CGSizeMake(4, 4);
+
     int y = 0;
     for (NSArray *row in rows) {
         int x = 0;
@@ -34,9 +36,9 @@
             CGPoint origin = CGPointMake(x, y);
             DataItemView *dataItemView = [[DataItemView alloc] initWithOriginPoint:origin dataItem:item];
             [dataItems addObject:dataItemView];
-            x += dataItemView.rect.size.width;
+            x += dataItemView.rect.size.width + cellSpacing.width;
         }
-        y += [DataItemView cellSize].height;
+        y += [DataItemView cellSize].height + cellSpacing.height;
     }
 
     return dataItems;
@@ -58,8 +60,12 @@
             [itemsToKeepTogether removeAllObjects];
         }
 
-        if ((currentRow.count + 1) * [DataItemView cellSize].width > (*size).width) {
-            if (itemsToKeepTogether.count > 0 && itemsToKeepTogether.count * [DataItemView cellSize].width <= (*size).width) {
+        CGFloat cellWidth = [DataItemView cellSize].width;
+
+        NSUInteger cellSpacing = 8;
+
+        if ((currentRow.count + 1) * cellWidth + currentRow.count * cellSpacing > (*size).width) {
+            if (itemsToKeepTogether.count > 0 && itemsToKeepTogether.count * cellWidth + ((itemsToKeepTogether.count - 1) * cellSpacing) <= (*size).width) {
                 for (NSMutableArray *row in rows) {
                     [row removeObjectsInArray:itemsToKeepTogether];
                 }

@@ -8,7 +8,8 @@
 
 #import "CalendarViewController.h"
 #import "CalendarDataSource.h"
-#import "UIColor+NewCategory.h"
+#import "UIViewController+jamesGradientBackground.h"
+#import "Theme.h"
 
 @interface CalendarViewController ()
 
@@ -21,15 +22,19 @@
 {
     [super viewDidLoad];
 
+    [self dateMaths_gradientBackgroundWhiteToGray];
+
     _dataSource = [[CalendarDataSource alloc] init];
     self.picker.dataSource = self.dataSource;
+    [self.next setTitleColor:[Theme colourMain] forState:UIControlStateNormal];
+    [self dateMaths_hideNavigationController];
 }
 
 - (NSAttributedString *)pickerView:(UIPickerView *)pickerView attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
     NSString *title = [self pickerView:pickerView titleForRow:row forComponent:component];
 
-    NSAttributedString *attString = [[NSAttributedString alloc] initWithString:title attributes:@{NSForegroundColorAttributeName : self.datePickerTextColor}];
+    NSAttributedString *attString = [[NSAttributedString alloc] initWithString:title attributes:@{NSForegroundColorAttributeName : [Theme datedatePickerTextColor]}];
     return attString;
 }
 
@@ -38,11 +43,14 @@
     if (!view) {
         view = [[UILabel alloc] initWithFrame:CGRectZero];
     }
-    UILabel *label = (UILabel *)view;
+
     NSString *title = [self pickerView:pickerView titleForRow:row forComponent:component];
+
+    UILabel *label = (UILabel *)view;
     label.text = title;
-    label.textColor = [UIColor neonPurple];
-    UIFont *font = [UIFont fontWithName:@"NEON GLOW" size:32];
+    label.textColor = [Theme colourMain];
+
+    UIFont *font = [Theme fontWithSize:32];
     label.font = font;
 
     return view;

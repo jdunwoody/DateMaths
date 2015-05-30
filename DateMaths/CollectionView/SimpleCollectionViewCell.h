@@ -13,8 +13,7 @@
 @property (nonatomic, strong) id<DataItem> dataItem;
 @property (nonatomic) BOOL illuminated;
 
-- (void)configureBorder;
-
+- (void)configure;
 @end
 
 static CGFloat SIMPLE_COLLECTION_VIEW_CELL_WIDTH = 50.0;

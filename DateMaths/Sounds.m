@@ -3,6 +3,7 @@
 @interface Sounds ()
 @property (nonatomic, strong) AVAudioPlayer *audioPlayer;
 @property (nonatomic, strong) AVAudioPlayer *backgroundAudioPlayer;
+@property (nonatomic) BOOL soundsEnabled;
 @end
 
 @implementation Sounds
@@ -13,8 +14,11 @@
     if (!self) {
         return self;
     }
+    self.soundsEnabled = NO;
 
-    [self prepareAudio];
+    if (self.soundsEnabled) {
+        [self prepareAudio];
+    }
 
     return self;
 }

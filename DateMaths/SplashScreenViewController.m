@@ -7,6 +7,8 @@
 //
 
 #import "SplashScreenViewController.h"
+#import "UIViewController+jamesGradientBackground.h"
+#import "Theme.h"
 
 @interface SplashScreenViewController ()
 
@@ -19,7 +21,12 @@
 {
     [super viewDidLoad];
 
+    [self dateMaths_gradientBackgroundWhiteToGray];
     self.timer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(timerFireMethod:) userInfo:nil repeats:NO];
+    self.mathsText.textColor = [Theme colourMain];
+    self.dateLabel.textColor = [Theme colourMain];
+
+    [self dateMaths_hideNavigationController];
 }
 
 - (void)timerFireMethod:(NSTimer *)timer

@@ -83,6 +83,10 @@
 
     id value = [expression expressionValueWithObject:nil context:nil];
 
+    if (dataItems.count == 0) {
+        value = @0;
+    }
+
     return value;
 }
 

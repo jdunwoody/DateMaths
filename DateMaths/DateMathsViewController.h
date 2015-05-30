@@ -25,6 +25,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *totalLabel;
 @property (strong, nonatomic) IBOutlet UIPanGestureRecognizer *dragResultsPanGestureRecogniser;
+@property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
 
 - (IBAction)panned:(id)sender;
 

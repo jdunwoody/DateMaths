@@ -8,6 +8,7 @@
 
 @interface CALayer (NewCategory)
 
-- (void)addBlackBorder;
+- (void)dateMaths_glowWithColor:(UIColor *)color;
+- (void)dateMaths_borderWithColor:(UIColor *)color;
 
 @end

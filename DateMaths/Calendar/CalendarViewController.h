@@ -14,5 +14,6 @@
 
 @property (strong, nonatomic) UIColor *datePickerTextColor;
 @property (weak, nonatomic) IBOutlet UIPickerView *picker;
+@property (weak, nonatomic) IBOutlet UIButton *next;
 
 @end

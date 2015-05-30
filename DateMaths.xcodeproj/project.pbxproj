@@ -22,7 +22,6 @@
 		914CB870AECF941BDF14E8C2 /* ExpressionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB5A346BB740958DDE8B4 /* ExpressionTest.m */; };
 		914CB937C64DEF7107080830 /* Sounds.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CBDB11C87B48FF1C5B7FD /* Sounds.m */; };
 		914CB95E9202F381887EBAFB /* OperatorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB9392C0D8F598BECCF7B /* OperatorFactory.m */; };
-		914CBA5C037D61EFAE1DB001 /* CALayer+NewCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CBF0DCA8CC6E6EDFE659A /* CALayer+NewCategory.m */; };
 		914CBB2005A6995428799172 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB479BAD5699ED9B7C2FA /* AppDelegate.m */; };
 		914CBC31A9FEB09E009C5F71 /* ResultsCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CBC34DFE9F966B62C8E5A /* ResultsCollection.m */; };
 		914CBCB678D93ADF1E4946BD /* DataItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CB1306033F9C4BDCA20F6 /* DataItemView.m */; };
@@ -32,6 +31,10 @@
 		914CBFF934113B500AA477F7 /* ParserTestUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 914CBFE8D7832200898A7360 /* ParserTestUtils.m */; };
 		9E0E2A401B14A0E800640211 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0E2A3F1B14A0E800640211 /* CalendarViewController.m */; };
 		9E0E2A431B14A71800640211 /* CalendarDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0E2A421B14A71800640211 /* CalendarDataSource.m */; };
+		9E0F948E1B194F4B00652EDE /* GraduatedGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0F948D1B194F4B00652EDE /* GraduatedGradientLayer.m */; };
+		9E0F94911B19513600652EDE /* UIViewController+jamesGradientBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0F94901B19513600652EDE /* UIViewController+jamesGradientBackground.m */; };
+		9E0F94951B1956BB00652EDE /* CALayer+NewCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0F94941B1956BB00652EDE /* CALayer+NewCategory.m */; };
+		9E0F949C1B195EBA00652EDE /* Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0F949B1B195EBA00652EDE /* Theme.m */; };
 		9E42E76E1AE2486B0084B471 /* LevelCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E42E7691AE2486B0084B471 /* LevelCollection.m */; };
 		9E42E76F1AE2486B0084B471 /* LevelCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E42E76B1AE2486B0084B471 /* LevelCollectionViewDataSource.m */; };
 		9E42E7701AE2486B0084B471 /* LevelItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E42E76D1AE2486B0084B471 /* LevelItem.m */; };
@@ -104,7 +107,6 @@
 		914CBA329EF88E051638C3E2 /* DateMathsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateMathsViewModel.m; sourceTree = "<group>"; };
 		914CBA6A542E628E5ADD25FD /* SimpleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleCollectionViewCell.xib; sourceTree = "<group>"; };
 		914CBA71EE1481B1E79FF2B1 /* UIColor+NewCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+NewCategory.m"; sourceTree = "<group>"; };
-		914CBAA50A5591BB3AD060B6 /* CALayer+NewCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+NewCategory.h"; sourceTree = "<group>"; };
 		914CBABF8458B64D6C56CCB5 /* DateMathsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateMathsViewModel.h; sourceTree = "<group>"; };
 		914CBB122EB9CF6F5DEE4671 /* SimpleCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleCollectionViewCell.h; sourceTree = "<group>"; };
 		914CBB93D8423EF1CC2BF154 /* OperatorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperatorFactory.h; sourceTree = "<group>"; };
@@ -116,12 +118,19 @@
 		914CBDB11C87B48FF1C5B7FD /* Sounds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sounds.m; sourceTree = "<group>"; };
 		914CBEC5335B4BF2B8CF491D /* OperatorMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperatorMap.m; sourceTree = "<group>"; };
 		914CBEF5684FDE8D8D5B99B3 /* DataItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataItemView.h; sourceTree = "<group>"; };
-		914CBF0DCA8CC6E6EDFE659A /* CALayer+NewCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+NewCategory.m"; sourceTree = "<group>"; };
 		914CBFE8D7832200898A7360 /* ParserTestUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParserTestUtils.m; path = Parser/ParserTestUtils.m; sourceTree = "<group>"; };
 		9E0E2A3E1B14A0E800640211 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
 		9E0E2A3F1B14A0E800640211 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
 		9E0E2A411B14A71800640211 /* CalendarDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarDataSource.h; sourceTree = "<group>"; };
 		9E0E2A421B14A71800640211 /* CalendarDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarDataSource.m; sourceTree = "<group>"; };
+		9E0F948C1B194F4B00652EDE /* GraduatedGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraduatedGradientLayer.h; sourceTree = "<group>"; };
+		9E0F948D1B194F4B00652EDE /* GraduatedGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraduatedGradientLayer.m; sourceTree = "<group>"; };
+		9E0F948F1B19513600652EDE /* UIViewController+jamesGradientBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+jamesGradientBackground.h"; path = "UIViewController/UIViewController+jamesGradientBackground.h"; sourceTree = "<group>"; };
+		9E0F94901B19513600652EDE /* UIViewController+jamesGradientBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+jamesGradientBackground.m"; path = "UIViewController/UIViewController+jamesGradientBackground.m"; sourceTree = "<group>"; };
+		9E0F94931B1956BB00652EDE /* CALayer+NewCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+NewCategory.h"; sourceTree = "<group>"; };
+		9E0F94941B1956BB00652EDE /* CALayer+NewCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+NewCategory.m"; sourceTree = "<group>"; };
+		9E0F949A1B195EBA00652EDE /* Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Theme.h; sourceTree = "<group>"; };
+		9E0F949B1B195EBA00652EDE /* Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Theme.m; sourceTree = "<group>"; };
 		9E42E7681AE2486B0084B471 /* LevelCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelCollection.h; sourceTree = "<group>"; };
 		9E42E7691AE2486B0084B471 /* LevelCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelCollection.m; sourceTree = "<group>"; };
 		9E42E76A1AE2486B0084B471 /* LevelCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelCollectionViewDataSource.h; sourceTree = "<group>"; };
@@ -236,7 +245,6 @@
 			isa = PBXGroup;
 			children = (
 				9E8B18BC1AF8F16E009EE106 /* sounds */,
-				9E1E01E01AE2829E0035A5D7 /* CollectionView */,
 				914CBC5C97790867B37B96F4 /* DateMaths */,
 				914CB63F45E87E6A734ED989 /* DateMathsTests */,
 				283BA2893EB1C610375889E5 /* Frameworks */,
@@ -258,12 +266,14 @@
 		914CBC5C97790867B37B96F4 /* DateMaths */ = {
 			isa = PBXGroup;
 			children = (
+				9E0F94991B195EBA00652EDE /* Theme */,
+				9E0F94921B1956BB00652EDE /* CALayer */,
+				9E0F948B1B194F4B00652EDE /* Background */,
+				9E1E01E01AE2829E0035A5D7 /* CollectionView */,
 				9E0E2A3D1B14A0E800640211 /* Calendar */,
 				914CB54EA3F6E6AABF8ED12E /* AppDelegate.h */,
 				914CB479BAD5699ED9B7C2FA /* AppDelegate.m */,
 				9E9E3C5F1B0B64D000D49818 /* BouncingCubes */,
-				914CBAA50A5591BB3AD060B6 /* CALayer+NewCategory.h */,
-				914CBF0DCA8CC6E6EDFE659A /* CALayer+NewCategory.m */,
 				914CB7F71ECE5F0052D94EBB /* DataItem.h */,
 				9E89CC101AC7F58B0086C816 /* DateMathsViewController.h */,
 				9E89CC111AC7F58B0086C816 /* DateMathsViewController.m */,
@@ -286,6 +296,8 @@
 				9E8B18C11AF8F4F5009EE106 /* SplashScreenViewController.h */,
 				9E8B18C21AF8F4F5009EE106 /* SplashScreenViewController.m */,
 				914CB8ECE2DC34F51FC0FB4F /* Supporting Files */,
+				9E0F948F1B19513600652EDE /* UIViewController+jamesGradientBackground.h */,
+				9E0F94901B19513600652EDE /* UIViewController+jamesGradientBackground.m */,
 			);
 			path = DateMaths;
 			sourceTree = "<group>";
@@ -303,6 +315,33 @@
 			path = Calendar;
 			sourceTree = "<group>";
 		};
+		9E0F948B1B194F4B00652EDE /* Background */ = {
+			isa = PBXGroup;
+			children = (
+				9E0F948C1B194F4B00652EDE /* GraduatedGradientLayer.h */,
+				9E0F948D1B194F4B00652EDE /* GraduatedGradientLayer.m */,
+			);
+			path = Background;
+			sourceTree = "<group>";
+		};
+		9E0F94921B1956BB00652EDE /* CALayer */ = {
+			isa = PBXGroup;
+			children = (
+				9E0F94931B1956BB00652EDE /* CALayer+NewCategory.h */,
+				9E0F94941B1956BB00652EDE /* CALayer+NewCategory.m */,
+			);
+			path = CALayer;
+			sourceTree = "<group>";
+		};
+		9E0F94991B195EBA00652EDE /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				9E0F949A1B195EBA00652EDE /* Theme.h */,
+				9E0F949B1B195EBA00652EDE /* Theme.m */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
 		9E1E01E01AE2829E0035A5D7 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,8 +357,7 @@
 				914CB1306033F9C4BDCA20F6 /* DataItemView.m */,
 				914CBEF5684FDE8D8D5B99B3 /* DataItemView.h */,
 			);
-			name = CollectionView;
-			path = DateMaths/CollectionView;
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 		9E42E7671AE2486B0084B471 /* Level */ = {
@@ -469,6 +507,11 @@
 			attributes = {
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = "";
+				TargetAttributes = {
+					914CBD8BD60D2A7EE055A073 = {
+						DevelopmentTeam = XAYRKR2Q8J;
+					};
+				};
 			};
 			buildConfigurationList = 914CBBD1CC29564A2FEED67F /* Build configuration list for PBXProject "DateMaths" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -574,11 +617,11 @@
 				9E89CC121AC7F58B0086C816 /* DateMathsViewController.m in Sources */,
 				9ED3179D1AEC636900AC2FD2 /* NumberWrappingLayoutCalculator.m in Sources */,
 				9E42E7701AE2486B0084B471 /* LevelItem.m in Sources */,
+				9E0F94911B19513600652EDE /* UIViewController+jamesGradientBackground.m in Sources */,
 				9E5F76CF1AD236E0001D69F5 /* DigitCollectionDataSource.m in Sources */,
 				9E0E2A401B14A0E800640211 /* CalendarViewController.m in Sources */,
 				9E5F76CE1AD236E0001D69F5 /* DigitCollection.m in Sources */,
 				914CBCC3B96D5CA79BEE8C77 /* DateMathsViewModel.m in Sources */,
-				914CBA5C037D61EFAE1DB001 /* CALayer+NewCategory.m in Sources */,
 				9E5F76D21AD236E0001D69F5 /* OperatorCollectionDataSource.m in Sources */,
 				9E42E76E1AE2486B0084B471 /* LevelCollection.m in Sources */,
 				9E5F76D11AD236E0001D69F5 /* OperatorCollection.m in Sources */,
@@ -596,10 +639,13 @@
 				914CB715B7F26799094FEBFC /* DigitFactory.m in Sources */,
 				914CB3B555D13EE7DE8E2E47 /* OperatorBuilder.m in Sources */,
 				914CB95E9202F381887EBAFB /* OperatorFactory.m in Sources */,
+				9E0F948E1B194F4B00652EDE /* GraduatedGradientLayer.m in Sources */,
 				914CBCB678D93ADF1E4946BD /* DataItemView.m in Sources */,
+				9E0F949C1B195EBA00652EDE /* Theme.m in Sources */,
 				914CB937C64DEF7107080830 /* Sounds.m in Sources */,
 				914CB790977D82F97414D330 /* OperatorMap.m in Sources */,
 				914CB005DE9BE64B633FB760 /* UIColor+NewCategory.m in Sources */,
+				9E0F94951B1956BB00652EDE /* CALayer+NewCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -648,6 +694,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = DateMaths/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -768,6 +815,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = DateMaths/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "";

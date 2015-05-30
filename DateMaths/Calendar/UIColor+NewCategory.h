@@ -7,6 +7,6 @@
 
 @interface UIColor (NewCategory)
 
-+ (UIColor *)neonPurple;
++ (UIColor *)dateMaths_neonPurple;
 
 @end

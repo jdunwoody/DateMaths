@@ -16,6 +16,8 @@
 #import "SimpleCollectionViewCell.h"
 #import "DataItemView.h"
 #import "Sounds.h"
+#import "UIViewController+jamesGradientBackground.h"
+#import "Theme.h"
 
 @interface DateMathsViewController ()
 
@@ -38,6 +40,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    [self dateMaths_gradientBackgroundWhiteToGray];
 
     UINib *nib = [UINib nibWithNibName:@"SimpleCollectionViewCell" bundle:[NSBundle mainBundle]];
 
@@ -72,14 +76,20 @@
     self.layout = (ResultCollectionViewLayout *)self.resultsCollectionView.collectionViewLayout;
     self.layout.levelCollection = self.levelCollection;
 
-    self.totalLabel.text = [self showValue:nil];
+    self.totalLabel.text = [self showValue:@0];
+    self.totalLabel.textColor = [Theme colourMain];
     self.sounds = [[Sounds alloc] init];
     [self playBackgroundMusic];
+
+    [self dateMaths_showNavigationController];
+    ((UINavigationItem *)self.navigationBar.items[0]).title = @"100pts";
+//    [self.navigationBar setTitleTextAttributes:@{NSFontAttributeName : [Theme fontWithSize:21]}];
+
 }
 
 - (void)playBackgroundMusic
 {
-//    [self.sounds playBackgroundMusic];
+    [self.sounds playBackgroundMusic];
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath

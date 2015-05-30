@@ -8,6 +8,7 @@
 
 #import "BouncingCubedViewController.h"
 #import "BouncyBehaviour.h"
+#import "UIViewController+jamesGradientBackground.h"
 
 @interface BouncingCubedViewController ()
 
@@ -19,6 +20,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self dateMaths_gradientBackgroundWhiteToGray];
 
     self.animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
 

@@ -1,4 +1,6 @@
 #import "SimpleCollectionViewCell.h"
+#import "CALayer+NewCategory.h"
+#import "Theme.h"
 
 @implementation SimpleCollectionViewCell
 
@@ -11,7 +13,7 @@
     self.starB.hidden = YES;
     self.starC.hidden = YES;
 
-    [self configureBorder];
+    [self configure];
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder
@@ -21,34 +23,32 @@
         return self;
     }
 
-
     return self;
 }
 
 - (void)setIlluminated:(BOOL)illuminated
 {
-    if (illuminated) {
-        UIColor *color = self.label.textColor;
+    UIColor *colour;
 
-        self.label.layer.shadowColor = [color CGColor];
-        self.label.layer.shadowRadius = 4.0f;
-        self.label.layer.shadowOpacity = .6;
-        self.label.layer.shadowOffset = CGSizeZero;
-        self.label.layer.masksToBounds = NO;
+    if (illuminated) {
+        colour = [Theme colourMain];
     } else {
-        self.label.layer.shadowColor = nil;
-        self.label.layer.shadowRadius = 1.0f;
-        self.label.layer.shadowOpacity = 0.0;
-        self.label.layer.shadowOffset = CGSizeZero;
-        self.label.layer.masksToBounds = NO;
+        colour = [Theme deselectedColour];
     }
+
+    [self.layer dateMaths_glowWithColor:colour];
+    [self.layer dateMaths_borderWithColor:colour];
+
+    self.label.textColor = colour;
+    [self.label.layer dateMaths_glowWithColor:colour];
 }
 
-- (void)configureBorder
+- (void)configure
 {
-    self.layer.cornerRadius = 4.0f;
-    self.layer.borderWidth = 1.0f;
-    self.layer.borderColor = self.label.textColor.CGColor;
+    self.label.textColor = [Theme colourMain];
+    self.label.font = [Theme fontWithSize:28];
+    [self.layer dateMaths_borderWithColor:[Theme colourMain]];
+    [self.layer dateMaths_glowWithColor:[Theme colourMain]];
 }
 
 @end

@@ -18,6 +18,7 @@
 #import "Sounds.h"
 #import "UIViewController+jamesGradientBackground.h"
 #import "Theme.h"
+#import "ResultsSliderViewController.h"
 
 @interface DateMathsViewController ()
 
@@ -33,6 +34,7 @@
 @property (nonatomic, strong) ResultCollectionViewLayout *layout;
 @property (nonatomic, strong) id<DataItem> selectedDataItem;
 @property (nonatomic, strong) Sounds *sounds;
+@property (nonatomic, readonly) ResultsSliderViewController *resultsSliderViewController;
 @end
 
 @implementation DateMathsViewController
@@ -83,8 +85,23 @@
 
     [self dateMaths_showNavigationController];
     ((UINavigationItem *)self.navigationBar.items[0]).title = @"100pts";
-//    [self.navigationBar setTitleTextAttributes:@{NSFontAttributeName : [Theme fontWithSize:21]}];
 
+    _resultsSliderViewController = [[ResultsSliderViewController alloc] initWithNibName:@"ResultsSliderViewController" bundle:nil];
+
+    [self addChildViewController:self.resultsSliderViewController];
+    [self.resultsSliderView addSubview:self.resultsSliderViewController.view];
+    self.resultsSliderViewController.view.frame = self.resultsSliderView.frame;
+    [self.resultsSliderViewController didMoveToParentViewController:self];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+
+    self.resultsSliderViewController.minYValue = 10.0f;
+    self.resultsSliderViewController.maxYValue = 20.0f;
+    self.resultsSliderViewController.actualYValue = 12.0f;
+    self.resultsSliderViewController.targetYValue = 16.0f;
 }
 
 - (void)playBackgroundMusic

@@ -15,6 +15,7 @@
 @class LevelCollection;
 @class ResultCollectionViewLayout;
 @class Sounds;
+@class ResultsSliderViewController;
 
 @interface DateMathsViewController : UIViewController<UICollectionViewDelegate, CollectionDataSourceDelegate>
 
@@ -26,6 +27,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *totalLabel;
 @property (strong, nonatomic) IBOutlet UIPanGestureRecognizer *dragResultsPanGestureRecogniser;
 @property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
+@property (weak, nonatomic) IBOutlet UIView *resultsSliderView;
 
 - (IBAction)panned:(id)sender;
 

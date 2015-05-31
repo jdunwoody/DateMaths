@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *operatorCollectionView;
 @property (weak, nonatomic) IBOutlet UICollectionView *resultsCollectionView;
 @property (weak, nonatomic) IBOutlet UICollectionView *levelCollectionView;
+@property (weak, nonatomic) IBOutlet UIView *levelCollectionContainer;
 
 @property (weak, nonatomic) IBOutlet UILabel *totalLabel;
 @property (strong, nonatomic) IBOutlet UIPanGestureRecognizer *dragResultsPanGestureRecogniser;

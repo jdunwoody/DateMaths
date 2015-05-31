@@ -41,7 +41,6 @@
 {
     _maxYValue = maxYValue;
     [self update];
-
 }
 
 - (void)update

@@ -48,7 +48,7 @@
     UINib *nib = [UINib nibWithNibName:@"SimpleCollectionViewCell" bundle:[NSBundle mainBundle]];
 
     DigitFactory *digitFactory = [[DigitFactory alloc] initWithDate:[NSDate date]];
-    OperatorFactory *operatorFactory = [[OperatorFactory alloc] initWithSymbols:@[@"+", @"-", @"/", @"*", @"(", @")"]];
+    OperatorFactory *operatorFactory = [[OperatorFactory alloc] initWithSymbols:@[@"(", @")", @"*", @"/", @"+", @"-"]];
     self.levelCollection = [[LevelCollection alloc] initWithDigitFactory:digitFactory operatorFactory:operatorFactory];
 
     //Level
@@ -141,6 +141,7 @@
 {
     LevelItem *target = self.levelCollection[(NSUInteger)indexPath.row];
     self.levelCollection.current = target;
+    self.levelCollectionContainer.hidden = YES;
 
     [self.resultsCollectionView reloadData];
     [self.operatorCollectionView reloadData];

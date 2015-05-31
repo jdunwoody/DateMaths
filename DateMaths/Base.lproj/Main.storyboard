@@ -78,15 +78,15 @@
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n3J-Hp-HXn" userLabel="Operator Container">
-                                <rect key="frame" x="0.0" y="400" width="600" height="200"/>
+                                <rect key="frame" x="4" y="396" width="592" height="200"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tK5-5c-J1z" userLabel="Digits Collection View">
-                                        <rect key="frame" x="0.0" y="0.0" width="450" height="200"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="472" height="200"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="169" id="YeV-Ef-7aw"/>
                                         </constraints>
-                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="4" id="VNp-fp-dYk">
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="8" id="VNp-fp-dYk">
                                             <size key="itemSize" width="44" height="44"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -100,10 +100,10 @@
                                         </variation>
                                     </collectionView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vU8-70-u2O" userLabel="Operator Collection View">
-                                        <rect key="frame" x="450" y="0.0" width="150" height="200"/>
+                                        <rect key="frame" x="492" y="0.0" width="100" height="200"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="150" id="TSf-Bz-Gcf"/>
+                                            <constraint firstAttribute="width" constant="100" id="TSf-Bz-Gcf"/>
                                             <constraint firstAttribute="height" constant="153" id="aBx-l9-ROu"/>
                                         </constraints>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="8" id="ijy-3L-63y">
@@ -122,22 +122,21 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="vU8-70-u2O" firstAttribute="leading" secondItem="tK5-5c-J1z" secondAttribute="trailing" id="9fQ-4i-Uog"/>
+                                    <constraint firstItem="vU8-70-u2O" firstAttribute="leading" secondItem="tK5-5c-J1z" secondAttribute="trailing" constant="20" id="9fQ-4i-Uog"/>
                                     <constraint firstAttribute="bottom" secondItem="tK5-5c-J1z" secondAttribute="bottom" id="BiI-6O-Au1"/>
                                     <constraint firstItem="vU8-70-u2O" firstAttribute="top" secondItem="n3J-Hp-HXn" secondAttribute="top" id="NAY-iX-Uuv"/>
                                     <constraint firstAttribute="trailing" secondItem="vU8-70-u2O" secondAttribute="trailing" id="SPe-gx-7EL"/>
                                     <constraint firstItem="tK5-5c-J1z" firstAttribute="top" secondItem="n3J-Hp-HXn" secondAttribute="top" id="SQB-fN-paf"/>
                                     <constraint firstAttribute="bottom" secondItem="vU8-70-u2O" secondAttribute="bottom" id="VMn-Gc-UWJ"/>
-                                    <constraint firstItem="vU8-70-u2O" firstAttribute="leading" secondItem="tK5-5c-J1z" secondAttribute="trailing" id="eii-Lw-Nwn"/>
                                     <constraint firstItem="tK5-5c-J1z" firstAttribute="leading" secondItem="n3J-Hp-HXn" secondAttribute="leading" id="kcl-Pv-We4"/>
                                     <constraint firstAttribute="height" constant="200" id="rFK-RA-fVK"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yGK-ql-Qfp" userLabel="Results Container">
-                                <rect key="frame" x="0.0" y="64" width="600" height="336"/>
+                                <rect key="frame" x="4" y="68" width="592" height="324"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="irY-uj-KQk" userLabel="Results Collection View">
-                                        <rect key="frame" x="0.0" y="0.0" width="540" height="336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="532" height="324"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="4" id="vU2-lD-qed" customClass="ResultCollectionViewLayout">
                                             <size key="itemSize" width="50" height="50"/>
@@ -148,14 +147,14 @@
                                         <cells/>
                                     </collectionView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ae-05-UyQ" userLabel="Results Slider">
-                                        <rect key="frame" x="540" y="0.0" width="60" height="336"/>
+                                        <rect key="frame" x="532" y="0.0" width="60" height="324"/>
                                         <color key="backgroundColor" red="0.99794126926405247" green="1" blue="0.5164471368076512" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="CRX-sH-Hji"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obf-Av-vxb" userLabel="Total">
-                                        <rect key="frame" x="536" y="300" width="64" height="36"/>
+                                        <rect key="frame" x="528" y="288" width="64" height="36"/>
                                         <fontDescription key="fontDescription" name="NEONGLOW" family="NEON GLOW" pointSize="32"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -216,19 +215,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="n3J-Hp-HXn" secondAttribute="trailing" id="2o9-hH-8nJ"/>
+                            <constraint firstAttribute="trailing" secondItem="n3J-Hp-HXn" secondAttribute="trailing" constant="4" id="2o9-hH-8nJ"/>
                             <constraint firstAttribute="bottom" secondItem="xFP-oI-ctM" secondAttribute="bottom" id="CL7-iQ-iZE"/>
                             <constraint firstAttribute="trailing" secondItem="4u6-bL-1PO" secondAttribute="trailing" id="Dup-Fc-3Rw"/>
-                            <constraint firstItem="yGK-ql-Qfp" firstAttribute="top" secondItem="4u6-bL-1PO" secondAttribute="bottom" id="L7e-Xh-r1X"/>
-                            <constraint firstAttribute="bottom" secondItem="n3J-Hp-HXn" secondAttribute="bottom" id="NT7-Sc-NAf"/>
+                            <constraint firstItem="yGK-ql-Qfp" firstAttribute="top" secondItem="4u6-bL-1PO" secondAttribute="bottom" constant="4" id="L7e-Xh-r1X"/>
+                            <constraint firstAttribute="bottom" secondItem="n3J-Hp-HXn" secondAttribute="bottom" constant="4" id="NT7-Sc-NAf"/>
                             <constraint firstAttribute="trailing" secondItem="xFP-oI-ctM" secondAttribute="trailing" id="PhT-yF-dAj"/>
-                            <constraint firstItem="yGK-ql-Qfp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QcJ-AQ-NoK"/>
+                            <constraint firstItem="yGK-ql-Qfp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="4" id="QcJ-AQ-NoK"/>
                             <constraint firstItem="xFP-oI-ctM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Tnc-6b-Yqd"/>
                             <constraint firstItem="4u6-bL-1PO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jPr-LJ-efk"/>
-                            <constraint firstItem="n3J-Hp-HXn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lVP-Xq-a4d"/>
+                            <constraint firstItem="n3J-Hp-HXn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="4" id="lVP-Xq-a4d"/>
                             <constraint firstItem="4u6-bL-1PO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="pRq-8X-ubv"/>
-                            <constraint firstAttribute="trailing" secondItem="yGK-ql-Qfp" secondAttribute="trailing" id="rLL-vJ-VGi"/>
-                            <constraint firstItem="n3J-Hp-HXn" firstAttribute="top" secondItem="yGK-ql-Qfp" secondAttribute="bottom" id="ykE-0o-YWb"/>
+                            <constraint firstAttribute="trailing" secondItem="yGK-ql-Qfp" secondAttribute="trailing" constant="4" id="rLL-vJ-VGi"/>
+                            <constraint firstItem="n3J-Hp-HXn" firstAttribute="top" secondItem="yGK-ql-Qfp" secondAttribute="bottom" constant="4" id="ykE-0o-YWb"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Ejx-kO-8NM" appends="YES" id="aEC-br-Yob"/>
@@ -238,6 +237,7 @@
                     <connections>
                         <outlet property="digitCollectionView" destination="tK5-5c-J1z" id="gx4-FT-Yl9"/>
                         <outlet property="dragResultsPanGestureRecogniser" destination="Ejx-kO-8NM" id="Wbq-1s-WOa"/>
+                        <outlet property="levelCollectionContainer" destination="xFP-oI-ctM" id="j4M-qU-T7r"/>
                         <outlet property="levelCollectionView" destination="Eu3-a7-zjb" id="0be-3a-UJh"/>
                         <outlet property="navigationBar" destination="4u6-bL-1PO" id="HBW-YJ-sJM"/>
                         <outlet property="operatorCollectionView" destination="vU8-70-u2O" id="ffs-cF-Hhu"/>

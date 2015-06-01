@@ -45,6 +45,12 @@
 
     [self dateMaths_gradientBackgroundWhiteToGray];
 
+    _resultsSliderViewController = [[ResultsSliderViewController alloc] initWithNibName:@"ResultsSliderViewController" bundle:nil];
+    [self addChildViewController:self.resultsSliderViewController];
+    self.resultsSliderViewController.view.frame = CGRectMake(0.0, 0.0, 100.0, 400.0);//self.resultsSliderView.frame;
+    [self.resultsSliderView addSubview:self.resultsSliderViewController.view];
+    [self.resultsSliderViewController didMoveToParentViewController:self];
+
     UINib *nib = [UINib nibWithNibName:@"SimpleCollectionViewCell" bundle:[NSBundle mainBundle]];
 
     DigitFactory *digitFactory = [[DigitFactory alloc] initWithDate:[NSDate date]];
@@ -78,7 +84,7 @@
     self.layout = (ResultCollectionViewLayout *)self.resultsCollectionView.collectionViewLayout;
     self.layout.levelCollection = self.levelCollection;
 
-    self.totalLabel.text = [self showValue:@0];
+    self.totalLabel.text = [self formatSum:@0];
     self.totalLabel.textColor = [Theme colourMain];
     self.sounds = [[Sounds alloc] init];
     [self playBackgroundMusic];
@@ -86,22 +92,25 @@
     [self dateMaths_showNavigationController];
     ((UINavigationItem *)self.navigationBar.items[0]).title = @"100pts";
 
-    _resultsSliderViewController = [[ResultsSliderViewController alloc] initWithNibName:@"ResultsSliderViewController" bundle:nil];
 
-    [self addChildViewController:self.resultsSliderViewController];
-    [self.resultsSliderView addSubview:self.resultsSliderViewController.view];
-    self.resultsSliderViewController.view.frame = self.resultsSliderView.frame;
-    [self.resultsSliderViewController didMoveToParentViewController:self];
+    [self didReceiveNewTarget:self.levelCollection.current.number];
+}
+
+- (void)didReceiveNewTarget:(double)newTarget
+{
+    self.resultsSliderViewController.targetYValue = (float)newTarget;
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
 
-    self.resultsSliderViewController.minYValue = 10.0f;
-    self.resultsSliderViewController.maxYValue = 20.0f;
-    self.resultsSliderViewController.actualYValue = 12.0f;
-    self.resultsSliderViewController.targetYValue = 16.0f;
+    self.resultsSliderViewController.view.frame = self.resultsSliderView.bounds;
+
+//    self.resultsSliderViewController.minYValue = 0.0f;
+//    self.resultsSliderViewController.maxYValue = 20.0f;
+//    self.resultsSliderViewController.actualYValue = 12.0f;
+//    self.resultsSliderViewController.targetYValue = 16.0f;
 }
 
 - (void)playBackgroundMusic
@@ -124,17 +133,19 @@
         [self clickedLevelCollectionAtIndexpath:indexPath];
     }
 
-    [self updateSum];
+    [self recalculateSum];
 
     [self.levelCollectionView reloadData];
 }
 
-- (void)updateSum
+- (void)recalculateSum
 {
     NSNumber *sum = self.levelCollection.current.resultsCollection.sum;
     LevelItem *current = self.levelCollection.current;
+    self.totalLabel.text = [self formatSum:sum];
+
+    self.resultsSliderViewController.actualYValue = [sum intValue];
     [current updateStarsWithSum:sum witDigitsCollection:self.levelCollection.current.digitCollection];
-    self.totalLabel.text = [self showValue:sum];
 }
 
 - (void)clickedLevelCollectionAtIndexpath:(NSIndexPath *)indexPath
@@ -143,6 +154,7 @@
     self.levelCollection.current = target;
     self.levelCollectionContainer.hidden = YES;
 
+    [self didReceiveNewTarget:target.number];
     [self.resultsCollectionView reloadData];
     [self.operatorCollectionView reloadData];
     [self.digitCollectionView reloadData];
@@ -201,7 +213,7 @@
 {
 }
 
-- (NSString *)showValue:(NSNumber *)sum
+- (NSString *)formatSum:(NSNumber *)sum
 {
     if (!sum) {
         return @"Error";
@@ -255,7 +267,7 @@
         }
         [self.resultsCollectionView reloadData];
 //        [self.sounds playSoundEffect];
-        [self updateSum];
+        [self recalculateSum];
 
     } else if (self.dragResultsPanGestureRecogniser.state == UIGestureRecognizerStateChanged) {
         CGPoint location = [self.dragResultsPanGestureRecogniser locationInView:self.resultsCollectionView];

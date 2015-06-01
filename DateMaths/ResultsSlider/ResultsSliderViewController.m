@@ -8,38 +8,59 @@
 
 #import "ResultsSliderViewController.h"
 #import "SlidingThing.h"
+#import "CALayer+NewCategory.h"
+#import "Theme.h"
 
 @implementation ResultsSliderViewController
 
-//- (void)viewWillAppear:(BOOL)animated
-//{
-//    [super viewWillAppear:animated];
-//
-//}
-
-- (void)setActualYValue:(float)actualYValue
+- (void)viewDidLoad
 {
-    _actualYValue = actualYValue;
-    self.actualLabel.text = [NSString stringWithFormat:@"%f", self.actualYValue];
+    [super viewDidLoad];
+
+    _minYValue = 0;
+    _maxYValue = 0;
+    _targetYValue = 0;
+    _actualYValue = 0;
+
+    [self.actualLabel.layer dateMaths_borderWithColor:[Theme colourMain]];
+    [self.targetLabel.layer dateMaths_borderWithColor:[Theme colourMain]];
+
     [self update];
 }
 
-- (void)setTargetYValue:(float)targetYValue
+- (void)setActualYValue:(int)actualYValue
 {
-    _targetYValue = targetYValue;
-    self.targetLabel.text = [NSString stringWithFormat:@"%f", self.targetYValue];
+    _actualYValue = MAX(actualYValue, self.minYValue);
+    _actualYValue = MIN(_actualYValue, self.maxYValue);
+    self.actualLabel.text = [NSString stringWithFormat:@"%d", actualYValue];
+
+    self.maxYValue = self.actualYValue + 10;
+
     [self update];
 }
 
-- (void)setMinYValue:(float)minYValue
+- (void)setTargetYValue:(int)targetYValue
 {
-    _minYValue = minYValue;
+    _targetYValue = MAX(targetYValue, self.minYValue);
+    _targetYValue = MIN(_targetYValue, self.maxYValue);
+    self.targetLabel.text = [NSString stringWithFormat:@"%d", targetYValue];
+
+    self.maxYValue = self.targetYValue + 10;
+
     [self update];
 }
 
-- (void)setMaxYValue:(float)maxYValue
+- (void)setMinYValue:(int)minYValue
 {
-    _maxYValue = maxYValue;
+    _minYValue = MAX(minYValue, 0);
+
+    [self update];
+}
+
+- (void)setMaxYValue:(int)maxYValue
+{
+    _maxYValue = MAX(maxYValue, self.minYValue);
+
     [self update];
 }
 
@@ -50,8 +71,25 @@
     CGFloat targetValueRatio = self.targetYValue - self.minYValue;
     CGFloat frameRange = self.view.frame.size.height;
 
-    self.slidingControl.actualYPosition = (actualValueRatio / valueRange) * frameRange + self.view.frame.origin.y;
-    self.slidingControl.targetYPosition = (targetValueRatio / valueRange) * frameRange + self.view.frame.origin.y;
+    CGFloat actualRange = actualValueRatio / valueRange;
+    if (isnan(actualRange)) {
+        actualRange = 0;
+    }
+    CGFloat actualYPosition = actualRange * frameRange + self.view.frame.origin.y;
+
+    CGFloat targetRange = targetValueRatio / valueRange;
+    if (isnan(targetRange)) {
+        targetRange = 0;
+    }
+    CGFloat targetYPosition = targetRange * frameRange + self.view.frame.origin.y;
+
+    self.slidingControl.actualYPosition = actualYPosition;
+    self.slidingControl.targetYPosition = targetYPosition;
+
+    self.actualTopSpaceConstraint.constant = actualYPosition;
+    self.targetTopSpaceConstraint.constant = targetYPosition;
+
+    [self.slidingControl setNeedsDisplay];
 }
 
 @end

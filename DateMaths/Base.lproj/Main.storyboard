@@ -147,8 +147,8 @@
                                         <cells/>
                                     </collectionView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ae-05-UyQ" userLabel="Results Slider">
-                                        <rect key="frame" x="532" y="0.0" width="60" height="324"/>
-                                        <color key="backgroundColor" red="0.99794126926405247" green="1" blue="0.5164471368076512" alpha="1" colorSpace="calibratedRGB"/>
+                                        <rect key="frame" x="532" y="0.0" width="60" height="288"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="CRX-sH-Hji"/>
                                         </constraints>
@@ -165,6 +165,7 @@
                                     <constraint firstAttribute="bottom" secondItem="irY-uj-KQk" secondAttribute="bottom" id="3Lf-Ht-0kI"/>
                                     <constraint firstAttribute="bottom" secondItem="7ae-05-UyQ" secondAttribute="bottom" id="Mtj-T2-Yiy"/>
                                     <constraint firstAttribute="trailing" secondItem="7ae-05-UyQ" secondAttribute="trailing" id="TOU-xc-SAt"/>
+                                    <constraint firstItem="obf-Av-vxb" firstAttribute="top" secondItem="7ae-05-UyQ" secondAttribute="bottom" id="VmV-mQ-S6h"/>
                                     <constraint firstItem="7ae-05-UyQ" firstAttribute="leading" secondItem="yGK-ql-Qfp" secondAttribute="leading" id="aBu-D7-0Fp"/>
                                     <constraint firstAttribute="trailing" secondItem="obf-Av-vxb" secondAttribute="trailing" id="h34-YC-N7F"/>
                                     <constraint firstItem="irY-uj-KQk" firstAttribute="top" secondItem="yGK-ql-Qfp" secondAttribute="top" id="kqX-yM-MYg"/>
@@ -174,6 +175,7 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="Mtj-T2-Yiy"/>
                                         <exclude reference="aBu-D7-0Fp"/>
                                     </mask>
                                 </variation>

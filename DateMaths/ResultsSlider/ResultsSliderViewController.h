@@ -14,14 +14,16 @@
 
 @interface ResultsSliderViewController : UIViewController
 
-@property (nonatomic) float minYValue;
-@property (nonatomic) float maxYValue;
-@property (nonatomic) float actualYValue;
-@property (nonatomic) float targetYValue;
+@property (nonatomic) int minYValue;
+@property (nonatomic) int maxYValue;
+@property (nonatomic) int actualYValue;
+@property (nonatomic) int targetYValue;
 
 @property (weak, nonatomic) IBOutlet UILabel *actualLabel;
 @property (weak, nonatomic) IBOutlet UILabel *targetLabel;
 @property (weak, nonatomic) IBOutlet SlidingThing *slidingControl;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *targetTopSpaceConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *actualTopSpaceConstraint;
 
 @end
